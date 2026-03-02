@@ -1,26 +1,283 @@
 @import "tailwindcss";
 
+/* ============================================
+   ALOPEX DIGITAL — Brand Design System
+   CVI v3.0 "Arctic fox in the boreal forest"
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core Palette */
+  --midnight: #161929;
+  --dark-navy: #282C3E;
+  --dark-surface: #1E2138;
+  --dark-elevated: #282C44;
+  --dark-border: rgba(255, 255, 255, 0.06);
+
+  /* Spruce (Trust, Capability) */
+  --spruce: #2D6A4F;
+  --spruce-light: #52B788;
+  --spruce-pale: #D8F3DC;
+
+  /* Fox Accent (Action, Urgency — ONE per viewport) */
+  --amber: #D4873F;
+  --amber-light: #F0C78A;
+  --amber-pale: #FFF5E6;
+
+  /* Atmospheric Neutrals */
+  --frost: #E8EDF2;
+  --off-white: #F8FAF9;
+  --white: #FFFFFF;
+  --mist: #C4CED8;
+  --light-gray: #F3F4F6;
+  --mid-gray: #9CA3AF;
+  --dark-gray: #6B7280;
+
+  /* Dark Mode Text */
+  --text-dark-heading: #E8EDF2;
+  --text-dark-body: rgba(255, 255, 255, 0.65);
+  --text-dark-muted: rgba(255, 255, 255, 0.45);
+
+  /* Motion */
+  --fox-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-medium: 300ms;
+  --duration-slow: 600ms;
+  --stagger: 80ms;
+
+  /* Spacing Scale */
+  --space-micro: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-base: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+
+  /* Radii */
+  --radius-button: 8px;
+  --radius-card: 12px;
+  --radius-section: 16px;
+  --radius-icon: 14px;
+  --radius-badge: 20px;
+
+  /* Fonts */
+  --font-display: var(--font-instrument-serif), Georgia, serif;
+  --font-heading: var(--font-outfit), system-ui, sans-serif;
+  --font-body: var(--font-montserrat), system-ui, sans-serif;
+  --font-code: var(--font-jetbrains-mono), monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-midnight: var(--midnight);
+  --color-dark-navy: var(--dark-navy);
+  --color-dark-surface: var(--dark-surface);
+  --color-dark-elevated: var(--dark-elevated);
+  --color-spruce: var(--spruce);
+  --color-spruce-light: var(--spruce-light);
+  --color-spruce-pale: var(--spruce-pale);
+  --color-amber: var(--amber);
+  --color-amber-light: var(--amber-light);
+  --color-amber-pale: var(--amber-pale);
+  --color-frost: var(--frost);
+  --color-off-white: var(--off-white);
+  --color-mist: var(--mist);
+  --color-light-gray: var(--light-gray);
+  --color-mid-gray: var(--mid-gray);
+  --color-dark-gray: var(--dark-gray);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-code);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--midnight);
+  color: var(--text-dark-body);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(45, 106, 79, 0.3);
+  color: var(--frost);
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ============================================
+   SCROLL REVEAL ANIMATION
+   ============================================ */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.reveal.revealed {
+  animation: fadeSlideUp var(--duration-slow) var(--fox-ease) forwards;
+}
+
+.reveal-delay-1 { animation-delay: calc(var(--stagger) * 1); }
+.reveal-delay-2 { animation-delay: calc(var(--stagger) * 2); }
+.reveal-delay-3 { animation-delay: calc(var(--stagger) * 3); }
+.reveal-delay-4 { animation-delay: calc(var(--stagger) * 4); }
+.reveal-delay-5 { animation-delay: calc(var(--stagger) * 5); }
+.reveal-delay-6 { animation-delay: calc(var(--stagger) * 6); }
+.reveal-delay-7 { animation-delay: calc(var(--stagger) * 7); }
+.reveal-delay-8 { animation-delay: calc(var(--stagger) * 8); }
+
+/* ============================================
+   AMBER PULSE GLOW (Primary CTA)
+   ============================================ */
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(212, 135, 63, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 24px 6px rgba(212, 135, 63, 0.15);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* ============================================
+   FROST NOISE TEXTURE (SVG Filter)
+   ============================================ */
+
+.frost-noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* ============================================
+   TOPOGRAPHIC TEXTURE
+   ============================================ */
+
+.topo-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image:
+    radial-gradient(ellipse at 30% 50%, transparent 40%, rgba(45, 106, 79, 0.15) 41%, transparent 42%),
+    radial-gradient(ellipse at 70% 30%, transparent 35%, rgba(45, 106, 79, 0.12) 36%, transparent 37%),
+    radial-gradient(ellipse at 50% 70%, transparent 50%, rgba(45, 106, 79, 0.1) 51%, transparent 52%),
+    radial-gradient(ellipse at 20% 20%, transparent 30%, rgba(45, 106, 79, 0.08) 31%, transparent 32%),
+    radial-gradient(ellipse at 80% 80%, transparent 45%, rgba(45, 106, 79, 0.1) 46%, transparent 47%);
+  background-size: 600px 600px;
+}
+
+/* ============================================
+   FILM GRAIN
+   ============================================ */
+
+.film-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ============================================
+   GRADIENT LINE ACCENT
+   ============================================ */
+
+.gradient-line {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--spruce), var(--amber));
+  border-radius: 1px;
+}
+
+/* ============================================
+   NAV GLASSMORPHISM
+   ============================================ */
+
+.nav-glass {
+  background: rgba(22, 25, 41, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--midnight);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-elevated);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--spruce);
 }
