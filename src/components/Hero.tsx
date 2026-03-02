@@ -126,6 +126,37 @@ export function Hero() {
         </div>
       </div>
 
+      {/* Scroll indicator */}
+      <div
+        className={`absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 transition-all duration-1000 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
+        style={{ transitionDelay: "1200ms" }}
+      >
+        <span
+          className="text-[10px] font-semibold tracking-[2px] uppercase"
+          style={{
+            fontFamily: "var(--font-heading)",
+            color: "var(--text-dark-muted)",
+          }}
+        >
+          Scroll
+        </span>
+        <div className="scroll-indicator">
+          <svg
+            width="16"
+            height="24"
+            viewBox="0 0 16 24"
+            fill="none"
+            stroke="var(--mist)"
+            strokeWidth="1.5"
+          >
+            <rect x="1" y="1" width="14" height="22" rx="7" />
+            <circle cx="8" cy="8" r="2" fill="var(--spruce-light)" stroke="none" />
+          </svg>
+        </div>
+      </div>
+
       {/* Bottom gradient fade */}
       <div
         className="absolute bottom-0 left-0 right-0 h-32 z-10 pointer-events-none"

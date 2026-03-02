@@ -281,3 +281,48 @@ h3, h4 {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--spruce);
 }
+
+/* ============================================
+   SCROLL INDICATOR (Hero)
+   ============================================ */
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+.scroll-indicator {
+  animation: scrollBounce 2.5s ease-in-out infinite;
+}
+
+/* ============================================
+   SMOOTH SECTION TRANSITIONS
+   ============================================ */
+
+section {
+  position: relative;
+}
+
+/* ============================================
+   LINK UNDERLINE ANIMATION
+   ============================================ */
+
+.link-hover {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--spruce-light);
+  transition: width var(--duration-medium) var(--fox-ease);
+}
+
+.link-hover:hover::after {
+  width: 100%;
+}

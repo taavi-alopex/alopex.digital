@@ -45,6 +45,10 @@ export const metadata: Metadata = {
     "CEE",
     "digital agency",
   ],
+  icons: {
+    icon: "/alopex-logo.svg",
+    apple: "/alopex-logo.png",
+  },
   openGraph: {
     title: "Alopex Digital — Orchestrating Clarity and Flow",
     description:
