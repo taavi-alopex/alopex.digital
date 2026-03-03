@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Clients } from "@/components/Clients";
+import { InlineCTA } from "@/components/InlineCTA";
 import { Uniques } from "@/components/Uniques";
 import { Services } from "@/components/Services";
 import { Process } from "@/components/Process";
@@ -24,13 +25,15 @@ export default function Home() {
         <Hero />
         <About />
         <Clients />
+        <InlineCTA variant="afterClients" />
         <Uniques />
         <Services />
         <Process />
+        <InlineCTA variant="afterProcess" />
         <Stats />
-        <Values />
         <Guarantee />
         <CTA />
+        <Values />
       </main>
       <Footer />
     </>

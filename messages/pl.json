@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Alopex Digital — Orkiestrujemy jasność i płynność",
-    "description": "Zaawansowana infrastruktura HighLevel i RevOps dla firm usługowych opartych na sprzedaży w Skandynawii i Europie Środkowo-Wschodniej. Projektujemy, budujemy i wdrażamy systemy, które powstrzymują utratę przychodów.",
-    "ogDescription": "Zaawansowana infrastruktura HighLevel i RevOps dla firm usługowych opartych na sprzedaży."
+    "title": "Agencja GoHighLevel & n8n w Estonii i CEE | Alopex Digital",
+    "description": "Zaawansowana infrastruktura HighLevel i RevOps dla firm opartych na sprzedaży. Projektujemy, budujemy i wdrażamy systemy, które powstrzymują utratę przychodów.",
+    "ogDescription": "Zaawansowana infrastruktura HighLevel i RevOps dla firm opartych na sprzedaży. Projektujemy, budujemy i wdrażamy systemy, które powstrzymują utratę przychodów."
   },
   "nav": {
     "about": "O nas",
@@ -10,24 +10,31 @@
     "process": "Proces",
     "values": "Wartości",
     "contact": "Kontakt",
-    "cta": "Umów rozmowę"
+    "cta": "Umów bezpłatną rozmowę"
   },
   "hero": {
-    "label": "Rozwiązania cyfrowe, które działają",
-    "title": "Orkiestrujemy jasność",
-    "titleAccent": "i płynność",
-    "subtitle": "Budujemy zaawansowaną infrastrukturę HighLevel i RevOps dla ambitnych firm usługowych w Skandynawii i Europie Środkowo-Wschodniej. Koniec z ręczną pracą.",
+    "label": "Agencja GoHighLevel & n8n",
+    "title": "Twoje Revenue Operations,",
+    "titleAccent": "zaprojektowane i wdrożone",
+    "subtitle": "Mapujemy Twój proces biznesowy, budujemy infrastrukturę GoHighLevel i upewniamy się, że Twój zespół faktycznie z niej korzysta. Koniec z leadami uciekającymi przez ręczny chaos.",
     "ctaPrimary": "Umów bezpłatną rozmowę",
+    "ctaPrimaryMicro": "30-minutowa rozmowa. Bez zobowiązań.",
     "ctaSecondary": "Nasz proces",
     "scroll": "Przewiń"
   },
+  "inlineCta": {
+    "afterClients": "Rozpoznajesz swoją firmę?",
+    "afterClientsLink": "Porozmawiajmy.",
+    "afterProcess": "Zacznij od Audytu Systemów",
+    "afterProcessMicro": "Bezpłatna rozmowa \u2014 zmapujemy, gdzie tracisz przychody."
+  },
   "about": {
     "label": "Kim jesteśmy",
-    "title": "Pomost między światową technologią",
-    "titleAccent": " a Twoim rynkiem",
-    "p1": "Alopex Digital to elitarny, zwinny integrator infrastruktury HighLevel — przenosimy najlepszą amerykańską technologię revenue operations do firm usługowych opartych na sprzedaży w Estonii, Polsce, Skandynawii i Europie Środkowo-Wschodniej.",
+    "title": "Agencja GoHighLevel & RevOps",
+    "titleAccent": "dla Estonii, Polski i CEE",
+    "p1": "Alopex Digital to elitarny, zwinny integrator infrastruktury GoHighLevel — przenosimy najlepszą amerykańską technologię revenue operations do firm usługowych opartych na sprzedaży w Estonii, Polsce i Europie Środkowo-Wschodniej.",
     "p2": "Nie budujemy po prostu systemów. Projektujemy jasność — mapujemy cały proces biznesowy, zanim napiszemy choćby jeden workflow. Potem budujemy, wdrażamy i upewniamy się, że Twój zespół faktycznie z tego korzysta. To nas wyróżnia.",
-    "regions": ["Estonia", "Polska", "Skandynawia", "CEE"],
+    "regions": ["Estonia", "Polska", "CEE"],
     "purposeLabel": "Nasza misja",
     "purposeQuote": "\u201eOrkiestrowa\u0107 jasno\u015b\u0107 i p\u0142ynno\u015b\u0107 dla ambitnych firm.\u201d",
     "purposeDescription": "Budujemy maszyny wolności — zautomatyzowane systemy, które uwalniają Twój czas, abyś mógł skupić się na rozwoju."
@@ -40,24 +47,27 @@
       {
         "industry": "Instalacje o wysokiej wartości",
         "examples": "Fotowoltaika, OZE, HVAC",
-        "pain": "Leady uciekają przez brak follow-upu przy kontraktach 10–50 tys. EUR"
+        "pain": "Leady uciekają przez brak follow-upu przy kontraktach 10–50 tys. EUR",
+        "outcome": "Automatyczne sekwencje follow-up, które zamykają lukę między leadem a podpisaną umową."
       },
       {
         "industry": "Pipeline relacyjny",
         "examples": "Nieruchomości, Consulting, Usługi prawne",
-        "pain": "Zarządzanie pipeline'ami kupujących/sprzedających, gdzie niedopasowane leady wypadają z procesu"
+        "pain": "Zarządzanie pipeline'ami kupujących/sprzedających, gdzie niedopasowane leady wypadają z procesu",
+        "outcome": "Workflow CRM, które dopasowują, pielęgnują i nigdy nie pozwalają ciepłemu leadowi umknąć."
       },
       {
         "industry": "Rynek dwustronny",
         "examples": "Rekrutacja, Staffing, Marketplace'y",
-        "pain": "Ghosting i słabe doświadczenie kandydatów w przepływach B2B + B2C"
+        "pain": "Ghosting i słabe doświadczenie kandydatów w przepływach B2B + B2C",
+        "outcome": "Doświadczenia kandydatów i klientów, które chronią markę i zapełniają wakaty szybciej."
       }
     ]
   },
   "uniques": {
     "label": "Dlaczego Alopex",
-    "title": "Trzy rzeczy, które robimy",
-    "titleAccent": "inaczej",
+    "title": "Dlaczego wybrać Alopex jako partnera",
+    "titleAccent": "GoHighLevel",
     "items": [
       {
         "title": "Strategiczny Blueprint",
@@ -72,7 +82,7 @@
       {
         "title": "Regionalna biegłość RevOps",
         "subtitle": "Faktor integratora",
-        "description": "Znamy kulturę, język i prawo. GDPR, lokalne bramki płatnicze, regionalna logika podatkowa — jesteśmy pomostem między światowej klasy amerykańską technologią a Twoim konkretnym rynkiem."
+        "description": "Znamy kulturę, język i prawo. GDPR, lokalne bramki płatnicze, regionalna logika podatkowa — przekładamy światowej klasy amerykańską technologię na rozwiązania działające na Twoim konkretnym rynku."
       }
     ]
   },
@@ -181,19 +191,19 @@
       {
         "title": "Audyt Systemów",
         "phase": "Odkrywanie",
-        "description": "Rozumiemy problem, zanim zaproponujemy rozwiązanie. W 1–2 spotkaniach oceniamy Twoje obecne bolączki, procesy i wąskie gardła, aby precyzyjnie zidentyfikować, gdzie tracisz przychody.",
+        "description": "Rozumiemy problem, zanim zaprojektujemy rozwiązanie. W 1–2 spotkaniach oceniamy Twoje obecne bolączki, procesy i wąskie gardła, aby precyzyjnie zidentyfikować, gdzie tracisz przychody.",
         "detail": "1–2 spotkania"
       },
       {
         "title": "Strategiczny Blueprint",
         "phase": "Planowanie",
-        "description": "Jasna mapa drogowa bez niespodzianek. Projektujemy pełną architekturę rozwiązania, ustalamy harmonogram i definiujemy każdą integrację. Ten samodzielny dokument jest Twój na zawsze.",
-        "detail": "Samodzielny płatny dokument"
+        "description": "Jasna mapa drogowa bez niespodzianek. Projektujemy pełną architekturę rozwiązania, ustalamy harmonogram i definiujemy każdą integrację. Ten dokument jest Twój na zawsze.",
+        "detail": "Twój na zawsze"
       },
       {
         "title": "Budowa Architektury",
         "phase": "Wdrożenie",
-        "description": "Przejrzysty postęp i doskonałość techniczna. Budujemy Twoją infrastrukturę HighLevel, integrujemy niestandardowe API i konfigurujemy automatyzację — z cotygodniowym raportowaniem przez ClickUp.",
+        "description": "Przejrzysty postęp i doskonałość techniczna. Budujemy Twoją infrastrukturę GoHighLevel, integrujemy niestandardowe API przez n8n i konfigurujemy automatyzację — z cotygodniowym raportowaniem przez ClickUp.",
         "detail": "Cotygodniowe raporty postępu"
       },
       {
@@ -212,10 +222,10 @@
   },
   "stats": {
     "items": [
-      { "value": 150, "suffix": "+", "label": "Zadowolonych klientów" },
-      { "value": 3, "suffix": "x", "label": "Więcej leadów" },
-      { "value": 85, "suffix": "%", "label": "Zaoszczędzonego czasu" },
-      { "value": 24, "suffix": "/7", "label": "Automatyzacja" }
+      { "value": 150, "suffix": "+", "label": "Uruchomionych systemów" },
+      { "value": 3, "suffix": "x", "label": "Więcej leadów w 90 dni" },
+      { "value": 85, "suffix": "%", "label": "Mniej ręcznego follow-upu" },
+      { "value": 12, "suffix": "min", "label": "Śr. czas odpowiedzi na leada" }
     ]
   },
   "values": {
@@ -272,10 +282,11 @@
     "titleAccent": "tracić przychody?",
     "description": "Umów bezpłatną rozmowę odkrywczą. Zmapujemy Twoje obecne bolączki i pokażemy dokładnie, gdzie leżą szanse — bez zobowiązań, bez nacisku sprzedażowego.",
     "button": "Umów bezpłatną rozmowę",
+    "microCopy": "30-minutowa rozmowa. Bez zobowiązań. Zmapujemy, gdzie tracisz przychody.",
     "emailPrefix": "Lub napisz do nas bezpośrednio na"
   },
   "footer": {
-    "tagline": "Orkiestrujemy jasność i płynność dla ambitnych firm usługowych w Skandynawii i Europie Środkowo-Wschodniej.",
+    "tagline": "Infrastruktura GoHighLevel & n8n dla ambitnych firm usługowych w Estonii, Polsce i Europie Środkowo-Wschodniej.",
     "servicesTitle": "Usługi",
     "companyTitle": "Firma",
     "services": [

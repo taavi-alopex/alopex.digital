@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Alopex Digital — Selguse ja sujuvuse orkestratsioon",
-    "description": "Kõrgtasemel HighLevel & RevOps taristu müügipõhistele teenindusettevõtetele Skandinaavias ja KIE-s. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise.",
-    "ogDescription": "Kõrgtasemel HighLevel & RevOps taristu müügipõhistele teenindusettevõtetele."
+    "title": "GoHighLevel & n8n agentuur Eestis ja KIE-s | Alopex Digital",
+    "description": "Kõrgtasemel HighLevel & RevOps taristu müügipõhistele ettevõtetele. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise.",
+    "ogDescription": "Kõrgtasemel HighLevel & RevOps taristu müügipõhistele ettevõtetele. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise."
   },
   "nav": {
     "about": "Meist",
@@ -10,24 +10,31 @@
     "process": "Protsess",
     "values": "Väärtused",
     "contact": "Kontakt",
-    "cta": "Broneeri kõne"
+    "cta": "Broneeri tutvumiskõne"
   },
   "hero": {
-    "label": "Digitaalsed lahendused, mis toimivad",
-    "title": "Selguse orkestratsioon",
-    "titleAccent": "ja sujuvus",
-    "subtitle": "Me ehitame kõrgtasemel HighLevel & RevOps taristut ambitsioonikatele teenindusettevõtetele üle Skandinaavia ja KIE. Lõpp käsitsi töötamisele.",
+    "label": "GoHighLevel & n8n agentuur",
+    "title": "Sinu tuluhaldus,",
+    "titleAccent": "projekteeritud ja käivitatud",
+    "subtitle": "Me kaardistame su äriprotsessi, ehitame GoHighLevel taristu ja tagame, et su meeskond seda päriselt kasutab. Lõpp müügivihjete lekkimisele käsitsi kaoses.",
     "ctaPrimary": "Broneeri tutvumiskõne",
+    "ctaPrimaryMicro": "30-minutiline kõne. Kohustuseta.",
     "ctaSecondary": "Meie protsess",
     "scroll": "Keri"
   },
+  "inlineCta": {
+    "afterClients": "Tunned oma ettevõtte ära?",
+    "afterClientsLink": "Räägime.",
+    "afterProcess": "Alusta süsteemide auditiga",
+    "afterProcessMicro": "Tasuta tutvumiskõne \u2014 kaardistame, kust tulu lekib."
+  },
   "about": {
     "label": "Kes me oleme",
-    "title": "Sild maailmatasemel tehnoloogia",
-    "titleAccent": " ja sinu turu vahel",
-    "p1": "Alopex Digital on HighLevel taristu eliitne ja paindlik Maaletooja — toob maailmatasemel USA tuluhalduse tehnoloogia müügipõhistele teenindusettevõtetele üle Eesti, Poola, Skandinaavia ja KIE.",
+    "title": "GoHighLevel & RevOps agentuur",
+    "titleAccent": "Eestis, Poolas ja KIE-s",
+    "p1": "Alopex Digital on GoHighLevel taristu eliitne ja paindlik Maaletooja — toob maailmatasemel USA tuluhalduse tehnoloogia müügipõhistele teenindusettevõtetele üle Eesti, Poola ja KIE.",
     "p2": "Me ei ehita lihtsalt süsteeme. Me projekteerime selguse — kaardistame kogu äriprotsessi enne ühtegi töövoo kirjutamist. Seejärel ehitame, käivitame ja tagame, et su meeskond seda ka päriselt kasutab. See ongi erinevus.",
-    "regions": ["Eesti", "Poola", "Skandinaavia", "KIE"],
+    "regions": ["Eesti", "Poola", "KIE"],
     "purposeLabel": "Meie eesmärk",
     "purposeQuote": "\u201eOrkestreerida selgust ja sujuvust ambitsioonikatele ettevõtetele.\u201c",
     "purposeDescription": "Me ehitame vabadusmootoreid — automatiseeritud süsteeme, mis vabastavad su aja, et saaksid keskenduda kasvule."
@@ -40,24 +47,27 @@
       {
         "industry": "Kõrge väärtusega paigaldus",
         "examples": "Päikeseenergia, taastuvenergia, küte ja ventilatsioon",
-        "pain": "Müügivihjed kaovad halva järeltegevuse tõttu 10–50k EUR tehingute puhul"
+        "pain": "Müügivihjed kaovad halva järeltegevuse tõttu 10–50k EUR tehingute puhul",
+        "outcome": "Automatiseeritud järeltegevuse järjestused, mis sulgevad lõhe müügivihje ja allkirjastatud lepingu vahel."
       },
       {
         "industry": "Suhtel põhinev müügitoru",
         "examples": "Kinnisvara, konsultatsioon, õigusteenused",
-        "pain": "Ostja/müüja torude haldamine, kus sobitamata kontaktid kaovad ära"
+        "pain": "Ostja/müüja torude haldamine, kus sobitamata kontaktid kaovad ära",
+        "outcome": "CRM töövood, mis sobitavad, hooldavad ja ei lase ühelgi soojal kontaktil kaduda."
       },
       {
         "industry": "Kahepoolne turg",
         "examples": "Värbamine, personaliteenus, turuplatsid",
-        "pain": "Kandidaatide halb kogemus ja kaduvad kontaktid B2B + B2C voogudes"
+        "pain": "Kandidaatide halb kogemus ja kaduvad kontaktid B2B + B2C voogudes",
+        "outcome": "Kandidaadi ja kliendi kogemused, mis kaitsevad brändi ja täidavad kohad kiiremini."
       }
     ]
   },
   "uniques": {
     "label": "Miks Alopex",
-    "title": "Kolm asja, mida teeme",
-    "titleAccent": "teisiti",
+    "title": "Miks valida Alopex oma",
+    "titleAccent": "GoHighLevel partneriks",
     "items": [
       {
         "title": "Strateegiline kavandamine",
@@ -72,7 +82,7 @@
       {
         "title": "Piirkondlik RevOps pädevus",
         "subtitle": "Maaletooja faktor",
-        "description": "Me tunneme kultuuri, keelt ja seadusi. GDPR, kohalikud maksevõimalused, piirkondlik maksuarvestus — me oleme sild maailmatasemel USA tehnoloogia ja sinu konkreetse turu vahel."
+        "description": "Me tunneme kultuuri, keelt ja seadusi. GDPR, kohalikud maksevõimalused, piirkondlik maksuarvestus — me tõlgime maailmatasemel USA tehnoloogia lahendusteks, mis töötavad sinu konkreetsel turul."
       }
     ]
   },
@@ -181,19 +191,19 @@
       {
         "title": "Süsteemide audit",
         "phase": "Avastamine",
-        "description": "Mõistame probleemi enne ravi määramist. 1–2 kohtumisega hindame su praegused valukohad, protsessid ja kitsaskohad, et tuvastada täpselt, kust tulu lekib.",
+        "description": "Mõistame probleemi enne lahenduse kujundamist. 1–2 kohtumisega hindame su praegused valukohad, protsessid ja kitsaskohad, et tuvastada täpselt, kust tulu lekib.",
         "detail": "1–2 kohtumist"
       },
       {
         "title": "Strateegiline kavand",
         "phase": "Planeerimine",
-        "description": "Selge tegevuskava ilma üllatusteta. Kaardistame kogu lahenduse arhitektuuri, määrame ajakava ja defineerime iga integratsiooni. See eraldiseisev väljund jääb sulle.",
-        "detail": "Eraldiseisev tasuline väljund"
+        "description": "Selge tegevuskava ilma üllatusteta. Kaardistame kogu lahenduse arhitektuuri, määrame ajakava ja defineerime iga integratsiooni. See väljund jääb sulle.",
+        "detail": "Jääb sulle"
       },
       {
         "title": "Arhitektuuri ehitus",
         "phase": "Teostamine",
-        "description": "Läbipaistev edenemine ja tehniline tipptase. Ehitame su HighLevel taristu, integreerime kohandatud API-d ja seadistame automatiseerimise — koos iganädalase aruandlusega ClickUp kaudu.",
+        "description": "Läbipaistev edenemine ja tehniline tipptase. Ehitame su GoHighLevel taristu, integreerime kohandatud API-d n8n kaudu ja seadistame automatiseerimise — koos iganädalase aruandlusega ClickUp kaudu.",
         "detail": "Iganädalased edenemisaruanded"
       },
       {
@@ -212,10 +222,10 @@
   },
   "stats": {
     "items": [
-      { "value": 150, "suffix": "+", "label": "Rahulolev klient" },
-      { "value": 3, "suffix": "x", "label": "Rohkem müügivihjeid" },
-      { "value": 85, "suffix": "%", "label": "Aega säästetud" },
-      { "value": 24, "suffix": "/7", "label": "Automatiseerimine" }
+      { "value": 150, "suffix": "+", "label": "Käivitatud süsteemi" },
+      { "value": 3, "suffix": "x", "label": "Rohkem müügivihjeid 90 päevaga" },
+      { "value": 85, "suffix": "%", "label": "Vähem käsitsi järeltegevust" },
+      { "value": 12, "suffix": "min", "label": "Keskm. müügivihje vastus" }
     ]
   },
   "values": {
@@ -272,10 +282,11 @@
     "titleAccent": "tulu lekkimise?",
     "description": "Broneeri tasuta tutvumiskõne. Kaardistame su praegused valukohad ja näitame täpselt, kus võimalused peituvad — ilma kohustuste ja müügikõneta.",
     "button": "Broneeri tutvumiskõne",
+    "microCopy": "30-minutiline kõne. Kohustuseta. Kaardistame, kust tulu lekib.",
     "emailPrefix": "Või kirjuta meile otse"
   },
   "footer": {
-    "tagline": "Selguse ja sujuvuse orkestratsioon ambitsioonikatele teenindusettevõtetele üle Skandinaavia ja KIE.",
+    "tagline": "GoHighLevel & n8n taristu ambitsioonikatele teenindusettevõtetele üle Eesti, Poola ja KIE.",
     "servicesTitle": "Teenused",
     "companyTitle": "Ettevõte",
     "services": [

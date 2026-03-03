@@ -24,7 +24,7 @@ const clientIcons = [
 
 export function Clients() {
   const t = useTranslations("clients");
-  const items: { industry: string; examples: string; pain: string }[] = t.raw("items");
+  const items: { industry: string; examples: string; pain: string; outcome: string }[] = t.raw("items");
 
   return (
     <section
@@ -97,10 +97,17 @@ export function Clients() {
                 </p>
 
                 <p
-                  className="text-[13px] leading-[1.7]"
+                  className="text-[13px] leading-[1.7] mb-3"
                   style={{ color: "var(--text-dark-muted)" }}
                 >
                   {client.pain}
+                </p>
+
+                <p
+                  className="text-[12px] leading-[1.6] font-medium"
+                  style={{ color: "var(--spruce-light)" }}
+                >
+                  {client.outcome}
                 </p>
               </div>
             </ScrollReveal>
