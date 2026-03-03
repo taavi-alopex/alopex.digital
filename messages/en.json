@@ -1,8 +1,8 @@
 {
   "metadata": {
     "title": "GoHighLevel & n8n Agency in Estonia & CEE | Alopex Digital",
-    "description": "Advanced HighLevel & RevOps infrastructure for sales-led businesses. We architect, build, and launch systems that stop revenue leaking.",
-    "ogDescription": "Advanced HighLevel & RevOps infrastructure for sales-led businesses. We architect, build, and launch systems that stop revenue leaking."
+    "description": "Advanced GoHighLevel & RevOps infrastructure for sales-led businesses. We architect, build, and launch systems that stop revenue leaking.",
+    "ogDescription": "Advanced GoHighLevel & RevOps infrastructure for sales-led businesses. We architect, build, and launch systems that stop revenue leaking."
   },
   "nav": {
     "about": "About",
@@ -32,17 +32,17 @@
     "label": "Who We Are",
     "title": "GoHighLevel & RevOps Agency",
     "titleAccent": "for Estonia, Poland & CEE",
-    "p1": "Alopex Digital is your dedicated local GoHighLevel partner \u2014 bringing world-class US revenue operations technology to sales-led service businesses across Estonia, Poland, and CEE.",
+    "p1": "Alopex Digital is your dedicated local GoHighLevel partner \u2014 bringing world-class US revenue operations technology to sales-led businesses across Estonia, Poland, and CEE.",
     "p2": "We don\u2019t just build systems. We architect clarity \u2014 mapping your entire business process before writing a single workflow. Then we build it, launch it, and make sure your team actually uses it. That\u2019s the difference.",
     "regions": ["Estonia", "Poland", "CEE"],
     "purposeLabel": "Our Purpose",
-    "purposeQuote": "\u201cTo orchestrate clarity and flow for ambitious businesses.\u201d",
+    "purposeQuote": "\u201cTo orchestrate clarity and flow for sales-led businesses.\u201d",
     "purposeDescription": "We build freedom machines \u2014 automated systems that free up your time so you can focus on growth."
   },
   "clients": {
     "label": "Who We Serve",
     "title": "Built for",
-    "titleAccent": "sales-led service businesses",
+    "titleAccent": "sales-led businesses",
     "items": [
       {
         "industry": "High-Ticket Install",
@@ -286,7 +286,7 @@
     "emailPrefix": "Or email us directly at"
   },
   "footer": {
-    "tagline": "GoHighLevel & n8n infrastructure for ambitious service businesses across Estonia, Poland, and CEE.",
+    "tagline": "GoHighLevel & n8n infrastructure for sales-led businesses across Estonia, Poland, and CEE.",
     "servicesTitle": "Services",
     "companyTitle": "Company",
     "services": [

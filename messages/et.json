@@ -1,8 +1,8 @@
 {
   "metadata": {
     "title": "GoHighLevel & n8n agentuur Eestis ja KIE-s | Alopex Digital",
-    "description": "Kõrgtasemel HighLevel & RevOps taristu müügipõhistele ettevõtetele. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise.",
-    "ogDescription": "Kõrgtasemel HighLevel & RevOps taristu müügipõhistele ettevõtetele. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise."
+    "description": "Kõrgtasemel GoHighLevel & RevOps taristu müügipõhistele ettevõtetele. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise.",
+    "ogDescription": "Kõrgtasemel GoHighLevel & RevOps taristu müügipõhistele ettevõtetele. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise."
   },
   "nav": {
     "about": "Meist",
@@ -32,17 +32,17 @@
     "label": "Kes me oleme",
     "title": "GoHighLevel & RevOps agentuur",
     "titleAccent": "Eestis, Poolas ja KIE-s",
-    "p1": "Alopex Digital on GoHighLevel taristu eliitne ja paindlik Maaletooja — toob maailmatasemel USA tuluhalduse tehnoloogia müügipõhistele teenindusettevõtetele üle Eesti, Poola ja KIE.",
+    "p1": "Alopex Digital on GoHighLevel taristu eliitne ja paindlik Maaletooja — toob maailmatasemel USA tuluhalduse tehnoloogia müügipõhistele ettevõtetele üle Eesti, Poola ja KIE.",
     "p2": "Me ei ehita lihtsalt süsteeme. Me projekteerime selguse — kaardistame kogu äriprotsessi enne ühtegi töövoo kirjutamist. Seejärel ehitame, käivitame ja tagame, et su meeskond seda ka päriselt kasutab. See ongi erinevus.",
     "regions": ["Eesti", "Poola", "KIE"],
     "purposeLabel": "Meie eesmärk",
-    "purposeQuote": "\u201eOrkestreerida selgust ja sujuvust ambitsioonikatele ettevõtetele.\u201c",
+    "purposeQuote": "\u201eOrkestreerida selgust ja sujuvust müügipõhistele ettevõtetele.\u201c",
     "purposeDescription": "Me ehitame vabadusmootoreid — automatiseeritud süsteeme, mis vabastavad su aja, et saaksid keskenduda kasvule."
   },
   "clients": {
     "label": "Keda me teenindame",
     "title": "Loodud",
-    "titleAccent": "müügipõhistele teenindusettevõtetele",
+    "titleAccent": "müügipõhistele ettevõtetele",
     "items": [
       {
         "industry": "Kõrge väärtusega paigaldus",
@@ -286,7 +286,7 @@
     "emailPrefix": "Või kirjuta meile otse"
   },
   "footer": {
-    "tagline": "GoHighLevel & n8n taristu ambitsioonikatele teenindusettevõtetele üle Eesti, Poola ja KIE.",
+    "tagline": "GoHighLevel & n8n taristu müügipõhistele ettevõtetele üle Eesti, Poola ja KIE.",
     "servicesTitle": "Teenused",
     "companyTitle": "Ettevõte",
     "services": [
