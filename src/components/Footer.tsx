@@ -1,19 +1,23 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { FoxLogo } from "./FoxLogo";
 
 const serviceHrefs = ["#process", "#process", "#process", "#process", "#process"];
 const companyHrefs = ["#about", "#process", "#values", "#contact"];
+const legalHrefs = ["/privacy-policy", "/terms"];
 
 export function Footer() {
   const t = useTranslations("footer");
   const services: { label: string }[] = t.raw("services");
   const company: { label: string }[] = t.raw("company");
+  const legal: { label: string }[] = t.raw("legal");
 
   const linkColumns = [
-    { title: t("servicesTitle"), links: services, hrefs: serviceHrefs },
-    { title: t("companyTitle"), links: company, hrefs: companyHrefs },
+    { title: t("servicesTitle"), links: services, hrefs: serviceHrefs, isInternal: false },
+    { title: t("companyTitle"), links: company, hrefs: companyHrefs, isInternal: false },
+    { title: t("legalTitle"), links: legal, hrefs: legalHrefs, isInternal: true },
   ];
 
   return (
@@ -27,7 +31,7 @@ export function Footer() {
       />
 
       <div className="max-w-[1200px] mx-auto px-5 md:px-8 py-14 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-10 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 md:gap-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
@@ -72,16 +76,29 @@ export function Footer() {
               <ul className="space-y-3">
                 {col.links.map((link, i) => (
                   <li key={link.label}>
-                    <a
-                      href={col.hrefs[i]}
-                      className="text-[14px] hover:text-[var(--spruce-light)] transition-colors duration-200"
-                      style={{
-                        color: "var(--text-dark-muted)",
-                        fontFamily: "var(--font-body)",
-                      }}
-                    >
-                      {link.label}
-                    </a>
+                    {col.isInternal ? (
+                      <Link
+                        href={col.hrefs[i]}
+                        className="text-[14px] hover:text-[var(--spruce-light)] transition-colors duration-200"
+                        style={{
+                          color: "var(--text-dark-muted)",
+                          fontFamily: "var(--font-body)",
+                        }}
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={col.hrefs[i]}
+                        className="text-[14px] hover:text-[var(--spruce-light)] transition-colors duration-200"
+                        style={{
+                          color: "var(--text-dark-muted)",
+                          fontFamily: "var(--font-body)",
+                        }}
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
