@@ -1,9 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
 
 export function About() {
+  const t = useTranslations("about");
+  const regions: string[] = t.raw("regions");
+
   return (
     <section
       id="about"
@@ -15,7 +19,7 @@ export function About() {
           {/* Left: Text */}
           <div>
             <ScrollReveal>
-              <SectionLabel text="Who We Are" light />
+              <SectionLabel text={t("label")} light />
             </ScrollReveal>
 
             <ScrollReveal delay={1}>
@@ -23,12 +27,12 @@ export function About() {
                 className="text-[clamp(28px,4vw,42px)] mb-6"
                 style={{ color: "var(--midnight)" }}
               >
-                The bridge between world-class tech
+                {t("title")}
                 <span
                   className="italic"
                   style={{ color: "var(--spruce)" }}
                 >
-                  {" "}and your market
+                  {t("titleAccent")}
                 </span>
               </h2>
             </ScrollReveal>
@@ -38,10 +42,7 @@ export function About() {
                 className="text-[15px] leading-[1.8] mb-6"
                 style={{ color: "var(--dark-gray)" }}
               >
-                Alopex Digital is the elite, lean &ldquo;Maaletooja&rdquo; of HighLevel
-                infrastructure — bringing world-class US revenue operations
-                technology to sales-led service businesses across Estonia, Poland,
-                Scandinavia, and CEE.
+                {t("p1")}
               </p>
             </ScrollReveal>
 
@@ -50,16 +51,13 @@ export function About() {
                 className="text-[15px] leading-[1.8] mb-8"
                 style={{ color: "var(--dark-gray)" }}
               >
-                We don&apos;t just build systems. We architect clarity — mapping
-                your entire business process before writing a single workflow.
-                Then we build it, launch it, and make sure your team actually
-                uses it. That&apos;s the difference.
+                {t("p2")}
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={4}>
               <div className="flex flex-wrap gap-3">
-                {["Estonia", "Poland", "Scandinavia", "CEE"].map((region) => (
+                {regions.map((region: string) => (
                   <span
                     key={region}
                     className="px-4 py-1.5 text-[10px] font-bold tracking-[1px] uppercase"
@@ -97,7 +95,7 @@ export function About() {
                     color: "var(--amber-light)",
                   }}
                 >
-                  Our Purpose
+                  {t("purposeLabel")}
                 </p>
                 <blockquote
                   className="text-[clamp(20px,2.5vw,26px)] italic leading-[1.4] mb-6"
@@ -106,8 +104,7 @@ export function About() {
                     color: "var(--frost)",
                   }}
                 >
-                  &ldquo;To orchestrate clarity and flow for ambitious
-                  businesses.&rdquo;
+                  {t("purposeQuote")}
                 </blockquote>
                 <div
                   className="h-[1px] mb-6"
@@ -117,8 +114,7 @@ export function About() {
                   className="text-[13px] leading-[1.7]"
                   style={{ color: "var(--text-dark-muted)" }}
                 >
-                  We build freedom machines — automated systems that free up
-                  your time so you can focus on growth.
+                  {t("purposeDescription")}
                 </p>
               </div>
             </div>

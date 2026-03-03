@@ -1,48 +1,31 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
 
-const clientTypes = [
-  {
-    industry: "High-Ticket Install",
-    examples: "Solar, Renewables, HVAC",
-    pain: "Leads leaking due to poor follow-up on 10-50k EUR deals",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3z" />
-      </svg>
-    ),
-  },
-  {
-    industry: "Relationship Pipeline",
-    examples: "Real Estate, Consulting, Legal",
-    pain: "Managing buyer/seller pipelines with unmatched leads dropping off",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-  },
-  {
-    industry: "Double-Sided Marketplace",
-    examples: "Recruitment, Staffing, Marketplaces",
-    pain: "Ghosting and poor candidate experience across B2B + B2C flows",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 3 21 3 21 8" />
-        <line x1="4" y1="20" x2="21" y2="3" />
-        <polyline points="21 16 21 21 16 21" />
-        <line x1="15" y1="15" x2="21" y2="21" />
-        <line x1="4" y1="4" x2="9" y2="9" />
-      </svg>
-    ),
-  },
+const clientIcons = [
+  <svg key="install" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3z" />
+  </svg>,
+  <svg key="pipeline" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+    <circle cx="9" cy="7" r="4" />
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+  </svg>,
+  <svg key="marketplace" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="16 3 21 3 21 8" />
+    <line x1="4" y1="20" x2="21" y2="3" />
+    <polyline points="21 16 21 21 16 21" />
+    <line x1="15" y1="15" x2="21" y2="21" />
+    <line x1="4" y1="4" x2="9" y2="9" />
+  </svg>,
 ];
 
 export function Clients() {
+  const t = useTranslations("clients");
+  const items: { industry: string; examples: string; pain: string }[] = t.raw("items");
+
   return (
     <section
       className="relative py-16 md:py-20 overflow-hidden"
@@ -55,7 +38,7 @@ export function Clients() {
         <div className="text-center max-w-[600px] mx-auto mb-12">
           <ScrollReveal>
             <div className="flex justify-center">
-              <SectionLabel text="Who We Serve" />
+              <SectionLabel text={t("label")} />
             </div>
           </ScrollReveal>
           <ScrollReveal delay={1}>
@@ -63,9 +46,9 @@ export function Clients() {
               className="text-[clamp(24px,3.5vw,36px)]"
               style={{ color: "var(--frost)" }}
             >
-              Built for{" "}
+              {t("title")}{" "}
               <span className="italic" style={{ color: "var(--spruce-light)" }}>
-                sales-led service businesses
+                {t("titleAccent")}
               </span>
             </h2>
           </ScrollReveal>
@@ -73,7 +56,7 @@ export function Clients() {
 
         {/* Client type cards */}
         <div className="grid md:grid-cols-3 gap-5">
-          {clientTypes.map((client, i) => (
+          {items.map((client, i) => (
             <ScrollReveal key={client.industry} delay={i + 1}>
               <div
                 className="group p-6 h-full transition-all duration-300 hover:-translate-y-0.5"
@@ -90,7 +73,7 @@ export function Clients() {
                     color: "var(--spruce-light)",
                   }}
                 >
-                  {client.icon}
+                  {clientIcons[i]}
                 </div>
 
                 <h3

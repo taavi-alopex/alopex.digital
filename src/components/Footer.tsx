@@ -1,22 +1,21 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { FoxLogo } from "./FoxLogo";
 
-const footerLinks = {
-  Services: [
-    { label: "Systems Audit", href: "#process" },
-    { label: "Strategic Blueprint", href: "#process" },
-    { label: "Architecture Build", href: "#process" },
-    { label: "Frictionless Launch", href: "#process" },
-    { label: "Growth Loop", href: "#process" },
-  ],
-  Company: [
-    { label: "About", href: "#about" },
-    { label: "Our Process", href: "#process" },
-    { label: "Values", href: "#values" },
-    { label: "Contact", href: "#contact" },
-  ],
-};
+const serviceHrefs = ["#process", "#process", "#process", "#process", "#process"];
+const companyHrefs = ["#about", "#process", "#values", "#contact"];
 
 export function Footer() {
+  const t = useTranslations("footer");
+  const services: { label: string }[] = t.raw("services");
+  const company: { label: string }[] = t.raw("company");
+
+  const linkColumns = [
+    { title: t("servicesTitle"), links: services, hrefs: serviceHrefs },
+    { title: t("companyTitle"), links: company, hrefs: companyHrefs },
+  ];
+
   return (
     <footer style={{ background: "var(--dark-navy)" }}>
       {/* Gradient bar */}
@@ -47,21 +46,20 @@ export function Footer() {
               className="text-[14px] leading-[1.7] max-w-[360px] mb-6"
               style={{ color: "var(--text-dark-muted)" }}
             >
-              Orchestrating clarity and flow for ambitious service businesses
-              across Scandinavia and CEE.
+              {t("tagline")}
             </p>
             <a
-              href="mailto:taavi@alopex.digital"
+              href="mailto:info@alopex.digital"
               className="text-[14px] hover:text-[var(--spruce-light)] transition-colors"
               style={{ color: "var(--mist)" }}
             >
-              taavi@alopex.digital
+              info@alopex.digital
             </a>
           </div>
 
           {/* Link columns */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
+          {linkColumns.map((col) => (
+            <div key={col.title}>
               <h4
                 className="text-[11px] font-bold tracking-[2px] uppercase mb-5"
                 style={{
@@ -69,13 +67,13 @@ export function Footer() {
                   color: "var(--frost)",
                 }}
               >
-                {title}
+                {col.title}
               </h4>
               <ul className="space-y-3">
-                {links.map((link) => (
+                {col.links.map((link, i) => (
                   <li key={link.label}>
                     <a
-                      href={link.href}
+                      href={col.hrefs[i]}
                       className="text-[14px] hover:text-[var(--spruce-light)] transition-colors duration-200"
                       style={{
                         color: "var(--text-dark-muted)",
@@ -100,14 +98,13 @@ export function Footer() {
             className="text-[12px]"
             style={{ color: "var(--text-dark-muted)" }}
           >
-            &copy; {new Date().getFullYear()} Alopex Digital O&Uuml;. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} {t("copyright")}
           </p>
           <p
             className="text-[12px]"
             style={{ color: "var(--text-dark-muted)" }}
           >
-            Tallinn, Estonia
+            {t("location")}
           </p>
         </div>
       </div>

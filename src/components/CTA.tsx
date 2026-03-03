@@ -1,9 +1,14 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 import { FoxLogo } from "./FoxLogo";
+import { useBooking } from "./BookingProvider";
 
 export function CTA() {
+  const t = useTranslations("cta");
+  const { openBooking } = useBooking();
+
   return (
     <section
       id="contact"
@@ -27,9 +32,9 @@ export function CTA() {
               color: "var(--frost)",
             }}
           >
-            Ready to stop{" "}
+            {t("title")}{" "}
             <span className="italic" style={{ color: "var(--amber-light)" }}>
-              leaking revenue?
+              {t("titleAccent")}
             </span>
           </h2>
         </ScrollReveal>
@@ -39,15 +44,13 @@ export function CTA() {
             className="text-[16px] leading-[1.8] mb-10"
             style={{ color: "var(--mist)" }}
           >
-            Book a free discovery call. We&apos;ll map your current pains and
-            show you exactly where the opportunities are — no obligation,
-            no sales pitch.
+            {t("description")}
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={2}>
-          <a
-            href="mailto:taavi@alopex.digital"
+          <button
+            onClick={openBooking}
             className="inline-flex items-center justify-center px-10 py-5 text-[14px] font-semibold tracking-[0.5px] uppercase text-white border-2 border-transparent cursor-pointer transition-all duration-300 hover:-translate-y-0.5 pulse-glow"
             style={{
               fontFamily: "var(--font-heading)",
@@ -56,8 +59,8 @@ export function CTA() {
               transitionTimingFunction: "var(--fox-ease)",
             }}
           >
-            Book a Discovery Call
-          </a>
+            {t("button")}
+          </button>
         </ScrollReveal>
 
         <ScrollReveal delay={3}>
@@ -65,13 +68,13 @@ export function CTA() {
             className="mt-6 text-[13px]"
             style={{ color: "var(--text-dark-muted)" }}
           >
-            Or email us directly at{" "}
+            {t("emailPrefix")}{" "}
             <a
-              href="mailto:taavi@alopex.digital"
+              href="mailto:info@alopex.digital"
               className="underline hover:text-[var(--spruce-light)] transition-colors"
               style={{ color: "var(--mist)" }}
             >
-              taavi@alopex.digital
+              info@alopex.digital
             </a>
           </p>
         </ScrollReveal>

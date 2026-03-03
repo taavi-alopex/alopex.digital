@@ -1,14 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useCountUp } from "@/hooks/useCountUp";
-
-const stats = [
-  { value: 150, suffix: "+", label: "Happy Clients" },
-  { value: 3, suffix: "x", label: "More Leads" },
-  { value: 85, suffix: "%", label: "Time Saved" },
-  { value: 24, suffix: "/7", label: "Automation" },
-];
 
 function StatItem({
   value,
@@ -49,6 +43,8 @@ function StatItem({
 }
 
 export function Stats() {
+  const t = useTranslations("stats");
+  const items: { value: number; suffix: string; label: string }[] = t.raw("items");
   const { ref, isRevealed } = useScrollReveal(0.3);
 
   return (
@@ -64,7 +60,7 @@ export function Stats() {
 
       <div className="relative z-10 max-w-[1000px] mx-auto px-5 md:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-          {stats.map((stat) => (
+          {items.map((stat) => (
             <StatItem key={stat.label} {...stat} started={isRevealed} />
           ))}
         </div>

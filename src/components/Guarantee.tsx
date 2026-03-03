@@ -1,39 +1,27 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
 
-const guarantees = [
-  {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-    title: "The User Adoption Promise",
-    description:
-      "We don't just build it; we ensure you use it. If your team isn't confident using the system after our launch training, we will provide additional retraining sessions at no cost until they are.",
-    highlight: "Retraining at no extra cost",
-  },
-  {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-      </svg>
-    ),
-    title: "The Blueprint Credit",
-    description:
-      "You pay for the Architecture, not the Sales Pitch. If you choose us for the Build, 100% of your Blueprint fee is credited toward implementation. If you go elsewhere, you keep the plans.",
-    highlight: "100% Blueprint fee credited",
-  },
+const guaranteeIcons = [
+  <svg key="adoption" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+    <circle cx="9" cy="7" r="4" />
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+  </svg>,
+  <svg key="credit" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+    <polyline points="14 2 14 8 20 8" />
+    <line x1="16" y1="13" x2="8" y2="13" />
+    <line x1="16" y1="17" x2="8" y2="17" />
+  </svg>,
 ];
 
 export function Guarantee() {
+  const t = useTranslations("guarantee");
+  const items: { title: string; description: string; highlight: string }[] = t.raw("items");
+
   return (
     <section
       className="relative py-24 md:py-32 overflow-hidden"
@@ -44,7 +32,7 @@ export function Guarantee() {
         <div className="text-center mb-14">
           <ScrollReveal>
             <div className="flex justify-center">
-              <SectionLabel text="Our Promise" light />
+              <SectionLabel text={t("label")} light />
             </div>
           </ScrollReveal>
           <ScrollReveal delay={1}>
@@ -52,9 +40,9 @@ export function Guarantee() {
               className="text-[clamp(28px,4vw,42px)]"
               style={{ color: "var(--midnight)" }}
             >
-              Zero risk,{" "}
+              {t("title")}{" "}
               <span className="italic" style={{ color: "var(--amber)" }}>
-                full confidence
+                {t("titleAccent")}
               </span>
             </h2>
           </ScrollReveal>
@@ -62,7 +50,7 @@ export function Guarantee() {
 
         {/* Guarantee cards */}
         <div className="grid md:grid-cols-2 gap-6">
-          {guarantees.map((item, i) => (
+          {items.map((item, i) => (
             <ScrollReveal key={item.title} delay={i + 1}>
               <div
                 className="p-8 md:p-10 h-full transition-all duration-300 hover:-translate-y-0.5"
@@ -82,7 +70,7 @@ export function Guarantee() {
                     color: "white",
                   }}
                 >
-                  {item.icon}
+                  {guaranteeIcons[i]}
                 </div>
 
                 <h3

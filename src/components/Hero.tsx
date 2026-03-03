@@ -1,10 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { FoxLogo } from "./FoxLogo";
 import { SectionLabel } from "./SectionLabel";
+import { useBooking } from "./BookingProvider";
 
 export function Hero() {
+  const t = useTranslations("hero");
+  const { openBooking } = useBooking();
   const [loaded, setLoaded] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
 
@@ -68,7 +72,7 @@ export function Hero() {
             transitionTimingFunction: "var(--fox-ease)",
           }}
         >
-          <SectionLabel text="Digital Solutions That Deliver" />
+          <SectionLabel text={t("label")} />
         </div>
 
         {/* H1 */}
@@ -81,10 +85,10 @@ export function Hero() {
             transitionTimingFunction: "var(--fox-ease)",
           }}
         >
-          Orchestrating Clarity
+          {t("title")}
           <br />
           <span className="italic" style={{ color: "var(--spruce-light)" }}>
-            and Flow
+            {t("titleAccent")}
           </span>
         </h1>
 
@@ -99,8 +103,7 @@ export function Hero() {
             transitionTimingFunction: "var(--fox-ease)",
           }}
         >
-          We build advanced HighLevel & RevOps infrastructure for ambitious
-          service businesses across Scandinavia and CEE. No more manual grind.
+          {t("subtitle")}
         </p>
 
         {/* Buttons */}
@@ -113,8 +116,8 @@ export function Hero() {
             transitionTimingFunction: "var(--fox-ease)",
           }}
         >
-          <a
-            href="#contact"
+          <button
+            onClick={openBooking}
             className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase text-white border-2 border-transparent cursor-pointer transition-all duration-300 hover:-translate-y-0.5 pulse-glow"
             style={{
               fontFamily: "var(--font-heading)",
@@ -123,8 +126,8 @@ export function Hero() {
               transitionTimingFunction: "var(--fox-ease)",
             }}
           >
-            Book a Discovery Call
-          </a>
+            {t("ctaPrimary")}
+          </button>
           <a
             href="#process"
             className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase text-white border-2 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,255,255,0.08)]"
@@ -135,7 +138,7 @@ export function Hero() {
               transitionTimingFunction: "var(--fox-ease)",
             }}
           >
-            Our Process
+            {t("ctaSecondary")}
           </a>
         </div>
       </div>
@@ -154,7 +157,7 @@ export function Hero() {
             color: "var(--text-dark-muted)",
           }}
         >
-          Scroll
+          {t("scroll")}
         </span>
         <div className="scroll-indicator">
           <svg

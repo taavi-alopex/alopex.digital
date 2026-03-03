@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "title": "Alopex Digital — Selguse ja sujuvuse orkestratsioon",
+    "description": "Kõrgtasemel HighLevel & RevOps taristu müügipõhistele teenindusettevõtetele Skandinaavias ja KIE-s. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise.",
+    "ogDescription": "Kõrgtasemel HighLevel & RevOps taristu müügipõhistele teenindusettevõtetele."
+  },
+  "nav": {
+    "about": "Meist",
+    "services": "Teenused",
+    "process": "Protsess",
+    "values": "Väärtused",
+    "contact": "Kontakt",
+    "cta": "Broneeri kõne"
+  },
+  "hero": {
+    "label": "Digitaalsed lahendused, mis toimivad",
+    "title": "Selguse orkestratsioon",
+    "titleAccent": "ja sujuvus",
+    "subtitle": "Me ehitame kõrgtasemel HighLevel & RevOps taristut ambitsioonikatele teenindusettevõtetele üle Skandinaavia ja KIE. Lõpp käsitsi töötamisele.",
+    "ctaPrimary": "Broneeri tutvumiskõne",
+    "ctaSecondary": "Meie protsess",
+    "scroll": "Keri"
+  },
+  "about": {
+    "label": "Kes me oleme",
+    "title": "Sild maailmatasemel tehnoloogia",
+    "titleAccent": " ja sinu turu vahel",
+    "p1": "Alopex Digital on HighLevel taristu eliitne ja paindlik Maaletooja — toob maailmatasemel USA tuluhalduse tehnoloogia müügipõhistele teenindusettevõtetele üle Eesti, Poola, Skandinaavia ja KIE.",
+    "p2": "Me ei ehita lihtsalt süsteeme. Me projekteerime selguse — kaardistame kogu äriprotsessi enne ühtegi töövoo kirjutamist. Seejärel ehitame, käivitame ja tagame, et su meeskond seda ka päriselt kasutab. See ongi erinevus.",
+    "regions": ["Eesti", "Poola", "Skandinaavia", "KIE"],
+    "purposeLabel": "Meie eesmärk",
+    "purposeQuote": "\u201eOrkestreerida selgust ja sujuvust ambitsioonikatele ettevõtetele.\u201c",
+    "purposeDescription": "Me ehitame vabadusmootoreid — automatiseeritud süsteeme, mis vabastavad su aja, et saaksid keskenduda kasvule."
+  },
+  "clients": {
+    "label": "Keda me teenindame",
+    "title": "Loodud",
+    "titleAccent": "müügipõhistele teenindusettevõtetele",
+    "items": [
+      {
+        "industry": "Kõrge väärtusega paigaldus",
+        "examples": "Päikeseenergia, taastuvenergia, küte ja ventilatsioon",
+        "pain": "Müügivihjed kaovad halva järeltegevuse tõttu 10–50k EUR tehingute puhul"
+      },
+      {
+        "industry": "Suhtel põhinev müügitoru",
+        "examples": "Kinnisvara, konsultatsioon, õigusteenused",
+        "pain": "Ostja/müüja torude haldamine, kus sobitamata kontaktid kaovad ära"
+      },
+      {
+        "industry": "Kahepoolne turg",
+        "examples": "Värbamine, personaliteenus, turuplatsid",
+        "pain": "Kandidaatide halb kogemus ja kaduvad kontaktid B2B + B2C voogudes"
+      }
+    ]
+  },
+  "uniques": {
+    "label": "Miks Alopex",
+    "title": "Kolm asja, mida teeme",
+    "titleAccent": "teisiti",
+    "items": [
+      {
+        "title": "Strateegiline kavandamine",
+        "subtitle": "Enne ehitamist projekteerime",
+        "description": "Me ei arva — me kaardistame kogu äriprotsessi enne ühtegi töövoo loomist. Enamik agentuure hakkab kohe ehitama. Meie maandame riski, mõeldes esmalt nagu omanik."
+      },
+      {
+        "title": "Kõrgtasemel API ökosüsteemid",
+        "subtitle": "Rohkem kui lihtsad integratsioonid",
+        "description": "Me ehitame kohandatud API sillad, mis ühendavad HighLevel iga pärand- või kohaliku süsteemiga. Sinu CRM saab ettevõtte keskseks ajuks, mitte lihtsalt järjekordseks tööriistaks."
+      },
+      {
+        "title": "Piirkondlik RevOps pädevus",
+        "subtitle": "Maaletooja faktor",
+        "description": "Me tunneme kultuuri, keelt ja seadusi. GDPR, kohalikud maksevõimalused, piirkondlik maksuarvestus — me oleme sild maailmatasemel USA tehnoloogia ja sinu konkreetse turu vahel."
+      }
+    ]
+  },
+  "process": {
+    "label": "Meie protsess",
+    "title": "Süsteemide",
+    "titleAccent": "orkestreerimise meetod",
+    "steps": [
+      {
+        "title": "Süsteemide audit",
+        "phase": "Avastamine",
+        "description": "Mõistame probleemi enne ravi määramist. 1–2 kohtumisega hindame su praegused valukohad, protsessid ja kitsaskohad, et tuvastada täpselt, kust tulu lekib.",
+        "detail": "1–2 kohtumist"
+      },
+      {
+        "title": "Strateegiline kavand",
+        "phase": "Planeerimine",
+        "description": "Selge tegevuskava ilma üllatusteta. Kaardistame kogu lahenduse arhitektuuri, määrame ajakava ja defineerime iga integratsiooni. See eraldiseisev väljund jääb sulle.",
+        "detail": "Eraldiseisev tasuline väljund"
+      },
+      {
+        "title": "Arhitektuuri ehitus",
+        "phase": "Teostamine",
+        "description": "Läbipaistev edenemine ja tehniline tipptase. Ehitame su HighLevel taristu, integreerime kohandatud API-d ja seadistame automatiseerimise — koos iganädalase aruandlusega ClickUp kaudu.",
+        "detail": "Iganädalased edenemisaruanded"
+      },
+      {
+        "title": "Sujuv käivitus",
+        "phase": "Juurutamine",
+        "description": "Me ei lahku enne, kui su meeskond tunneb end süsteemiga mugavalt. Praktiline koolitus, kasutajaliidese kohandused ja kasutuselevõtu tugi — sest tarnimine pole lõppenud enne, kui meeskond süsteemi kasutab.",
+        "detail": "Praktiline koolitus kaasas"
+      },
+      {
+        "title": "Kasvu tsükkel",
+        "phase": "Jätkuv",
+        "description": "Tagame, et süsteem areneb koos su äriga. Kahenädalased stabiliseerimiskõned lähevad üle kvartaalseteks strateegia ülevaatusteks, hoides su taristut kasvust sammu ees.",
+        "detail": "Pidev areng"
+      }
+    ]
+  },
+  "stats": {
+    "items": [
+      { "value": 150, "suffix": "+", "label": "Rahulolev klient" },
+      { "value": 3, "suffix": "x", "label": "Rohkem müügivihjeid" },
+      { "value": 85, "suffix": "%", "label": "Aega säästetud" },
+      { "value": 24, "suffix": "/7", "label": "Automatiseerimine" }
+    ]
+  },
+  "values": {
+    "label": "Meie väärtused",
+    "title": "Mis juhib",
+    "titleAccent": "kõike, mida teeme",
+    "items": [
+      {
+        "title": "Omaniku mõtteviis",
+        "subtitle": "Vastutus ja tulemus",
+        "description": "Kohtleme klientide ettevõtteid nagu enda omi. Proaktiivsed, usaldusisikuna tegutsevad ja ei ütle kunagi \u201esee pole minu töö\u201c. Me toome positiivse muutuse ja premeerime tulemusi."
+      },
+      {
+        "title": "Vastutustundlik vabadus",
+        "subtitle": "Distsiplineeritud autonoomia",
+        "description": "Töötame kõikjal, aga ei jäta kunagi meeskonda hätta. Tulemus enne tunde. Autonoomia, mis on teenitud usaldusväärsuse ja kõrge sooritusega."
+      },
+      {
+        "title": "Kõik on lahendatav",
+        "subtitle": "Tehniline leidlikkus",
+        "description": "Järeleandmatu probleemilahenduse mõtteviis. Kasutame kollektiivset intelligentsi — tehisintellekti, dokumentatsiooni, kogukonda — et ületada iga takistus. \u201eMa ei tea\u201c ei ole kunagi lõplik vastus."
+      },
+      {
+        "title": "Tõde enne egot",
+        "subtitle": "Meritokraatia ja läbipaistvus",
+        "description": "Radikaalne läbipaistvus meeskonna ja klientidega. Parim idee võidab, sõltumata tiitlist või staažist. Ehitame usaldust avatuse ja aususe kaudu."
+      },
+      {
+        "title": "Süda on sees",
+        "subtitle": "Empaatia ja inimlik side",
+        "description": "Iga pileti ja API päringu taga on inimene. Toetame üksteise arengut, heaolu ja edu. Kõrge sooritus nõuab kõrget hoolimist."
+      }
+    ]
+  },
+  "guarantee": {
+    "label": "Meie lubadus",
+    "title": "Null riski,",
+    "titleAccent": "täielik kindlustunne",
+    "items": [
+      {
+        "title": "Kasutuselevõtu lubadus",
+        "description": "Me ei ehita lihtsalt — me tagame, et sa kasutad seda. Kui su meeskond ei tunne end pärast käivituskoolitust süsteemiga kindlalt, pakume lisaks tasuta ümberõppe seansse, kuni nad tunnevad.",
+        "highlight": "Ümberõpe ilma lisatasuta"
+      },
+      {
+        "title": "Kavandi krediit",
+        "description": "Maksad arhitektuuri eest, mitte müügikõne eest. Kui valid meid ehitama, krediteeritakse 100% kavandi tasust teostuse arvesse. Kui lähed mujale, jäävad plaanid sulle.",
+        "highlight": "100% kavandi tasu krediteeritud"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Valmis lõpetama",
+    "titleAccent": "tulu lekkimise?",
+    "description": "Broneeri tasuta tutvumiskõne. Kaardistame su praegused valukohad ja näitame täpselt, kus võimalused peituvad — ilma kohustuste ja müügikõneta.",
+    "button": "Broneeri tutvumiskõne",
+    "emailPrefix": "Või kirjuta meile otse"
+  },
+  "footer": {
+    "tagline": "Selguse ja sujuvuse orkestratsioon ambitsioonikatele teenindusettevõtetele üle Skandinaavia ja KIE.",
+    "servicesTitle": "Teenused",
+    "companyTitle": "Ettevõte",
+    "services": [
+      { "label": "Süsteemide audit" },
+      { "label": "Strateegiline kavand" },
+      { "label": "Arhitektuuri ehitus" },
+      { "label": "Sujuv käivitus" },
+      { "label": "Kasvu tsükkel" }
+    ],
+    "company": [
+      { "label": "Meist" },
+      { "label": "Meie protsess" },
+      { "label": "Väärtused" },
+      { "label": "Kontakt" }
+    ],
+    "copyright": "Alopex Digital OÜ. Kõik õigused kaitstud.",
+    "location": "Tallinn, Eesti"
+  }
+}

@@ -1,54 +1,31 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
 
-const uniques = [
-  {
-    number: "01",
-    title: "Strategic Blueprinting",
-    subtitle: "We architect before we build",
-    description:
-      "We don't guess; we map your entire business process before building a single workflow. Most agencies skip straight to building. We mitigate risk by thinking like an owner first.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="2" />
-        <path d="M3 9h18M9 3v18" />
-      </svg>
-    ),
-    accent: false,
-  },
-  {
-    number: "02",
-    title: "Advanced API Ecosystems",
-    subtitle: "Beyond basic integrations",
-    description:
-      "We build custom API bridges that connect HighLevel to any legacy or local system. Your CRM becomes the central brain of your company, not just another tool.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="3" />
-        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-      </svg>
-    ),
-    accent: false,
-  },
-  {
-    number: "03",
-    title: "Regional RevOps Fluency",
-    subtitle: 'The "Maaletooja" factor',
-    description:
-      "We know the culture, the language, and the laws. GDPR, local payment gateways, regional tax logic — we're the bridge between world-class US tech and your specific market.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10" />
-      </svg>
-    ),
-    accent: true,
-  },
+const uniqueIcons = [
+  <svg key="blueprint" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <path d="M3 9h18M9 3v18" />
+  </svg>,
+  <svg key="api" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="3" />
+    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+  </svg>,
+  <svg key="regional" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" />
+    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10" />
+  </svg>,
 ];
 
+const numbers = ["01", "02", "03"];
+const accents = [false, false, true];
+
 export function Uniques() {
+  const t = useTranslations("uniques");
+  const items: { title: string; subtitle: string; description: string }[] = t.raw("items");
+
   return (
     <section
       id="uniques"
@@ -60,7 +37,7 @@ export function Uniques() {
         <div className="text-center max-w-[600px] mx-auto mb-16">
           <ScrollReveal>
             <div className="flex justify-center">
-              <SectionLabel text="Why Alopex" />
+              <SectionLabel text={t("label")} />
             </div>
           </ScrollReveal>
           <ScrollReveal delay={1}>
@@ -68,9 +45,9 @@ export function Uniques() {
               className="text-[clamp(28px,4vw,42px)]"
               style={{ color: "var(--frost)" }}
             >
-              Three things we do{" "}
+              {t("title")}{" "}
               <span className="italic" style={{ color: "var(--spruce-light)" }}>
-                differently
+                {t("titleAccent")}
               </span>
             </h2>
           </ScrollReveal>
@@ -78,8 +55,8 @@ export function Uniques() {
 
         {/* Cards Grid */}
         <div className="grid md:grid-cols-3 gap-5">
-          {uniques.map((item, i) => (
-            <ScrollReveal key={item.number} delay={i + 1}>
+          {items.map((item, i) => (
+            <ScrollReveal key={numbers[i]} delay={i + 1}>
               <div
                 className="group relative p-7 md:p-8 h-full transition-all duration-300 hover:-translate-y-0.5"
                 style={{
@@ -93,12 +70,12 @@ export function Uniques() {
                 <div
                   className="w-[52px] h-[52px] flex items-center justify-center mb-6"
                   style={{
-                    background: item.accent ? "var(--amber)" : "var(--spruce)",
+                    background: accents[i] ? "var(--amber)" : "var(--spruce)",
                     borderRadius: "var(--radius-icon)",
                     color: "white",
                   }}
                 >
-                  {item.icon}
+                  {uniqueIcons[i]}
                 </div>
 
                 {/* Number */}
@@ -106,12 +83,12 @@ export function Uniques() {
                   className="text-[11px] font-bold tracking-[2px]"
                   style={{
                     fontFamily: "var(--font-heading)",
-                    color: item.accent
+                    color: accents[i]
                       ? "var(--amber-light)"
                       : "var(--spruce-light)",
                   }}
                 >
-                  {item.number}
+                  {numbers[i]}
                 </span>
 
                 {/* Title */}
@@ -148,7 +125,7 @@ export function Uniques() {
                 <div
                   className="absolute bottom-0 left-8 right-8 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{
-                    background: item.accent
+                    background: accents[i]
                       ? "var(--amber)"
                       : "var(--spruce)",
                     borderRadius: "1px",

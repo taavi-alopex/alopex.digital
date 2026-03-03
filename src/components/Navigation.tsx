@@ -1,17 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { FoxLogo } from "./FoxLogo";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useBooking } from "./BookingProvider";
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#uniques" },
-  { label: "Process", href: "#process" },
-  { label: "Values", href: "#values" },
-  { label: "Contact", href: "#contact" },
-];
+const navKeys = [
+  { key: "about", href: "#about" },
+  { key: "services", href: "#uniques" },
+  { key: "process", href: "#process" },
+  { key: "values", href: "#values" },
+  { key: "contact", href: "#contact" },
+] as const;
 
 export function Navigation() {
+  const t = useTranslations("nav");
+  const { openBooking } = useBooking();
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -47,18 +52,19 @@ export function Navigation() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {navKeys.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className="text-[13px] font-medium tracking-wide text-[var(--mist)] hover:text-white transition-colors duration-200"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              {link.label}
+              {t(link.key)}
             </a>
           ))}
-          <a
-            href="#contact"
+          <LanguageSwitcher />
+          <button
+            onClick={openBooking}
             className="ml-2 px-5 py-2.5 text-[11px] font-semibold tracking-[0.5px] uppercase text-white border-0 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(212,135,63,0.3)]"
             style={{
               fontFamily: "var(--font-heading)",
@@ -67,8 +73,8 @@ export function Navigation() {
               transitionTimingFunction: "var(--fox-ease)",
             }}
           >
-            Book a Call
-          </a>
+            {t("cta")}
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -99,7 +105,7 @@ export function Navigation() {
       {mobileOpen && (
         <div className="md:hidden nav-glass border-t border-[rgba(255,255,255,0.06)]">
           <div className="px-5 py-6 flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {navKeys.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -107,21 +113,23 @@ export function Navigation() {
                 className="text-[15px] font-medium text-[var(--mist)] hover:text-white transition-colors"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                {link.label}
+                {t(link.key)}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setMobileOpen(false)}
-              className="mt-2 px-5 py-3 text-[12px] font-semibold tracking-[0.5px] uppercase text-white text-center"
+            <div className="mt-2">
+              <LanguageSwitcher />
+            </div>
+            <button
+              onClick={() => { setMobileOpen(false); openBooking(); }}
+              className="mt-2 px-5 py-3 text-[12px] font-semibold tracking-[0.5px] uppercase text-white text-center border-0 cursor-pointer"
               style={{
                 fontFamily: "var(--font-heading)",
                 background: "var(--amber)",
                 borderRadius: "var(--radius-button)",
               }}
             >
-              Book a Call
-            </a>
+              {t("cta")}
+            </button>
           </div>
         </div>
       )}

@@ -1,52 +1,14 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
 
-const steps = [
-  {
-    number: "01",
-    title: "The Systems Audit",
-    phase: "Discovery",
-    description:
-      "We understand the problem before we prescribe the cure. In 1-2 meetings, we assess your current pains, processes, and bottlenecks to identify exactly where revenue is leaking.",
-    detail: "1-2 meetings",
-  },
-  {
-    number: "02",
-    title: "The Strategic Blueprint",
-    phase: "Planning",
-    description:
-      "A clear roadmap with no surprises. We map the full solution architecture, scope the timeline, and define every integration. This standalone deliverable is yours to keep.",
-    detail: "Standalone paid deliverable",
-  },
-  {
-    number: "03",
-    title: "The Architecture Build",
-    phase: "Implementation",
-    description:
-      "Transparent progress and technical excellence. We build your HighLevel infrastructure, integrate custom APIs, and configure automation — with weekly reporting via ClickUp.",
-    detail: "Weekly progress reports",
-  },
-  {
-    number: "04",
-    title: "The Frictionless Launch",
-    phase: "Onboarding",
-    description:
-      "We don't leave until your team is comfortable using the system. Hands-on training, UI tweaks, and adoption support — because delivery isn't done until your team is using it.",
-    detail: "Hands-on training included",
-  },
-  {
-    number: "05",
-    title: "The Growth Loop",
-    phase: "Ongoing",
-    description:
-      "We ensure the system evolves with your business. Bi-weekly stabilization calls transition to quarterly strategy reviews, keeping your infrastructure ahead of your growth.",
-    detail: "Continuous evolution",
-  },
-];
-
 export function Process() {
+  const t = useTranslations("process");
+  const steps: { title: string; phase: string; description: string; detail: string }[] = t.raw("steps");
+  const numbers = ["01", "02", "03", "04", "05"];
+
   return (
     <section
       id="process"
@@ -58,7 +20,7 @@ export function Process() {
         <div className="text-center max-w-[600px] mx-auto mb-16 md:mb-20">
           <ScrollReveal>
             <div className="flex justify-center">
-              <SectionLabel text="Our Process" light />
+              <SectionLabel text={t("label")} light />
             </div>
           </ScrollReveal>
           <ScrollReveal delay={1}>
@@ -66,9 +28,9 @@ export function Process() {
               className="text-[clamp(28px,4vw,42px)]"
               style={{ color: "var(--midnight)" }}
             >
-              The Systems{" "}
+              {t("title")}{" "}
               <span className="italic" style={{ color: "var(--spruce)" }}>
-                Orchestration Method
+                {t("titleAccent")}
               </span>
             </h2>
           </ScrollReveal>
@@ -92,7 +54,7 @@ export function Process() {
 
               return (
                 <div
-                  key={step.number}
+                  key={numbers[i]}
                   className="relative md:grid md:grid-cols-2 md:gap-12 md:py-8"
                 >
                   {/* Timeline dot */}
@@ -109,7 +71,7 @@ export function Process() {
                         boxShadow: "0 0 0 6px var(--off-white)",
                       }}
                     >
-                      {step.number}
+                      {numbers[i]}
                     </div>
                   </div>
 
@@ -145,7 +107,7 @@ export function Process() {
                             color: "white",
                           }}
                         >
-                          {step.number}
+                          {numbers[i]}
                         </div>
                         <span
                           className="text-[10px] font-bold tracking-[2px] uppercase"
