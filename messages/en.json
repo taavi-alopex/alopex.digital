@@ -302,6 +302,11 @@
       { "label": "Values" },
       { "label": "Contact" }
     ],
+    "legalTitle": "Legal",
+    "legal": [
+      { "label": "Privacy Policy" },
+      { "label": "Terms of Service" }
+    ],
     "copyright": "Alopex Digital O\u00dc. All rights reserved.",
     "location": "Tallinn, Estonia"
   },
