@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { FoxLogo } from "./FoxLogo";
+import { useRecruitment } from "./RecruitmentProvider";
 
 const serviceHrefs = ["#process", "#process", "#process", "#process", "#process"];
 const companyHrefs = ["#about", "#process", "#values", "#contact"];
@@ -10,6 +11,8 @@ const legalHrefs = ["/privacy-policy", "/terms"];
 
 export function Footer() {
   const t = useTranslations("footer");
+  const tRecruitment = useTranslations("recruitment");
+  const { openRecruitment } = useRecruitment();
   const services: { label: string }[] = t.raw("services");
   const company: { label: string }[] = t.raw("company");
   const legal: { label: string }[] = t.raw("legal");
@@ -101,6 +104,20 @@ export function Footer() {
                     )}
                   </li>
                 ))}
+                {col.title === t("companyTitle") && (
+                  <li>
+                    <button
+                      onClick={openRecruitment}
+                      className="text-[14px] bg-transparent border-0 p-0 cursor-pointer hover:text-[var(--spruce-light)] transition-colors duration-200"
+                      style={{
+                        color: "var(--text-dark-muted)",
+                        fontFamily: "var(--font-body)",
+                      }}
+                    >
+                      {tRecruitment("footerLink")}
+                    </button>
+                  </li>
+                )}
               </ul>
             </div>
           ))}

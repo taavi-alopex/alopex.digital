@@ -3,14 +3,41 @@
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 import { useBooking } from "./BookingProvider";
+import { useAssessment } from "./AssessmentProvider";
 
 interface InlineCTAProps {
-  variant: "afterClients" | "afterProcess";
+  variant: "afterClients" | "afterProcess" | "assessment";
 }
 
 export function InlineCTA({ variant }: InlineCTAProps) {
   const t = useTranslations("inlineCta");
   const { openBooking } = useBooking();
+  const { openAssessment } = useAssessment();
+
+  if (variant === "assessment") {
+    return (
+      <div
+        className="py-12 text-center"
+        style={{ background: "var(--off-white)" }}
+      >
+        <ScrollReveal>
+          <p
+            className="text-[15px] mb-2"
+            style={{ color: "var(--dark-gray)" }}
+          >
+            {t("assessment")}
+          </p>
+          <button
+            onClick={openAssessment}
+            className="border-0 bg-transparent cursor-pointer text-[15px] font-semibold underline underline-offset-4 transition-colors duration-200 hover:opacity-80"
+            style={{ color: "var(--spruce)" }}
+          >
+            {t("assessmentLink")}
+          </button>
+        </ScrollReveal>
+      </div>
+    );
+  }
 
   if (variant === "afterClients") {
     return (

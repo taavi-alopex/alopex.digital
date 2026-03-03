@@ -20,13 +20,16 @@
     "ctaPrimary": "Umów bezpłatną rozmowę",
     "ctaPrimaryMicro": "30-minutowa rozmowa. Bez zobowiązań.",
     "ctaSecondary": "Nasz proces",
-    "scroll": "Przewiń"
+    "scroll": "Przewiń",
+    "assessmentLink": "Zrób darmowy audyt RevOps"
   },
   "inlineCta": {
     "afterClients": "Rozpoznajesz swoją firmę?",
     "afterClientsLink": "Porozmawiajmy.",
     "afterProcess": "Zacznij od Audytu Systemów",
-    "afterProcessMicro": "Bezpłatna rozmowa \u2014 zmapujemy, gdzie tracisz przychody."
+    "afterProcessMicro": "Bezpłatna rozmowa \u2014 zmapujemy, gdzie tracisz przychody.",
+    "assessment": "Nie wiesz, od czego zacząć?",
+    "assessmentLink": "Zrób darmowy audyt RevOps \u2192"
   },
   "about": {
     "label": "Kim jesteśmy",
@@ -309,6 +312,148 @@
     ],
     "copyright": "Alopex Digital OÜ. Wszelkie prawa zastrzeżone.",
     "location": "Tallinn, Estonia"
+  },
+  "recruitment": {
+    "title": "Dołącz do zespołu Alopex",
+    "subtitle": "Zawsze szukamy bystrych, zmotywowanych osób, które chcą budować coś znaczącego. Opowiedz nam o sobie.",
+    "name": "Imię i nazwisko",
+    "email": "E-mail",
+    "role": "Rola, która Cię interesuje",
+    "rolePlaceholder": "np. Specjalista RevOps, Developer, Sprzedaż...",
+    "message": "Opowiedz nam o sobie",
+    "messagePlaceholder": "Co Cię ekscytuje w Alopex? Jaka jest Twoja supermoc?",
+    "submit": "Wyślij zgłoszenie",
+    "submitting": "Wysyłanie...",
+    "success": "Zgłoszenie wysłane!",
+    "successMessage": "Dziękujemy za kontakt. Przejrzymy Twoje zgłoszenie i odezwiemy się w ciągu kilku dni.",
+    "footerLink": "Dołącz do zespołu"
+  },
+  "socialProof": {
+    "label": "Wyniki",
+    "title": "Udowodnione rezultaty",
+    "titleAccent": "z prawdziwymi firmami",
+    "partnersLabel": "Zaufani partnerzy",
+    "caseStudy": {
+      "client": "Koduaken",
+      "industry": "Produkcja okien",
+      "challenge": "Oferty wysyłane, ale bez follow-upu — kontrakty wymykały się z rąk.",
+      "solution": "Automatyczne sekwencje follow-up uruchamiane po każdej ofercie.",
+      "result": "20%",
+      "resultLabel": "poprawa konwersji",
+      "resultDetail": "już od pierwszego testu"
+    }
+  },
+  "anchoring": {
+    "label": "Mądra inwestycja",
+    "title": "Etatowy specjalista RevOps",
+    "titleAccent": "vs. Alopex",
+    "inHouse": {
+      "title": "Zatrudnij wewnętrznie",
+      "salary": "€48 000–72 000/rok",
+      "items": [
+        "Wynagrodzenie + świadczenia",
+        "3–6 miesięcy na rekrutację",
+        "Szkolenie i wdrożenie",
+        "Pojedynczy punkt awarii",
+        "Licencje na narzędzia dodatkowo"
+      ]
+    },
+    "alopex": {
+      "title": "Współpraca z Alopex",
+      "items": [
+        "Zespół specjalistów od pierwszego dnia",
+        "Gotowe w tygodniach, nie miesiącach",
+        "Wbudowane najlepsze praktyki",
+        "Bieżące wsparcie i rozwój",
+        "Licencja GoHighLevel w cenie"
+      ],
+      "highlight": "Ułamek kosztu. Zero ryzyka."
+    },
+    "cta": "Zobacz, jak to wyglądałoby u Ciebie",
+    "ctaMicro": "Bezpłatna rozmowa — bez zobowiązań."
+  },
+  "assessment": {
+    "welcome": {
+      "title": "Audyt RevOps",
+      "subtitle": "Odpowiedz na 5 szybkich pytań, aby zobaczyć, jak wypadają Twoje operacje przychodowe — i gdzie kryją się największe możliwości.",
+      "start": "Rozpocznij audyt"
+    },
+    "questions": [
+      {
+        "question": "Jak obecnie śledzisz leady?",
+        "options": [
+          "Arkusz kalkulacyjny lub e-mail",
+          "Podstawowy CRM (HubSpot free, Pipedrive itp.)",
+          "GoHighLevel lub zaawansowany CRM",
+          "Właściwie ich nie śledzimy"
+        ]
+      },
+      {
+        "question": "Co dzieje się po pojawieniu się leada?",
+        "options": [
+          "Ktoś kontaktuje się ręcznie",
+          "Mamy kilka automatycznych maili",
+          "W pełni zautomatyzowana odpowiedź + sekwencja pielęgnacji",
+          "Zależy, kto jest dostępny"
+        ]
+      },
+      {
+        "question": "Jak szybko nowy lead dostaje odpowiedź?",
+        "options": [
+          "W ciągu 5 minut",
+          "W ciągu godziny",
+          "Tego samego dnia roboczego",
+          "Następnego dnia lub później"
+        ]
+      },
+      {
+        "question": "Jak czyste są Twoje dane klientów?",
+        "options": [
+          "Nie mamy centralnej bazy danych",
+          "Arkusz z lukami",
+          "CRM, ale bałagan",
+          "Czysty, aktualny CRM"
+        ]
+      },
+      {
+        "question": "Ile kontraktów wymyka się co miesiąc?",
+        "options": [
+          "Żaden — śledzimy wszystko",
+          "Kilka, prawdopodobnie",
+          "10–20% lub więcej",
+          "Nie mam pojęcia"
+        ]
+      }
+    ],
+    "other": "Inne (proszę sprecyzować)",
+    "progress": "Pytanie {current} z {total}",
+    "back": "Wstecz",
+    "next": "Dalej",
+    "contact": {
+      "title": "Prawie gotowe!",
+      "subtitle": "Podaj swoje dane, aby otrzymać spersonalizowaną rekomendację i konkretne następne kroki.",
+      "name": "Imię",
+      "email": "E-mail",
+      "company": "Firma (opcjonalnie)",
+      "submit": "Pokaż wyniki",
+      "skip": "Pomiń — pokaż wyniki"
+    },
+    "results": {
+      "critical": {
+        "label": "Krytyczny",
+        "message": "Twoje operacje przychodowe mają znaczące luki, które prawdopodobnie kosztują Cię kontrakty co tydzień. Dobra wiadomość: to dokładnie te problemy, które rozwiązujemy, a szybkie wygrane są w zasięgu ręki."
+      },
+      "needsWork": {
+        "label": "Wymaga pracy",
+        "message": "Masz pewne fundamenty, ale są wyraźne możliwości usprawnienia procesu i przechwycenia większych przychodów. Kilka celowanych usprawnień może przynieść dużą różnicę."
+      },
+      "strong": {
+        "label": "Mocny fundament",
+        "message": "Twoje operacje wyglądają dobrze. Wciąż może być przestrzeń do optymalizacji i skalowania — znajdźmy razem te ostatnie punkty dźwigni."
+      },
+      "cta": "Umów bezpłatną rozmowę",
+      "ctaMicro": "Przejdziemy przez Twoje wyniki i pokażemy dokładnie, co poprawić."
+    }
   },
   "legal": {
     "privacyPolicy": {

@@ -14,25 +14,28 @@
   },
   "hero": {
     "label": "GoHighLevel & n8n agentuur",
-    "title": "Sinu tuluhaldus,",
+    "title": "Sinu müügimasin,",
     "titleAccent": "projekteeritud ja käivitatud",
     "subtitle": "Me kaardistame su äriprotsessi, ehitame GoHighLevel taristu ja tagame, et su meeskond seda päriselt kasutab. Lõpp müügivihjete lekkimisele käsitsi kaoses.",
     "ctaPrimary": "Broneeri tutvumiskõne",
     "ctaPrimaryMicro": "30-minutiline kõne. Kohustuseta.",
     "ctaSecondary": "Meie protsess",
-    "scroll": "Keri"
+    "scroll": "Keri",
+    "assessmentLink": "Tee tasuta müügisüsteemi audit"
   },
   "inlineCta": {
     "afterClients": "Tunned oma ettevõtte ära?",
     "afterClientsLink": "Räägime.",
     "afterProcess": "Alusta süsteemide auditiga",
-    "afterProcessMicro": "Tasuta tutvumiskõne \u2014 kaardistame, kust tulu lekib."
+    "afterProcessMicro": "Tasuta tutvumiskõne \u2014 kaardistame, kust tulu lekib.",
+    "assessment": "Pole kindel, kust alustada?",
+    "assessmentLink": "Tee tasuta müügisüsteemi audit \u2192"
   },
   "about": {
     "label": "Kes me oleme",
     "title": "GoHighLevel & RevOps agentuur",
     "titleAccent": "Eestis, Poolas ja KIE-s",
-    "p1": "Alopex Digital on GoHighLevel taristu eliitne ja paindlik Maaletooja — toob maailmatasemel USA tuluhalduse tehnoloogia müügipõhistele ettevõtetele üle Eesti, Poola ja KIE.",
+    "p1": "Alopex Digital on GoHighLevel Maaletooja — me ehitame automatiseeritud süsteeme, mis vabastavad su aja, et saaksid keskenduda kasvule.",
     "p2": "Me ei ehita lihtsalt süsteeme. Me projekteerime selguse — kaardistame kogu äriprotsessi enne ühtegi töövoo kirjutamist. Seejärel ehitame, käivitame ja tagame, et su meeskond seda ka päriselt kasutab. See ongi erinevus.",
     "regions": ["Eesti", "Poola", "KIE"],
     "purposeLabel": "Meie eesmärk",
@@ -90,7 +93,7 @@
     "label": "Mida me ehitame",
     "title": "GoHighLevel lahendused",
     "titleAccent": "ja kohandatud integratsioonid",
-    "intro": "Pakume terviklikku tuluhalduse platvormi — GoHighLevel baasil, ühendatud sinu kohalike süsteemidega läbi kohandatud n8n integratsioonide.",
+    "intro": "Pakume terviklikku RevOps platvormi — GoHighLevel baasil, ühendatud sinu kohalike süsteemidega läbi kohandatud n8n integratsioonide.",
     "platformLabel": "GoHighLevel platvorm",
     "integrationsLabel": "Kohandatud integratsioonid n8n kaudu",
     "platformItems": [
@@ -309,6 +312,148 @@
     ],
     "copyright": "Alopex Digital OÜ. Kõik õigused kaitstud.",
     "location": "Tallinn, Eesti"
+  },
+  "recruitment": {
+    "title": "Liitu Alopexi meeskonnaga",
+    "subtitle": "Otsime alati teravaid ja motiveeritud inimesi, kes tahavad ehitada midagi tähenduslikku. Räägi meile enda kohta.",
+    "name": "Täisnimi",
+    "email": "E-post",
+    "role": "Roll, mis sind huvitab",
+    "rolePlaceholder": "nt RevOps spetsialist, arendaja, müük...",
+    "message": "Räägi meile enda kohta",
+    "messagePlaceholder": "Mis sind Alopexi juures põnevil hoiab? Mis on su supervõime?",
+    "submit": "Saada kandidatuur",
+    "submitting": "Saatmine...",
+    "success": "Kandidatuur saadetud!",
+    "successMessage": "Täname, et ühendust võtsid. Vaatame su kandidatuuri läbi ja vastame mõne päeva jooksul.",
+    "footerLink": "Liitu meeskonnaga"
+  },
+  "socialProof": {
+    "label": "Tulemused",
+    "title": "Tõestatud tulemused",
+    "titleAccent": "päris ettevõtetega",
+    "partnersLabel": "Usaldusväärsed partnerid",
+    "caseStudy": {
+      "client": "Koduaken",
+      "industry": "Aknatootmine",
+      "challenge": "Hinnapakkumised saadeti, aga järeltegevust ei tulnud — tehingud libisesid käest.",
+      "solution": "Automatiseeritud järeltegevuse järjestused, mis käivituvad pärast iga hinnapakkumist.",
+      "result": "20%",
+      "resultLabel": "konversiooni paranemine",
+      "resultDetail": "juba esimesest testist"
+    }
+  },
+  "anchoring": {
+    "label": "Nutikas investeering",
+    "title": "Palgaline RevOps spetsialist",
+    "titleAccent": "vs. Alopex",
+    "inHouse": {
+      "title": "Palka majja",
+      "salary": "€48 000–72 000/a",
+      "items": [
+        "Palk + sotsiaalmaksud",
+        "3–6 kuud värbamiseks",
+        "Koolitus ja sisseelamine",
+        "Üks inimene = üks riskikoht",
+        "Tööriistade litsentsid peale"
+      ]
+    },
+    "alopex": {
+      "title": "Tööta Alopexiga",
+      "items": [
+        "Spetsialistide meeskond esimesest päevast",
+        "Töötab nädalatega, mitte kuudega",
+        "Parimad praktikad sisseehitatud",
+        "Jätkuv tugi ja areng",
+        "GoHighLevel litsents kaasas"
+      ],
+      "highlight": "Murdosa hinnast. Null riski."
+    },
+    "cta": "Vaata, kuidas see sinu jaoks välja näeks",
+    "ctaMicro": "Tasuta tutvumiskõne — kohustuseta."
+  },
+  "assessment": {
+    "welcome": {
+      "title": "Müügisüsteemi tervisekontroll",
+      "subtitle": "Vasta 5 kiirele küsimusele, et näha, kuidas su müügisüsteemid töötavad — ja kus peituvad suurimad võimalused.",
+      "start": "Alusta auditi"
+    },
+    "questions": [
+      {
+        "question": "Kuidas sa praegu müügivihjeid jälgid?",
+        "options": [
+          "Exceli tabel või e-post",
+          "Lihtne CRM (HubSpot free, Pipedrive jne)",
+          "GoHighLevel või täiustatud CRM",
+          "Tegelikult ei jälgigi"
+        ]
+      },
+      {
+        "question": "Mis juhtub pärast müügivihje saabumist?",
+        "options": [
+          "Keegi võtab käsitsi ühendust",
+          "Meil on mõned automaatsed e-kirjad",
+          "Täisautomaatne vastus + hooldusahel",
+          "Oleneb, kes parajasti saadaval on"
+        ]
+      },
+      {
+        "question": "Kui kiiresti uus müügivihje vastuse saab?",
+        "options": [
+          "5 minuti jooksul",
+          "Tunni jooksul",
+          "Sama tööpäeva jooksul",
+          "Järgmisel päeval või hiljem"
+        ]
+      },
+      {
+        "question": "Kui puhas on su kliendiandmebaas?",
+        "options": [
+          "Meil pole ühtset andmebaasi",
+          "Excel lünkadega",
+          "CRM, aga segane",
+          "Puhas, ajakohane CRM"
+        ]
+      },
+      {
+        "question": "Mitu tehingut iga kuu käest libiseb?",
+        "options": [
+          "Mitte ühtegi — jälgime kõike",
+          "Mõned tõenäoliselt",
+          "10–20% või rohkem",
+          "Pole aimugi"
+        ]
+      }
+    ],
+    "other": "Muu (täpsusta)",
+    "progress": "Küsimus {current}/{total}",
+    "back": "Tagasi",
+    "next": "Edasi",
+    "contact": {
+      "title": "Peaaegu valmis!",
+      "subtitle": "Sisesta oma andmed personaalse soovituse ja konkreetsete järgmiste sammude saamiseks.",
+      "name": "Nimi",
+      "email": "E-post",
+      "company": "Ettevõte (valikuline)",
+      "submit": "Näita tulemusi",
+      "skip": "Jäta vahele — näita tulemusi"
+    },
+    "results": {
+      "critical": {
+        "label": "Kriitiline",
+        "message": "Su müügisüsteemidel on olulised lüngad, mis tõenäoliselt maksavad sulle igal nädalal tehinguid. Hea uudis: need on täpselt need probleemid, mida me lahendame, ja kiired võidud on käeulatuses."
+      },
+      "needsWork": {
+        "label": "Vajab tööd",
+        "message": "Sul on mõned alused paigas, aga on selgeid võimalusi protsessi tõhustamiseks ja rohkema tulu hõivamiseks. Mõni sihitud parandus võib tuua suure erinevuse."
+      },
+      "strong": {
+        "label": "Tugev vundament",
+        "message": "Su süsteemid on heas seisus. Siiski võib olla ruumi optimeerimiseks ja skaleerimiseks — leiame need viimased hoovad koos üles."
+      },
+      "cta": "Broneeri tasuta tutvumiskõne",
+      "ctaMicro": "Vaatame su tulemused läbi ja näitame täpselt, kust parandada."
+    }
   },
   "legal": {
     "privacyPolicy": {

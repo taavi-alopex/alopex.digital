@@ -8,6 +8,8 @@ import { Uniques } from "@/components/Uniques";
 import { Services } from "@/components/Services";
 import { Process } from "@/components/Process";
 import { Stats } from "@/components/Stats";
+import { SocialProof } from "@/components/SocialProof";
+import { Anchoring } from "@/components/Anchoring";
 import { Values } from "@/components/Values";
 import { Guarantee } from "@/components/Guarantee";
 import { CTA } from "@/components/CTA";
@@ -29,8 +31,10 @@ export default function Home() {
         <Uniques />
         <Services />
         <Process />
-        <InlineCTA variant="afterProcess" />
+        <InlineCTA variant="assessment" />
         <Stats />
+        <SocialProof />
+        <Anchoring />
         <Guarantee />
         <CTA />
         <Values />

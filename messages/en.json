@@ -20,13 +20,16 @@
     "ctaPrimary": "Book a Discovery Call",
     "ctaPrimaryMicro": "30-minute call. No obligation.",
     "ctaSecondary": "Our Process",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "assessmentLink": "Take the free RevOps Health Check"
   },
   "inlineCta": {
     "afterClients": "Recognize your business?",
     "afterClientsLink": "Let\u2019s talk.",
     "afterProcess": "Start with a Systems Audit",
-    "afterProcessMicro": "Free discovery call \u2014 we\u2019ll map where you\u2019re losing revenue."
+    "afterProcessMicro": "Free discovery call \u2014 we\u2019ll map where you\u2019re losing revenue.",
+    "assessment": "Not sure where to start?",
+    "assessmentLink": "Take the free RevOps Health Check \u2192"
   },
   "about": {
     "label": "Who We Are",
@@ -309,6 +312,148 @@
     ],
     "copyright": "Alopex Digital O\u00dc. All rights reserved.",
     "location": "Tallinn, Estonia"
+  },
+  "recruitment": {
+    "title": "Join the Alopex Team",
+    "subtitle": "We\u2019re always looking for sharp, driven people who want to build something meaningful. Tell us about yourself.",
+    "name": "Full Name",
+    "email": "Email",
+    "role": "Role you\u2019re interested in",
+    "rolePlaceholder": "e.g. RevOps Specialist, Developer, Sales...",
+    "message": "Tell us about yourself",
+    "messagePlaceholder": "What excites you about Alopex? What\u2019s your superpower?",
+    "submit": "Send Application",
+    "submitting": "Sending...",
+    "success": "Application sent!",
+    "successMessage": "Thanks for reaching out. We\u2019ll review your application and get back to you within a few days.",
+    "footerLink": "Join the team"
+  },
+  "socialProof": {
+    "label": "Results",
+    "title": "Proven results",
+    "titleAccent": "with real businesses",
+    "partnersLabel": "Trusted Partners",
+    "caseStudy": {
+      "client": "Koduaken",
+      "industry": "Window Manufacturing",
+      "challenge": "Quotes sent but never followed up \u2014 deals slipping through the cracks.",
+      "solution": "Automated follow-up sequences triggered after every quote.",
+      "result": "20%",
+      "resultLabel": "improvement in conversion rate",
+      "resultDetail": "from the very first test"
+    }
+  },
+  "anchoring": {
+    "label": "The Smart Investment",
+    "title": "In-house RevOps",
+    "titleAccent": "vs. Alopex",
+    "inHouse": {
+      "title": "Hire In-House",
+      "salary": "\u20ac48,000\u201372,000/yr",
+      "items": [
+        "Salary + benefits",
+        "3\u20136 months to hire",
+        "Training & ramp-up time",
+        "Single point of failure",
+        "Tool licenses on top"
+      ]
+    },
+    "alopex": {
+      "title": "Work with Alopex",
+      "items": [
+        "Specialist team from day one",
+        "Live in weeks, not months",
+        "Built-in best practices",
+        "Ongoing support & evolution",
+        "GoHighLevel license included"
+      ],
+      "highlight": "Fraction of the cost. None of the risk."
+    },
+    "cta": "See what it would look like for you",
+    "ctaMicro": "Free discovery call \u2014 no obligation."
+  },
+  "assessment": {
+    "welcome": {
+      "title": "RevOps Health Check",
+      "subtitle": "Answer 5 quick questions to see how your revenue operations stack up \u2014 and where the biggest opportunities are hiding.",
+      "start": "Start Assessment"
+    },
+    "questions": [
+      {
+        "question": "How do you currently track your leads?",
+        "options": [
+          "Spreadsheets or email",
+          "Basic CRM (HubSpot free, Pipedrive, etc.)",
+          "GoHighLevel or advanced CRM",
+          "We don\u2019t really track them"
+        ]
+      },
+      {
+        "question": "What happens after a lead comes in?",
+        "options": [
+          "Someone follows up manually",
+          "We have some automated emails",
+          "Fully automated response + nurture sequence",
+          "It depends on who\u2019s available"
+        ]
+      },
+      {
+        "question": "How fast does a new lead get a response?",
+        "options": [
+          "Within 5 minutes",
+          "Within an hour",
+          "Same business day",
+          "Next day or later"
+        ]
+      },
+      {
+        "question": "How clean is your customer data?",
+        "options": [
+          "We don\u2019t have a central database",
+          "Spreadsheet with some gaps",
+          "CRM but it\u2019s messy",
+          "Clean, up-to-date CRM"
+        ]
+      },
+      {
+        "question": "How many deals fall through the cracks each month?",
+        "options": [
+          "None \u2014 we track everything",
+          "A few, probably",
+          "10\u201320% or more",
+          "No idea"
+        ]
+      }
+    ],
+    "other": "Other (please specify)",
+    "progress": "Question {current} of {total}",
+    "back": "Back",
+    "next": "Next",
+    "contact": {
+      "title": "Almost there!",
+      "subtitle": "Enter your details for a personalized recommendation and actionable next steps.",
+      "name": "Name",
+      "email": "Email",
+      "company": "Company (optional)",
+      "submit": "See My Results",
+      "skip": "Skip \u2014 just show results"
+    },
+    "results": {
+      "critical": {
+        "label": "Critical",
+        "message": "Your revenue operations have significant gaps that are likely costing you deals every week. The good news: these are exactly the problems we solve, and fast wins are within reach."
+      },
+      "needsWork": {
+        "label": "Needs Work",
+        "message": "You have some foundations in place, but there are clear opportunities to tighten your process and capture more revenue. A few targeted improvements could make a big difference."
+      },
+      "strong": {
+        "label": "Strong Foundation",
+        "message": "Your operations are in good shape. There may still be room to optimize and scale \u2014 let\u2019s find those final leverage points together."
+      },
+      "cta": "Book a Free Discovery Call",
+      "ctaMicro": "We\u2019ll walk through your results and show you exactly where to improve."
+    }
   },
   "legal": {
     "privacyPolicy": {

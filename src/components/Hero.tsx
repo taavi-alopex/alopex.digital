@@ -5,10 +5,12 @@ import { useTranslations } from "next-intl";
 import { FoxLogo } from "./FoxLogo";
 import { SectionLabel } from "./SectionLabel";
 import { useBooking } from "./BookingProvider";
+import { useAssessment } from "./AssessmentProvider";
 
 export function Hero() {
   const t = useTranslations("hero");
   const { openBooking } = useBooking();
+  const { openAssessment } = useAssessment();
   const [loaded, setLoaded] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
 
@@ -140,6 +142,25 @@ export function Hero() {
           >
             {t("ctaSecondary")}
           </a>
+        </div>
+
+        {/* Assessment link */}
+        <div
+          className={`mt-6 transition-all duration-700 ${
+            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+          style={{
+            transitionDelay: "800ms",
+            transitionTimingFunction: "var(--fox-ease)",
+          }}
+        >
+          <button
+            onClick={openAssessment}
+            className="text-[13px] underline underline-offset-4 bg-transparent border-0 cursor-pointer transition-colors duration-200 hover:opacity-80"
+            style={{ color: "var(--mist)" }}
+          >
+            {t("assessmentLink")} →
+          </button>
         </div>
       </div>
 

@@ -6,6 +6,8 @@
   import { getMessages, getTranslations } from "next-intl/server";
   import { routing } from "@/i18n/routing";
   import { BookingProvider } from "@/components/BookingProvider";
+  import { AssessmentProvider } from "@/components/AssessmentProvider";
+  import { RecruitmentProvider } from "@/components/RecruitmentProvider";
   import "../globals.css";
 
   const instrumentSerif = Instrument_Serif({
@@ -133,7 +135,11 @@
         >
           <NextIntlClientProvider messages={messages}>
             <BookingProvider>
-              {children}
+              <AssessmentProvider>
+                <RecruitmentProvider>
+                  {children}
+                </RecruitmentProvider>
+              </AssessmentProvider>
             </BookingProvider>
           </NextIntlClientProvider>
         </body>
