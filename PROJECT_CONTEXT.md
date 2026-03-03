@@ -5,6 +5,7 @@
 - **Stack**: Next.js 16, React 19, Tailwind CSS v4, TypeScript
 - **CWD**: /Users/taaviswcoachingandrecruiting/alopex.digital
 - **Brand**: Nordic-editorial, dark-dominant, "arctic fox in boreal forest"
+- **Run**: `npm run dev` → http://localhost:3000
 
 ## Brand Tokens (Essential)
 ### Colors
@@ -39,36 +40,72 @@
 - Guarantees: User Adoption Promise + Blueprint Credit
 - Values: Ownership Mindset | Responsible Freedom | Everything is Figureoutable | Truth Over Ego | Have Heart
 
+## File Structure
+```
+src/app/
+  globals.css          — Full CVI theme (colors, spacing, motion, textures, animations)
+  layout.tsx           — 4 Google Fonts, metadata, OG tags, favicon
+  page.tsx             — Assembles all sections
+src/components/
+  Navigation.tsx       — Fixed nav, glassmorphic on scroll, scroll progress bar, mobile menu
+  Hero.tsx             — Full viewport, mouse-following gradient, frost noise, geometric grid, scroll indicator
+  About.tsx            — Mission section, purpose quote card, region badges
+  Clients.tsx          — Three ideal client type cards
+  Uniques.tsx          — Three differentiator cards with icons
+  Process.tsx          — 5-step vertical timeline with alternating layout
+  Stats.tsx            — 4-column animated counter grid
+  Values.tsx           — Editorial alternating layout for 5 core values
+  Guarantee.tsx        — Two guarantee cards (User Adoption + Blueprint Credit)
+  CTA.tsx              — Final conversion section with pulse-glow amber CTA
+  Footer.tsx           — Brand mark, links, gradient bar, copyright
+  FoxLogo.tsx          — Logo component with optional glow
+  ScrollReveal.tsx     — Intersection Observer scroll animation wrapper
+  SectionLabel.tsx     — Uppercase label with gradient line accent
+  Button.tsx           — 7 variants, 3 sizes (currently unused, available for expansion)
+src/hooks/
+  useScrollReveal.ts   — Intersection Observer hook
+  useCountUp.ts        — Number counting animation hook
+```
+
 ## Progress Tracker
 
 ### Phase 1: Foundation ✅ DONE
 - [x] Next.js project created
 - [x] GitHub repo created (private)
-- [x] CVI document parsed
-- [x] EOS business docs parsed
-- [x] Logo assets downloaded
+- [x] CVI document parsed (full Brand Board v3)
+- [x] EOS business docs parsed (10 documents)
+- [x] Logo assets downloaded and placed in public/
 
-### Phase 2: Theme & Layout
-- [ ] Copy logo assets to public/
-- [ ] globals.css — full Tailwind v4 theme tokens + CSS variables + animations
-- [ ] layout.tsx — fonts, metadata
-- [ ] Base components: ScrollReveal, Button, SectionLabel, FoxLogo
+### Phase 2: Theme & Layout ✅ DONE
+- [x] globals.css — full Tailwind v4 theme tokens, CSS variables, keyframes, textures
+- [x] layout.tsx — 4 fonts, metadata, OG tags, favicon
+- [x] Base components: ScrollReveal, Button, SectionLabel, FoxLogo
 
-### Phase 3: Sections (Top → Bottom)
-- [ ] Navigation (fixed, glassmorphic)
-- [ ] Hero (full viewport, animated)
-- [ ] About (mission / core focus)
-- [ ] 3 Uniques (differentiator cards)
-- [ ] Process (5-step timeline)
-- [ ] Values (editorial layout)
-- [ ] Stats (animated counters)
-- [ ] Guarantee (trust section)
-- [ ] CTA (conversion section)
-- [ ] Footer (gradient bar)
+### Phase 3: Sections ✅ DONE
+- [x] Navigation (fixed, glassmorphic, scroll progress, mobile hamburger)
+- [x] Hero (full viewport, animated entrance, mouse gradient, geometric grid, scroll indicator)
+- [x] About (mission, purpose quote, region badges)
+- [x] Clients ("Who We Serve" — 3 ideal client types)
+- [x] 3 Uniques (differentiator cards with icons)
+- [x] Process (5-step vertical timeline, alternating layout)
+- [x] Stats (animated counters on scroll)
+- [x] Values (editorial alternating layout)
+- [x] Guarantee (two trust cards)
+- [x] CTA (conversion section with pulse-glow)
+- [x] Footer (gradient bar, links, copyright)
 
-### Phase 4: Polish
-- [ ] Responsive design (mobile/tablet)
-- [ ] Visual effects (frost noise, topographic, parallax)
-- [ ] Animation fine-tuning
-- [ ] Production build test
-- [ ] Final commit & push
+### Phase 4: Polish ✅ DONE
+- [x] Responsive design (mobile hamburger, responsive typography with clamp())
+- [x] Visual effects (frost noise, topographic, film grain, geometric grid)
+- [x] Animation system (staggered reveals, fox easing, scroll-triggered)
+- [x] Production build test (passes clean)
+- [x] All commits pushed to GitHub
+
+## Next Steps (Future Improvements)
+- [ ] Add actual case study content when available
+- [ ] Add HighLevel booking link to CTA buttons (replace mailto)
+- [ ] Add real client testimonials
+- [ ] Deploy to Vercel or similar
+- [ ] Add Estonian language version
+- [ ] Add blog/content section
+- [ ] Connect contact form to actual backend
