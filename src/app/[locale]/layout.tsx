@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Instrument_Serif, Outfit, Montserrat, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
@@ -72,6 +73,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
+
+  export default async function LocaleLayout({ children, params }: Props) {                                                                                                                   
+    const { locale } = await params;                                                                                                                                                          
+                                                                                                                                                                                              
+    if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {                                                                                                              
+      notFound();                                                                                                                                                                             
+    }                                                                                                                                                                                         
+                                                                                                                                                                                              
+    const messages = await getMessages();                                                                                                                                                     
+                                                                                                                                                                                              
+    return (                                                                                                                                                                                  
+      <html lang={locale} className="scroll-smooth">                                                                                                                                          
+        <head>                                                                                                                                                                                
+          <Script                                                                                                                                                                             
+            id="cookieyes"                                                                                                                                                                    
+            src="https://cdn-cookieyes.com/client_data/0fa48870f6545632d245c569fd209db8/script.js"                                                                                            
+            strategy="beforeInteractive"                                                                                                                                                      
+          />                                                                                                                                                                                  
+        </head>                                                                                                                                                                               
+        <body                                                                                                                                                                                 
+          className={`${instrumentSerif.variable} ${outfit.variable} ${montserrat.variable} ${jetbrainsMono.variable} antialiased`}                                                           
+          suppressHydrationWarning                                                                                                                                                            
+        >                                                                                                                                                                                     
+          <NextIntlClientProvider messages={messages}>                                                                                                                                        
+            <BookingProvider>                                                                                                                                                                 
+              {children}                                                                                                                                                                      
+            </BookingProvider>                                                                                                                                                                
+          </NextIntlClientProvider>                                                                                                                                                           
+        </body>                                                                                                                                                                               
+      </html>                                                                                                                                                                                 
+    );                                                                                                                                                                                        
+  } 
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
