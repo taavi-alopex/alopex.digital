@@ -76,6 +76,103 @@
       }
     ]
   },
+  "services": {
+    "label": "Co budujemy",
+    "title": "Rozwiązania GoHighLevel",
+    "titleAccent": "i niestandardowe integracje",
+    "intro": "Dostarczamy kompletny stos revenue operations — oparty na GoHighLevel i połączony z Twoimi lokalnymi systemami przez niestandardowe integracje n8n.",
+    "platformLabel": "Platforma GoHighLevel",
+    "integrationsLabel": "Niestandardowe integracje przez n8n",
+    "platformItems": [
+      {
+        "title": "CRM i zarządzanie pipeline'em",
+        "description": "Śledź każdą transakcję od pierwszego kontaktu do podpisanej umowy"
+      },
+      {
+        "title": "Automatyzacja marketingu",
+        "description": "Pielęgnuj leady automatycznymi sekwencjami e-mail, SMS i workflow"
+      },
+      {
+        "title": "Kalendarz i rezerwacje",
+        "description": "Pozwól klientom rezerwować bezpośrednio — bez wymiany maili"
+      },
+      {
+        "title": "Zarządzanie reputacją",
+        "description": "Zbieraj i prezentuj opinie na autopilocie"
+      },
+      {
+        "title": "Strony i lejki",
+        "description": "Uruchom konwertujące strony bez programisty"
+      },
+      {
+        "title": "Formularze i ankiety",
+        "description": "Zbieraj leady i feedback inteligentnymi, brandowanymi formularzami"
+      },
+      {
+        "title": "Fakturowanie i płatności",
+        "description": "Wysyłaj faktury i zbieraj płatności w swoim CRM"
+      },
+      {
+        "title": "Raportowanie i dashboardy",
+        "description": "Zobacz cały pipeline przychodów na jednym dashboardzie"
+      }
+    ],
+    "integrationItems": [
+      {
+        "title": "ERP i księgowość",
+        "description": "Połącz Merit Aktiva, e-Arveldaja lub dowolny system księgowy"
+      },
+      {
+        "title": "Platformy e-podpisu",
+        "description": "Zautomatyzuj podpisywanie dokumentów z Dokobit lub SignHere"
+      },
+      {
+        "title": "Lokalne bramki płatnicze",
+        "description": "Zintegruj Montonio, EveryPay i regionalne metody płatności"
+      },
+      {
+        "title": "Portale rządowe i podatkowe",
+        "description": "Zautomatyzuj raportowanie podatkowe i zgodność regulacyjną"
+      },
+      {
+        "title": "Migracja ze starego CRM",
+        "description": "Przenieś dane z dowolnego starego systemu — czysto i kompletnie"
+      },
+      {
+        "title": "Niestandardowe mosty API",
+        "description": "Jeśli ma API, możemy to połączyć z Twoim CRM"
+      }
+    ],
+    "useCasesLabel": "Zobacz w akcji",
+    "useCasesTitle": "Jak to działa",
+    "useCasesTitleAccent": "w Twojej branży",
+    "useCases": [
+      {
+        "industry": "Instalacje o wysokiej wartości",
+        "examples": "Fotowoltaika, HVAC, OZE",
+        "pain": "Przestań tracić kontrakty 10–50 tys. przez brak follow-upu",
+        "solution": "Automatyczna odpowiedź na leada w minuty, śledzenie pipeline'u per handlowiec i sekwencje SMS/email, które pielęgnują aż do podpisania umowy.",
+        "outcome": "Szybsza odpowiedź, mniej straconych kontraktów, pełna widoczność pipeline'u"
+      },
+      {
+        "industry": "Pipeline relacyjny",
+        "examples": "Nieruchomości, Consulting, Usługi prawne",
+        "pain": "Nigdy nie pozwól, by dopasowany lead umknął",
+        "solution": "Workflow CRM dopasowujące kupujących do sprzedających, automatyczna pielęgnacja zimnych leadów i linki do rezerwacji eliminujące tarcie.",
+        "outcome": "Każdy lead śledzony, każde dopasowanie obsłużone, zero porzuconych szans"
+      },
+      {
+        "industry": "Rynek dwustronny",
+        "examples": "Rekrutacja, Staffing, Marketplace'y",
+        "pain": "Zakończ ghosting kandydatów, chroń swoją markę",
+        "solution": "Automatyczna komunikacja z kandydatem na każdym etapie, dashboardy dla klientów i pętle feedbacku zamykające lukę doświadczeń.",
+        "outcome": "Kandydaci zaangażowani, klienci widzą postęp, Twoja marka pozostaje silna"
+      }
+    ],
+    "ctaText": "Nie wiesz, co pasuje?",
+    "ctaDescription": "Umów bezpłatną rozmowę — zmapujemy Twoje potrzeby w 30 minut.",
+    "ctaButton": "Umów bezpłatną rozmowę"
+  },
   "process": {
     "label": "Nasz proces",
     "title": "Metoda",

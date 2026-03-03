@@ -76,6 +76,103 @@
       }
     ]
   },
+  "services": {
+    "label": "What We Build",
+    "title": "GoHighLevel solutions",
+    "titleAccent": "and custom integrations",
+    "intro": "We deliver a complete revenue operations stack — powered by GoHighLevel and connected to your local systems through custom n8n integrations.",
+    "platformLabel": "GoHighLevel Platform",
+    "integrationsLabel": "Custom Integrations via n8n",
+    "platformItems": [
+      {
+        "title": "CRM & Pipeline Management",
+        "description": "Track every deal from first touch to signed contract"
+      },
+      {
+        "title": "Marketing Automation",
+        "description": "Nurture leads with automated email, SMS, and workflow sequences"
+      },
+      {
+        "title": "Calendar & Booking",
+        "description": "Let prospects book directly — no back-and-forth emails"
+      },
+      {
+        "title": "Reputation Management",
+        "description": "Collect and showcase reviews on autopilot"
+      },
+      {
+        "title": "Websites & Funnels",
+        "description": "Launch high-converting pages without a developer"
+      },
+      {
+        "title": "Forms & Surveys",
+        "description": "Capture leads and feedback with smart, branded forms"
+      },
+      {
+        "title": "Invoicing & Payments",
+        "description": "Send invoices and collect payments inside your CRM"
+      },
+      {
+        "title": "Reporting & Dashboards",
+        "description": "See your entire revenue pipeline in one dashboard"
+      }
+    ],
+    "integrationItems": [
+      {
+        "title": "ERP & Accounting",
+        "description": "Connect Merit Aktiva, e-Arveldaja, or any accounting system"
+      },
+      {
+        "title": "E-Signature Platforms",
+        "description": "Automate document signing with Dokobit or SignHere"
+      },
+      {
+        "title": "Local Payment Gateways",
+        "description": "Integrate Montonio, EveryPay, and regional payment methods"
+      },
+      {
+        "title": "Government & Tax Portals",
+        "description": "Automate tax reporting and regulatory compliance"
+      },
+      {
+        "title": "Legacy CRM Migration",
+        "description": "Move your data from any old system — clean and complete"
+      },
+      {
+        "title": "Custom API Bridges",
+        "description": "If it has an API, we can connect it to your CRM"
+      }
+    ],
+    "useCasesLabel": "See It in Action",
+    "useCasesTitle": "How it works",
+    "useCasesTitleAccent": "for your industry",
+    "useCases": [
+      {
+        "industry": "High-Ticket Install",
+        "examples": "Solar, HVAC, Renewables",
+        "pain": "Stop losing 10–50k deals to poor follow-up",
+        "solution": "Automated lead response within minutes, pipeline tracking per sales rep, and SMS/email sequences that nurture until the contract is signed.",
+        "outcome": "Faster response, fewer lost deals, full pipeline visibility"
+      },
+      {
+        "industry": "Relationship Pipeline",
+        "examples": "Real Estate, Consulting, Legal",
+        "pain": "Never let a matched lead slip away",
+        "solution": "CRM workflows that match buyers to sellers, automated nurture for cold leads, and booking links that eliminate scheduling friction.",
+        "outcome": "Every lead tracked, every match followed up, zero dropped balls"
+      },
+      {
+        "industry": "Double-Sided Marketplace",
+        "examples": "Recruitment, Staffing, Marketplaces",
+        "pain": "End candidate ghosting, protect your brand",
+        "solution": "Automated candidate communication at every stage, client-facing dashboards, and feedback loops that close the experience gap.",
+        "outcome": "Candidates stay engaged, clients see progress, your brand stays strong"
+      }
+    ],
+    "ctaText": "Not sure what fits?",
+    "ctaDescription": "Book a free discovery call — we'll map your needs in 30 minutes.",
+    "ctaButton": "Book a Discovery Call"
+  },
   "process": {
     "label": "Our Process",
     "title": "The Systems",

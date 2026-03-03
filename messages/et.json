@@ -76,6 +76,103 @@
       }
     ]
   },
+  "services": {
+    "label": "Mida me ehitame",
+    "title": "GoHighLevel lahendused",
+    "titleAccent": "ja kohandatud integratsioonid",
+    "intro": "Pakume terviklikku tuluhalduse platvormi — GoHighLevel baasil, ühendatud sinu kohalike süsteemidega läbi kohandatud n8n integratsioonide.",
+    "platformLabel": "GoHighLevel platvorm",
+    "integrationsLabel": "Kohandatud integratsioonid n8n kaudu",
+    "platformItems": [
+      {
+        "title": "CRM ja müügitoru haldus",
+        "description": "Jälgi iga tehingut esimesest kontaktist allkirjastatud lepinguni"
+      },
+      {
+        "title": "Turunduse automatiseerimine",
+        "description": "Hoolda müügivihjeid automaatsete e-posti, SMS ja töövoo järjestustega"
+      },
+      {
+        "title": "Kalender ja broneerimine",
+        "description": "Lase klientidel otse broneerida — ilma e-kirjade edasi-tagasi saatmiseta"
+      },
+      {
+        "title": "Maine haldus",
+        "description": "Kogu ja kuva arvustusi autopiloodil"
+      },
+      {
+        "title": "Veebilehed ja müügilehtrid",
+        "description": "Käivita konverteerivad lehed ilma arendajata"
+      },
+      {
+        "title": "Vormid ja küsitlused",
+        "description": "Kogu müügivihjeid ja tagasisidet nutikate bränditud vormidega"
+      },
+      {
+        "title": "Arveldamine ja maksed",
+        "description": "Saada arveid ja kogu makseid otse CRM-is"
+      },
+      {
+        "title": "Aruandlus ja töölauad",
+        "description": "Vaata kogu müügitoru ühelt töölaualt"
+      }
+    ],
+    "integrationItems": [
+      {
+        "title": "ERP ja raamatupidamine",
+        "description": "Ühenda Merit Aktiva, e-Arveldaja või mis tahes raamatupidamissüsteem"
+      },
+      {
+        "title": "E-allkirja platvormid",
+        "description": "Automatiseeri dokumendiallkirjastamine Dokobitiga või SignHere'iga"
+      },
+      {
+        "title": "Kohalikud maksevõimalused",
+        "description": "Integreeri Montonio, EveryPay ja piirkondlikud maksemeetodid"
+      },
+      {
+        "title": "Riigi- ja maksuportaalid",
+        "description": "Automatiseeri maksuaruandlus ja regulatiivne vastavus"
+      },
+      {
+        "title": "Vana CRM-i migratsioon",
+        "description": "Vii oma andmed üle mis tahes vanast süsteemist — puhtalt ja täielikult"
+      },
+      {
+        "title": "Kohandatud API sillad",
+        "description": "Kui sellel on API, saame selle sinu CRM-iga ühendada"
+      }
+    ],
+    "useCasesLabel": "Vaata tegevuses",
+    "useCasesTitle": "Kuidas see töötab",
+    "useCasesTitleAccent": "sinu valdkonnas",
+    "useCases": [
+      {
+        "industry": "Kõrge väärtusega paigaldus",
+        "examples": "Päikeseenergia, küte, taastuvenergia",
+        "pain": "Lõpeta 10–50k tehingute kaotamine halva järeltegevuse tõttu",
+        "solution": "Automaatne müügivihje vastus minutitega, müügitoru jälgimine müügiesindaja kohta ja SMS/e-posti järjestused, mis hooldavad kuni lepingu allkirjastamiseni.",
+        "outcome": "Kiirem vastus, vähem kaotatud tehinguid, täielik ülevaade müügitorust"
+      },
+      {
+        "industry": "Suhtel põhinev müügitoru",
+        "examples": "Kinnisvara, konsultatsioon, õigusteenused",
+        "pain": "Ära lase ühelgi sobitatud kontaktil kaduda",
+        "solution": "CRM töövood, mis sobitavad ostjaid müüjatega, automaatne hooldus külmadele kontaktidele ja broneerimislingid, mis kõrvaldavad ajaplaneerimise hõõrdumise.",
+        "outcome": "Iga kontakt jälgitud, iga sobitamine jälgitud, null kaotatud võimalust"
+      },
+      {
+        "industry": "Kahepoolne turg",
+        "examples": "Värbamine, personaliteenus, turuplatsid",
+        "pain": "Lõpeta kandidaatide kadumine, kaitse oma brändi",
+        "solution": "Automaatne kandidaadisuhtlus igal etapil, kliendile suunatud töölauad ja tagasiside tsüklid, mis sulgevad kogemuslõhe.",
+        "outcome": "Kandidaadid jäävad kaasatuks, kliendid näevad edenemist, sinu bränd püsib tugev"
+      }
+    ],
+    "ctaText": "Pole kindel, mis sobib?",
+    "ctaDescription": "Broneeri tasuta tutvumiskõne — kaardistame su vajadused 30 minutiga.",
+    "ctaButton": "Broneeri tutvumiskõne"
+  },
   "process": {
     "label": "Meie protsess",
     "title": "Süsteemide",
