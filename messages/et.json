@@ -302,6 +302,11 @@
       { "label": "Väärtused" },
       { "label": "Kontakt" }
     ],
+    "legalTitle": "Õiguslik teave",
+    "legal": [
+      { "label": "Privaatsuspoliitika" },
+      { "label": "Kasutustingimused" }
+    ],
     "copyright": "Alopex Digital OÜ. Kõik õigused kaitstud.",
     "location": "Tallinn, Eesti"
   },
