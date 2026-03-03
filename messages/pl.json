@@ -293,5 +293,101 @@
     ],
     "copyright": "Alopex Digital OÜ. Wszelkie prawa zastrzeżone.",
     "location": "Tallinn, Estonia"
+  },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Polityka Prywatności",
+      "metaDescription": "Polityka Prywatności Alopex Digital - jak zbieramy, wykorzystujemy i chronimy Twoje dane",
+      "lastUpdated": "Ostatnia aktualizacja",
+      "company": "Firma",
+      "registryCode": "Numer rejestracyjny",
+      "address": "Adres",
+      "email": "E-mail",
+      "sections": {
+        "introduction": {
+          "title": "1. Wprowadzenie",
+          "content": "Alopex Digital OÜ zobowiązuje się do ochrony Twoich danych osobowych. Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób zbieramy, wykorzystujemy, przechowujemy i chronimy Twoje dane podczas korzystania z naszej strony internetowej lub usług."
+        },
+        "dataCollected": {
+          "title": "2. Zbierane dane",
+          "content": "Zbieramy dane kontaktowe (imię, e-mail, telefon), dane biznesowe (firma, stanowisko), dane o użytkowaniu (odwiedzone strony, czas spędzony na stronie) oraz pliki cookie do celów funkcjonalności i analityki."
+        },
+        "legalBasis": {
+          "title": "3. Podstawa prawna przetwarzania",
+          "content": "Przetwarzamy dane na podstawie: wykonania umowy, prawnie uzasadnionego interesu, zgody (na marketing) oraz obowiązków prawnych wynikających z art. 6 RODO."
+        },
+        "thirdParties": {
+          "title": "4. Zewnętrzni dostawcy usług",
+          "content": "Udostępniamy dane zaufanym dostawcom: GoHighLevel (CRM), Meta (reklama), Google (analityka), TikTok (reklama) i n8n (automatyzacja). Wszyscy przestrzegają Ram Ochrony Danych UE-USA lub Standardowych Klauzul Umownych."
+        },
+        "retention": {
+          "title": "5. Okres przechowywania danych",
+          "content": "Zgłoszenia kontaktowe: 3 lata. Dane klientów: czas trwania umowy + 7 lat. Dane analityczne: 26 miesięcy. Zgoda marketingowa: do wycofania + 3 lata."
+        },
+        "rights": {
+          "title": "6. Twoje prawa",
+          "content": "Na mocy RODO przysługuje Ci prawo do: dostępu, sprostowania, usunięcia, ograniczenia, przenoszenia, sprzeciwu i wycofania zgody. Aby skorzystać ze swoich praw, skontaktuj się z info@alopex.digital."
+        },
+        "cookies": {
+          "title": "7. Pliki cookie",
+          "content": "Używamy niezbędnych plików cookie (funkcjonalność strony), analitycznych plików cookie (statystyki użytkowania) i marketingowych plików cookie (reklama). Zarządzaj preferencjami poprzez nasz baner zgody na pliki cookie."
+        },
+        "contact": {
+          "title": "8. Kontakt",
+          "content": "W przypadku pytań dotyczących prywatności lub w celu skorzystania ze swoich praw:"
+        },
+        "supervisory": {
+          "title": "9. Organ nadzorczy",
+          "content": "Masz prawo złożyć skargę do Estońskiego Inspektoratu Ochrony Danych:"
+        }
+      }
+    },
+    "terms": {
+      "title": "Regulamin",
+      "metaDescription": "Regulamin Alopex Digital - zasady korzystania z naszych usług",
+      "lastUpdated": "Ostatnia aktualizacja",
+      "sections": {
+        "introduction": {
+          "title": "1. Wprowadzenie",
+          "content": "Niniejszy Regulamin określa zasady korzystania ze strony internetowej, usług i produktów programowych oferowanych przez Alopex Digital OÜ (numer rejestracyjny 17180489). Korzystając z naszych usług, akceptujesz niniejszy Regulamin."
+        },
+        "services": {
+          "title": "2. Usługi",
+          "content": "Alopex Digital oferuje usługi doradcze (wdrażanie CRM, automatyzacja przepływów pracy), produkty programowe (niestandardowe automatyzacje, integracje) oraz usługi zarządzane (bieżące wsparcie, konserwacja)."
+        },
+        "obligations": {
+          "title": "3. Obowiązki Klienta",
+          "content": "Klienci zobowiązują się do: dostarczania dokładnych informacji, zapewnienia niezbędnego dostępu do systemów, terminowego reagowania na zapytania, zachowania poufności danych uwierzytelniających, przestrzegania obowiązujących przepisów i regulowania faktur zgodnie z uzgodnionymi warunkami."
+        },
+        "payment": {
+          "title": "4. Warunki płatności",
+          "content": "Standardowy termin płatności: 14 dni od daty wystawienia faktury. Faktury w EUR. Opóźnione płatności mogą podlegać odsetkom 0,05% dziennie. Usługi mogą zostać zawieszone dla kont zalegających ponad 30 dni."
+        },
+        "ip": {
+          "title": "5. Własność intelektualna",
+          "content": "Zachowujemy własność istniejących narzędzi i metodologii. Klienci są właścicielami niestandardowych rezultatów stworzonych specjalnie dla nich (po pełnej zapłacie) oraz konfiguracji specyficznych dla ich działalności."
+        },
+        "confidentiality": {
+          "title": "6. Poufność",
+          "content": "Obie strony zobowiązują się do zachowania poufności informacji, wykorzystywania ich wyłącznie do świadczenia usług i nieujawniania stronom trzecim bez zgody. Zobowiązania obowiązują 3 lata po rozwiązaniu umowy."
+        },
+        "liability": {
+          "title": "7. Ograniczenie odpowiedzialności",
+          "content": "Nasza całkowita odpowiedzialność nie przekroczy opłat zapłaconych w ciągu 12 miesięcy poprzedzających roszczenie. Nie ponosimy odpowiedzialności za szkody pośrednie, utracone zyski ani problemy wynikające z usług stron trzecich."
+        },
+        "termination": {
+          "title": "8. Rozwiązanie",
+          "content": "Każda ze stron może rozwiązać umowę: dla wygody z 30-dniowym wypowiedzeniem lub natychmiast w przypadku istotnego naruszenia nienaprawionego w ciągu 14 dni. Po rozwiązaniu klient płaci za świadczone usługi."
+        },
+        "governing": {
+          "title": "9. Prawo właściwe",
+          "content": "Niniejszy Regulamin podlega prawu estońskiemu. Spory będą rozstrzygane przez Sąd Okręgowy w Harju, Estonia. Konsumenci z UE mogą korzystać z platformy ODR UE pod adresem ec.europa.eu/consumers/odr."
+        },
+        "contact": {
+          "title": "10. Kontakt",
+          "content": "W przypadku pytań dotyczących niniejszego Regulaminu:"
+        }
+      }
+    }
   }
 }

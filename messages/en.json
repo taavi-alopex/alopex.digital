@@ -293,5 +293,101 @@
     ],
     "copyright": "Alopex Digital O\u00dc. All rights reserved.",
     "location": "Tallinn, Estonia"
+  },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "metaDescription": "Privacy Policy for Alopex Digital - how we collect, use and protect your data",
+      "lastUpdated": "Last updated",
+      "company": "Company",
+      "registryCode": "Registry code",
+      "address": "Address",
+      "email": "Email",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "Alopex Digital OÜ is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect your information when you visit our website or use our services."
+        },
+        "dataCollected": {
+          "title": "2. Data We Collect",
+          "content": "We collect contact information (name, email, phone), business information (company, role), usage data (pages visited, time on site), and cookies for functionality and analytics."
+        },
+        "legalBasis": {
+          "title": "3. Legal Basis for Processing",
+          "content": "We process data based on: contract performance, legitimate interest, consent (for marketing), and legal obligations under GDPR Article 6."
+        },
+        "thirdParties": {
+          "title": "4. Third-Party Services",
+          "content": "We share data with trusted providers: GoHighLevel (CRM), Meta (advertising), Google (analytics), TikTok (advertising), and n8n (automation). All comply with EU-US Data Privacy Framework or Standard Contractual Clauses."
+        },
+        "retention": {
+          "title": "5. Data Retention",
+          "content": "Contact submissions: 3 years. Client data: contract duration + 7 years. Analytics: 26 months. Marketing consent: until withdrawn + 3 years."
+        },
+        "rights": {
+          "title": "6. Your Rights",
+          "content": "Under GDPR you have rights to: access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. Contact info@alopex.digital to exercise your rights."
+        },
+        "cookies": {
+          "title": "7. Cookies",
+          "content": "We use necessary cookies (site functionality), analytics cookies (usage statistics), and marketing cookies (advertising). Manage preferences via our cookie consent banner."
+        },
+        "contact": {
+          "title": "8. Contact Us",
+          "content": "For privacy-related questions or to exercise your rights:"
+        },
+        "supervisory": {
+          "title": "9. Supervisory Authority",
+          "content": "You have the right to lodge a complaint with the Estonian Data Protection Inspectorate:"
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "metaDescription": "Terms of Service for Alopex Digital - rules governing use of our services",
+      "lastUpdated": "Last updated",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "These Terms of Service govern your use of the website, services, and software products provided by Alopex Digital OÜ (registry code 17180489). By using our services, you agree to these Terms."
+        },
+        "services": {
+          "title": "2. Services",
+          "content": "Alopex Digital provides consulting services (CRM implementation, workflow automation), software products (custom automations, integrations), and managed services (ongoing support, maintenance)."
+        },
+        "obligations": {
+          "title": "3. Client Obligations",
+          "content": "Clients agree to: provide accurate information, grant necessary system access, respond timely to requests, maintain credential confidentiality, comply with applicable laws, and pay invoices per agreed terms."
+        },
+        "payment": {
+          "title": "4. Payment Terms",
+          "content": "Standard payment term: 14 days from invoice date. Invoices in EUR. Late payments may incur 0.05% daily interest. Services may be suspended for accounts 30+ days overdue."
+        },
+        "ip": {
+          "title": "5. Intellectual Property",
+          "content": "We retain ownership of pre-existing tools and methodologies. Clients own custom deliverables created specifically for them (upon full payment) and their business-specific configurations."
+        },
+        "confidentiality": {
+          "title": "6. Confidentiality",
+          "content": "Both parties agree to keep confidential information private, use it only for service delivery, and not disclose to third parties without consent. Obligations survive 3 years after termination."
+        },
+        "liability": {
+          "title": "7. Limitation of Liability",
+          "content": "Our total liability shall not exceed fees paid in the 12 months preceding the claim. We are not liable for indirect damages, lost profits, or issues from third-party services."
+        },
+        "termination": {
+          "title": "8. Termination",
+          "content": "Either party may terminate: for convenience with 30 days notice, or immediately for material breach not cured within 14 days. Upon termination, client pays for services rendered."
+        },
+        "governing": {
+          "title": "9. Governing Law",
+          "content": "These Terms are governed by Estonian law. Disputes shall be resolved in Harju County Court, Estonia. EU consumers may use the EU ODR platform at ec.europa.eu/consumers/odr."
+        },
+        "contact": {
+          "title": "10. Contact",
+          "content": "For questions about these Terms:"
+        }
+      }
+    }
   }
 }

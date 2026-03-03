@@ -293,5 +293,101 @@
     ],
     "copyright": "Alopex Digital OÜ. Kõik õigused kaitstud.",
     "location": "Tallinn, Eesti"
+  },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Privaatsuspoliitika",
+      "metaDescription": "Alopex Digitali privaatsuspoliitika - kuidas me teie andmeid kogume, kasutame ja kaitseme",
+      "lastUpdated": "Viimati uuendatud",
+      "company": "Ettevõte",
+      "registryCode": "Registrikood",
+      "address": "Aadress",
+      "email": "E-post",
+      "sections": {
+        "introduction": {
+          "title": "1. Sissejuhatus",
+          "content": "Alopex Digital OÜ on pühendunud teie isikuandmete kaitsmisele. Käesolev privaatsuspoliitika selgitab, kuidas me kogume, kasutame, säilitame ja kaitseme teie andmeid, kui külastate meie veebilehte või kasutate meie teenuseid."
+        },
+        "dataCollected": {
+          "title": "2. Kogutavad andmed",
+          "content": "Me kogume kontaktandmeid (nimi, e-post, telefon), äriandmeid (ettevõte, ametikoht), kasutusandmeid (külastatud lehed, lehel viibitud aeg) ja küpsiseid funktsionaalsuse ning analüütika jaoks."
+        },
+        "legalBasis": {
+          "title": "3. Töötlemise õiguslik alus",
+          "content": "Me töötleme andmeid järgmistel alustel: lepingu täitmine, õigustatud huvi, nõusolek (turunduseks) ja juriidilised kohustused GDPR artikli 6 alusel."
+        },
+        "thirdParties": {
+          "title": "4. Kolmandatest osapooltest teenusepakkujad",
+          "content": "Me jagame andmeid usaldusväärsete pakkujatega: GoHighLevel (CRM), Meta (reklaam), Google (analüütika), TikTok (reklaam) ja n8n (automatiseerimine). Kõik järgivad EL-USA andmekaitseraamistikku või standardseid lepingutingimusi."
+        },
+        "retention": {
+          "title": "5. Andmete säilitamine",
+          "content": "Kontaktvormi esitused: 3 aastat. Kliendi andmed: lepingu kestvus + 7 aastat. Analüütikaandmed: 26 kuud. Turundusnõusolek: kuni tagasivõtmiseni + 3 aastat."
+        },
+        "rights": {
+          "title": "6. Teie õigused",
+          "content": "GDPR-i alusel on teil õigus: juurdepääsule, parandamisele, kustutamisele, piiramisele, ülekantavusele, vastuväitele ja nõusoleku tagasivõtmisele. Oma õiguste kasutamiseks võtke ühendust info@alopex.digital."
+        },
+        "cookies": {
+          "title": "7. Küpsised",
+          "content": "Me kasutame vajalikke küpsiseid (veebilehe funktsionaalsus), analüütikaküpsiseid (kasutusstatistika) ja turundusküpsiseid (reklaam). Hallake eelistusi meie küpsiste nõusolekuribalt."
+        },
+        "contact": {
+          "title": "8. Võtke meiega ühendust",
+          "content": "Privaatsusega seotud küsimuste või oma õiguste kasutamiseks:"
+        },
+        "supervisory": {
+          "title": "9. Järelevalveasutus",
+          "content": "Teil on õigus esitada kaebus Andmekaitse Inspektsioonile:"
+        }
+      }
+    },
+    "terms": {
+      "title": "Kasutustingimused",
+      "metaDescription": "Alopex Digitali kasutustingimused - meie teenuste kasutamise reeglid",
+      "lastUpdated": "Viimati uuendatud",
+      "sections": {
+        "introduction": {
+          "title": "1. Sissejuhatus",
+          "content": "Käesolevad kasutustingimused reguleerivad Alopex Digital OÜ (registrikood 17180489) pakutava veebilehe, teenuste ja tarkvaratoodete kasutamist. Meie teenuseid kasutades nõustute käesolevate tingimustega."
+        },
+        "services": {
+          "title": "2. Teenused",
+          "content": "Alopex Digital pakub nõustamisteenuseid (CRM-i juurutamine, töövoo automatiseerimine), tarkvaratooteid (kohandatud automatiseeringud, integratsioonid) ja haldusteenuseid (jätkuv tugi, hooldus)."
+        },
+        "obligations": {
+          "title": "3. Kliendi kohustused",
+          "content": "Kliendid nõustuvad: esitama täpseid andmeid, andma vajalikku süsteemidele juurdepääsu, vastama päringutele õigeaegselt, hoidma volitusi konfidentsiaalsena, järgima kehtivaid seadusi ja tasuma arveid kokkulepitud tingimustel."
+        },
+        "payment": {
+          "title": "4. Maksetingimused",
+          "content": "Standardne maksetähtaeg: 14 päeva arve kuupäevast. Arved eurodes. Hilinenud maksetele võidakse lisada viivist 0,05% päevas. Teenused võidakse peatada üle 30 päeva võlgu olevate kontode puhul."
+        },
+        "ip": {
+          "title": "5. Intellektuaalomand",
+          "content": "Meile jääb omand olemasolevatele tööriistadele ja metoodikatele. Klientidele kuuluvad spetsiaalselt neile loodud kohandatud tulemid (pärast täielikku tasumist) ja nende ärispetsiifilised konfiguratsioonid."
+        },
+        "confidentiality": {
+          "title": "6. Konfidentsiaalsus",
+          "content": "Mõlemad pooled nõustuvad hoidma konfidentsiaalset teavet privaatsena, kasutama seda ainult teenuse osutamiseks ega avalda kolmandatele osapooltele ilma nõusolekuta. Kohustused kehtivad 3 aastat pärast lõpetamist."
+        },
+        "liability": {
+          "title": "7. Vastutuse piiramine",
+          "content": "Meie koguvastutus ei ületa nõude esitamisele eelnenud 12 kuu jooksul makstud tasusid. Me ei vastuta kaudsete kahjude, saamata jäänud kasumi ega kolmandate osapoolte teenustest tulenevate probleemide eest."
+        },
+        "termination": {
+          "title": "8. Lõpetamine",
+          "content": "Kumbki pool võib lõpetada: mugavuse huvides 30-päevase etteteatamisega või viivitamatult olulise rikkumise korral, mida ei ole 14 päeva jooksul parandatud. Lõpetamisel tasub klient osutatud teenuste eest."
+        },
+        "governing": {
+          "title": "9. Kohaldatav õigus",
+          "content": "Käesolevaid tingimusi reguleerivad Eesti seadused. Vaidlused lahendatakse Harju Maakohtus, Eestis. EL-i tarbijad võivad kasutada EL-i veebipõhist vaidluste lahendamise platvormi aadressil ec.europa.eu/consumers/odr."
+        },
+        "contact": {
+          "title": "10. Kontakt",
+          "content": "Käesolevate tingimuste kohta küsimuste korral:"
+        }
+      }
+    }
   }
 }
