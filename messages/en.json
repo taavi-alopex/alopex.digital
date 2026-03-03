@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Alopex Digital — Orchestrating Clarity and Flow",
-    "description": "Advanced HighLevel & RevOps infrastructure for sales-led service businesses in Scandinavia and CEE. We architect, build, and launch systems that stop revenue leaking.",
-    "ogDescription": "Advanced HighLevel & RevOps infrastructure for sales-led service businesses."
+    "title": "GoHighLevel & n8n Agency in Estonia & CEE | Alopex Digital",
+    "description": "Advanced GoHighLevel & RevOps infrastructure for sales-led businesses. We architect, build, and launch systems that stop revenue leaking.",
+    "ogDescription": "Advanced GoHighLevel & RevOps infrastructure for sales-led businesses. We architect, build, and launch systems that stop revenue leaking."
   },
   "nav": {
     "about": "About",
@@ -10,54 +10,64 @@
     "process": "Process",
     "values": "Values",
     "contact": "Contact",
-    "cta": "Book a Call"
+    "cta": "Book a Discovery Call"
   },
   "hero": {
-    "label": "Digital Solutions That Deliver",
-    "title": "Orchestrating Clarity",
-    "titleAccent": "and Flow",
-    "subtitle": "We build advanced HighLevel & RevOps infrastructure for ambitious service businesses across Scandinavia and CEE. No more manual grind.",
+    "label": "GoHighLevel & n8n Agency",
+    "title": "Your Revenue Operations,",
+    "titleAccent": "Architected and Launched",
+    "subtitle": "We map your business process, build your GoHighLevel infrastructure, and make sure your team actually uses it. No more leads leaking through manual chaos.",
     "ctaPrimary": "Book a Discovery Call",
+    "ctaPrimaryMicro": "30-minute call. No obligation.",
     "ctaSecondary": "Our Process",
     "scroll": "Scroll"
   },
+  "inlineCta": {
+    "afterClients": "Recognize your business?",
+    "afterClientsLink": "Let\u2019s talk.",
+    "afterProcess": "Start with a Systems Audit",
+    "afterProcessMicro": "Free discovery call \u2014 we\u2019ll map where you\u2019re losing revenue."
+  },
   "about": {
     "label": "Who We Are",
-    "title": "The bridge between world-class tech",
-    "titleAccent": " and your market",
-    "p1": "Alopex Digital is the elite, lean \u201cMaaletooja\u201d of HighLevel infrastructure \u2014 bringing world-class US revenue operations technology to sales-led service businesses across Estonia, Poland, Scandinavia, and CEE.",
+    "title": "GoHighLevel & RevOps Agency",
+    "titleAccent": "for Estonia, Poland & CEE",
+    "p1": "Alopex Digital is your dedicated local GoHighLevel partner \u2014 bringing world-class US revenue operations technology to sales-led businesses across Estonia, Poland, and CEE.",
     "p2": "We don\u2019t just build systems. We architect clarity \u2014 mapping your entire business process before writing a single workflow. Then we build it, launch it, and make sure your team actually uses it. That\u2019s the difference.",
-    "regions": ["Estonia", "Poland", "Scandinavia", "CEE"],
+    "regions": ["Estonia", "Poland", "CEE"],
     "purposeLabel": "Our Purpose",
-    "purposeQuote": "\u201cTo orchestrate clarity and flow for ambitious businesses.\u201d",
+    "purposeQuote": "\u201cTo orchestrate clarity and flow for sales-led businesses.\u201d",
     "purposeDescription": "We build freedom machines \u2014 automated systems that free up your time so you can focus on growth."
   },
   "clients": {
     "label": "Who We Serve",
     "title": "Built for",
-    "titleAccent": "sales-led service businesses",
+    "titleAccent": "sales-led businesses",
     "items": [
       {
         "industry": "High-Ticket Install",
         "examples": "Solar, Renewables, HVAC",
-        "pain": "Leads leaking due to poor follow-up on 10-50k EUR deals"
+        "pain": "Leads leaking due to poor follow-up on 10-50k EUR deals",
+        "outcome": "Automated follow-up sequences that close the gap between lead and signed contract."
       },
       {
         "industry": "Relationship Pipeline",
         "examples": "Real Estate, Consulting, Legal",
-        "pain": "Managing buyer/seller pipelines with unmatched leads dropping off"
+        "pain": "Managing buyer/seller pipelines with unmatched leads dropping off",
+        "outcome": "CRM workflows that match, nurture, and never let a warm lead slip."
       },
       {
         "industry": "Double-Sided Marketplace",
         "examples": "Recruitment, Staffing, Marketplaces",
-        "pain": "Ghosting and poor candidate experience across B2B + B2C flows"
+        "pain": "Ghosting and poor candidate experience across B2B + B2C flows",
+        "outcome": "Candidate and client experiences that protect your brand and fill roles faster."
       }
     ]
   },
   "uniques": {
     "label": "Why Alopex",
-    "title": "Three things we do",
-    "titleAccent": "differently",
+    "title": "Why choose Alopex as your",
+    "titleAccent": "GoHighLevel partner",
     "items": [
       {
         "title": "Strategic Blueprinting",
@@ -71,8 +81,8 @@
       },
       {
         "title": "Regional RevOps Fluency",
-        "subtitle": "The \u201cMaaletooja\u201d factor",
-        "description": "We know the culture, the language, and the laws. GDPR, local payment gateways, regional tax logic \u2014 we\u2019re the bridge between world-class US tech and your specific market."
+        "subtitle": "The local partner advantage",
+        "description": "We know the culture, the language, and the laws. GDPR, local payment gateways, regional tax logic \u2014 we translate world-class US tech into solutions that work in your specific market."
       }
     ]
   },
@@ -181,19 +191,19 @@
       {
         "title": "The Systems Audit",
         "phase": "Discovery",
-        "description": "We understand the problem before we prescribe the cure. In 1-2 meetings, we assess your current pains, processes, and bottlenecks to identify exactly where revenue is leaking.",
+        "description": "We understand the problem before we design the solution. In 1-2 meetings, we assess your current pains, processes, and bottlenecks to identify exactly where revenue is leaking.",
         "detail": "1-2 meetings"
       },
       {
         "title": "The Strategic Blueprint",
         "phase": "Planning",
-        "description": "A clear roadmap with no surprises. We map the full solution architecture, scope the timeline, and define every integration. This standalone deliverable is yours to keep.",
-        "detail": "Standalone paid deliverable"
+        "description": "A clear roadmap with no surprises. We map the full solution architecture, scope the timeline, and define every integration. This deliverable is yours to keep.",
+        "detail": "Yours to keep"
       },
       {
         "title": "The Architecture Build",
         "phase": "Implementation",
-        "description": "Transparent progress and technical excellence. We build your HighLevel infrastructure, integrate custom APIs, and configure automation \u2014 with weekly reporting via ClickUp.",
+        "description": "Transparent progress and technical excellence. We build your GoHighLevel infrastructure, integrate custom APIs via n8n, and configure automation \u2014 with weekly reporting via ClickUp.",
         "detail": "Weekly progress reports"
       },
       {
@@ -212,10 +222,10 @@
   },
   "stats": {
     "items": [
-      { "value": 150, "suffix": "+", "label": "Happy Clients" },
-      { "value": 3, "suffix": "x", "label": "More Leads" },
-      { "value": 85, "suffix": "%", "label": "Time Saved" },
-      { "value": 24, "suffix": "/7", "label": "Automation" }
+      { "value": 150, "suffix": "+", "label": "Systems Launched" },
+      { "value": 3, "suffix": "x", "label": "More Leads in 90 Days" },
+      { "value": 85, "suffix": "%", "label": "Less Manual Follow-Up" },
+      { "value": 12, "suffix": "min", "label": "Avg. Lead Response" }
     ]
   },
   "values": {
@@ -272,10 +282,11 @@
     "titleAccent": "leaking revenue?",
     "description": "Book a free discovery call. We\u2019ll map your current pains and show you exactly where the opportunities are \u2014 no obligation, no sales pitch.",
     "button": "Book a Discovery Call",
+    "microCopy": "30-minute call. No obligation. We\u2019ll map where you\u2019re losing revenue.",
     "emailPrefix": "Or email us directly at"
   },
   "footer": {
-    "tagline": "Orchestrating clarity and flow for ambitious service businesses across Scandinavia and CEE.",
+    "tagline": "GoHighLevel & n8n infrastructure for sales-led businesses across Estonia, Poland, and CEE.",
     "servicesTitle": "Services",
     "companyTitle": "Company",
     "services": [
@@ -290,11 +301,6 @@
       { "label": "Our Process" },
       { "label": "Values" },
       { "label": "Contact" }
-    ],
-    "legalTitle": "Legal",
-    "legal": [
-      { "label": "Privacy Policy" },
-      { "label": "Terms of Service" }
     ],
     "copyright": "Alopex Digital O\u00dc. All rights reserved.",
     "location": "Tallinn, Estonia"
