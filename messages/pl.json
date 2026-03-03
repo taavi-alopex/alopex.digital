@@ -302,6 +302,11 @@
       { "label": "Wartości" },
       { "label": "Kontakt" }
     ],
+    "legalTitle": "Informacje prawne",
+    "legal": [
+      { "label": "Polityka Prywatności" },
+      { "label": "Regulamin" }
+    ],
     "copyright": "Alopex Digital OÜ. Wszelkie prawa zastrzeżone.",
     "location": "Tallinn, Estonia"
   },
