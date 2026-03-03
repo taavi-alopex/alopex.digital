@@ -3,16 +3,22 @@
 import { useEffect, useRef } from "react";
 import Script from "next/script";
 
-const GHL_URL =
-  "https://api.leadconnectorhq.com/widget/booking/Wt3A4KaUfmwZzFwGMirM";
+const CALENDAR_IDS: Record<string, string> = {
+  et: "Wt3A4KaUfmwZzFwGMirM", // Estonian
+  pl: "anlzXzfzVMRmXFsp7Kao", // Polish
+  en: "YFpWDPuPHUrGFkubfnlX", // English
+};
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
+  locale: string;
 };
 
-export function BookingModal({ isOpen, onClose }: Props) {
+export function BookingModal({ isOpen, onClose, locale }: Props) {
   const overlayRef = useRef<HTMLDivElement>(null);
+  const calendarId = CALENDAR_IDS[locale] || CALENDAR_IDS.en;
+  const ghlUrl = `https://api.leadconnectorhq.com/widget/booking/${calendarId}`;
 
   // Lock body scroll when open
   useEffect(() => {
@@ -80,7 +86,7 @@ export function BookingModal({ isOpen, onClose }: Props) {
           }}
         >
           <iframe
-            src={GHL_URL}
+            src={ghlUrl}
             className="w-full h-full border-0"
             title="Book a Discovery Call"
             allow="payment"

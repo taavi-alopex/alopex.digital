@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useState } from "react";
+import { useLocale } from "next-intl";
 import { BookingModal } from "./BookingModal";
 
 type BookingContextValue = {
@@ -19,6 +20,7 @@ export function useBooking() {
 
 export function BookingProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const locale = useLocale();
 
   const openBooking = useCallback(() => setIsOpen(true), []);
   const closeBooking = useCallback(() => setIsOpen(false), []);
@@ -26,7 +28,7 @@ export function BookingProvider({ children }: { children: React.ReactNode }) {
   return (
     <BookingContext.Provider value={{ isOpen, openBooking, closeBooking }}>
       {children}
-      <BookingModal isOpen={isOpen} onClose={closeBooking} />
+      <BookingModal isOpen={isOpen} onClose={closeBooking} locale={locale} />
     </BookingContext.Provider>
   );
 }
