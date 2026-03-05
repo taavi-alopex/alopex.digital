@@ -130,19 +130,23 @@ export function HealthCheckPage() {
 
   const handleSubmit = async () => {
     const webhookUrl = process.env.NEXT_PUBLIC_GHL_ASSESSMENT_WEBHOOK;
-    if (!webhookUrl || !contact.name || !contact.email) return;
 
-    setSubmitting(true);
-    try {
-      await fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(buildPayload()),
-      });
-    } catch {
-      // Continue to results on failure
+    // Only send to webhook if we have URL and contact info
+    if (webhookUrl && contact.name && contact.email) {
+      setSubmitting(true);
+      try {
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(buildPayload()),
+        });
+      } catch {
+        // Continue to results on failure
+      }
+      setSubmitting(false);
     }
-    setSubmitting(false);
+
+    // Always show results
     setStep(7);
   };
 
