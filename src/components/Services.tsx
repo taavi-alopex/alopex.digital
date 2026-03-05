@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
+import { useBooking } from "./BookingProvider";
 
 /* ── Platform capability icons (GoHighLevel) ── */
 const platformIcons = [
@@ -106,6 +107,7 @@ const useCaseIcons = [
 
 export function Services() {
   const t = useTranslations("services");
+  const { openBooking } = useBooking();
   const platformItems: { title: string; description: string }[] = t.raw("platformItems");
   const integrationItems: { title: string; description: string }[] = t.raw("integrationItems");
   const useCases: { industry: string; examples: string; pain: string; solution: string; outcome: string }[] = t.raw("useCases");
@@ -414,9 +416,9 @@ export function Services() {
             >
               {t("ctaDescription")}
             </p>
-            <a
-              href="#cta"
-              className="inline-flex items-center gap-2 px-6 py-3 text-[13px] font-semibold tracking-[0.5px] transition-all duration-300 hover:-translate-y-0.5"
+            <button
+              onClick={openBooking}
+              className="inline-flex items-center gap-2 px-6 py-3 text-[13px] font-semibold tracking-[0.5px] border-0 cursor-pointer transition-all duration-300 hover:-translate-y-0.5"
               style={{
                 fontFamily: "var(--font-heading)",
                 background: "var(--spruce)",
@@ -430,7 +432,7 @@ export function Services() {
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
-            </a>
+            </button>
           </div>
         </ScrollReveal>
       </div>
