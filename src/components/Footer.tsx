@@ -5,8 +5,8 @@ import { Link } from "@/i18n/navigation";
 import { FoxLogo } from "./FoxLogo";
 import { useRecruitment } from "./RecruitmentProvider";
 
-const serviceHrefs = ["#process", "#process", "#process", "#process", "#process"];
-const companyHrefs = ["#about", "#process", "#values", "#contact"];
+const serviceHrefs = ["/services", "/services", "/services", "/services", "/services"];
+const companyHrefs = ["/about", "/process", "/about", "#contact"];
 const legalHrefs = ["/privacy-policy", "/terms"];
 
 export function Footer() {
@@ -18,8 +18,8 @@ export function Footer() {
   const legal: { label: string }[] = t.raw("legal");
 
   const linkColumns = [
-    { title: t("servicesTitle"), links: services, hrefs: serviceHrefs, isInternal: false },
-    { title: t("companyTitle"), links: company, hrefs: companyHrefs, isInternal: false },
+    { title: t("servicesTitle"), links: services, hrefs: serviceHrefs, isInternal: true },
+    { title: t("companyTitle"), links: company, hrefs: companyHrefs, isInternal: true },
     { title: t("legalTitle"), links: legal, hrefs: legalHrefs, isInternal: true },
   ];
 
@@ -77,33 +77,37 @@ export function Footer() {
                 {col.title}
               </h4>
               <ul className="space-y-3">
-                {col.links.map((link, i) => (
-                  <li key={link.label}>
-                    {col.isInternal ? (
-                      <Link
-                        href={col.hrefs[i]}
-                        className="text-[14px] hover:text-[var(--spruce-light)] transition-colors duration-200"
-                        style={{
-                          color: "var(--text-dark-muted)",
-                          fontFamily: "var(--font-body)",
-                        }}
-                      >
-                        {link.label}
-                      </Link>
-                    ) : (
-                      <a
-                        href={col.hrefs[i]}
-                        className="text-[14px] hover:text-[var(--spruce-light)] transition-colors duration-200"
-                        style={{
-                          color: "var(--text-dark-muted)",
-                          fontFamily: "var(--font-body)",
-                        }}
-                      >
-                        {link.label}
-                      </a>
-                    )}
-                  </li>
-                ))}
+                {col.links.map((link, i) => {
+                  const href = col.hrefs[i];
+                  const isHashLink = href.startsWith("#");
+                  return (
+                    <li key={link.label}>
+                      {isHashLink ? (
+                        <a
+                          href={href}
+                          className="text-[14px] hover:text-[var(--spruce-light)] transition-colors duration-200"
+                          style={{
+                            color: "var(--text-dark-muted)",
+                            fontFamily: "var(--font-body)",
+                          }}
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={href}
+                          className="text-[14px] hover:text-[var(--spruce-light)] transition-colors duration-200"
+                          style={{
+                            color: "var(--text-dark-muted)",
+                            fontFamily: "var(--font-body)",
+                          }}
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
                 {col.title === t("companyTitle") && (
                   <li>
                     <button

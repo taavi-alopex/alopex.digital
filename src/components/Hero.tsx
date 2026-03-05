@@ -2,15 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { FoxLogo } from "./FoxLogo";
 import { SectionLabel } from "./SectionLabel";
 import { useBooking } from "./BookingProvider";
-import { useAssessment } from "./AssessmentProvider";
 
 export function Hero() {
   const t = useTranslations("hero");
   const { openBooking } = useBooking();
-  const { openAssessment } = useAssessment();
   const [loaded, setLoaded] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
 
@@ -130,8 +129,8 @@ export function Hero() {
           >
             {t("ctaPrimary")}
           </button>
-          <a
-            href="#process"
+          <Link
+            href="/process"
             className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase text-white border-2 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,255,255,0.08)]"
             style={{
               fontFamily: "var(--font-heading)",
@@ -141,7 +140,7 @@ export function Hero() {
             }}
           >
             {t("ctaSecondary")}
-          </a>
+          </Link>
         </div>
 
         {/* Assessment link */}
@@ -154,13 +153,13 @@ export function Hero() {
             transitionTimingFunction: "var(--fox-ease)",
           }}
         >
-          <button
-            onClick={openAssessment}
-            className="text-[13px] underline underline-offset-4 bg-transparent border-0 cursor-pointer transition-colors duration-200 hover:opacity-80"
+          <Link
+            href="/health-check"
+            className="text-[13px] underline underline-offset-4 transition-colors duration-200 hover:opacity-80"
             style={{ color: "var(--mist)" }}
           >
             {t("assessmentLink")} →
-          </button>
+          </Link>
         </div>
       </div>
 

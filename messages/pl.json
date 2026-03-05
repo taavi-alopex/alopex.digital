@@ -8,7 +8,7 @@
     "about": "O nas",
     "services": "Usługi",
     "process": "Proces",
-    "values": "Wartości",
+    "healthCheck": "Audyt RevOps",
     "contact": "Kontakt",
     "cta": "Umów bezpłatną rozmowę"
   },
@@ -32,6 +32,10 @@
     "assessmentLink": "Zrób darmowy audyt RevOps \u2192"
   },
   "about": {
+    "meta": {
+      "title": "O nas",
+      "description": "Alopex Digital — Twój partner GoHighLevel & RevOps dla Estonii, Polski i CEE. Projektujemy jasność dla firm opartych na sprzedaży."
+    },
     "label": "Kim jesteśmy",
     "title": "Agencja GoHighLevel & RevOps",
     "titleAccent": "dla Estonii, Polski i CEE",
@@ -90,6 +94,10 @@
     ]
   },
   "services": {
+    "meta": {
+      "title": "Usługi",
+      "description": "Rozwiązania GoHighLevel i niestandardowe integracje n8n dla firm opartych na sprzedaży. CRM, automatyzacja, pipeline'y i integracje lokalnych systemów."
+    },
     "label": "Co budujemy",
     "title": "Rozwiązania GoHighLevel",
     "titleAccent": "i niestandardowe integracje",
@@ -187,6 +195,10 @@
     "ctaButton": "Umów bezpłatną rozmowę"
   },
   "process": {
+    "meta": {
+      "title": "Nasz proces",
+      "description": "Metoda orkiestracji systemów — od audytu odkrywczego do strategicznego blueprintu, przez budowę architektury do bezproblemowego wdrożenia."
+    },
     "label": "Nasz proces",
     "title": "Metoda",
     "titleAccent": "Orkiestracji Systemów",
@@ -373,7 +385,12 @@
     "ctaMicro": "Bezpłatna rozmowa — bez zobowiązań."
   },
   "assessment": {
+    "meta": {
+      "title": "Audyt RevOps",
+      "description": "Zrób nasz darmowy 5-pytaniowy test, aby zidentyfikować luki w operacjach przychodowych i odkryć możliwości zamknięcia większej liczby transakcji."
+    },
     "welcome": {
+      "label": "Darmowy audyt",
       "title": "Audyt RevOps",
       "subtitle": "Odpowiedz na 5 szybkich pytań, aby zobaczyć, jak wypadają Twoje operacje przychodowe — i gdzie kryją się największe możliwości.",
       "start": "Rozpocznij audyt"

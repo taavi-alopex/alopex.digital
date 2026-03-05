@@ -8,7 +8,7 @@
     "about": "About",
     "services": "Services",
     "process": "Process",
-    "values": "Values",
+    "healthCheck": "Health Check",
     "contact": "Contact",
     "cta": "Book a Discovery Call"
   },
@@ -32,6 +32,10 @@
     "assessmentLink": "Take the free RevOps Health Check \u2192"
   },
   "about": {
+    "meta": {
+      "title": "About Us",
+      "description": "Alopex Digital — your GoHighLevel & RevOps partner for Estonia, Poland, and CEE. We architect clarity for sales-led businesses."
+    },
     "label": "Who We Are",
     "title": "GoHighLevel & RevOps Agency",
     "titleAccent": "for Estonia, Poland & CEE",
@@ -90,6 +94,10 @@
     ]
   },
   "services": {
+    "meta": {
+      "title": "Services",
+      "description": "GoHighLevel solutions and custom n8n integrations for sales-led businesses. CRM, automation, pipelines, and local system integrations."
+    },
     "label": "What We Build",
     "title": "GoHighLevel solutions",
     "titleAccent": "and custom integrations",
@@ -187,6 +195,10 @@
     "ctaButton": "Book a Discovery Call"
   },
   "process": {
+    "meta": {
+      "title": "Our Process",
+      "description": "The Systems Orchestration Method — from discovery audit to strategic blueprint to architecture build to frictionless launch."
+    },
     "label": "Our Process",
     "title": "The Systems",
     "titleAccent": "Orchestration Method",
@@ -373,7 +385,12 @@
     "ctaMicro": "Free discovery call \u2014 no obligation."
   },
   "assessment": {
+    "meta": {
+      "title": "RevOps Health Check",
+      "description": "Take our free 5-question assessment to identify gaps in your revenue operations and discover opportunities to capture more deals."
+    },
     "welcome": {
+      "label": "Free Assessment",
       "title": "RevOps Health Check",
       "subtitle": "Answer 5 quick questions to see how your revenue operations stack up \u2014 and where the biggest opportunities are hiding.",
       "start": "Start Assessment"

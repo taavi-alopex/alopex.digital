@@ -8,7 +8,7 @@
     "about": "Meist",
     "services": "Teenused",
     "process": "Protsess",
-    "values": "Väärtused",
+    "healthCheck": "Tervisekontroll",
     "contact": "Kontakt",
     "cta": "Broneeri tutvumiskõne"
   },
@@ -32,6 +32,10 @@
     "assessmentLink": "Tee tasuta müügisüsteemi audit \u2192"
   },
   "about": {
+    "meta": {
+      "title": "Meist",
+      "description": "Alopex Digital — sinu GoHighLevel & RevOps partner Eestis, Poolas ja KIE-s. Me projekteerime selgust müügipõhistele ettevõtetele."
+    },
     "label": "Kes me oleme",
     "title": "GoHighLevel & RevOps agentuur",
     "titleAccent": "Eestis, Poolas ja KIE-s",
@@ -90,6 +94,10 @@
     ]
   },
   "services": {
+    "meta": {
+      "title": "Teenused",
+      "description": "GoHighLevel lahendused ja kohandatud n8n integratsioonid müügipõhistele ettevõtetele. CRM, automatiseerimine, müügitorud ja kohalikud süsteemiintegratsioonid."
+    },
     "label": "Mida me ehitame",
     "title": "GoHighLevel lahendused",
     "titleAccent": "ja kohandatud integratsioonid",
@@ -187,6 +195,10 @@
     "ctaButton": "Broneeri tutvumiskõne"
   },
   "process": {
+    "meta": {
+      "title": "Meie protsess",
+      "description": "Süsteemide orkestreerimise meetod — auditist strateegilise kavandini, arhitektuuri ehitamisest sujuva käivitamiseni."
+    },
     "label": "Meie protsess",
     "title": "Süsteemide",
     "titleAccent": "orkestreerimise meetod",
@@ -373,7 +385,12 @@
     "ctaMicro": "Tasuta tutvumiskõne — kohustuseta."
   },
   "assessment": {
+    "meta": {
+      "title": "RevOps tervisekontroll",
+      "description": "Tee meie tasuta 5-küsimuseline test, et tuvastada lüngad müügisüsteemides ja avastada võimalusi rohkemate tehingute sõlmimiseks."
+    },
     "welcome": {
+      "label": "Tasuta audit",
       "title": "Müügisüsteemi tervisekontroll",
       "subtitle": "Vasta 5 kiirele küsimusele, et näha, kuidas su müügisüsteemid töötavad — ja kus peituvad suurimad võimalused.",
       "start": "Alusta auditi"

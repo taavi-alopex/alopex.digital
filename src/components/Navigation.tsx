@@ -2,16 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { FoxLogo } from "./FoxLogo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useBooking } from "./BookingProvider";
 
 const navKeys = [
-  { key: "about", href: "#about" },
-  { key: "services", href: "#uniques" },
-  { key: "process", href: "#process" },
-  { key: "values", href: "#values" },
-  { key: "contact", href: "#contact" },
+  { key: "about", href: "/about", isRoute: true },
+  { key: "services", href: "/services", isRoute: true },
+  { key: "process", href: "/process", isRoute: true },
+  { key: "healthCheck", href: "/health-check", isRoute: true },
+  { key: "contact", href: "#contact", isRoute: false },
 ] as const;
 
 export function Navigation() {
@@ -40,7 +41,7 @@ export function Navigation() {
     >
       <div className="max-w-[1200px] mx-auto px-5 md:px-8 flex items-center justify-between h-[72px]">
         {/* Brand Mark */}
-        <a href="#" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <FoxLogo size={32} glow={scrolled} />
           <span
             className="text-[13px] font-semibold tracking-[3px] uppercase text-white hidden sm:block"
@@ -48,20 +49,31 @@ export function Navigation() {
           >
             Alopex Digital
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navKeys.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-[13px] font-medium tracking-wide text-[var(--mist)] hover:text-white transition-colors duration-200"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              {t(link.key)}
-            </a>
-          ))}
+          {navKeys.map((link) =>
+            link.isRoute ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[13px] font-medium tracking-wide text-[var(--mist)] hover:text-white transition-colors duration-200"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                {t(link.key)}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-[13px] font-medium tracking-wide text-[var(--mist)] hover:text-white transition-colors duration-200"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                {t(link.key)}
+              </a>
+            )
+          )}
           <LanguageSwitcher />
           <button
             onClick={openBooking}
@@ -105,17 +117,29 @@ export function Navigation() {
       {mobileOpen && (
         <div className="md:hidden nav-glass border-t border-[rgba(255,255,255,0.06)]">
           <div className="px-5 py-6 flex flex-col gap-4">
-            {navKeys.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="text-[15px] font-medium text-[var(--mist)] hover:text-white transition-colors"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                {t(link.key)}
-              </a>
-            ))}
+            {navKeys.map((link) =>
+              link.isRoute ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-[15px] font-medium text-[var(--mist)] hover:text-white transition-colors"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  {t(link.key)}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-[15px] font-medium text-[var(--mist)] hover:text-white transition-colors"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  {t(link.key)}
+                </a>
+              )
+            )}
             <div className="mt-2">
               <LanguageSwitcher />
             </div>
