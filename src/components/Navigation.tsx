@@ -12,7 +12,7 @@ const navKeys = [
   { key: "services", href: "/services", isRoute: true },
   { key: "process", href: "/process", isRoute: true },
   { key: "healthCheck", href: "/health-check", isRoute: true },
-  { key: "contact", href: "#contact", isRoute: false },
+  { key: "contact", href: "/contact", isRoute: true },
 ] as const;
 
 export function Navigation() {

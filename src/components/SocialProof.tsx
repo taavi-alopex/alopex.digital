@@ -74,18 +74,18 @@ function TestimonialCard({
         <div className="flex items-center gap-4 pt-4 border-t border-white/5">
           {/* Logo container */}
           <div
-            className="relative flex-shrink-0 flex items-center justify-center overflow-hidden"
+            className="relative flex-shrink-0 flex items-center justify-center"
             style={{
-              width: isChanet ? "40px" : "48px",
-              height: isChanet ? "40px" : "32px",
+              width: isChanet ? "36px" : "48px",
+              height: isChanet ? "36px" : "32px",
             }}
           >
             {isChanet ? (
               <Image
                 src={testimonial.logo}
                 alt={testimonial.name}
-                width={40}
-                height={40}
+                width={32}
+                height={32}
                 className="object-contain"
               />
             ) : isGemoss ? (

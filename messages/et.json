@@ -587,5 +587,27 @@
         }
       }
     }
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontakt",
+      "description": "Võta ühendust Alopex Digitaliga. Broneeri tutvumiskõne, kirjuta meile või jälgi meid sotsiaalmeedias."
+    },
+    "label": "Võta ühendust",
+    "title": "Alustame",
+    "titleAccent": "vestlust",
+    "subtitle": "Olgu sul küsimus, soov projekti arutada või lihtsalt tere öelda — meil on hea meel sinust kuulda.",
+    "bookCall": {
+      "title": "Broneeri tutvumiskõne",
+      "description": "30-minutiline kõne. Kohustuseta. Kaardistame, kust tulu lekib ja näitame võimalusi.",
+      "button": "Broneeri tutvumiskõne"
+    },
+    "phone": "Telefon",
+    "email": "E-post",
+    "followUs": "Jälgi meid",
+    "registeredAddress": "Registreeritud aadress",
+    "team": {
+      "title": "Otsekontaktid"
+    }
   }
 }

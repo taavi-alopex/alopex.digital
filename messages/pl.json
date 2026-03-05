@@ -587,5 +587,27 @@
         }
       }
     }
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontakt",
+      "description": "Skontaktuj się z Alopex Digital. Umów rozmowę, napisz do nas lub śledź nas w mediach społecznościowych."
+    },
+    "label": "Skontaktuj się",
+    "title": "Rozpocznijmy",
+    "titleAccent": "rozmowę",
+    "subtitle": "Czy masz pytanie, chcesz omówić projekt, czy po prostu powiedzieć cześć — chętnie Cię wysłuchamy.",
+    "bookCall": {
+      "title": "Umów bezpłatną rozmowę",
+      "description": "30-minutowa rozmowa. Bez zobowiązań. Zmapujemy, gdzie tracisz przychody i pokażemy możliwości.",
+      "button": "Umów bezpłatną rozmowę"
+    },
+    "phone": "Telefon",
+    "email": "Email",
+    "followUs": "Śledź nas",
+    "registeredAddress": "Adres siedziby",
+    "team": {
+      "title": "Kontakty bezpośrednie"
+    }
   }
 }

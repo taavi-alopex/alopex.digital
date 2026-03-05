@@ -587,5 +587,27 @@
         }
       }
     }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact Us",
+      "description": "Get in touch with Alopex Digital. Book a discovery call, email us, or connect on social media."
+    },
+    "label": "Get in Touch",
+    "title": "Let's start",
+    "titleAccent": "a conversation",
+    "subtitle": "Whether you have a question, want to discuss a project, or just want to say hello — we'd love to hear from you.",
+    "bookCall": {
+      "title": "Book a Discovery Call",
+      "description": "30-minute call. No obligation. We'll map where you're losing revenue and show you the opportunities.",
+      "button": "Book a Discovery Call"
+    },
+    "phone": "Phone",
+    "email": "Email",
+    "followUs": "Follow us",
+    "registeredAddress": "Registered Address",
+    "team": {
+      "title": "Direct Contacts"
+    }
   }
 }
