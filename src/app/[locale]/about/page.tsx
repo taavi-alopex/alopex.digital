@@ -4,7 +4,6 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { About } from "@/components/About";
 import { Values } from "@/components/Values";
-import { Stats } from "@/components/Stats";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -26,7 +25,6 @@ export default function AboutPage() {
       <Navigation />
       <main className="pt-20">
         <About />
-        <Stats />
         <Values />
       </main>
       <Footer />

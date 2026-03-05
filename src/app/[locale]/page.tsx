@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Clients } from "@/components/Clients";
 import { InlineCTA } from "@/components/InlineCTA";
 import { SocialProof } from "@/components/SocialProof";
+import { Stats } from "@/components/Stats";
 import { Anchoring } from "@/components/Anchoring";
 import { Guarantee } from "@/components/Guarantee";
 import { CTA } from "@/components/CTA";
@@ -22,6 +23,7 @@ export default function Home() {
         <Clients />
         <InlineCTA variant="afterClients" />
         <SocialProof />
+        <Stats />
         <Anchoring />
         <Guarantee />
         <CTA />
