@@ -341,10 +341,30 @@
     "footerLink": "Liitu meeskonnaga"
   },
   "socialProof": {
-    "label": "Tulemused",
-    "title": "Tõestatud tulemused",
-    "titleAccent": "päris ettevõtetega",
-    "partnersLabel": "Usaldusväärsed partnerid",
+    "label": "Klientide lood",
+    "title": "Mida meie kliendid",
+    "titleAccent": "meie kohta ütlevad",
+    "testimonials": [
+      {
+        "quote": "Mul oli palju ideid, aga ma ei teadnud, mis on tehniliselt võimalik. Vajasin partnerit, kes aitaks mu ärisid automatiseerida.",
+        "name": "Chanet Simonen",
+        "title": "Coach & Ettevõtja",
+        "logo": "/chanet-logo.png"
+      },
+      {
+        "quote": "Mul polnud ülevaadet, mida mu müügimeeskond teeb. Nüüd on mul kogu meeskonna automatiseeritud KPI jälgimine.",
+        "name": "Viktoria Rozental",
+        "title": "Tegevjuht, Gemoss",
+        "logo": "/gemoss-logo.svg"
+      },
+      {
+        "quote": "Tahtsin oma äri skaleerida, aga tundsin, et mina ise olen pudelikael. Alopex aitas mul ehitada skaleeritavad süsteemid.",
+        "name": "Martin Kull",
+        "title": "Tegevjuht, Ovision",
+        "logo": "/ovision-logo.svg"
+      }
+    ],
+    "caseStudyLabel": "Juhtumiuuring",
     "caseStudy": {
       "client": "Koduaken",
       "industry": "Aknatootmine",

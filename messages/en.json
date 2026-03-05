@@ -341,10 +341,30 @@
     "footerLink": "Join the team"
   },
   "socialProof": {
-    "label": "Results",
-    "title": "Proven results",
-    "titleAccent": "with real businesses",
-    "partnersLabel": "Trusted Partners",
+    "label": "Client Stories",
+    "title": "What our clients",
+    "titleAccent": "say about us",
+    "testimonials": [
+      {
+        "quote": "I had lots of ideas but didn't know what was technically possible. I needed a partner to automate my businesses.",
+        "name": "Chanet Simonen",
+        "title": "Coach & Entrepreneur",
+        "logo": "/chanet-logo.png"
+      },
+      {
+        "quote": "I didn't have visibility into what my sales team was doing. Now I have automated KPI tracking for my whole team.",
+        "name": "Viktoria Rozental",
+        "title": "CEO, Gemoss",
+        "logo": "/gemoss-logo.svg"
+      },
+      {
+        "quote": "I wanted to scale my business, but I felt like I was the bottleneck. Alopex helped me build scalable systems.",
+        "name": "Martin Kull",
+        "title": "CEO, Ovision",
+        "logo": "/ovision-logo.svg"
+      }
+    ],
+    "caseStudyLabel": "Case Study",
     "caseStudy": {
       "client": "Koduaken",
       "industry": "Window Manufacturing",

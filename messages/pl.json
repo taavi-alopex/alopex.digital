@@ -341,10 +341,30 @@
     "footerLink": "Dołącz do zespołu"
   },
   "socialProof": {
-    "label": "Wyniki",
-    "title": "Udowodnione rezultaty",
-    "titleAccent": "z prawdziwymi firmami",
-    "partnersLabel": "Zaufani partnerzy",
+    "label": "Historie klientów",
+    "title": "Co nasi klienci",
+    "titleAccent": "mówią o nas",
+    "testimonials": [
+      {
+        "quote": "Miałam wiele pomysłów, ale nie wiedziałam, co jest technicznie możliwe. Potrzebowałam partnera do automatyzacji moich biznesów.",
+        "name": "Chanet Simonen",
+        "title": "Coach & Przedsiębiorca",
+        "logo": "/chanet-logo.png"
+      },
+      {
+        "quote": "Nie miałam wglądu w to, co robi mój zespół sprzedaży. Teraz mam automatyczne śledzenie KPI dla całego zespołu.",
+        "name": "Viktoria Rozental",
+        "title": "CEO, Gemoss",
+        "logo": "/gemoss-logo.svg"
+      },
+      {
+        "quote": "Chciałem skalować swój biznes, ale czułem, że sam jestem wąskim gardłem. Alopex pomógł mi zbudować skalowalne systemy.",
+        "name": "Martin Kull",
+        "title": "CEO, Ovision",
+        "logo": "/ovision-logo.svg"
+      }
+    ],
+    "caseStudyLabel": "Case Study",
     "caseStudy": {
       "client": "Koduaken",
       "industry": "Produkcja okien",
