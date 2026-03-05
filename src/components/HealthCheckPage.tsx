@@ -68,6 +68,10 @@ function ClockIcon({ className }: { className?: string }) {
   );
 }
 
+function isValidEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 export function HealthCheckPage() {
   const t = useTranslations("assessment");
   const locale = useLocale();
@@ -544,7 +548,7 @@ export function HealthCheckPage() {
                 <div className="text-center">
                   <button
                     onClick={handleSubmit}
-                    disabled={submitting || !contact.name || !contact.email}
+                    disabled={submitting || !contact.name || !isValidEmail(contact.email)}
                     className="px-10 py-5 text-[14px] font-semibold tracking-[0.5px] uppercase text-white border-0 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 mb-5"
                     style={{
                       fontFamily: "var(--font-heading)",
