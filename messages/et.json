@@ -588,6 +588,44 @@
       }
     }
   },
+  "qualification": {
+    "step1": {
+      "title": "Alustame sinu e-postiga",
+      "subtitle": "Kasutame seda kokkuvõtte saatmiseks ja sind kursis hoidmiseks.",
+      "placeholder": "sinu@email.ee"
+    },
+    "step2": {
+      "title": "Räägi meile oma ettevõttest",
+      "subtitle": "See aitab meil produktiivsemaks vestluseks valmistuda.",
+      "budget": "Igakuine eelarve turunduseks/süsteemideks",
+      "businessType": "Mis tüüpi ettevõtet sa juhid?",
+      "businessTypePlaceholder": "nt Päikeseenergia paigaldus, Kinnisvarabüroo, SaaS...",
+      "challenge": "Mis on sinu suurim operatiivne väljakutse?",
+      "challengePlaceholder": "nt Liidid kukuvad läbi, käsitsi järeltegevus...",
+      "timeline": "Millal soovid alustada?"
+    },
+    "step3": {
+      "title": "Veel üks samm",
+      "subtitle": "Palun kinnita, et oled inimene.",
+      "verified": "Kinnitatud"
+    },
+    "budgetOptions": {
+      "under2500": "Alla €2 500",
+      "2500to5000": "€2 500 – €5 000",
+      "5000to10000": "€5 000 – €10 000",
+      "over10000": "Üle €10 000"
+    },
+    "timelineOptions": {
+      "asap": "Nii kiiresti kui võimalik",
+      "1month": "1 kuu jooksul",
+      "3months": "3 kuu jooksul",
+      "exploring": "Lihtsalt uurin"
+    },
+    "back": "Tagasi",
+    "continue": "Jätka",
+    "showCalendar": "Näita kalendrit",
+    "submitting": "Palun oota..."
+  },
   "contact": {
     "meta": {
       "title": "Kontakt",

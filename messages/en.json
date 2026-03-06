@@ -588,6 +588,44 @@
       }
     }
   },
+  "qualification": {
+    "step1": {
+      "title": "Let's start with your email",
+      "subtitle": "We'll use this to send you a summary and keep you updated.",
+      "placeholder": "your@email.com"
+    },
+    "step2": {
+      "title": "Tell us about your business",
+      "subtitle": "This helps us prepare for a more productive conversation.",
+      "budget": "Monthly budget for marketing/systems",
+      "businessType": "What type of business do you run?",
+      "businessTypePlaceholder": "e.g. Solar installation, Real estate agency, SaaS...",
+      "challenge": "What's your biggest operational challenge?",
+      "challengePlaceholder": "e.g. Leads falling through the cracks, manual follow-up...",
+      "timeline": "When do you want to start?"
+    },
+    "step3": {
+      "title": "One last step",
+      "subtitle": "Please verify you're human to continue.",
+      "verified": "Verified"
+    },
+    "budgetOptions": {
+      "under2500": "Under €2,500",
+      "2500to5000": "€2,500 – €5,000",
+      "5000to10000": "€5,000 – €10,000",
+      "over10000": "Over €10,000"
+    },
+    "timelineOptions": {
+      "asap": "As soon as possible",
+      "1month": "Within 1 month",
+      "3months": "Within 3 months",
+      "exploring": "Just exploring"
+    },
+    "back": "Back",
+    "continue": "Continue",
+    "showCalendar": "Show Calendar",
+    "submitting": "Please wait..."
+  },
   "contact": {
     "meta": {
       "title": "Contact Us",

@@ -588,6 +588,44 @@
       }
     }
   },
+  "qualification": {
+    "step1": {
+      "title": "Zacznijmy od Twojego e-maila",
+      "subtitle": "Użyjemy go, aby wysłać Ci podsumowanie i informować o postępach.",
+      "placeholder": "twoj@email.pl"
+    },
+    "step2": {
+      "title": "Opowiedz nam o swojej firmie",
+      "subtitle": "To pomoże nam przygotować się do bardziej produktywnej rozmowy.",
+      "budget": "Miesięczny budżet na marketing/systemy",
+      "businessType": "Jaką firmę prowadzisz?",
+      "businessTypePlaceholder": "np. Instalacje solarne, Agencja nieruchomości, SaaS...",
+      "challenge": "Jakie jest Twoje największe wyzwanie operacyjne?",
+      "challengePlaceholder": "np. Leady przepadają, ręczne follow-upy...",
+      "timeline": "Kiedy chcesz zacząć?"
+    },
+    "step3": {
+      "title": "Jeszcze jeden krok",
+      "subtitle": "Potwierdź, że jesteś człowiekiem, aby kontynuować.",
+      "verified": "Zweryfikowano"
+    },
+    "budgetOptions": {
+      "under2500": "Poniżej €2 500",
+      "2500to5000": "€2 500 – €5 000",
+      "5000to10000": "€5 000 – €10 000",
+      "over10000": "Powyżej €10 000"
+    },
+    "timelineOptions": {
+      "asap": "Jak najszybciej",
+      "1month": "W ciągu 1 miesiąca",
+      "3months": "W ciągu 3 miesięcy",
+      "exploring": "Tylko rozglądam się"
+    },
+    "back": "Wstecz",
+    "continue": "Dalej",
+    "showCalendar": "Pokaż kalendarz",
+    "submitting": "Proszę czekać..."
+  },
   "contact": {
     "meta": {
       "title": "Kontakt",

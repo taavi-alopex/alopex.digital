@@ -1,8 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useState } from "react";
-import { useLocale } from "next-intl";
-import { BookingModal } from "./BookingModal";
+import { LeadQualificationModal } from "./LeadQualificationModal";
 
 type BookingContextValue = {
   isOpen: boolean;
@@ -20,7 +19,6 @@ export function useBooking() {
 
 export function BookingProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const locale = useLocale();
 
   const openBooking = useCallback(() => setIsOpen(true), []);
   const closeBooking = useCallback(() => setIsOpen(false), []);
@@ -28,7 +26,7 @@ export function BookingProvider({ children }: { children: React.ReactNode }) {
   return (
     <BookingContext.Provider value={{ isOpen, openBooking, closeBooking }}>
       {children}
-      <BookingModal isOpen={isOpen} onClose={closeBooking} locale={locale} />
+      <LeadQualificationModal isOpen={isOpen} onClose={closeBooking} />
     </BookingContext.Provider>
   );
 }
