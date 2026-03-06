@@ -8,6 +8,7 @@
   import { BookingProvider } from "@/components/BookingProvider";
   import { AssessmentProvider } from "@/components/AssessmentProvider";
   import { RecruitmentProvider } from "@/components/RecruitmentProvider";
+  import { MetaPixel } from "@/components/MetaPixel";
   import "../globals.css";
 
   const instrumentSerif = Instrument_Serif({
@@ -133,6 +134,7 @@
           className={`${instrumentSerif.variable} ${outfit.variable} ${montserrat.variable} ${jetbrainsMono.variable} antialiased`}
           suppressHydrationWarning
         >
+          <MetaPixel />
           <NextIntlClientProvider messages={messages}>
             <BookingProvider>
               <AssessmentProvider>

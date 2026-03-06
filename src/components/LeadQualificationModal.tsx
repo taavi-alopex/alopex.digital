@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Script from "next/script";
+import { MetaEvents } from "./MetaPixel";
 
 const CALENDAR_IDS: Record<string, string> = {
   et: "Wt3A4KaUfmwZzFwGMirM",
@@ -156,6 +157,9 @@ export function LeadQualificationModal({ isOpen, onClose }: Props) {
       setStep(3);
     } else if (step === 3 && recaptchaToken) {
       await submitFullData();
+      // Track Meta events
+      MetaEvents.lead({ content_name: "Qualification Flow", value: 0, currency: "EUR" });
+      MetaEvents.schedule({ content_name: "Discovery Call" });
       setStep(4);
     }
   };

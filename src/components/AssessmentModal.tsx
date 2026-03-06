@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { useBooking } from "./BookingProvider";
+import { MetaEvents } from "./MetaPixel";
 
 type Props = {
   isOpen: boolean;
@@ -143,6 +144,8 @@ export function AssessmentModal({ isOpen, onClose }: Props) {
     } catch {
       // Still show results on failure
     }
+    // Track Meta event
+    MetaEvents.lead({ content_name: "RevOps Assessment" });
     setSubmitting(false);
     setStep(7);
   };

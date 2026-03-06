@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import { MetaEvents } from "./MetaPixel";
 
 type Props = {
   isOpen: boolean;
@@ -68,6 +69,8 @@ export function RecruitmentModal({ isOpen, onClose }: Props) {
     } catch {
       // Show success anyway — webhook failure shouldn't block UX
     }
+    // Track Meta event
+    MetaEvents.lead({ content_name: "Job Application" });
     setSubmitting(false);
     setSubmitted(true);
   };
