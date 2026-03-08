@@ -5,6 +5,14 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  async rewrites() {
+    return [
+      {
+        source: "/pricing",
+        destination: "/pricing.html",
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
