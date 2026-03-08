@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         source: "/pricing",
         destination: "/pricing.html",
       },
+      {
+        source: "/sample-dashboard",
+        destination: "/sample-dashboard.html",
+      },
     ];
   },
 };

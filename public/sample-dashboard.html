@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alopex Analytics — Performance Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* ── Alopex Brand Palette ── */
+    --navy: #282c3e;
+    --midnight: #161929;
+    --spruce: #2D6A4F;
+    --spruce-light: #52B788;
+    --spruce-pale: #D8F3DC;
+    --amber: #D4873F;
+    --amber-light: #F0C78A;
+    --amber-pale: #FFF5E6;
+    --frost: #E8EDF2;
+    --mist: #C4CED8;
+
+    /* ── Dark Mode Surfaces ── */
+    --bg-root: #0d1020;
+    --bg-surface: var(--midnight);
+    --bg-card: #1E2138;
+    --bg-card-hover: #252845;
+    --border: rgba(255,255,255,0.06);
+    --border-hover: rgba(255,255,255,0.12);
+
+    /* ── Semantic Colors ── */
+    --text-primary: #E8EDF2;
+    --text-secondary: #C4CED8;
+    --text-muted: #6B7280;
+    --green: var(--spruce-light);
+    --green-dim: rgba(45,106,79,0.25);
+    --red: #E5534B;
+    --red-dim: rgba(229,83,75,0.15);
+    --accent: var(--amber);
+    --accent-dim: rgba(212,135,63,0.15);
+
+    /* ── Fonts ── */
+    --font-display: 'Instrument Serif', serif;
+    --font-ui: 'Outfit', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* ── Motion ── */
+    --ease-fox: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-sm: 150ms;
+    --duration-md: 300ms;
+    --duration-lg: 600ms;
+    --stagger: 80ms;
+
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-root);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Noise texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* Ambient glows — brand colors */
+  .ambient-glow {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(160px);
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .glow-1 { top: -200px; left: -100px; background: var(--spruce); }
+  .glow-2 { bottom: -200px; right: -100px; background: var(--amber); }
+
+  .dashboard {
+    position: relative;
+    z-index: 1;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 32px 48px;
+  }
+
+  /* ══ Header ══ */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--spruce), var(--amber));
+    box-shadow: 0 4px 16px rgba(45,106,79,0.3);
+  }
+  .brand-logo svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .brand-text h1 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    color: var(--text-primary);
+  }
+  .brand-text span {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--font-ui);
+    font-weight: 600;
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ctrl-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-family: var(--font-mono);
+    cursor: pointer;
+    transition: all var(--duration-md) var(--ease-fox);
+    user-select: none;
+  }
+  .ctrl-btn:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+  }
+  .ctrl-btn.active {
+    border-color: var(--amber);
+    background: var(--accent-dim);
+    color: var(--amber);
+  }
+  .ctrl-btn svg { opacity: 0.5; }
+
+  .status-dot {
+    width: 8px; height: 8px;
+    background: var(--spruce-light);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--spruce-light);
+    animation: pulse 2s infinite;
+  }
+  .live-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ══ Interactive Controls Bar ══ */
+  .controls-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 14px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    flex-wrap: wrap;
+  }
+  .controls-bar label {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+  }
+
+  .range-slider {
+    flex: 1;
+    min-width: 200px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: var(--navy);
+    border-radius: 2px;
+    outline: none;
+  }
+  .range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--amber);
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(212,135,63,0.4);
+    transition: transform var(--duration-sm) var(--ease-fox);
+  }
+  .range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+  .range-value {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--amber);
+    min-width: 80px;
+  }
+
+  .toggle-group {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  .toggle-btn {
+    padding: 6px 14px;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all var(--duration-md) var(--ease-fox);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .toggle-btn:not(:last-child) { border-right: 1px solid var(--border); }
+  .toggle-btn:hover { color: var(--text-secondary); background: rgba(255,255,255,0.03); }
+  .toggle-btn.active {
+    color: var(--amber);
+    background: var(--accent-dim);
+  }
+
+  .sep {
+    width: 1px;
+    height: 24px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  /* ══ Cards ══ */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: all var(--duration-md) var(--ease-fox);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  }
+  .card:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .card-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: var(--font-ui);
+  }
+
+  .card-actions {
+    display: flex;
+    gap: 4px;
+  }
+  .card-action-btn {
+    padding: 4px 10px;
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all var(--duration-sm) var(--ease-fox);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .card-action-btn:hover { color: var(--text-secondary); border-color: var(--border-hover); }
+  .card-action-btn.active {
+    color: var(--amber);
+    border-color: var(--amber);
+    background: var(--accent-dim);
+  }
+
+  /* ══ KPI Grid ══ */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .kpi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    transition: all var(--duration-md) var(--ease-fox);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+    transition: background var(--duration-md) var(--ease-fox);
+  }
+  .kpi-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+  .kpi-card:hover::before {
+    background: linear-gradient(90deg, transparent, var(--amber), transparent);
+    opacity: 0.6;
+  }
+  .kpi-card.expanded {
+    grid-column: span 2;
+  }
+
+  .kpi-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .kpi-value-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .kpi-value {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  .kpi-target {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .kpi-change {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-top: 6px;
+  }
+  .kpi-change.up { color: var(--spruce-light); background: var(--green-dim); }
+  .kpi-change.down { color: var(--red); background: var(--red-dim); }
+
+  .kpi-sparkline { height: 30px; margin-top: 8px; }
+
+  .kpi-progress-bar {
+    height: 3px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+  .kpi-progress-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1.5s var(--ease-fox);
+  }
+
+  /* ══ Drill-down panel ══ */
+  .drill-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s var(--ease-fox), padding 0.3s var(--ease-fox);
+    background: rgba(0,0,0,0.15);
+    border-radius: 0 0 var(--radius) var(--radius);
+    margin: 0 -20px -18px;
+    padding: 0 20px;
+  }
+  .drill-panel.open {
+    max-height: 300px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border);
+  }
+  .drill-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+  .drill-table th {
+    text-align: left;
+    color: var(--text-muted);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .drill-table td {
+    padding: 5px 8px;
+    color: var(--text-secondary);
+  }
+  .drill-table tr:hover td { color: var(--text-primary); }
+
+  /* ══ Chart Grid ══ */
+  .chart-grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-full { grid-template-columns: 1fr; }
+  .grid-2-1 { grid-template-columns: 2fr 1fr; }
+
+  .chart-container {
+    width: 100%;
+    height: 320px;
+  }
+  .chart-container.tall { height: 380px; }
+
+  /* ══ Section Headers ══ */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+  }
+  .section-label h2 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-secondary);
+  }
+  .section-label .line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .section-label .badge {
+    font-size: 9px;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    color: var(--amber);
+    background: var(--accent-dim);
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  /* ══ Footer ══ */
+  .footer {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    margin-top: 16px;
+  }
+  .footer p {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: var(--font-ui);
+  }
+  .footer a {
+    color: var(--amber);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* ══ Animations ══ */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .anim { animation: fadeUp 0.6s var(--ease-fox) both; }
+  .d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.1s; } .d3 { animation-delay: 0.15s; }
+  .d4 { animation-delay: 0.2s; } .d5 { animation-delay: 0.25s; } .d6 { animation-delay: 0.3s; }
+  .d7 { animation-delay: 0.35s; } .d8 { animation-delay: 0.4s; } .d9 { animation-delay: 0.45s; }
+  .d10 { animation-delay: 0.5s; } .d11 { animation-delay: 0.55s; } .d12 { animation-delay: 0.6s; }
+
+  /* ══ Responsive ══ */
+  @media (max-width: 1200px) {
+    .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+    .grid-2, .grid-2-1 { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .dashboard { padding: 16px; }
+    .header { flex-direction: column; gap: 16px; }
+    .controls-bar { flex-direction: column; align-items: stretch; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ambient-glow glow-1"></div>
+<div class="ambient-glow glow-2"></div>
+
+<div class="dashboard">
+  <!-- ══ Header ══ -->
+  <header class="header">
+    <div class="brand">
+      <div class="brand-logo">
+        <svg viewBox="280 200 480 580" fill="none">
+          <path fill="#E8EDF2" d="M323.882 290.744C323.493 288.044 322.279 279.319 322.539 277.01C323.92 264.714 326.711 251.414 329.099 239.258C330.268 233.313 331.785 223.661 333.386 218.467L334.108 218.311L335.631 219.552C344.326 227.965 355.406 240.397 363.739 249.427C379.098 265.756 394.307 282.225 409.365 298.832C412.658 302.394 437.728 328.802 438.601 330.737C440.044 331.715 440.06 332.048 441.832 332.053L585.43 332.882C586.546 345.323 585.567 362.393 586.194 375.311C586.371 378.973 586.816 400.735 586.468 403.453C586.606 409.908 587.837 443.907 586.221 448.208L586.713 448.697C591.393 449.381 621.513 490.18 625.451 491.656C644.785 496.061 664.253 499.784 683.588 504.052C699.919 507.657 715.931 511.892 732.367 515.337L732.706 515.822C729.53 519.354 711.241 535.109 707.029 537.879C703.929 541.742 696.78 545.562 694.897 547.791C695.254 558.401 702.603 578.686 705.151 589.672C705.742 592.22 707.535 597.64 707.849 599.981C710.304 607.772 712.487 615.647 714.393 623.59C704.398 636.232 685.442 659.99 674.137 671.207C670.861 676.35 653.083 696.073 648.178 701.695C647.172 702.848 633.502 707.481 630.672 708.482L595.283 720.886L543.784 739.004C534.794 742.159 525.805 745.606 516.681 748.346C515.011 748.847 513.702 749.085 511.995 748.599C499.158 744.936 381.425 704.806 378.093 701.783L377.548 701.264C368.415 692.684 358.474 680.339 350.85 670.298C347.704 667.514 341.262 659.67 338.263 656.181C329.147 645.58 320.367 634.831 311.184 624.254L315.219 610.371C315.287 608.752 318.854 596.221 319.502 593.665C323.285 578.744 327.977 563.567 331.257 548.553C319.821 537.14 306.489 527.12 293.83 517.134C292.846 516.357 293.05 515.987 293.067 514.929C297.065 505.703 304.352 492.51 309.148 483.347L328.978 444.728C330.924 440.991 339.2 424.03 340.967 421.993C341.316 420.785 341.32 419.523 341.399 418.259C340.94 415.835 340.559 409.896 340.157 406.933L336.188 379.486C331.997 350.589 327.269 319.58 323.882 290.744Z"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1>Alopex Analytics</h1>
+        <span>Performance Dashboard</span>
+      </div>
+    </div>
+    <div class="header-controls">
+      <div style="display:flex;align-items:center;gap:6px;">
+        <div class="status-dot"></div>
+        <span class="live-label">Live</span>
+      </div>
+      <div class="ctrl-btn" id="btn-date">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span id="date-display">Mar 1 – Mar 8, 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ Interactive Controls ══ -->
+  <div class="controls-bar anim d1">
+    <label>Revenue Goal</label>
+    <input type="range" class="range-slider" id="goal-slider" min="30000" max="80000" value="55000" step="1000">
+    <span class="range-value" id="goal-value">€55,000</span>
+    <div class="sep"></div>
+    <label>View</label>
+    <div class="toggle-group">
+      <button class="toggle-btn active" data-view="monthly" onclick="setView('monthly')">Monthly</button>
+      <button class="toggle-btn" data-view="cumulative" onclick="setView('cumulative')">Cumulative</button>
+    </div>
+    <div class="sep"></div>
+    <label>Period</label>
+    <div class="toggle-group">
+      <button class="toggle-btn" data-period="6" onclick="setPeriod(6)">6M</button>
+      <button class="toggle-btn active" data-period="12" onclick="setPeriod(12)">12M</button>
+    </div>
+  </div>
+
+  <!-- ══ KPI Cards ══ -->
+  <div class="kpi-grid">
+    <div class="kpi-card anim d2" onclick="toggleDrill(this)">
+      <div class="kpi-label">Revenue This Month</div>
+      <div class="kpi-value-row">
+        <div class="kpi-value" style="color:var(--amber)">€47,280</div>
+        <div class="kpi-target">/ €55,000</div>
+      </div>
+      <div class="kpi-change up">↑ 8.3% vs last month</div>
+      <div class="kpi-progress-bar">
+        <div class="kpi-progress-fill" style="width:0%;background:linear-gradient(90deg,var(--amber),var(--amber-light));" data-target="86"></div>
+      </div>
+      <div class="kpi-sparkline" id="spark-revenue"></div>
+      <div class="drill-panel">
+        <table class="drill-table">
+          <tr><th>Source</th><th>Revenue</th><th>%</th></tr>
+          <tr><td>Google Ads</td><td>€18,420</td><td>39%</td></tr>
+          <tr><td>Referral</td><td>€12,760</td><td>27%</td></tr>
+          <tr><td>Facebook</td><td>€9,080</td><td>19%</td></tr>
+          <tr><td>Organic</td><td>€7,020</td><td>15%</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="kpi-card anim d3" onclick="toggleDrill(this)">
+      <div class="kpi-label">New Leads</div>
+      <div class="kpi-value-row">
+        <div class="kpi-value">284</div>
+      </div>
+      <div class="kpi-change up">↑ 12% vs last month</div>
+      <div class="kpi-sparkline" id="spark-leads"></div>
+      <div class="drill-panel">
+        <table class="drill-table">
+          <tr><th>Channel</th><th>Leads</th><th>Conv%</th></tr>
+          <tr><td>Google Ads</td><td>86</td><td>20.9%</td></tr>
+          <tr><td>Facebook</td><td>72</td><td>16.7%</td></tr>
+          <tr><td>Referral</td><td>48</td><td>29.2%</td></tr>
+          <tr><td>Organic</td><td>42</td><td>19.0%</td></tr>
+          <tr><td>LinkedIn</td><td>22</td><td>22.7%</td></tr>
+          <tr><td>Cold Email</td><td>14</td><td>14.3%</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="kpi-card anim d4" onclick="toggleDrill(this)">
+      <div class="kpi-label">Conversion Rate</div>
+      <div class="kpi-value-row">
+        <div class="kpi-value">18.4<span style="font-size:14px;color:var(--text-muted)">%</span></div>
+      </div>
+      <div class="kpi-change down">↓ 2.1% vs last month</div>
+      <div class="kpi-sparkline" id="spark-conversion"></div>
+      <div class="drill-panel">
+        <table class="drill-table">
+          <tr><th>Stage</th><th>Rate</th><th>Trend</th></tr>
+          <tr><td>Lead → Contact</td><td>69.7%</td><td style="color:var(--spruce-light)">↑</td></tr>
+          <tr><td>Contact → Qualified</td><td>56.6%</td><td style="color:var(--red)">↓</td></tr>
+          <tr><td>Qualified → Proposal</td><td>60.7%</td><td style="color:var(--spruce-light)">↑</td></tr>
+          <tr><td>Proposal → Won</td><td>35.3%</td><td style="color:var(--red)">↓</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="kpi-card anim d5" onclick="toggleDrill(this)">
+      <div class="kpi-label">Booked Appointments</div>
+      <div class="kpi-value-row">
+        <div class="kpi-value">67</div>
+        <div class="kpi-target">/ 80</div>
+      </div>
+      <div class="kpi-change up">↑ 5.2% vs last month</div>
+      <div class="kpi-progress-bar">
+        <div class="kpi-progress-fill" style="width:0%;background:linear-gradient(90deg,var(--spruce),var(--spruce-light));" data-target="84"></div>
+      </div>
+      <div class="kpi-sparkline" id="spark-appointments"></div>
+      <div class="drill-panel">
+        <table class="drill-table">
+          <tr><th>Rep</th><th>Booked</th><th>Show%</th></tr>
+          <tr><td>Emma</td><td>22</td><td>91%</td></tr>
+          <tr><td>Sofia</td><td>19</td><td>84%</td></tr>
+          <tr><td>Marcus</td><td>14</td><td>79%</td></tr>
+          <tr><td>Jake</td><td>12</td><td>83%</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="kpi-card anim d6" onclick="toggleDrill(this)">
+      <div class="kpi-label">Avg Deal Value</div>
+      <div class="kpi-value-row">
+        <div class="kpi-value">€2,340</div>
+      </div>
+      <div class="kpi-change up">↑ 3.7% vs last month</div>
+      <div class="kpi-sparkline" id="spark-deal"></div>
+      <div class="drill-panel">
+        <table class="drill-table">
+          <tr><th>Service</th><th>Avg Value</th><th>Deals</th></tr>
+          <tr><td>Full Automation</td><td>€4,200</td><td>6</td></tr>
+          <tr><td>CRM Setup</td><td>€2,100</td><td>10</td></tr>
+          <tr><td>Ad Management</td><td>€1,400</td><td>5</td></tr>
+          <tr><td>Consulting</td><td>€850</td><td>3</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Revenue vs Goal ══ -->
+  <div class="section-label">
+    <h2>Revenue Performance</h2>
+    <div class="line"></div>
+    <div class="badge">Goal Tracking</div>
+  </div>
+  <div class="chart-grid grid-full">
+    <div class="card anim d7">
+      <div class="card-header">
+        <div class="card-title">Monthly Revenue vs Target — FY 2025/26</div>
+        <div class="card-actions">
+          <button class="card-action-btn active" onclick="toggleRevenueChart('bar', this)">Bar</button>
+          <button class="card-action-btn" onclick="toggleRevenueChart('line', this)">Line</button>
+          <button class="card-action-btn" onclick="toggleRevenueChart('area', this)">Area</button>
+        </div>
+      </div>
+      <div class="chart-container tall" id="chart-revenue-goal"></div>
+    </div>
+  </div>
+
+  <!-- ══ Pipeline + Lead Source ══ -->
+  <div class="section-label">
+    <h2>Pipeline & Acquisition</h2>
+    <div class="line"></div>
+    <div class="badge">Funnel Analytics</div>
+  </div>
+  <div class="chart-grid grid-2">
+    <div class="card anim d8">
+      <div class="card-header">
+        <div class="card-title">Pipeline Conversion Funnel</div>
+        <div class="card-actions">
+          <button class="card-action-btn active" onclick="toggleFunnel('funnel', this)">Funnel</button>
+          <button class="card-action-btn" onclick="toggleFunnel('bar', this)">Bar</button>
+        </div>
+      </div>
+      <div class="chart-container tall" id="chart-funnel"></div>
+    </div>
+    <div class="card anim d9">
+      <div class="card-header">
+        <div class="card-title">Lead Source ROI Analysis</div>
+        <div class="card-actions">
+          <button class="card-action-btn active" onclick="toggleLeadView('roi', this)">ROI</button>
+          <button class="card-action-btn" onclick="toggleLeadView('volume', this)">Volume</button>
+        </div>
+      </div>
+      <div class="chart-container tall" id="chart-lead-source"></div>
+    </div>
+  </div>
+
+  <!-- ══ Rep Performance + Heatmap ══ -->
+  <div class="section-label">
+    <h2>Team & Activity</h2>
+    <div class="line"></div>
+    <div class="badge">Performance</div>
+  </div>
+  <div class="chart-grid grid-2">
+    <div class="card anim d10">
+      <div class="card-header">
+        <div class="card-title">Sales Rep Comparison</div>
+        <div class="card-actions">
+          <button class="card-action-btn active" onclick="toggleRadar('radar', this)">Radar</button>
+          <button class="card-action-btn" onclick="toggleRadar('bar', this)">Ranked</button>
+        </div>
+      </div>
+      <div class="chart-container tall" id="chart-radar"></div>
+    </div>
+    <div class="card anim d11">
+      <div class="card-title" style="margin-bottom:16px">Activity Heatmap — Best Performing Time Slots</div>
+      <div class="chart-container tall" id="chart-heatmap"></div>
+    </div>
+  </div>
+
+  <!-- ══ Forecast + Gauges ══ -->
+  <div class="section-label">
+    <h2>Forecast & Appointments</h2>
+    <div class="line"></div>
+    <div class="badge">Predictive</div>
+  </div>
+  <div class="chart-grid grid-2-1">
+    <div class="card anim d12">
+      <div class="card-title" style="margin-bottom:16px">Revenue Forecast — Pipeline Weighted</div>
+      <div class="chart-container" id="chart-forecast"></div>
+    </div>
+    <div class="card anim d12">
+      <div class="card-title" style="margin-bottom:16px">Appointment Funnel Metrics</div>
+      <div class="chart-container" id="chart-gauges"></div>
+    </div>
+  </div>
+
+  <!-- ══ Footer ══ -->
+  <div class="footer">
+    <p>Powered by <a href="#">Alopex Digital</a> · Custom analytics beyond GoHighLevel · Data refreshes every 15 min</p>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// Theme — Alopex Brand
+// ═══════════════════════════════════════════
+const T = {
+  bg: '#1E2138',
+  navy: '#282c3e',
+  midnight: '#161929',
+  spruce: '#2D6A4F',
+  spruceLight: '#52B788',
+  amber: '#D4873F',
+  amberLight: '#F0C78A',
+  text: '#E8EDF2',
+  textSec: '#C4CED8',
+  textMuted: '#6B7280',
+  border: 'rgba(255,255,255,0.06)',
+  red: '#E5534B',
+  frost: '#E8EDF2',
+};
+
+const FM = 'JetBrains Mono, monospace';
+const FU = 'Outfit, sans-serif';
+const tooltipStyle = {
+  backgroundColor: '#1E2138',
+  borderColor: 'rgba(255,255,255,0.08)',
+  textStyle: { fontFamily: FM, fontSize: 11, color: T.text },
+};
+
+const charts = {};
+function initChart(id) {
+  const c = echarts.init(document.getElementById(id), null, { renderer: 'canvas' });
+  charts[id] = c;
+  window.addEventListener('resize', () => c.resize());
+  return c;
+}
+
+// ═══════════════════════════════════════════
+// KPI Drill-down
+// ═══════════════════════════════════════════
+function toggleDrill(card) {
+  const panel = card.querySelector('.drill-panel');
+  const wasOpen = panel.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.drill-panel.open').forEach(p => p.classList.remove('open'));
+  document.querySelectorAll('.kpi-card.expanded').forEach(c => c.classList.remove('expanded'));
+  if (!wasOpen) {
+    panel.classList.add('open');
+    card.classList.add('expanded');
+  }
+  // Resize sparklines after layout change
+  setTimeout(() => {
+    Object.values(charts).forEach(c => c.resize());
+  }, 350);
+}
+
+// ═══════════════════════════════════════════
+// Sparklines
+// ═══════════════════════════════════════════
+function sparkline(id, data, color) {
+  const c = initChart(id);
+  c.setOption({
+    grid: { top: 4, bottom: 0, left: 0, right: 0 },
+    xAxis: { type: 'category', show: false, data: data.map((_, i) => i) },
+    yAxis: { type: 'value', show: false, min: Math.min(...data) * 0.9 },
+    series: [{
+      type: 'line', data, smooth: 0.4, symbol: 'none',
+      lineStyle: { width: 2, color },
+      areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+        { offset: 0, color: color + '40' },
+        { offset: 1, color: 'transparent' }
+      ])}
+    }],
+    animationDuration: 1200, animationEasing: 'cubicOut'
+  });
+}
+
+sparkline('spark-revenue', [32000, 36500, 38200, 41000, 39800, 43600, 44100, 47280], T.amber);
+sparkline('spark-leads', [180, 205, 220, 198, 234, 260, 253, 284], T.spruceLight);
+sparkline('spark-conversion', [22.1, 21.5, 20.8, 20.1, 19.6, 20.5, 19.2, 18.4], T.red);
+sparkline('spark-appointments', [42, 48, 51, 55, 58, 60, 64, 67], T.spruceLight);
+sparkline('spark-deal', [1980, 2050, 2100, 2180, 2200, 2280, 2310, 2340], T.amberLight);
+
+// Progress bars
+setTimeout(() => {
+  document.querySelectorAll('.kpi-progress-fill').forEach(el => {
+    el.style.width = el.dataset.target + '%';
+  });
+}, 300);
+
+// ═══════════════════════════════════════════
+// Revenue Goal Slider
+// ═══════════════════════════════════════════
+const goalSlider = document.getElementById('goal-slider');
+const goalDisplay = document.getElementById('goal-value');
+let currentGoal = 55000;
+let currentView = 'monthly';
+let currentPeriod = 12;
+
+goalSlider.addEventListener('input', (e) => {
+  currentGoal = parseInt(e.target.value);
+  goalDisplay.textContent = '€' + currentGoal.toLocaleString();
+  renderRevenueChart();
+});
+
+function setView(v) {
+  currentView = v;
+  document.querySelectorAll('[data-view]').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+  renderRevenueChart();
+}
+
+function setPeriod(p) {
+  currentPeriod = p;
+  document.querySelectorAll('[data-period]').forEach(b => b.classList.toggle('active', parseInt(b.dataset.period) === p));
+  renderRevenueChart();
+}
+
+// ═══════════════════════════════════════════
+// 1. Revenue vs Goal
+// ═══════════════════════════════════════════
+const allMonths = ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'];
+const allActual = [38200, 41500, 43800, 39200, 45600, 48100, 52300, 49800, 55200, 44100, 47800, 47280];
+let revenueChartType = 'bar';
+
+function toggleRevenueChart(type, btn) {
+  revenueChartType = type;
+  btn.parentElement.querySelectorAll('.card-action-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderRevenueChart();
+}
+
+function renderRevenueChart() {
+  const chart = charts['chart-revenue-goal'] || initChart('chart-revenue-goal');
+  const startIdx = 12 - currentPeriod;
+  const months = allMonths.slice(startIdx);
+  const actual = allActual.slice(startIdx);
+  const target = months.map(() => currentGoal);
+
+  let cumActual, cumTarget;
+  if (currentView === 'cumulative') {
+    cumActual = actual.reduce((acc, v) => { acc.push((acc.length ? acc[acc.length-1] : 0) + v); return acc; }, []);
+    cumTarget = target.reduce((acc, v) => { acc.push((acc.length ? acc[acc.length-1] : 0) + v); return acc; }, []);
+  }
+  const displayActual = currentView === 'cumulative' ? cumActual : actual;
+  const displayTarget = currentView === 'cumulative' ? cumTarget : target;
+
+  const series = [];
+  if (revenueChartType === 'bar') {
+    series.push({
+      name: 'Revenue', type: 'bar', data: displayActual, barWidth: '45%',
+      itemStyle: {
+        borderRadius: [4, 4, 0, 0],
+        color: (p) => {
+          const hit = displayActual[p.dataIndex] >= displayTarget[p.dataIndex];
+          return new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 0, color: hit ? T.spruceLight : T.amber },
+            { offset: 1, color: hit ? T.spruce + '66' : T.amber + '44' }
+          ]);
+        }
+      },
+      animationDelay: idx => idx * 60
+    });
+  } else {
+    series.push({
+      name: 'Revenue', type: 'line', data: displayActual, smooth: 0.3,
+      symbol: 'circle', symbolSize: 6,
+      lineStyle: { color: T.amber, width: 3 },
+      itemStyle: { color: T.amber, borderColor: T.bg, borderWidth: 2 },
+      ...(revenueChartType === 'area' ? { areaStyle: {
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          { offset: 0, color: T.amber + '30' },
+          { offset: 1, color: 'transparent' }
+        ])
+      }} : {})
+    });
+  }
+  series.push({
+    name: 'Target', type: 'line', data: displayTarget, symbol: 'none',
+    lineStyle: { color: T.spruceLight, width: 2, type: 'dashed' },
+    z: 10
+  });
+
+  chart.setOption({
+    tooltip: {
+      trigger: 'axis', ...tooltipStyle,
+      formatter: params => {
+        const a = params.find(p => p.seriesName === 'Revenue');
+        const t = params.find(p => p.seriesName === 'Target');
+        if (!a || !t) return '';
+        const diff = a.value - t.value;
+        const pct = ((a.value / t.value) * 100).toFixed(1);
+        const c = diff >= 0 ? T.spruceLight : T.red;
+        const sign = diff >= 0 ? '+' : '';
+        return `<div style="font-family:${FM}"><div style="color:${T.textMuted};margin-bottom:8px">${a.name}</div>
+          <div style="display:flex;justify-content:space-between;gap:24px;margin-bottom:4px"><span>Revenue</span><span style="font-weight:700">€${a.value.toLocaleString()}</span></div>
+          <div style="display:flex;justify-content:space-between;gap:24px;margin-bottom:4px"><span>Target</span><span>€${t.value.toLocaleString()}</span></div>
+          <div style="border-top:1px solid rgba(255,255,255,0.06);margin:6px 0"></div>
+          <div style="display:flex;justify-content:space-between;gap:24px"><span>Attainment</span><span style="color:${c};font-weight:700">${pct}% (${sign}€${Math.abs(diff).toLocaleString()})</span></div></div>`;
+      }
+    },
+    grid: { top: 40, bottom: 40, left: 60, right: 20 },
+    xAxis: {
+      type: 'category', data: months,
+      axisLine: { lineStyle: { color: 'rgba(255,255,255,0.06)' } },
+      axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 11 },
+      axisTick: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      axisLine: { show: false },
+      splitLine: { lineStyle: { color: 'rgba(255,255,255,0.04)', type: 'dashed' } },
+      axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 11, formatter: v => '€' + (v / 1000) + 'k' }
+    },
+    legend: {
+      top: 4, right: 0,
+      textStyle: { color: T.textMuted, fontFamily: FM, fontSize: 11 },
+      itemWidth: 16, itemHeight: 3
+    },
+    series,
+    animationDuration: 800, animationEasing: 'cubicOut'
+  }, true);
+}
+renderRevenueChart();
+
+// ═══════════════════════════════════════════
+// 2. Pipeline Funnel
+// ═══════════════════════════════════════════
+const funnelStages = ['New Lead', 'Contacted', 'Qualified', 'Proposal Sent', 'Negotiation', 'Won'];
+const funnelValues = [284, 198, 112, 68, 41, 24];
+const funnelColors = [T.amber, T.amberLight, T.spruceLight, T.spruce, '#7B9EA8', T.spruceLight];
+
+function toggleFunnel(type, btn) {
+  btn.parentElement.querySelectorAll('.card-action-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderFunnel(type);
+}
+
+function renderFunnel(type) {
+  const chart = charts['chart-funnel'] || initChart('chart-funnel');
+  const fmtTooltip = p => {
+    const idx = funnelStages.indexOf(p.name);
+    const dropoff = idx > 0 ? ((1 - funnelValues[idx] / funnelValues[idx-1]) * 100).toFixed(1) : 0;
+    const fromTop = ((funnelValues[idx] / funnelValues[0]) * 100).toFixed(1);
+    return `<div style="font-family:${FM}"><div style="font-weight:700;margin-bottom:6px">${p.name}</div>
+      <div>${funnelValues[idx]} contacts</div>
+      ${idx > 0 ? `<div style="color:${T.red};margin-top:4px">↓ ${dropoff}% drop-off</div>` : ''}
+      <div style="color:${T.textMuted};margin-top:2px">${fromTop}% of total pipeline</div></div>`;
+  };
+
+  if (type === 'funnel') {
+    chart.setOption({
+      tooltip: { trigger: 'item', ...tooltipStyle, formatter: fmtTooltip },
+      series: [{
+        type: 'funnel', left: '10%', right: '10%', top: 16, bottom: 16,
+        width: '80%', minSize: '15%', maxSize: '100%', sort: 'descending', gap: 4,
+        label: { show: true, position: 'inside', fontFamily: FM, fontSize: 12, color: '#fff',
+          formatter: p => `${p.name}  ·  ${funnelValues[funnelStages.indexOf(p.name)]}` },
+        itemStyle: { borderColor: 'transparent', borderWidth: 0 },
+        emphasis: { label: { fontSize: 13, fontWeight: 700 } },
+        data: funnelStages.map((name, i) => ({
+          name, value: funnelValues[i],
+          itemStyle: { color: funnelColors[i], borderRadius: 4 }
+        }))
+      }],
+      xAxis: undefined, yAxis: undefined, grid: undefined,
+      animationDuration: 1200
+    }, true);
+  } else {
+    chart.setOption({
+      tooltip: { trigger: 'axis', ...tooltipStyle },
+      grid: { top: 16, bottom: 40, left: 100, right: 30 },
+      xAxis: { type: 'value', axisLine: { show: false }, splitLine: { lineStyle: { color: 'rgba(255,255,255,0.04)', type: 'dashed' } },
+        axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 11 } },
+      yAxis: { type: 'category', data: [...funnelStages].reverse(), axisLine: { lineStyle: { color: 'rgba(255,255,255,0.06)' } },
+        axisLabel: { color: T.textSec, fontFamily: FM, fontSize: 10 }, axisTick: { show: false } },
+      series: [{ type: 'bar', data: [...funnelValues].reverse(), barWidth: '50%',
+        itemStyle: { borderRadius: [0, 4, 4, 0],
+          color: (p) => funnelColors[5 - p.dataIndex] },
+        label: { show: true, position: 'right', fontFamily: FM, fontSize: 11, color: T.textSec }
+      }],
+      animationDuration: 800
+    }, true);
+  }
+}
+renderFunnel('funnel');
+
+// ═══════════════════════════════════════════
+// 3. Lead Source ROI
+// ═══════════════════════════════════════════
+const sources = ['Google Ads', 'Facebook', 'Referral', 'Organic', 'LinkedIn', 'Cold Email'];
+const lsLeads = [86, 72, 48, 42, 22, 14];
+const lsDeals = [18, 12, 14, 8, 5, 2];
+const lsCPA = [42, 58, 0, 0, 85, 120];
+const lsSpend = [3600, 4200, 0, 0, 1870, 1680];
+const lsRevenue = [42120, 28080, 32760, 18720, 11700, 4680];
+
+function toggleLeadView(view, btn) {
+  btn.parentElement.querySelectorAll('.card-action-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderLeadSource(view);
+}
+
+function renderLeadSource(view) {
+  const chart = charts['chart-lead-source'] || initChart('chart-lead-source');
+  if (view === 'roi') {
+    chart.setOption({
+      tooltip: { trigger: 'axis', ...tooltipStyle,
+        formatter: params => {
+          const idx = sources.indexOf(params[0].name);
+          const roi = lsSpend[idx] > 0 ? ((lsRevenue[idx] - lsSpend[idx]) / lsSpend[idx] * 100).toFixed(0) : '∞';
+          return `<div style="font-family:${FM}"><div style="font-weight:700;margin-bottom:8px">${params[0].name}</div>
+            <div style="display:grid;grid-template-columns:auto auto;gap:2px 16px">
+            <span style="color:${T.textMuted}">Leads</span><span>${lsLeads[idx]}</span>
+            <span style="color:${T.textMuted}">Deals</span><span>${lsDeals[idx]}</span>
+            <span style="color:${T.textMuted}">Spend</span><span>€${lsSpend[idx].toLocaleString()}</span>
+            <span style="color:${T.textMuted}">Revenue</span><span>€${lsRevenue[idx].toLocaleString()}</span>
+            <span style="color:${T.textMuted}">ROI</span><span style="color:${T.spruceLight};font-weight:700">${roi}%</span></div></div>`;
+        }
+      },
+      legend: { top: 4, right: 0, textStyle: { color: T.textMuted, fontFamily: FM, fontSize: 11 }, itemWidth: 12, itemHeight: 3 },
+      grid: { top: 40, bottom: 40, left: 50, right: 50 },
+      xAxis: { type: 'category', data: sources, axisLine: { lineStyle: { color: 'rgba(255,255,255,0.06)' } },
+        axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 10 }, axisTick: { show: false } },
+      yAxis: [
+        { type: 'value', name: 'Count', nameTextStyle: { color: T.textMuted, fontFamily: FM, fontSize: 10 },
+          axisLine: { show: false }, splitLine: { lineStyle: { color: 'rgba(255,255,255,0.04)', type: 'dashed' } },
+          axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 10 } },
+        { type: 'value', name: 'CPA (€)', nameTextStyle: { color: T.textMuted, fontFamily: FM, fontSize: 10 },
+          axisLine: { show: false }, splitLine: { show: false },
+          axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 10, formatter: '€{value}' } }
+      ],
+      series: [
+        { name: 'Leads', type: 'bar', data: lsLeads, barWidth: '30%', itemStyle: { color: T.amber, borderRadius: [3,3,0,0] } },
+        { name: 'Deals', type: 'bar', data: lsDeals, barWidth: '30%', itemStyle: { color: T.spruceLight, borderRadius: [3,3,0,0] } },
+        { name: 'CPA', type: 'line', yAxisIndex: 1, data: lsCPA.map(v => v || null),
+          lineStyle: { color: T.amberLight, width: 2 }, symbol: 'circle', symbolSize: 8,
+          itemStyle: { color: T.amberLight, borderColor: T.bg, borderWidth: 2 } }
+      ],
+      animationDuration: 800
+    }, true);
+  } else {
+    // Volume — pie chart
+    chart.setOption({
+      tooltip: { trigger: 'item', ...tooltipStyle },
+      legend: { bottom: 0, textStyle: { color: T.textMuted, fontFamily: FM, fontSize: 10 }, itemWidth: 10, itemHeight: 3 },
+      grid: undefined, xAxis: undefined, yAxis: undefined,
+      series: [{
+        type: 'pie', radius: ['35%', '60%'], center: ['50%', '45%'],
+        label: { color: T.textSec, fontFamily: FM, fontSize: 11, formatter: '{b}\n{d}%' },
+        data: sources.map((s, i) => ({
+          name: s, value: lsLeads[i],
+          itemStyle: { color: [T.amber, T.amberLight, T.spruceLight, T.spruce, '#7B9EA8', T.textMuted][i] }
+        })),
+        emphasis: { itemStyle: { shadowBlur: 20, shadowColor: 'rgba(0,0,0,0.3)' } }
+      }],
+      animationDuration: 800
+    }, true);
+  }
+}
+renderLeadSource('roi');
+
+// ═══════════════════════════════════════════
+// 4. Radar / Ranked
+// ═══════════════════════════════════════════
+const reps = ['Emma', 'Jake', 'Sofia', 'Marcus'];
+const repColors = [T.amber, T.spruceLight, T.amberLight, '#7B9EA8'];
+const repData = [
+  [88, 82, 75, 90, 72, 85],
+  [72, 68, 85, 78, 90, 62],
+  [95, 88, 68, 72, 85, 92],
+  [65, 72, 92, 95, 68, 70]
+];
+const radarAxes = ['Calls Made', 'Appts Set', 'Deals Closed', 'Revenue', 'Response Time', 'Follow-up'];
+
+function toggleRadar(type, btn) {
+  btn.parentElement.querySelectorAll('.card-action-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderRadar(type);
+}
+
+function renderRadar(type) {
+  const chart = charts['chart-radar'] || initChart('chart-radar');
+  if (type === 'radar') {
+    chart.setOption({
+      tooltip: { ...tooltipStyle },
+      legend: { bottom: 0, textStyle: { color: T.textMuted, fontFamily: FM, fontSize: 11 }, itemWidth: 12, itemHeight: 3, selectedMode: true },
+      radar: {
+        indicator: radarAxes.map(name => ({ name, max: 100 })),
+        shape: 'polygon', splitNumber: 4,
+        axisName: { color: T.textMuted, fontFamily: FM, fontSize: 10 },
+        splitLine: { lineStyle: { color: 'rgba(255,255,255,0.06)' } },
+        splitArea: { show: false },
+        axisLine: { lineStyle: { color: 'rgba(255,255,255,0.06)' } },
+        center: ['50%', '48%'], radius: '65%'
+      },
+      grid: undefined, xAxis: undefined, yAxis: undefined,
+      series: [{ type: 'radar', data: reps.map((name, i) => ({
+        name, value: repData[i],
+        lineStyle: { color: repColors[i], width: 2 },
+        areaStyle: { color: repColors[i] + '20' },
+        itemStyle: { color: repColors[i] }
+      })), animationDuration: 1200 }]
+    }, true);
+  } else {
+    // Ranked bar
+    const scores = reps.map((r, i) => ({ name: r, score: Math.round(repData[i].reduce((a, b) => a+b, 0) / 6), color: repColors[i] }));
+    scores.sort((a, b) => b.score - a.score);
+    chart.setOption({
+      tooltip: { trigger: 'axis', ...tooltipStyle },
+      grid: { top: 16, bottom: 20, left: 80, right: 30 },
+      radar: undefined, legend: undefined,
+      xAxis: { type: 'value', max: 100, axisLine: { show: false },
+        splitLine: { lineStyle: { color: 'rgba(255,255,255,0.04)', type: 'dashed' } },
+        axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 11 } },
+      yAxis: { type: 'category', data: scores.map(s => s.name),
+        axisLine: { lineStyle: { color: 'rgba(255,255,255,0.06)' } },
+        axisLabel: { color: T.textSec, fontFamily: FM, fontSize: 12 }, axisTick: { show: false } },
+      series: [{ type: 'bar', data: scores.map(s => ({ value: s.score, itemStyle: { color: s.color } })),
+        barWidth: '40%', itemStyle: { borderRadius: [0, 6, 6, 0] },
+        label: { show: true, position: 'right', fontFamily: FM, fontSize: 13, fontWeight: 700, color: T.textSec }
+      }],
+      animationDuration: 800
+    }, true);
+  }
+}
+renderRadar('radar');
+
+// ═══════════════════════════════════════════
+// 5. Activity Heatmap
+// ═══════════════════════════════════════════
+(() => {
+  const chart = initChart('chart-heatmap');
+  const hours = ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+  const data = [];
+  for (let d = 0; d < 7; d++) {
+    for (let h = 0; h < 12; h++) {
+      let base;
+      if (d < 5 && h >= 1 && h <= 3) base = 14 + Math.random() * 6;
+      else if (d < 5 && h >= 6 && h <= 8) base = 10 + Math.random() * 5;
+      else if (d < 5) base = 3 + Math.random() * 5;
+      else base = Math.random() * 3;
+      data.push([h, d, Math.round(base)]);
+    }
+  }
+
+  chart.setOption({
+    tooltip: { ...tooltipStyle,
+      formatter: p => `<div style="font-family:${FM}"><div style="color:${T.textMuted}">${days[p.value[1]]} · ${hours[p.value[0]]}</div>
+        <div style="font-weight:700;font-size:16px;margin-top:4px">${p.value[2]} activities</div></div>` },
+    grid: { top: 16, bottom: 40, left: 50, right: 16 },
+    xAxis: { type: 'category', data: hours, splitArea: { show: false },
+      axisLine: { lineStyle: { color: 'rgba(255,255,255,0.06)' } },
+      axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 10 }, axisTick: { show: false } },
+    yAxis: { type: 'category', data: days, splitArea: { show: false },
+      axisLine: { lineStyle: { color: 'rgba(255,255,255,0.06)' } },
+      axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 11 }, axisTick: { show: false } },
+    visualMap: { min: 0, max: 20, calculable: false, show: false,
+      inRange: { color: [T.midnight, T.spruce + '44', T.spruce + '88', T.spruce, T.spruceLight, T.spruceLight + 'dd'] } },
+    series: [{ type: 'heatmap', data,
+      itemStyle: { borderColor: T.midnight, borderWidth: 3, borderRadius: 4 },
+      emphasis: { itemStyle: { borderColor: T.spruceLight, borderWidth: 2, shadowBlur: 10, shadowColor: T.spruceLight + '66' } },
+      animationDelay: idx => idx * 12 }]
+  });
+})();
+
+// ═══════════════════════════════════════════
+// 6. Revenue Forecast
+// ═══════════════════════════════════════════
+(() => {
+  const chart = initChart('chart-forecast');
+  const months = ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+  const actual = [52300, 49800, 55200, 44100, 47800, 47280, null, null, null];
+  const forecast = [null, null, null, null, null, 47280, 51400, 54800, 58200];
+  const upper = [null, null, null, null, null, 47280, 56500, 62100, 67800];
+  const lower = [null, null, null, null, null, 47280, 46300, 47500, 48600];
+
+  chart.setOption({
+    tooltip: { trigger: 'axis', ...tooltipStyle,
+      formatter: params => {
+        let html = `<div style="font-family:${FM}"><div style="color:${T.textMuted};margin-bottom:6px">${params[0].name}</div>`;
+        params.forEach(p => {
+          if (p.value != null && !['Upper','Lower'].includes(p.seriesName))
+            html += `<div style="display:flex;justify-content:space-between;gap:16px"><span>${p.marker} ${p.seriesName}</span><span style="font-weight:700">€${p.value.toLocaleString()}</span></div>`;
+        });
+        return html + '</div>';
+      }
+    },
+    legend: { top: 4, right: 0, textStyle: { color: T.textMuted, fontFamily: FM, fontSize: 11 }, itemWidth: 16, itemHeight: 3, data: ['Actual', 'Forecast'] },
+    grid: { top: 40, bottom: 30, left: 60, right: 20 },
+    xAxis: { type: 'category', data: months, boundaryGap: false,
+      axisLine: { lineStyle: { color: 'rgba(255,255,255,0.06)' } },
+      axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 11 }, axisTick: { show: false } },
+    yAxis: { type: 'value', axisLine: { show: false },
+      splitLine: { lineStyle: { color: 'rgba(255,255,255,0.04)', type: 'dashed' } },
+      axisLabel: { color: T.textMuted, fontFamily: FM, fontSize: 11, formatter: v => '€' + (v/1000) + 'k' } },
+    series: [
+      { name: 'Upper', type: 'line', data: upper, symbol: 'none', lineStyle: { width: 0 },
+        areaStyle: { color: T.amber + '10' }, stack: 'ci', z: 1 },
+      { name: 'Lower', type: 'line', data: lower, symbol: 'none', lineStyle: { width: 0 },
+        areaStyle: { color: T.amber + '10' }, stack: 'ci', z: 1 },
+      { name: 'Actual', type: 'line', data: actual, symbol: 'circle', symbolSize: 8,
+        lineStyle: { color: T.amber, width: 3 },
+        itemStyle: { color: T.amber, borderColor: T.bg, borderWidth: 2 },
+        areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          { offset: 0, color: T.amber + '25' }, { offset: 1, color: 'transparent' }
+        ])} },
+      { name: 'Forecast', type: 'line', data: forecast, symbol: 'diamond', symbolSize: 8,
+        lineStyle: { color: T.spruceLight, width: 2, type: 'dashed' },
+        itemStyle: { color: T.spruceLight, borderColor: T.bg, borderWidth: 2 } }
+    ],
+    animationDuration: 1200
+  });
+})();
+
+// ═══════════════════════════════════════════
+// 7. Gauges
+// ═══════════════════════════════════════════
+(() => {
+  const chart = initChart('chart-gauges');
+  const gauges = [
+    { name: 'Show Rate', value: 84, color: T.amber, x: '18%' },
+    { name: 'Close Rate', value: 38, color: T.spruceLight, x: '50%' },
+    { name: 'Book→Close', value: 32, color: T.amberLight, x: '82%' }
+  ];
+
+  chart.setOption({
+    series: gauges.map(g => ({
+      type: 'gauge', center: [g.x, '50%'], radius: '72%',
+      startAngle: 220, endAngle: -40, min: 0, max: 100, splitNumber: 10,
+      progress: { show: true, width: 14,
+        itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+          { offset: 0, color: g.color }, { offset: 1, color: g.color + 'aa' }
+        ])} },
+      axisLine: { lineStyle: { width: 14, color: [[1, 'rgba(255,255,255,0.04)']] } },
+      axisTick: { show: false }, splitLine: { show: false }, axisLabel: { show: false },
+      pointer: { show: false }, anchor: { show: false },
+      title: { show: true, offsetCenter: [0, '60%'], fontSize: 11, fontFamily: FU, fontWeight: 600, color: T.textMuted },
+      detail: { valueAnimation: true, offsetCenter: [0, '10%'], fontSize: 26, fontWeight: 700, fontFamily: FM, color: g.color, formatter: '{value}%' },
+      data: [{ value: g.value, name: g.name }],
+      animationDuration: 2000, animationEasing: 'cubicOut'
+    }))
+  });
+})();
+</script>
+</body>
+</html>
