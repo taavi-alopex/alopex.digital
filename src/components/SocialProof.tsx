@@ -10,6 +10,7 @@ interface Testimonial {
   name: string;
   title: string;
   logo: string;
+  website?: string;
 }
 
 function QuoteIcon({ className }: { className?: string }) {
@@ -71,7 +72,12 @@ function TestimonialCard({
         </blockquote>
 
         {/* Attribution */}
-        <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+        <a
+          href={testimonial.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-4 pt-4 border-t border-white/5 transition-opacity hover:opacity-80"
+        >
           {/* Logo container */}
           <div
             className="relative flex-shrink-0 flex items-center justify-center"
@@ -133,7 +139,7 @@ function TestimonialCard({
               {testimonial.title}
             </p>
           </div>
-        </div>
+        </a>
 
         {/* Subtle glow on hover */}
         <div
@@ -152,25 +158,28 @@ function TestimonialCard({
 export function SocialProof() {
   const t = useTranslations("socialProof");
 
-  // Get testimonials array
+  // Get testimonials array with website links
   const testimonials: Testimonial[] = [
     {
       quote: t("testimonials.0.quote"),
       name: t("testimonials.0.name"),
       title: t("testimonials.0.title"),
       logo: t("testimonials.0.logo"),
+      website: "https://weq.ee/",
     },
     {
       quote: t("testimonials.1.quote"),
       name: t("testimonials.1.name"),
       title: t("testimonials.1.title"),
       logo: t("testimonials.1.logo"),
+      website: "https://gemoss.ee/",
     },
     {
       quote: t("testimonials.2.quote"),
       name: t("testimonials.2.name"),
       title: t("testimonials.2.title"),
       logo: t("testimonials.2.logo"),
+      website: "https://ovision.ee/",
     },
   ];
 
@@ -253,15 +262,18 @@ export function SocialProof() {
               }}
             >
               <div className="flex flex-wrap items-center gap-3 mb-4">
-                <h3
-                  className="text-[20px] font-semibold"
+                <a
+                  href="https://www.koduaken.ee/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[20px] font-semibold transition-colors hover:text-[var(--spruce-light)]"
                   style={{
                     fontFamily: "var(--font-heading)",
                     color: "var(--frost)",
                   }}
                 >
                   {t("caseStudy.client")}
-                </h3>
+                </a>
                 <span
                   className="px-3 py-1 text-[11px] font-bold tracking-[1px] uppercase"
                   style={{
