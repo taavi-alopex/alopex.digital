@@ -626,6 +626,18 @@
     "showCalendar": "Pokaż kalendarz",
     "submitting": "Proszę czekać..."
   },
+  "unsubscribe": {
+    "title": "Wypisz się z newslettera",
+    "message": "Zamierzasz wypisać się z newslettera dla tego adresu e-mail:",
+    "button": "Potwierdź wypisanie",
+    "cancel": "Anuluj i wróć",
+    "error": "Coś poszło nie tak. Spróbuj ponownie lub skontaktuj się z nami.",
+    "success": {
+      "title": "Zostałeś wypisany",
+      "message": "Nie będziesz już otrzymywać od nas newsletterów. Jeśli to była pomyłka, zawsze możesz ponownie się zapisać na naszej stronie.",
+      "backHome": "Wróć do strony głównej"
+    }
+  },
   "newsletter": {
     "title": "Bądź na bieżąco",
     "subtitle": "Otrzymuj cotygodniowe informacje o RevOps, automatyzacji i skalowaniu firm sprzedażowych. Bez spamu, tylko wartość.",

@@ -626,6 +626,18 @@
     "showCalendar": "Näita kalendrit",
     "submitting": "Palun oota..."
   },
+  "unsubscribe": {
+    "title": "Loobu uudiskirjast",
+    "message": "Sa oled loobumas uudiskirjast selle e-postiga:",
+    "button": "Kinnita loobumine",
+    "cancel": "Tühista ja mine tagasi",
+    "error": "Midagi läks valesti. Palun proovi uuesti või võta meiega ühendust.",
+    "success": {
+      "title": "Oled loobunud",
+      "message": "Sa ei saa meilt enam uudiskirju. Kui see oli eksitus, saad alati uuesti tellida meie veebilehel.",
+      "backHome": "Tagasi avalehele"
+    }
+  },
   "newsletter": {
     "title": "Püsi kursis",
     "subtitle": "Saa iganädalasi teadmisi RevOps-ist, automatiseerimisest ja müügile suunatud ettevõtete skaleerimisest. Mitte späm, ainult väärtus.",

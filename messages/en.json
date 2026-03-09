@@ -626,6 +626,18 @@
     "showCalendar": "Show Calendar",
     "submitting": "Please wait..."
   },
+  "unsubscribe": {
+    "title": "Unsubscribe from Newsletter",
+    "message": "You're about to unsubscribe this email from our newsletter:",
+    "button": "Confirm Unsubscribe",
+    "cancel": "Cancel and go back",
+    "error": "Something went wrong. Please try again or contact us.",
+    "success": {
+      "title": "You've been unsubscribed",
+      "message": "You won't receive any more newsletter emails from us. If this was a mistake, you can always subscribe again on our website.",
+      "backHome": "Back to Homepage"
+    }
+  },
   "newsletter": {
     "title": "Stay in the Loop",
     "subtitle": "Get weekly insights on RevOps, automation, and scaling sales-led businesses. No spam, just value.",
