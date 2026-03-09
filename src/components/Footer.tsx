@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { FoxLogo } from "./FoxLogo";
 import { useRecruitment } from "./RecruitmentProvider";
+import { useNewsletter } from "./NewsletterProvider";
 
 const serviceHrefs = ["/services", "/services", "/services", "/services", "/services"];
 const companyHrefs = ["/about", "/process", "/about", "/contact"];
@@ -55,7 +56,9 @@ const socialLinks = [
 export function Footer() {
   const t = useTranslations("footer");
   const tRecruitment = useTranslations("recruitment");
+  const tNewsletter = useTranslations("newsletter");
   const { openRecruitment } = useRecruitment();
+  const { openNewsletter } = useNewsletter();
   const services: { label: string }[] = t.raw("services");
   const company: { label: string }[] = t.raw("company");
   const legal: { label: string }[] = t.raw("legal");
@@ -126,6 +129,23 @@ export function Footer() {
                 </a>
               ))}
             </div>
+
+            {/* Newsletter subscribe */}
+            <button
+              onClick={openNewsletter}
+              className="mt-5 flex items-center gap-2 text-[13px] bg-transparent border border-[rgba(255,255,255,0.15)] px-4 py-2 cursor-pointer transition-all duration-300 hover:border-[var(--spruce-light)] hover:text-[var(--spruce-light)]"
+              style={{
+                borderRadius: "8px",
+                color: "var(--mist)",
+                fontFamily: "var(--font-body)",
+              }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              {tNewsletter("footerLink")}
+            </button>
           </div>
 
           {/* Link columns */}

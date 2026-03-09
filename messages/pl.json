@@ -633,6 +633,9 @@
     "button": "Subskrybuj",
     "privacy": "Szanujemy Twoją prywatność. Zrezygnuj w każdej chwili.",
     "error": "Coś poszło nie tak. Spróbuj ponownie.",
+    "invalidEmail": "Podaj prawidłowy adres e-mail.",
+    "footerLink": "Zapisz się do newslettera",
+    "contactTitle": "Otrzymuj cotygodniowe informacje RevOps",
     "success": {
       "title": "Jesteś w grze!",
       "message": "Dziękujemy za subskrypcję. Sprawdź swoją skrzynkę pocztową."

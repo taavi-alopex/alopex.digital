@@ -633,6 +633,9 @@
     "button": "Subscribe",
     "privacy": "We respect your privacy. Unsubscribe anytime.",
     "error": "Something went wrong. Please try again.",
+    "invalidEmail": "Please enter a valid email address.",
+    "footerLink": "Subscribe to newsletter",
+    "contactTitle": "Get weekly RevOps insights",
     "success": {
       "title": "You're In!",
       "message": "Thanks for subscribing. Check your inbox for a confirmation."

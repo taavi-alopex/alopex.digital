@@ -633,6 +633,9 @@
     "button": "Telli",
     "privacy": "Austame sinu privaatsust. Loobu igal ajal.",
     "error": "Midagi läks valesti. Palun proovi uuesti.",
+    "invalidEmail": "Palun sisesta kehtiv e-posti aadress.",
+    "footerLink": "Telli uudiskiri",
+    "contactTitle": "Saa iganädalasi RevOps teadmisi",
     "success": {
       "title": "Oled sees!",
       "message": "Täname tellimuse eest. Kontrolli oma postkasti kinnituse saamiseks."

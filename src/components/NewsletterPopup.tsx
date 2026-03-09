@@ -12,12 +12,20 @@ type Props = {
 
 const WEBHOOK_URL = process.env.NEXT_PUBLIC_NEWSLETTER_WEBHOOK || "";
 
+// Basic email validation: must have @, domain, and TLD with dot
+function isValidEmail(email: string): boolean {
+  const trimmed = email.trim().toLowerCase();
+  // Check basic structure: something@something.something
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  return emailRegex.test(trimmed);
+}
+
 export function NewsletterPopup({ isOpen, onClose, onSubscribe }: Props) {
   const t = useTranslations("newsletter");
   const overlayRef = useRef<HTMLDivElement>(null);
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "success" | "error" | "invalid">("idle");
 
   // Lock body scroll
   useEffect(() => {
@@ -53,6 +61,13 @@ export function NewsletterPopup({ isOpen, onClose, onSubscribe }: Props) {
     e.preventDefault();
     if (!email || !WEBHOOK_URL) return;
 
+    // Validate email format
+    if (!isValidEmail(email)) {
+      setStatus("invalid");
+      return;
+    }
+
+    setStatus("idle");
     setSubmitting(true);
     try {
       const res = await fetch(WEBHOOK_URL, {
@@ -216,12 +231,12 @@ export function NewsletterPopup({ isOpen, onClose, onSubscribe }: Props) {
                   {submitting ? "..." : t("button")}
                 </button>
 
-                {status === "error" && (
+                {(status === "error" || status === "invalid") && (
                   <p
                     className="mt-4 text-[13px]"
                     style={{ color: "#e74c3c" }}
                   >
-                    {t("error")}
+                    {status === "invalid" ? t("invalidEmail") : t("error")}
                   </p>
                 )}
               </form>

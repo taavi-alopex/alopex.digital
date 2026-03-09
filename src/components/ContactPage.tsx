@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useBooking } from "./BookingProvider";
+import { useNewsletter } from "./NewsletterProvider";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
 
@@ -99,7 +100,9 @@ const teamMembers = [
 
 export function ContactPage() {
   const t = useTranslations("contact");
+  const tNewsletter = useTranslations("newsletter");
   const { openBooking } = useBooking();
+  const { openNewsletter } = useNewsletter();
 
   return (
     <section
@@ -283,6 +286,33 @@ export function ContactPage() {
                       </a>
                     ))}
                   </div>
+                </div>
+
+                {/* Newsletter signup */}
+                <div className="mt-8 pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+                  <p
+                    className="text-[15px] mb-4"
+                    style={{ color: "var(--frost)" }}
+                  >
+                    {tNewsletter("contactTitle")}
+                  </p>
+                  <button
+                    onClick={openNewsletter}
+                    className="w-full flex items-center justify-center gap-2 px-6 py-4 text-[14px] font-medium border cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--spruce-light)] hover:text-[var(--spruce-light)]"
+                    style={{
+                      background: "rgba(82,183,136,0.05)",
+                      borderColor: "rgba(82,183,136,0.3)",
+                      borderRadius: "var(--radius-button)",
+                      color: "var(--frost)",
+                      fontFamily: "var(--font-body)",
+                    }}
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="m3 7 9 6 9-6" />
+                    </svg>
+                    {tNewsletter("button")}
+                  </button>
                 </div>
               </div>
             </ScrollReveal>
