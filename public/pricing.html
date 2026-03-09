@@ -1250,7 +1250,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
         </div>
         <div class="card featured" onclick="showModal('saas-growth')">
           <h3>SaaS + Growth</h3>
-          <div class="price">&euro;597<span style="font-size:.5em;color:var(--mist)">/mo</span></div>
+          <div class="price">&euro;772<span style="font-size:.5em;color:var(--mist)">/mo</span></div>
           <ul>
             <li>Everything in SaaS Only</li>
             <li>Bi-weekly strategy calls</li>
@@ -1262,7 +1262,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
         </div>
         <div class="card" onclick="showModal('saas-scale')">
           <h3>SaaS + Scale</h3>
-          <div class="price">&euro;997<span style="font-size:.5em;color:var(--mist)">/mo</span></div>
+          <div class="price">&euro;1,272<span style="font-size:.5em;color:var(--mist)">/mo</span></div>
           <ul>
             <li>Everything in Growth</li>
             <li>Weekly strategy calls</li>
@@ -1275,7 +1275,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
         <div class="card" style="border-color:var(--amber);background:linear-gradient(135deg,var(--dark-surface),rgba(212,135,63,.1));" onclick="showModal('saas-enterprise')">
           <span class="tag-pill" style="background:var(--amber);color:var(--navy);">CUSTOM</span>
           <h3>SaaS + Enterprise</h3>
-          <div class="price">&euro;1,497<span style="font-size:.5em;color:var(--mist)">+/mo</span></div>
+          <div class="price">&euro;1,772<span style="font-size:.5em;color:var(--mist)">+/mo</span></div>
           <ul>
             <li>Weekly + async calls</li>
             <li>30h+/mo custom work</li>
@@ -1310,17 +1310,17 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
           <div class="decision-row">
             <div class="decision-need">"We want regular optimization &amp; check-ins"</div>
             <div class="decision-arrow">&rarr;</div>
-            <div class="decision-plan">SaaS + Growth<div class="dp-price">&euro;597/mo</div></div>
+            <div class="decision-plan">SaaS + Growth<div class="dp-price">&euro;772/mo</div></div>
           </div>
           <div class="decision-row">
             <div class="decision-need">"We want you to run our RevOps"</div>
             <div class="decision-arrow">&rarr;</div>
-            <div class="decision-plan">SaaS + Scale<div class="dp-price">&euro;997/mo</div></div>
+            <div class="decision-plan">SaaS + Scale<div class="dp-price">&euro;1,272/mo</div></div>
           </div>
           <div class="decision-row">
             <div class="decision-need">"We need custom dashboards and ongoing custom builds"</div>
             <div class="decision-arrow">&rarr;</div>
-            <div class="decision-plan">Enterprise<div class="dp-price">&euro;1,497+/mo</div></div>
+            <div class="decision-plan">Enterprise<div class="dp-price">&euro;1,772+/mo</div></div>
           </div>
         </div>
         <div>
@@ -1451,13 +1451,13 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
             </div>
             <div class="rev-plan-card rev-plan-featured">
               <div class="rev-plan-name">SaaS + Growth</div>
-              <div class="rev-plan-price">&euro;597/mo</div>
+              <div class="rev-plan-price">&euro;772/mo</div>
               <div class="rev-plan-deals" id="revGrowth">&mdash;</div>
               <div class="rev-plan-label">extra deal(s)/month</div>
             </div>
             <div class="rev-plan-card">
               <div class="rev-plan-name">SaaS + Scale</div>
-              <div class="rev-plan-price">&euro;997/mo</div>
+              <div class="rev-plan-price">&euro;1,272/mo</div>
               <div class="rev-plan-deals" id="revScale">&mdash;</div>
               <div class="rev-plan-label">extra deal(s)/month</div>
             </div>
@@ -1717,7 +1717,7 @@ const modalData = {
   },
   'saas-growth': {
     title: 'SaaS + Growth',
-    price: '\u20ac597/mo',
+    price: '\u20ac772/mo',
     tag: 'RECOMMENDED',
     body: 'Everything in SaaS Only plus bi-weekly strategy calls, 10 hours/month of optimization work, quarterly business reviews, and priority support. For teams that want ongoing guidance.',
     details: [
@@ -1732,7 +1732,7 @@ const modalData = {
   },
   'saas-scale': {
     title: 'SaaS + Scale',
-    price: '\u20ac997/mo',
+    price: '\u20ac1,272/mo',
     tag: 'FRACTIONAL REVOPS',
     body: 'Your fractional RevOps team. Weekly calls, 20 hours/month of optimization, SLA guarantees, and a dedicated Slack channel. We act as your ops department.',
     details: [
@@ -2365,8 +2365,8 @@ function calcRevenue() {
   // Step 4: Breakeven deals per plan
   const plans = [
     { el: 'revSaas', cost: 272 },
-    { el: 'revGrowth', cost: 597 },
-    { el: 'revScale', cost: 997 }
+    { el: 'revGrowth', cost: 772 },
+    { el: 'revScale', cost: 1272 }
   ];
 
   plans.forEach(p => {
@@ -2382,9 +2382,9 @@ function calcRevenue() {
   // Insight
   const insightEl = document.getElementById('revInsight');
   if (clv > 0 && deals > 0 && totalLeak > 0) {
-    const growthDeals = Math.ceil(597 / clv);
-    const recoveryPct = ((597 / totalLeak) * 100).toFixed(0);
-    insightEl.innerHTML = 'The Growth plan costs <strong>&euro;597/mo</strong>. You\'re leaking <strong>&euro;' +
+    const growthDeals = Math.ceil(772 / clv);
+    const recoveryPct = ((772 / totalLeak) * 100).toFixed(0);
+    insightEl.innerHTML = 'The Growth plan costs <strong>&euro;772/mo</strong>. You\'re leaking <strong>&euro;' +
       totalLeak.toLocaleString('en') + '/mo</strong>. Recovering just <strong>' + recoveryPct +
       '%</strong> of that covers the entire plan \u2014 that\'s <strong>' + growthDeals +
       ' extra deal' + (growthDeals !== 1 ? 's' : '') + '</strong>.';
