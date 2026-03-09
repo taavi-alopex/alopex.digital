@@ -626,6 +626,18 @@
     "showCalendar": "Näita kalendrit",
     "submitting": "Palun oota..."
   },
+  "newsletter": {
+    "title": "Püsi kursis",
+    "subtitle": "Saa iganädalasi teadmisi RevOps-ist, automatiseerimisest ja müügile suunatud ettevõtete skaleerimisest. Mitte späm, ainult väärtus.",
+    "placeholder": "sinu@email.ee",
+    "button": "Telli",
+    "privacy": "Austame sinu privaatsust. Loobu igal ajal.",
+    "error": "Midagi läks valesti. Palun proovi uuesti.",
+    "success": {
+      "title": "Oled sees!",
+      "message": "Täname tellimuse eest. Kontrolli oma postkasti kinnituse saamiseks."
+    }
+  },
   "contact": {
     "meta": {
       "title": "Kontakt",

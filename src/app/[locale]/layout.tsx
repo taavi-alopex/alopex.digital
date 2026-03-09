@@ -8,6 +8,7 @@
   import { BookingProvider } from "@/components/BookingProvider";
   import { AssessmentProvider } from "@/components/AssessmentProvider";
   import { RecruitmentProvider } from "@/components/RecruitmentProvider";
+  import { NewsletterProvider } from "@/components/NewsletterProvider";
   import { MetaPixel } from "@/components/MetaPixel";
   import "../globals.css";
 
@@ -139,8 +140,10 @@
             <BookingProvider>
               <AssessmentProvider>
                 <RecruitmentProvider>
-                  {children}
-                </RecruitmentProvider>
+                    <NewsletterProvider>
+                      {children}
+                    </NewsletterProvider>
+                  </RecruitmentProvider>
               </AssessmentProvider>
             </BookingProvider>
           </NextIntlClientProvider>

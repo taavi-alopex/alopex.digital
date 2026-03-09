@@ -626,6 +626,18 @@
     "showCalendar": "Show Calendar",
     "submitting": "Please wait..."
   },
+  "newsletter": {
+    "title": "Stay in the Loop",
+    "subtitle": "Get weekly insights on RevOps, automation, and scaling sales-led businesses. No spam, just value.",
+    "placeholder": "your@email.com",
+    "button": "Subscribe",
+    "privacy": "We respect your privacy. Unsubscribe anytime.",
+    "error": "Something went wrong. Please try again.",
+    "success": {
+      "title": "You're In!",
+      "message": "Thanks for subscribing. Check your inbox for a confirmation."
+    }
+  },
   "contact": {
     "meta": {
       "title": "Contact Us",

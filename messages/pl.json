@@ -626,6 +626,18 @@
     "showCalendar": "Pokaż kalendarz",
     "submitting": "Proszę czekać..."
   },
+  "newsletter": {
+    "title": "Bądź na bieżąco",
+    "subtitle": "Otrzymuj cotygodniowe informacje o RevOps, automatyzacji i skalowaniu firm sprzedażowych. Bez spamu, tylko wartość.",
+    "placeholder": "twoj@email.pl",
+    "button": "Subskrybuj",
+    "privacy": "Szanujemy Twoją prywatność. Zrezygnuj w każdej chwili.",
+    "error": "Coś poszło nie tak. Spróbuj ponownie.",
+    "success": {
+      "title": "Jesteś w grze!",
+      "message": "Dziękujemy za subskrypcję. Sprawdź swoją skrzynkę pocztową."
+    }
+  },
   "contact": {
     "meta": {
       "title": "Kontakt",
