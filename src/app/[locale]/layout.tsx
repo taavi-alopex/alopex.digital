@@ -62,9 +62,8 @@
         "RevOps",
         "CRM automation",
         "revenue operations",
-        "Estonia",
-        "Poland",
-        "CEE",
+        "European Union",
+        "EU",
       ],
       alternates: {
         canonical: `https://alopex.digital/${locale}`,
@@ -116,16 +115,11 @@
                 name: "Alopex Digital",
                 url: "https://alopex.digital",
                 logo: "https://alopex.digital/alopex-logo.png",
-                description: "GoHighLevel & n8n agency for sales-led businesses in Estonia, Poland, and CEE.",
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Tallinn",
-                  addressCountry: "EE",
+                description: "GoHighLevel & n8n agency for sales-led businesses across the EU.",
+                areaServed: {
+                  "@type": "Place",
+                  name: "European Union",
                 },
-                areaServed: [
-                  { "@type": "Country", name: "Estonia" },
-                  { "@type": "Country", name: "Poland" },
-                ],
                 sameAs: [],
               }),
             }}

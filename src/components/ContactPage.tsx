@@ -1,10 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useBooking } from "./BookingProvider";
 import { useNewsletter } from "./NewsletterProvider";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
+import { MagneticButton } from "./MagneticButton";
 
 function PhoneIcon({ className }: { className?: string }) {
   return (
@@ -109,15 +111,33 @@ export function ContactPage() {
       className="relative min-h-screen overflow-hidden"
       style={{ background: "var(--midnight)" }}
     >
+      {/* Background photo with heavy overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/strategy-call.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ filter: "brightness(0.2)" }}
+          priority
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(160deg, rgba(22, 25, 41, 0.9), rgba(40, 44, 62, 0.85))",
+          }}
+        />
+      </div>
+
       {/* Background pattern */}
       <div
-        className="absolute inset-0 opacity-[0.015]"
+        className="absolute inset-0 opacity-[0.015] z-[1]"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='none' stroke='%23ffffff' stroke-width='0.5'/%3E%3C/svg%3E")`,
           backgroundSize: "60px 60px",
         }}
       />
-      <div className="frost-noise absolute inset-0" />
+      <div className="frost-noise absolute inset-0 z-[1]" />
 
       <div className="relative z-10 py-32 md:py-40">
         <div className="max-w-[1100px] mx-auto px-5 md:px-8">
@@ -155,9 +175,9 @@ export function ContactPage() {
           {/* Main content grid */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Left column - CTA and contact info */}
-            <ScrollReveal delay={3}>
+            <ScrollReveal delay={3} variant="fadeLeft">
               <div
-                className="p-8 md:p-10 h-full"
+                className="p-8 md:p-10 h-full card-hover-glow-dark"
                 style={{
                   background: "rgba(255,255,255,0.02)",
                   borderRadius: "var(--radius-card)",
@@ -181,18 +201,17 @@ export function ContactPage() {
                   >
                     {t("bookCall.description")}
                   </p>
-                  <button
+                  <MagneticButton
                     onClick={openBooking}
                     className="w-full px-8 py-5 text-[14px] font-semibold tracking-[0.5px] uppercase text-white border-0 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(212,135,63,0.35)]"
                     style={{
                       fontFamily: "var(--font-heading)",
                       background: "var(--amber)",
                       borderRadius: "var(--radius-button)",
-                      transitionTimingFunction: "var(--fox-ease)",
                     }}
                   >
                     {t("bookCall.button")}
-                  </button>
+                  </MagneticButton>
                 </div>
 
                 {/* Contact details */}
@@ -201,7 +220,7 @@ export function ContactPage() {
                   style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
                 >
                   <a
-                    href="tel:+3725780 0857"
+                    href="tel:+37257800857"
                     className="flex items-center gap-4 group"
                   >
                     <div
@@ -320,9 +339,9 @@ export function ContactPage() {
             {/* Right column - Company info and team */}
             <div className="space-y-8">
               {/* Company details */}
-              <ScrollReveal delay={4}>
+              <ScrollReveal delay={4} variant="fadeRight">
                 <div
-                  className="p-8 md:p-10"
+                  className="p-8 md:p-10 card-hover-glow-dark"
                   style={{
                     background: "rgba(255,255,255,0.02)",
                     borderRadius: "var(--radius-card)",
@@ -389,9 +408,9 @@ export function ContactPage() {
               </ScrollReveal>
 
               {/* Team contacts */}
-              <ScrollReveal delay={5}>
+              <ScrollReveal delay={5} variant="fadeRight">
                 <div
-                  className="p-8 md:p-10"
+                  className="p-8 md:p-10 card-hover-glow-dark"
                   style={{
                     background: "rgba(255,255,255,0.02)",
                     borderRadius: "var(--radius-card)",

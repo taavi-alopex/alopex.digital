@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Agencja GoHighLevel & n8n w Estonii i CEE | Alopex Digital",
+    "title": "Agencja GoHighLevel & n8n dla firm opartych na sprzedaży | Alopex Digital",
     "description": "Zaawansowana infrastruktura GoHighLevel i RevOps dla firm opartych na sprzedaży. Projektujemy, budujemy i wdrażamy systemy, które powstrzymują utratę przychodów.",
     "ogDescription": "Zaawansowana infrastruktura GoHighLevel i RevOps dla firm opartych na sprzedaży. Projektujemy, budujemy i wdrażamy systemy, które powstrzymują utratę przychodów."
   },
@@ -23,6 +23,24 @@
     "scroll": "Przewiń",
     "assessmentLink": "Zrób darmowy audyt RevOps"
   },
+  "heroV2": {
+    "label": "Agencja Revenue Operations",
+    "title": "Twoich leadów nigdy nie otrzymuje",
+    "titleAccent": "drugiego kontaktu",
+    "subtitle": "To dziesiątki tysięcy euro przychodu, które co miesiąc wymykają się Ci z rąk. Powolne follow-upy, niepołączone narzędzia i ręczny chaos po cichu zabijają Twój pipeline.",
+    "hook": "Kiedy ostatnio skontaktowałeś się ponownie ze swoją istniejącą bazą klientów?",
+    "ctaPrimary": "Znajdź swoje wycieki przychodu",
+    "ctaSecondary": "Zobacz, jak to naprawiamy",
+    "scroll": "Przewiń",
+    "assessmentLink": "Zrób darmowy audyt RevOps",
+    "calculator": {
+      "dealValueLabel": "Śr. wartość transakcji (€)",
+      "leadsLabel": "Leadów miesięcznie",
+      "resultLabel": "Prawdopodobnie tracisz",
+      "perMonth": "/mies.",
+      "breakdown": "{lostLeads} utraconych leadów × 10% konwersja = {lostDeals} utraconych transakcji · {annual}/rok"
+    }
+  },
   "inlineCta": {
     "afterClients": "Rozpoznajesz swoją firmę?",
     "afterClientsLink": "Porozmawiajmy.",
@@ -34,14 +52,14 @@
   "about": {
     "meta": {
       "title": "O nas",
-      "description": "Alopex Digital — Twój partner GoHighLevel & RevOps dla Estonii, Polski i CEE. Projektujemy jasność dla firm opartych na sprzedaży."
+      "description": "Alopex Digital — Twój partner GoHighLevel & RevOps w Europie. Projektujemy jasność dla firm opartych na sprzedaży."
     },
     "label": "Kim jesteśmy",
     "title": "Agencja GoHighLevel & RevOps",
-    "titleAccent": "dla Estonii, Polski i CEE",
-    "p1": "Alopex Digital to Twój lokalny partner GoHighLevel — przenosimy najlepszą amerykańską technologię revenue operations do firm opartych na sprzedaży w Estonii, Polsce i Europie Środkowo-Wschodniej.",
+    "titleAccent": "dla firm opartych na sprzedaży w UE",
+    "p1": "Alopex Digital to Twój partner GoHighLevel — przenosimy najlepszą amerykańską technologię revenue operations do firm opartych na sprzedaży w całej Europie.",
     "p2": "Nie budujemy po prostu systemów. Projektujemy jasność — mapujemy cały proces biznesowy, zanim napiszemy choćby jeden workflow. Potem budujemy, wdrażamy i upewniamy się, że Twój zespół faktycznie z tego korzysta. To nas wyróżnia.",
-    "regions": ["Estonia", "Polska", "CEE"],
+    "regions": ["Unia Europejska", "GoHighLevel", "RevOps"],
     "purposeLabel": "Nasza misja",
     "purposeQuote": "\u201eOrkiestrowa\u0107 jasno\u015b\u0107 i p\u0142ynno\u015b\u0107 dla firm opartych na sprzedaży.\u201d",
     "purposeDescription": "Budujemy maszyny wolności — zautomatyzowane systemy, które uwalniają Twój czas, abyś mógł skupić się na rozwoju."
@@ -301,7 +319,7 @@
     "emailPrefix": "Lub napisz do nas bezpośrednio na"
   },
   "footer": {
-    "tagline": "Infrastruktura GoHighLevel & n8n dla firm opartych na sprzedaży w Estonii, Polsce i Europie Środkowo-Wschodniej.",
+    "tagline": "Infrastruktura GoHighLevel & n8n dla firm opartych na sprzedaży w całej Europie.",
     "servicesTitle": "Usługi",
     "companyTitle": "Firma",
     "services": [
@@ -323,7 +341,7 @@
       { "label": "Regulamin" }
     ],
     "copyright": "Alopex Digital OÜ. Wszelkie prawa zastrzeżone.",
-    "location": "Tallinn, Estonia"
+    "location": "Obsługujemy firmy w całej Europie"
   },
   "recruitment": {
     "title": "Dołącz do zespołu Alopex",
@@ -597,7 +615,7 @@
     "step2": {
       "title": "Opowiedz nam o swojej firmie",
       "subtitle": "To pomoże nam przygotować się do bardziej produktywnej rozmowy.",
-      "budget": "Miesięczny budżet na marketing/systemy",
+      "revenue": "Miesięczny przychód",
       "businessType": "Jaką firmę prowadzisz?",
       "businessTypePlaceholder": "np. Instalacje solarne, Agencja nieruchomości, SaaS...",
       "challenge": "Jakie jest Twoje największe wyzwanie operacyjne?",
@@ -609,11 +627,11 @@
       "subtitle": "Potwierdź, że jesteś człowiekiem, aby kontynuować.",
       "verified": "Zweryfikowano"
     },
-    "budgetOptions": {
-      "under2500": "Poniżej €2 500",
-      "2500to5000": "€2 500 – €5 000",
-      "5000to10000": "€5 000 – €10 000",
-      "over10000": "Powyżej €10 000"
+    "revenueOptions": {
+      "under25k": "Poniżej €25 000",
+      "25kto100k": "€25 000 – €100 000",
+      "100kto500k": "€100 000 – €500 000",
+      "over500k": "Powyżej €500 000"
     },
     "timelineOptions": {
       "asap": "Jak najszybciej",

@@ -6,6 +6,12 @@ import { useLocale } from "next-intl";
 import Script from "next/script";
 import { MetaEvents } from "./MetaPixel";
 
+function getABVariant(): string {
+  if (typeof document === "undefined") return "1";
+  const match = document.cookie.match(/(?:^|; )ab_hero=([^;]*)/);
+  return match ? decodeURIComponent(match[1]) : "1";
+}
+
 const CALENDAR_IDS: Record<string, string> = {
   et: "Wt3A4KaUfmwZzFwGMirM",
   pl: "anlzXzfzVMRmXFsp7Kao",
@@ -21,7 +27,7 @@ type Props = {
 
 type FormData = {
   email: string;
-  budget: string;
+  revenue: string;
   businessType: string;
   challenge: string;
   timeline: string;
@@ -36,7 +42,7 @@ export function LeadQualificationModal({ isOpen, onClose }: Props) {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<FormData>({
     email: "",
-    budget: "",
+    revenue: "",
     businessType: "",
     challenge: "",
     timeline: "",
@@ -53,7 +59,7 @@ export function LeadQualificationModal({ isOpen, onClose }: Props) {
   useEffect(() => {
     if (!isOpen) {
       setStep(1);
-      setFormData({ email: "", budget: "", businessType: "", challenge: "", timeline: "" });
+      setFormData({ email: "", revenue: "", businessType: "", challenge: "", timeline: "" });
       setRecaptchaToken(null);
       setEmailSent(false);
       setSubmitting(false);
@@ -115,6 +121,7 @@ export function LeadQualificationModal({ isOpen, onClose }: Props) {
         body: JSON.stringify({
           email: formData.email,
           locale,
+          ab_variant: `hero_v${getABVariant()}`,
           timestamp: new Date().toISOString(),
           step: "email_capture",
         }),
@@ -138,6 +145,7 @@ export function LeadQualificationModal({ isOpen, onClose }: Props) {
         body: JSON.stringify({
           ...formData,
           locale,
+          ab_variant: `hero_v${getABVariant()}`,
           timestamp: new Date().toISOString(),
           step: "full_submission",
           recaptchaToken,
@@ -158,8 +166,9 @@ export function LeadQualificationModal({ isOpen, onClose }: Props) {
     } else if (step === 3 && recaptchaToken) {
       await submitFullData();
       // Track Meta events
-      MetaEvents.lead({ content_name: "Qualification Flow", value: 0, currency: "EUR" });
-      MetaEvents.schedule({ content_name: "Discovery Call" });
+      const abVar = `hero_v${getABVariant()}`;
+      MetaEvents.lead({ content_name: `Qualification Flow - ${abVar}`, value: 0, currency: "EUR" });
+      MetaEvents.schedule({ content_name: `Discovery Call - ${abVar}` });
       setStep(4);
     }
   };
@@ -172,18 +181,18 @@ export function LeadQualificationModal({ isOpen, onClose }: Props) {
 
   const isStepValid = () => {
     if (step === 1) return formData.email && formData.email.includes("@");
-    if (step === 2) return formData.budget && formData.businessType && formData.challenge && formData.timeline;
+    if (step === 2) return formData.revenue && formData.businessType && formData.challenge && formData.timeline;
     if (step === 3) return !!recaptchaToken;
     return true;
   };
 
   if (!isOpen) return null;
 
-  const budgetOptions = [
-    { value: "under_2500", label: t("budgetOptions.under2500") },
-    { value: "2500_5000", label: t("budgetOptions.2500to5000") },
-    { value: "5000_10000", label: t("budgetOptions.5000to10000") },
-    { value: "over_10000", label: t("budgetOptions.over10000") },
+  const revenueOptions = [
+    { value: "under_25k", label: t("revenueOptions.under25k") },
+    { value: "25k_100k", label: t("revenueOptions.25kto100k") },
+    { value: "100k_500k", label: t("revenueOptions.100kto500k") },
+    { value: "over_500k", label: t("revenueOptions.over500k") },
   ];
 
   const timelineOptions = [
@@ -301,22 +310,22 @@ export function LeadQualificationModal({ isOpen, onClose }: Props) {
                   </p>
 
                   <div className="space-y-6">
-                    {/* Budget */}
+                    {/* Revenue */}
                     <div>
                       <label className="block text-[12px] font-semibold tracking-[1px] uppercase mb-3" style={{ color: "var(--mist)" }}>
-                        {t("step2.budget")}
+                        {t("step2.revenue")}
                       </label>
                       <div className="grid grid-cols-2 gap-2">
-                        {budgetOptions.map((opt) => (
+                        {revenueOptions.map((opt) => (
                           <button
                             key={opt.value}
                             type="button"
-                            onClick={() => setFormData({ ...formData, budget: opt.value })}
+                            onClick={() => setFormData({ ...formData, revenue: opt.value })}
                             className="px-4 py-3 text-[13px] rounded-lg border transition-all duration-200 cursor-pointer text-left"
                             style={{
-                              background: formData.budget === opt.value ? "rgba(212,135,63,0.15)" : "rgba(255,255,255,0.03)",
-                              borderColor: formData.budget === opt.value ? "var(--amber)" : "rgba(255,255,255,0.08)",
-                              color: formData.budget === opt.value ? "var(--amber)" : "var(--frost)",
+                              background: formData.revenue === opt.value ? "rgba(212,135,63,0.15)" : "rgba(255,255,255,0.03)",
+                              borderColor: formData.revenue === opt.value ? "var(--amber)" : "rgba(255,255,255,0.08)",
+                              color: formData.revenue === opt.value ? "var(--amber)" : "var(--frost)",
                             }}
                           >
                             {opt.label}

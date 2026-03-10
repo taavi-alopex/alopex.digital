@@ -1,8 +1,10 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { ScrollReveal } from "./ScrollReveal";
 import { FoxLogo } from "./FoxLogo";
+import { MagneticButton } from "./MagneticButton";
 import { useBooking } from "./BookingProvider";
 
 export function CTA() {
@@ -18,13 +20,30 @@ export function CTA() {
           "radial-gradient(ellipse at 50% 100%, rgba(45, 106, 79, 0.12), transparent 60%), linear-gradient(160deg, var(--midnight), var(--dark-navy))",
       }}
     >
-      {/* Background fox watermark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-        <FoxLogo size={400} className="opacity-[0.02]" />
+      {/* Background photo with heavy overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/strategy-call.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ filter: "brightness(0.3)" }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(160deg, rgba(22, 25, 41, 0.85), rgba(40, 44, 62, 0.75))",
+          }}
+        />
+      </div>
+
+      {/* Fox watermark on top of photo */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[1]">
+        <FoxLogo size={400} className="opacity-[0.03]" />
       </div>
 
       <div className="relative z-10 max-w-[640px] mx-auto px-5 md:px-8 text-center">
-        <ScrollReveal>
+        <ScrollReveal variant="scale">
           <h2
             className="text-[clamp(30px,4.5vw,48px)] mb-6"
             style={{
@@ -33,7 +52,7 @@ export function CTA() {
             }}
           >
             {t("title")}{" "}
-            <span className="italic" style={{ color: "var(--amber-light)" }}>
+            <span className="italic shimmer-text">
               {t("titleAccent")}
             </span>
           </h2>
@@ -49,18 +68,17 @@ export function CTA() {
         </ScrollReveal>
 
         <ScrollReveal delay={2}>
-          <button
+          <MagneticButton
             onClick={openBooking}
             className="inline-flex items-center justify-center px-10 py-5 text-[14px] font-semibold tracking-[0.5px] uppercase text-white border-2 border-transparent cursor-pointer transition-all duration-300 hover:-translate-y-0.5 pulse-glow"
             style={{
               fontFamily: "var(--font-heading)",
               background: "var(--amber)",
               borderRadius: "var(--radius-button)",
-              transitionTimingFunction: "var(--fox-ease)",
             }}
           >
             {t("button")}
-          </button>
+          </MagneticButton>
         </ScrollReveal>
 
         <ScrollReveal delay={3}>

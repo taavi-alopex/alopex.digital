@@ -178,12 +178,11 @@ export function Services() {
                 {platformItems.map((item, i) => (
                   <div
                     key={item.title}
-                    className="group flex gap-3 p-4 transition-all duration-300 hover:-translate-y-0.5"
+                    className="group flex gap-3 p-4 card-hover-glow"
                     style={{
                       background: "var(--white)",
                       borderRadius: "var(--radius-card)",
                       border: "1px solid var(--frost)",
-                      transitionTimingFunction: "var(--fox-ease)",
                     }}
                   >
                     <div
@@ -246,12 +245,11 @@ export function Services() {
                 {integrationItems.map((item, i) => (
                   <div
                     key={item.title}
-                    className="group flex gap-3 p-4 transition-all duration-300 hover:-translate-y-0.5"
+                    className="group flex gap-3 p-4 card-hover-glow"
                     style={{
                       background: "var(--white)",
                       borderRadius: "var(--radius-card)",
                       border: "1px solid var(--frost)",
-                      transitionTimingFunction: "var(--fox-ease)",
                     }}
                   >
                     <div
@@ -311,15 +309,14 @@ export function Services() {
 
           <div className="grid md:grid-cols-3 gap-5">
             {useCases.map((uc, i) => (
-              <ScrollReveal key={uc.industry} delay={i + 1}>
+              <ScrollReveal key={uc.industry} delay={i + 1} variant={i === 0 ? "fadeLeft" : i === 2 ? "fadeRight" : "fadeUp"}>
                 <div
-                  className="group relative p-6 md:p-7 h-full flex flex-col transition-all duration-300 hover:-translate-y-0.5"
+                  className="group relative p-6 md:p-7 h-full flex flex-col card-hover-glow"
                   style={{
                     background: "var(--white)",
                     borderRadius: "var(--radius-card)",
                     boxShadow: "0 2px 20px rgba(0,0,0,0.04)",
                     border: "1px solid var(--frost)",
-                    transitionTimingFunction: "var(--fox-ease)",
                   }}
                 >
                   {/* Icon */}

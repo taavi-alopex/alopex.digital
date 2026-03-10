@@ -42,10 +42,13 @@ function TestimonialCard({
   const isOvision = testimonial.logo.includes("ovision");
   const isChanet = testimonial.logo.includes("chanet");
 
+  // Alternate slide direction for visual interest
+  const variant = index === 0 ? "fadeLeft" as const : index === 2 ? "fadeRight" as const : "fadeUp" as const;
+
   return (
-    <ScrollReveal delay={index + 2}>
+    <ScrollReveal delay={index + 2} variant={variant}>
       <div
-        className="group relative h-full p-6 md:p-8 transition-all duration-500 hover:-translate-y-1"
+        className="group relative h-full p-6 md:p-8 card-hover-glow-dark"
         style={{
           background: "rgba(255,255,255,0.02)",
           borderRadius: "var(--radius-card)",
@@ -236,8 +239,34 @@ export function SocialProof() {
           ))}
         </div>
 
-        {/* Case study card */}
+        {/* Team photo strip */}
         <ScrollReveal delay={5}>
+          <div
+            className="relative mb-14 md:mb-16 rounded-xl overflow-hidden"
+            style={{ borderRadius: "var(--radius-card)" }}
+          >
+            <Image
+              src="/images/team-collab.jpg"
+              alt="Alopex Digital team collaborating"
+              width={1200}
+              height={669}
+              className="w-full h-[240px] md:h-[320px] object-cover"
+              style={{
+                filter: "brightness(0.85)",
+              }}
+            />
+            {/* Gradient overlay */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to right, rgba(22, 25, 41, 0.4) 0%, transparent 50%, rgba(22, 25, 41, 0.3) 100%)",
+              }}
+            />
+          </div>
+        </ScrollReveal>
+
+        {/* Case study card */}
+        <ScrollReveal delay={5} variant="scale">
           <div className="max-w-[800px] mx-auto">
             <div className="flex justify-center mb-6">
               <span

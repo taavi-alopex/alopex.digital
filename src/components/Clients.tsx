@@ -54,17 +54,20 @@ export function Clients() {
           </ScrollReveal>
         </div>
 
-        {/* Client type cards */}
+        {/* Client type cards — alternating slide directions */}
         <div className="grid md:grid-cols-3 gap-5">
           {items.map((client, i) => (
-            <ScrollReveal key={client.industry} delay={i + 1}>
+            <ScrollReveal
+              key={client.industry}
+              delay={i + 1}
+              variant={i === 0 ? "fadeLeft" : i === 2 ? "fadeRight" : "fadeUp"}
+            >
               <div
-                className="group p-6 h-full transition-all duration-300 hover:-translate-y-0.5"
+                className="group p-6 h-full card-hover-glow-dark"
                 style={{
                   background: "rgba(255,255,255,0.03)",
                   borderRadius: "var(--radius-card)",
                   border: "1px solid var(--dark-border)",
-                  transitionTimingFunction: "var(--fox-ease)",
                 }}
               >
                 <div

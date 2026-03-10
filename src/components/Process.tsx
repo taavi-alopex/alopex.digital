@@ -78,6 +78,7 @@ export function Process() {
                   {/* Content card */}
                   <ScrollReveal
                     delay={i}
+                    variant={isEven ? "fadeLeft" : "fadeRight"}
                     className={`${
                       isEven
                         ? "md:col-start-1 md:text-right md:pr-16"
@@ -85,13 +86,12 @@ export function Process() {
                     }`}
                   >
                     <div
-                      className="p-6 md:p-8 transition-all duration-300 hover:-translate-y-0.5"
+                      className="p-6 md:p-8 card-hover-glow"
                       style={{
                         background: "var(--white)",
                         borderRadius: "var(--radius-card)",
                         boxShadow: "0 2px 20px rgba(0,0,0,0.04)",
                         border: "1px solid var(--frost)",
-                        transitionTimingFunction: "var(--fox-ease)",
                       }}
                     >
                       {/* Mobile number */}

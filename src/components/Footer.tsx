@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { FoxLogo } from "./FoxLogo";
+import { ScrollReveal } from "./ScrollReveal";
 import { useRecruitment } from "./RecruitmentProvider";
 import { useNewsletter } from "./NewsletterProvider";
 
@@ -82,71 +83,73 @@ export function Footer() {
       <div className="max-w-[1200px] mx-auto px-5 md:px-8 py-14 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 md:gap-8">
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-3 mb-5">
-              <FoxLogo size={36} glow />
-              <span
-                className="text-[14px] font-semibold tracking-[3px] uppercase"
+          <ScrollReveal variant="fadeLeft">
+            <div>
+              <div className="flex items-center gap-3 mb-5">
+                <FoxLogo size={36} glow />
+                <span
+                  className="text-[14px] font-semibold tracking-[3px] uppercase"
+                  style={{
+                    fontFamily: "var(--font-heading)",
+                    color: "var(--frost)",
+                  }}
+                >
+                  Alopex Digital
+                </span>
+              </div>
+              <p
+                className="text-[14px] leading-[1.7] max-w-[360px] mb-6"
+                style={{ color: "var(--text-dark-muted)" }}
+              >
+                {t("tagline")}
+              </p>
+              <a
+                href="mailto:info@alopex.digital"
+                className="text-[14px] hover:text-[var(--spruce-light)] transition-colors"
+                style={{ color: "var(--mist)" }}
+              >
+                info@alopex.digital
+              </a>
+
+              {/* Social links */}
+              <div className="flex gap-3 mt-5">
+                {socialLinks.map(({ name, href, Icon }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5 hover:text-[var(--spruce-light)]"
+                    style={{
+                      background: "rgba(255,255,255,0.05)",
+                      borderRadius: "8px",
+                      color: "var(--mist)",
+                    }}
+                    aria-label={name}
+                  >
+                    <Icon />
+                  </a>
+                ))}
+              </div>
+
+              {/* Newsletter subscribe */}
+              <button
+                onClick={openNewsletter}
+                className="mt-5 flex items-center gap-2 text-[13px] bg-transparent border border-[rgba(255,255,255,0.15)] px-4 py-2 cursor-pointer transition-all duration-300 hover:border-[var(--spruce-light)] hover:text-[var(--spruce-light)]"
                 style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--frost)",
+                  borderRadius: "8px",
+                  color: "var(--mist)",
+                  fontFamily: "var(--font-body)",
                 }}
               >
-                Alopex Digital
-              </span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 7 9 6 9-6" />
+                </svg>
+                {tNewsletter("footerLink")}
+              </button>
             </div>
-            <p
-              className="text-[14px] leading-[1.7] max-w-[360px] mb-6"
-              style={{ color: "var(--text-dark-muted)" }}
-            >
-              {t("tagline")}
-            </p>
-            <a
-              href="mailto:info@alopex.digital"
-              className="text-[14px] hover:text-[var(--spruce-light)] transition-colors"
-              style={{ color: "var(--mist)" }}
-            >
-              info@alopex.digital
-            </a>
-
-            {/* Social links */}
-            <div className="flex gap-3 mt-5">
-              {socialLinks.map(({ name, href, Icon }) => (
-                <a
-                  key={name}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5 hover:text-[var(--spruce-light)]"
-                  style={{
-                    background: "rgba(255,255,255,0.05)",
-                    borderRadius: "8px",
-                    color: "var(--mist)",
-                  }}
-                  aria-label={name}
-                >
-                  <Icon />
-                </a>
-              ))}
-            </div>
-
-            {/* Newsletter subscribe */}
-            <button
-              onClick={openNewsletter}
-              className="mt-5 flex items-center gap-2 text-[13px] bg-transparent border border-[rgba(255,255,255,0.15)] px-4 py-2 cursor-pointer transition-all duration-300 hover:border-[var(--spruce-light)] hover:text-[var(--spruce-light)]"
-              style={{
-                borderRadius: "8px",
-                color: "var(--mist)",
-                fontFamily: "var(--font-body)",
-              }}
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="m3 7 9 6 9-6" />
-              </svg>
-              {tNewsletter("footerLink")}
-            </button>
-          </div>
+          </ScrollReveal>
 
           {/* Link columns */}
           {linkColumns.map((col) => (

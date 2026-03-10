@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
 
@@ -75,50 +76,76 @@ export function About() {
             </ScrollReveal>
           </div>
 
-          {/* Right: Visual accent card */}
-          <ScrollReveal delay={2}>
-            <div
-              className="relative p-8 md:p-10"
-              style={{
-                background:
-                  "linear-gradient(135deg, var(--midnight), var(--dark-navy))",
-                borderRadius: "var(--radius-section)",
-                boxShadow: "0 2px 40px rgba(0,0,0,0.1)",
-              }}
-            >
-              <div className="frost-noise absolute inset-0 rounded-[16px] overflow-hidden" />
-              <div className="relative z-10">
-                <p
-                  className="text-[11px] font-bold tracking-[2px] uppercase mb-4"
-                  style={{
-                    fontFamily: "var(--font-heading)",
-                    color: "var(--amber-light)",
-                  }}
-                >
-                  {t("purposeLabel")}
-                </p>
-                <blockquote
-                  className="text-[clamp(20px,2.5vw,26px)] italic leading-[1.4] mb-6"
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    color: "var(--frost)",
-                  }}
-                >
-                  {t("purposeQuote")}
-                </blockquote>
-                <div
-                  className="h-[1px] mb-6"
-                  style={{ background: "var(--dark-border)" }}
+          {/* Right: Photo + accent card stack */}
+          <div className="space-y-6">
+            {/* Team photo */}
+            <ScrollReveal delay={2} variant="fadeRight">
+              <div
+                className="relative overflow-hidden"
+                style={{ borderRadius: "var(--radius-section)" }}
+              >
+                <Image
+                  src="/images/team-collab.jpg"
+                  alt="Alopex Digital team"
+                  width={1200}
+                  height={669}
+                  className="w-full h-[220px] md:h-[260px] object-cover"
+                  style={{ filter: "brightness(0.9)" }}
                 />
-                <p
-                  className="text-[13px] leading-[1.7]"
-                  style={{ color: "var(--text-dark-muted)" }}
-                >
-                  {t("purposeDescription")}
-                </p>
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: "linear-gradient(to top, rgba(22, 25, 41, 0.4) 0%, transparent 60%)",
+                  }}
+                />
               </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+
+            {/* Purpose card */}
+            <ScrollReveal delay={3} variant="fadeRight">
+              <div
+                className="relative p-8 md:p-10"
+                style={{
+                  background:
+                    "linear-gradient(135deg, var(--midnight), var(--dark-navy))",
+                  borderRadius: "var(--radius-section)",
+                  boxShadow: "0 2px 40px rgba(0,0,0,0.1)",
+                }}
+              >
+                <div className="frost-noise absolute inset-0 rounded-[16px] overflow-hidden" />
+                <div className="relative z-10">
+                  <p
+                    className="text-[11px] font-bold tracking-[2px] uppercase mb-4"
+                    style={{
+                      fontFamily: "var(--font-heading)",
+                      color: "var(--amber-light)",
+                    }}
+                  >
+                    {t("purposeLabel")}
+                  </p>
+                  <blockquote
+                    className="text-[clamp(20px,2.5vw,26px)] italic leading-[1.4] mb-6"
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      color: "var(--frost)",
+                    }}
+                  >
+                    {t("purposeQuote")}
+                  </blockquote>
+                  <div
+                    className="h-[1px] mb-6"
+                    style={{ background: "var(--dark-border)" }}
+                  />
+                  <p
+                    className="text-[13px] leading-[1.7]"
+                    style={{ color: "var(--text-dark-muted)" }}
+                  >
+                    {t("purposeDescription")}
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>

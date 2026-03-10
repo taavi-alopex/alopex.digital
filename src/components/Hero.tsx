@@ -1,11 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { FoxLogo } from "./FoxLogo";
+import Image from "next/image";
+import { AnimatedFoxLogo } from "./AnimatedFoxLogo";
+import { AuroraEffect } from "./AuroraEffect";
+import { SpruceTreeline } from "./SpruceTreeline";
 import { SectionLabel } from "./SectionLabel";
+import { MagneticButton } from "./MagneticButton";
 import { useBooking } from "./BookingProvider";
+
+// Lazy load Three.js starfield for performance
+const StarfieldBackground = lazy(() =>
+  import("./StarfieldBackground").then((m) => ({ default: m.StarfieldBackground }))
+);
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -27,18 +36,55 @@ export function Hero() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden frost-noise film-grain"
-      style={{
-        background: `
-          radial-gradient(ellipse at ${mousePos.x}% ${mousePos.y}%, rgba(45, 106, 79, 0.08), transparent 60%),
-          radial-gradient(ellipse at 70% 90%, rgba(212, 135, 63, 0.06), transparent),
-          linear-gradient(160deg, #161929, #1a1e2e 40%, rgba(45, 106, 79, 0.15))
-        `,
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Layer 0: Photorealistic boreal forest background */}
+      <div className="absolute inset-0 z-[0]">
+        <Image
+          src="/images/hero-forest.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          quality={85}
+          style={{
+            transform: `scale(1.05) translate(${(mousePos.x - 50) * 0.02}%, ${(mousePos.y - 50) * 0.02}%)`,
+            transition: "transform 0.3s ease-out",
+          }}
+        />
+        {/* Dark overlay to keep text readable */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(160deg, rgba(22, 25, 41, 0.75), rgba(22, 25, 41, 0.6) 40%, rgba(45, 106, 79, 0.4))",
+          }}
+        />
+      </div>
+
+      {/* Layer 1: 3D Starfield */}
+      <Suspense fallback={null}>
+        <StarfieldBackground mouseX={mousePos.x} mouseY={mousePos.y} />
+      </Suspense>
+
+      {/* Layer 2: Aurora overlay */}
+      <AuroraEffect />
+
+      {/* Layer 3: Mouse-following radial glow */}
+      <div
+        className="absolute inset-0 z-[3] pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(ellipse at ${mousePos.x}% ${mousePos.y}%, rgba(45, 106, 79, 0.12), transparent 60%)
+          `,
+        }}
+      />
+
+      {/* Frost noise + film grain textures */}
+      <div className="absolute inset-0 z-[4] pointer-events-none frost-noise film-grain" />
+
       {/* Geometric grid overlay */}
       <div
-        className="absolute inset-0 z-[2] pointer-events-none opacity-[0.03]"
+        className="absolute inset-0 z-[5] pointer-events-none opacity-[0.03]"
         style={{
           backgroundImage: `
             linear-gradient(rgba(82,183,136,0.5) 1px, transparent 1px),
@@ -50,58 +96,87 @@ export function Hero() {
         }}
       />
 
+      {/* Layer 5: Spruce treeline silhouette at bottom */}
+      <div
+        className="absolute bottom-0 left-0 right-0 z-[6] pointer-events-none"
+        style={{
+          transform: `translateY(${Math.max(0, (mousePos.y - 50) * 0.05)}px)`,
+          transition: "transform 0.3s ease-out",
+        }}
+      >
+        <SpruceTreeline variant={1} opacity={0.15} />
+      </div>
+
       <div className="relative z-10 text-center max-w-[800px] mx-auto px-5 py-32">
-        {/* Fox Logo */}
+        {/* Fox Logo — animated draw-in */}
         <div
-          className={`mb-10 transition-all duration-1000 ${
-            loaded
-              ? "opacity-100 translate-y-0 scale-100"
-              : "opacity-0 translate-y-8 scale-90"
-          }`}
-          style={{ transitionTimingFunction: "var(--fox-ease)" }}
+          className="mb-10"
+          style={{
+            opacity: loaded ? 1 : 0,
+            transform: loaded ? "translateY(0) scale(1)" : "translateY(16px) scale(0.9)",
+            transition: "opacity 1s var(--fox-ease), transform 1s var(--fox-ease)",
+          }}
         >
-          <FoxLogo size={140} glow className="mx-auto" />
+          <AnimatedFoxLogo size={140} glow animate={loaded} className="mx-auto" />
         </div>
 
         {/* Label */}
         <div
-          className={`flex justify-center transition-all duration-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
           style={{
-            transitionDelay: "200ms",
-            transitionTimingFunction: "var(--fox-ease)",
+            opacity: loaded ? 1 : 0,
+            transform: loaded ? "translateY(0)" : "translateY(24px)",
+            transition: "opacity 0.7s var(--fox-ease) 0.2s, transform 0.7s var(--fox-ease) 0.2s",
           }}
+          className="flex justify-center"
         >
           <SectionLabel text={t("label")} />
         </div>
 
-        {/* H1 */}
+        {/* H1 — clip-mask text reveal */}
         <h1
-          className={`text-[clamp(32px,5.5vw,56px)] text-[var(--frost)] mb-6 transition-all duration-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className="text-[clamp(32px,5.5vw,56px)] text-[var(--frost)] mb-6"
           style={{
-            transitionDelay: "350ms",
-            transitionTimingFunction: "var(--fox-ease)",
+            opacity: loaded ? 1 : 0,
+            transform: loaded ? "translateY(0)" : "translateY(24px)",
+            transition: "opacity 0.7s var(--fox-ease) 0.35s, transform 0.7s var(--fox-ease) 0.35s",
+            textShadow: "0 2px 20px rgba(0,0,0,0.5)",
           }}
         >
-          {t("title")}
+          <span className="inline-block overflow-hidden">
+            <span
+              className="inline-block"
+              style={{
+                transform: loaded ? "translateY(0)" : "translateY(100%)",
+                transition: "transform 0.8s var(--fox-ease) 0.4s",
+              }}
+            >
+              {t("title")}
+            </span>
+          </span>
           <br />
-          <span className="italic" style={{ color: "var(--spruce-light)" }}>
-            {t("titleAccent")}
+          <span className="inline-block overflow-hidden">
+            <span
+              className="italic inline-block"
+              style={{
+                color: "var(--spruce-light)",
+                transform: loaded ? "translateY(0)" : "translateY(100%)",
+                transition: "transform 0.8s var(--fox-ease) 0.55s",
+              }}
+            >
+              {t("titleAccent")}
+            </span>
           </span>
         </h1>
 
         {/* Subtitle */}
         <p
-          className={`text-[clamp(14px,1.8vw,17px)] leading-relaxed max-w-[560px] mx-auto mb-10 transition-all duration-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className="text-[clamp(14px,1.8vw,17px)] leading-relaxed max-w-[560px] mx-auto mb-10"
           style={{
             color: "var(--mist)",
-            transitionDelay: "500ms",
-            transitionTimingFunction: "var(--fox-ease)",
+            opacity: loaded ? 1 : 0,
+            transform: loaded ? "translateY(0)" : "translateY(24px)",
+            transition: "opacity 0.7s var(--fox-ease) 0.5s, transform 0.7s var(--fox-ease) 0.5s",
+            textShadow: "0 1px 10px rgba(0,0,0,0.4)",
           }}
         >
           {t("subtitle")}
@@ -109,26 +184,24 @@ export function Hero() {
 
         {/* Buttons */}
         <div
-          className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
           style={{
-            transitionDelay: "650ms",
-            transitionTimingFunction: "var(--fox-ease)",
+            opacity: loaded ? 1 : 0,
+            transform: loaded ? "translateY(0)" : "translateY(24px)",
+            transition: "opacity 0.7s var(--fox-ease) 0.65s, transform 0.7s var(--fox-ease) 0.65s",
           }}
         >
-          <button
+          <MagneticButton
             onClick={openBooking}
             className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase text-white border-2 border-transparent cursor-pointer transition-all duration-300 hover:-translate-y-0.5 pulse-glow"
             style={{
               fontFamily: "var(--font-heading)",
               background: "var(--amber)",
               borderRadius: "var(--radius-button)",
-              transitionTimingFunction: "var(--fox-ease)",
             }}
           >
             {t("ctaPrimary")}
-          </button>
+          </MagneticButton>
           <Link
             href="/process"
             className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase text-white border-2 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,255,255,0.08)]"
@@ -137,6 +210,7 @@ export function Hero() {
               borderColor: "rgba(255,255,255,0.25)",
               borderRadius: "var(--radius-button)",
               transitionTimingFunction: "var(--fox-ease)",
+              backdropFilter: "blur(8px)",
             }}
           >
             {t("ctaSecondary")}
@@ -145,13 +219,12 @@ export function Hero() {
 
         {/* Assessment link */}
         <div
-          className={`mt-6 transition-all duration-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
           style={{
-            transitionDelay: "800ms",
-            transitionTimingFunction: "var(--fox-ease)",
+            opacity: loaded ? 1 : 0,
+            transform: loaded ? "translateY(0)" : "translateY(24px)",
+            transition: "opacity 0.7s var(--fox-ease) 0.8s, transform 0.7s var(--fox-ease) 0.8s",
           }}
+          className="mt-6"
         >
           <Link
             href="/health-check"
@@ -165,10 +238,11 @@ export function Hero() {
 
       {/* Scroll indicator */}
       <div
-        className={`absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 transition-all duration-1000 ${
-          loaded ? "opacity-100" : "opacity-0"
-        }`}
-        style={{ transitionDelay: "1200ms" }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+        style={{
+          opacity: loaded ? 1 : 0,
+          transition: "opacity 1s ease 1.2s",
+        }}
       >
         <span
           className="text-[10px] font-semibold tracking-[2px] uppercase"
@@ -196,7 +270,7 @@ export function Hero() {
 
       {/* Bottom gradient fade */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 z-10 pointer-events-none"
+        className="absolute bottom-0 left-0 right-0 h-32 z-[7] pointer-events-none"
         style={{
           background:
             "linear-gradient(to top, var(--midnight), transparent)",
