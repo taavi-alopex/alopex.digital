@@ -10,6 +10,7 @@
   import { RecruitmentProvider } from "@/components/RecruitmentProvider";
   import { NewsletterProvider } from "@/components/NewsletterProvider";
   import { MetaPixel } from "@/components/MetaPixel";
+  import { ChatWidget } from "@/components/ChatWidget";
   import "../globals.css";
 
   const instrumentSerif = Instrument_Serif({
@@ -141,6 +142,7 @@
               </AssessmentProvider>
             </BookingProvider>
           </NextIntlClientProvider>
+          <ChatWidget />
         </body>
       </html>
     );
