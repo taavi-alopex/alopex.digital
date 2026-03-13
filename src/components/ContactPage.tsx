@@ -6,7 +6,6 @@ import { useBooking } from "./BookingProvider";
 import { useNewsletter } from "./NewsletterProvider";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
-import { MagneticButton } from "./MagneticButton";
 
 function PhoneIcon({ className }: { className?: string }) {
   return (
@@ -201,17 +200,18 @@ export function ContactPage() {
                   >
                     {t("bookCall.description")}
                   </p>
-                  <MagneticButton
+                  <button
                     onClick={openBooking}
                     className="w-full px-8 py-5 text-[14px] font-semibold tracking-[0.5px] uppercase text-white border-0 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(212,135,63,0.35)]"
                     style={{
                       fontFamily: "var(--font-heading)",
                       background: "var(--amber)",
                       borderRadius: "var(--radius-button)",
+                      transitionTimingFunction: "var(--fox-ease)",
                     }}
                   >
                     {t("bookCall.button")}
-                  </MagneticButton>
+                  </button>
                 </div>
 
                 {/* Contact details */}

@@ -8,7 +8,6 @@ import { AnimatedFoxLogo } from "./AnimatedFoxLogo";
 import { AuroraEffect } from "./AuroraEffect";
 import { SpruceTreeline } from "./SpruceTreeline";
 import { SectionLabel } from "./SectionLabel";
-import { MagneticButton } from "./MagneticButton";
 import { useBooking } from "./BookingProvider";
 
 // Lazy load Three.js starfield for performance
@@ -191,17 +190,18 @@ export function Hero() {
             transition: "opacity 0.7s var(--fox-ease) 0.65s, transform 0.7s var(--fox-ease) 0.65s",
           }}
         >
-          <MagneticButton
+          <button
             onClick={openBooking}
             className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase text-white border-2 border-transparent cursor-pointer transition-all duration-300 hover:-translate-y-0.5 pulse-glow"
             style={{
               fontFamily: "var(--font-heading)",
               background: "var(--amber)",
               borderRadius: "var(--radius-button)",
+              transitionTimingFunction: "var(--fox-ease)",
             }}
           >
             {t("ctaPrimary")}
-          </MagneticButton>
+          </button>
           <Link
             href="/process"
             className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase text-white border-2 cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,255,255,0.08)]"

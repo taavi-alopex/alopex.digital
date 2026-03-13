@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ScrollReveal } from "./ScrollReveal";
 import { FoxLogo } from "./FoxLogo";
-import { MagneticButton } from "./MagneticButton";
 import { useBooking } from "./BookingProvider";
 
 export function CTA() {
@@ -68,17 +67,18 @@ export function CTA() {
         </ScrollReveal>
 
         <ScrollReveal delay={2}>
-          <MagneticButton
+          <button
             onClick={openBooking}
             className="inline-flex items-center justify-center px-10 py-5 text-[14px] font-semibold tracking-[0.5px] uppercase text-white border-2 border-transparent cursor-pointer transition-all duration-300 hover:-translate-y-0.5 pulse-glow"
             style={{
               fontFamily: "var(--font-heading)",
               background: "var(--amber)",
               borderRadius: "var(--radius-button)",
+              transitionTimingFunction: "var(--fox-ease)",
             }}
           >
             {t("button")}
-          </MagneticButton>
+          </button>
         </ScrollReveal>
 
         <ScrollReveal delay={3}>

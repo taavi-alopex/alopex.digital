@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
-import { MagneticButton } from "./MagneticButton";
 import { useBooking } from "./BookingProvider";
 
 export function Anchoring() {
@@ -166,17 +165,18 @@ export function Anchoring() {
         {/* CTA */}
         <ScrollReveal delay={3}>
           <div className="text-center mt-12">
-            <MagneticButton
+            <button
               onClick={openBooking}
               className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase text-white border-2 border-transparent cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(212,135,63,0.3)]"
               style={{
                 fontFamily: "var(--font-heading)",
                 background: "var(--amber)",
                 borderRadius: "var(--radius-button)",
+                transitionTimingFunction: "var(--fox-ease)",
               }}
             >
               {t("cta")}
-            </MagneticButton>
+            </button>
             <p
               className="mt-3 text-[12px]"
               style={{ color: "var(--dark-gray)" }}
