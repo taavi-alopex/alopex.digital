@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "GoHighLevel & n8n Agency in Estonia & CEE | Alopex Digital",
+    "title": "Alopex Digital",
     "description": "Advanced GoHighLevel & RevOps infrastructure for sales-led businesses. We architect, build, and launch systems that stop revenue leaking.",
     "ogDescription": "Advanced GoHighLevel & RevOps infrastructure for sales-led businesses. We architect, build, and launch systems that stop revenue leaking."
   },
@@ -658,14 +658,15 @@
   },
   "newsletter": {
     "title": "Stay in the Loop",
-    "subtitle": "Get weekly insights on RevOps, automation, and scaling sales-led businesses. No spam, just value.",
+    "subtitle": "Get monthly insights on RevOps, automation, and scaling sales-led businesses. No spam, just value.",
+    "namePlaceholder": "Your name",
     "placeholder": "your@email.com",
     "button": "Subscribe",
     "privacy": "We respect your privacy. Unsubscribe anytime.",
     "error": "Something went wrong. Please try again.",
     "invalidEmail": "Please enter a valid email address.",
     "footerLink": "Subscribe to newsletter",
-    "contactTitle": "Get weekly RevOps insights",
+    "contactTitle": "Get monthly RevOps insights",
     "success": {
       "title": "You're In!",
       "message": "Thanks for subscribing. Check your inbox for a confirmation."

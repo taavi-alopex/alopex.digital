@@ -23,6 +23,7 @@ function isValidEmail(email: string): boolean {
 export function NewsletterPopup({ isOpen, onClose, onSubscribe }: Props) {
   const t = useTranslations("newsletter");
   const overlayRef = useRef<HTMLDivElement>(null);
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error" | "invalid">("idle");
@@ -52,6 +53,7 @@ export function NewsletterPopup({ isOpen, onClose, onSubscribe }: Props) {
   // Reset state when reopened
   useEffect(() => {
     if (isOpen) {
+      setName("");
       setEmail("");
       setStatus("idle");
     }
@@ -74,6 +76,7 @@ export function NewsletterPopup({ isOpen, onClose, onSubscribe }: Props) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          name,
           email,
           source: window.location.pathname,
           timestamp: new Date().toISOString(),
@@ -202,6 +205,19 @@ export function NewsletterPopup({ isOpen, onClose, onSubscribe }: Props) {
               </p>
 
               <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder={t("namePlaceholder")}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full px-5 py-4 text-[15px] border outline-none transition-colors duration-200 focus:border-[var(--spruce-light)] mb-4"
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    borderColor: "var(--dark-border)",
+                    borderRadius: "var(--radius-card, 12px)",
+                    color: "var(--frost)",
+                  }}
+                />
                 <input
                   type="email"
                   placeholder={t("placeholder")}

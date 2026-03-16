@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Agencja GoHighLevel & n8n dla firm opartych na sprzedaży | Alopex Digital",
+    "title": "Alopex Digital",
     "description": "Zaawansowana infrastruktura GoHighLevel i RevOps dla firm opartych na sprzedaży. Projektujemy, budujemy i wdrażamy systemy, które powstrzymują utratę przychodów.",
     "ogDescription": "Zaawansowana infrastruktura GoHighLevel i RevOps dla firm opartych na sprzedaży. Projektujemy, budujemy i wdrażamy systemy, które powstrzymują utratę przychodów."
   },
@@ -658,14 +658,15 @@
   },
   "newsletter": {
     "title": "Bądź na bieżąco",
-    "subtitle": "Otrzymuj cotygodniowe informacje o RevOps, automatyzacji i skalowaniu firm sprzedażowych. Bez spamu, tylko wartość.",
+    "subtitle": "Otrzymuj comiesięczne informacje o RevOps, automatyzacji i skalowaniu firm sprzedażowych. Bez spamu, tylko wartość.",
+    "namePlaceholder": "Twoje imię",
     "placeholder": "twoj@email.pl",
     "button": "Subskrybuj",
     "privacy": "Szanujemy Twoją prywatność. Zrezygnuj w każdej chwili.",
     "error": "Coś poszło nie tak. Spróbuj ponownie.",
     "invalidEmail": "Podaj prawidłowy adres e-mail.",
     "footerLink": "Zapisz się do newslettera",
-    "contactTitle": "Otrzymuj cotygodniowe informacje RevOps",
+    "contactTitle": "Otrzymuj comiesięczne informacje RevOps",
     "success": {
       "title": "Jesteś w grze!",
       "message": "Dziękujemy za subskrypcję. Sprawdź swoją skrzynkę pocztową."
