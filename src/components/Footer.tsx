@@ -8,7 +8,7 @@ import { useRecruitment } from "./RecruitmentProvider";
 import { useNewsletter } from "./NewsletterProvider";
 
 const serviceHrefs = ["/services", "/services", "/services", "/services", "/services"];
-const companyHrefs = ["/about", "/process", "/about", "/contact"];
+const companyHrefs = ["/about", "/process", "/case-studies", "/about", "/contact"];
 const legalHrefs = ["/privacy-policy", "/terms"];
 
 function InstagramIcon({ className }: { className?: string }) {

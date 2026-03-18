@@ -8,6 +8,7 @@
     "about": "O nas",
     "services": "Usługi",
     "process": "Proces",
+    "caseStudies": "Case Studies",
     "healthCheck": "Audyt RevOps",
     "contact": "Kontakt",
     "cta": "Umów bezpłatną rozmowę"
@@ -332,6 +333,7 @@
     "company": [
       { "label": "O nas" },
       { "label": "Nasz proces" },
+      { "label": "Case Studies" },
       { "label": "Wartości" },
       { "label": "Kontakt" }
     ],
@@ -670,6 +672,196 @@
     "success": {
       "title": "Jesteś w grze!",
       "message": "Dziękujemy za subskrypcję. Sprawdź swoją skrzynkę pocztową."
+    }
+  },
+  "caseStudies": {
+    "meta": {
+      "title": "Case Studies",
+      "description": "Zobacz, jak Alopex Digital pomógł firmom zautomatyzować procesy i zaoszczędzić czas dzięki n8n i GoHighLevel."
+    },
+    "label": "Case Studies",
+    "title": "Prawdziwe wyniki",
+    "titleAccent": "dla prawdziwych firm",
+    "subtitle": "Zobacz, jak pomogliśmy firmom zautomatyzować procesy, wyeliminować pracę ręczną i skupić się na rozwoju.",
+    "readMore": "Czytaj więcej",
+    "backLink": "Wszystkie case studies",
+    "ctaTitle": "Chcesz podobnych wyników?",
+    "ctaDescription": "Umów bezpłatną rozmowę, a zmapujemy, gdzie Twoja firma traci czas i pieniądze.",
+    "ctaButton": "Umów bezpłatną rozmowę",
+    "beforeLabel": "Przed",
+    "solutionLabel": "Rozwiązanie",
+    "resultsLabel": "Wyniki",
+    "items": {
+      "ovision-invoicing": {
+        "client": "Ovision",
+        "tag": "Fakturowanie",
+        "title": "Faktury nie spóźniają się już nigdy",
+        "summary": "Automatyczne fakturowanie z GHL do Merit Aktiva z danymi z rejestru firm — faktura w sekundach, nie dniach.",
+        "before": {
+          "text": "Ovision nie miał CRM-a — pipeline był w Trello. Faktury tworzono ręcznie w Merit Aktiva: księgowa kopiowała dane klienta, sprawdzała kody rejestrowe, obliczała numery referencyjne i wprowadzała pozycje produktowe. Każda faktura zajmowała 10–15 minut i regularnie się spóźniała.",
+          "items": [
+            "Każda faktura ręcznie — 10–15 minut",
+            "Faktury regularnie spóźnione, szczególnie po piątkowej produkcji",
+            "Dane rejestrowe sprawdzane ręcznie",
+            "Czas właściciela pochłaniany przez papierkową robotę"
+          ]
+        },
+        "solution": {
+          "text": "Połączyliśmy system sprzedaży bezpośrednio z oprogramowaniem księgowym. Gdy zamówienie przechodzi do etapu 'oczekuje na fakturę', faktura tworzy się automatycznie — z oficjalnymi danymi z rejestru firm, poprawną datą i obliczonym numerem referencyjnym.",
+          "items": [
+            "GHL → Merit Aktiva automatyczne połączenie",
+            "Dane rejestrowe pobierane automatycznie",
+            "Numery referencyjne obliczane przez system",
+            "Faktura generowana w momencie realizacji zamówienia"
+          ]
+        },
+        "results": {
+          "text": "Martin może teraz skupić się na sprzedaży i produkcji zamiast papierkowej robocie.",
+          "items": [
+            "Faktury generowane w sekundach, nie dniach",
+            "Data faktury zawsze poprawna",
+            "Dane rejestrowe zawsze aktualne",
+            "Księgowa nie musi już nic robić ręcznie"
+          ],
+          "highlight": "Sekundy, nie dni"
+        }
+      },
+      "gemoss-sales-kpis": {
+        "client": "Gemoss",
+        "tag": "KPI sprzedaży",
+        "title": "KPI zespołu sprzedaży, które naprawdę działają",
+        "summary": "Kalkulator czasu odpowiedzi w godzinach pracy i automatyczny codzienny system raportowania dla 6-osobowego zespołu.",
+        "before": {
+          "text": "Gemoss nie miał CRM-a — pipeline był w Microsoft Teams. KPI obliczano ręcznie w Excelu raz w miesiącu. KPI czasu odpowiedzi wliczał weekendy i godziny nocne, dając fałszywe wyniki wpływające bezpośrednio na wynagrodzenia.",
+          "items": [
+            "KPI obliczane ręcznie w Excelu raz w miesiącu",
+            "KPI czasu odpowiedzi wliczał weekendy",
+            "Fałszywe liczby wpływały bezpośrednio na wynagrodzenia",
+            "Brak wglądu w aktywność sprzedaży w czasie rzeczywistym"
+          ]
+        },
+        "solution": {
+          "text": "Zbudowaliśmy kalkulator czasu odpowiedzi uwzględniający tylko dni robocze (pon.–pt. 9:00–17:30, z wyłączeniem estońskich świąt). Połączyliśmy ClickUp i Google Sheets z codziennym automatycznym raportowaniem.",
+          "items": [
+            "Kalkulator czasu odpowiedzi w godzinach pracy",
+            "Codzienny automatyczny raport w Google Sheets",
+            "Automatyczne liczenie umów na ekspresy do kawy",
+            "Indywidualne wyniki widoczne per handlowiec"
+          ]
+        },
+        "results": {
+          "text": "Zespół sprzedaży ufa systemowi, a lista płac opiera się na rzeczywistych danych.",
+          "items": [
+            "Przegląd w czasie rzeczywistym każdego ranka",
+            "Uczciwy KPI czasu odpowiedzi — tylko godziny pracy",
+            "Lista płac oparta na rzeczywistych danych",
+            "Zespół sprzedaży ufa systemowi"
+          ],
+          "highlight": "W czasie rzeczywistym, nie raz w miesiącu"
+        }
+      },
+      "ovision-production": {
+        "client": "Ovision",
+        "tag": "Produkcja",
+        "title": "Produkcja pod kontrolą",
+        "summary": "Karty śledzenia per produkt, automatyczne zarządzanie plikami w SharePoint i fakturowanie po ostatnim produkcie.",
+        "before": {
+          "text": "Ovision nie miał żadnego systemu śledzenia produkcji. Kierownik produkcji musiał pamiętać, na jakim etapie jest każdy produkt. Zarządzanie plikami projektowymi było otwartą kwestią, a czasem produkty umykały uwadze.",
+          "items": [
+            "Brak ustrukturyzowanego systemu śledzenia",
+            "Kierownik produkcji śledził statusy z pamięci",
+            "Pliki projektowe rozproszone po mailach",
+            "Fakturowanie opóźnione z powodu braku przeglądu"
+          ]
+        },
+        "solution": {
+          "text": "Zbudowaliśmy system, w którym każdy produkt ma własną kartę śledzenia z terminami, metodami druku i plikami projektowymi. Pliki trafiają automatycznie do SharePoint. Po ukończeniu ostatniego produktu zamówienie automatycznie przechodzi do fakturowania.",
+          "items": [
+            "Każdy produkt ma własną kartę śledzenia",
+            "Pliki projektowe automatycznie do SharePoint",
+            "Produkcja rusza dopiero po zatwierdzeniu projektu",
+            "Automatyczne fakturowanie po ostatnim produkcie"
+          ]
+        },
+        "results": {
+          "text": "Żaden produkt nie umknie uwadze, a fakturowanie rozpoczyna się natychmiast.",
+          "items": [
+            "Status każdego produktu widoczny w czasie rzeczywistym",
+            "Żaden produkt nie umknie uwadze",
+            "Fakturowanie natychmiast, nie po dniach",
+            "Pliki projektowe zawsze we właściwym miejscu"
+          ],
+          "highlight": "Zero przeoczonych produktów"
+        }
+      },
+      "swa-poland-recruitment": {
+        "client": "SWA Poland",
+        "tag": "Rekrutacja",
+        "title": "Kampania rekrutacyjna AI w trzech językach",
+        "summary": "Chatbot AI na Instagramie i Facebooku, trójjęzyczne kampanie SMS+email i odzyskiwanie no-show — automatycznie.",
+        "before": {
+          "text": "SWA Poland nie miał CRM-a ani ustrukturyzowanego procesu rekrutacji. Rekruterzy komunikowali się z kandydatami ręcznie przez DM na Instagramie i Facebooku. Trójjęzyczna komunikacja oznaczała potrójną pracę.",
+          "items": [
+            "Kandydaci kontaktowani ręcznie przez DM",
+            "Brak widoczności pipeline'u",
+            "Kampanie SMS i email wysyłane ręcznie",
+            "Trójjęzyczna komunikacja = 3x pracy"
+          ]
+        },
+        "solution": {
+          "text": "Zbudowaliśmy kompleksowy system rekrutacji: bot AI kwalifikujący w mediach społecznościowych, trójjęzyczne automatyczne kampanie i system wykrywania no-show.",
+          "items": [
+            "Chatbot AI na Instagramie i Facebooku",
+            "9 SMS + 6 wariantów email w trzech językach",
+            "Wykrywanie no-show i automatyczne odzyskiwanie",
+            "Kampanie Meta Ads w 7 miastach"
+          ]
+        },
+        "results": {
+          "text": "Rekruterzy mogą skupić się na kwalifikowanych kandydatach zamiast ręcznego pisania.",
+          "items": [
+            "AI automatycznie przeprowadza wstępną kwalifikację",
+            "Trójjęzyczna kampania działa na autopilocie",
+            "Przegląd kandydatów i etapów w czasie rzeczywistym",
+            "No-show automatycznie dostają drugą szansę"
+          ],
+          "highlight": "3 języki, 0 pracy ręcznej"
+        }
+      },
+      "ovision-quotes-costing": {
+        "client": "Ovision",
+        "tag": "Oferty",
+        "title": "Oferty i kalkulacja kosztów z jednego miejsca",
+        "summary": "Automatyczna wycena z katalogu, generowanie PDF i scentralizowany dostęp do plików dla całego zespołu.",
+        "before": {
+          "text": "Tworzenie ofert było całkowicie ręczne. Ceny zakupu sprawdzano w portalach dostawców, nazwy dostawców wpisywano jako wolny tekst, a pliki były rozproszone po różnych komputerach.",
+          "items": [
+            "Tworzenie oferty zajmowało godzinę pracy ręcznej",
+            "Ceny zakupu kopiowane ręcznie z portali dostawców",
+            "Nazwy dostawców i metody druku jako wolny tekst",
+            "Pliki rozproszone po różnych komputerach"
+          ]
+        },
+        "solution": {
+          "text": "Przenieśliśmy cały proces w jedno miejsce. Ceny produktów pobierane automatycznie z katalogu, kalkulacja kosztów generowana w SharePoint, a PDF oferty tworzy się automatycznie.",
+          "items": [
+            "Ceny automatycznie z katalogu",
+            "Kalkulacja w SharePoint z dostawcami i marżami",
+            "Automatyczny profesjonalny PDF",
+            "Cały zespół widzi ten sam plik"
+          ]
+        },
+        "results": {
+          "text": "Tworzenie oferty jednym kliknięciem, a cały zespół ma dostęp do plików.",
+          "items": [
+            "Jedno kliknięcie zamiast godziny pracy ręcznej",
+            "Ceny zakupu automatycznie z katalogu",
+            "Profesjonalny PDF za każdym razem",
+            "Ponowne zamówienia nie wymagają rozpoczynania od zera"
+          ],
+          "highlight": "1 kliknięcie, nie 1 godzina"
+        }
+      }
     }
   },
   "contact": {

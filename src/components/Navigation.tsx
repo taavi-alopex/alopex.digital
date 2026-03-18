@@ -11,6 +11,7 @@ const navKeys = [
   { key: "about", href: "/about", isRoute: true },
   { key: "services", href: "/services", isRoute: true },
   { key: "process", href: "/process", isRoute: true },
+  { key: "caseStudies", href: "/case-studies", isRoute: true },
   { key: "healthCheck", href: "/health-check", isRoute: true },
   { key: "contact", href: "/contact", isRoute: true },
 ] as const;

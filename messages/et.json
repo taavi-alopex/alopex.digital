@@ -8,6 +8,7 @@
     "about": "Meist",
     "services": "Teenused",
     "process": "Protsess",
+    "caseStudies": "Juhtumiuuringud",
     "healthCheck": "Tervisekontroll",
     "contact": "Kontakt",
     "cta": "Broneeri tutvumiskõne"
@@ -332,6 +333,7 @@
     "company": [
       { "label": "Meist" },
       { "label": "Meie protsess" },
+      { "label": "Juhtumiuuringud" },
       { "label": "Väärtused" },
       { "label": "Kontakt" }
     ],
@@ -670,6 +672,196 @@
     "success": {
       "title": "Oled sees!",
       "message": "Täname tellimuse eest. Kontrolli oma postkasti kinnituse saamiseks."
+    }
+  },
+  "caseStudies": {
+    "meta": {
+      "title": "Juhtumiuuringud",
+      "description": "Vaata, kuidas Alopex Digital on aidanud ettevõtetel automatiseerida protsesse ja säästa aega n8n ja GoHighLevel abil."
+    },
+    "label": "Juhtumiuuringud",
+    "title": "Päris tulemused",
+    "titleAccent": "päris ettevõtetele",
+    "subtitle": "Vaata, kuidas me oleme aidanud ettevõtetel automatiseerida protsesse, kaotada käsitööd ja keskenduda kasvule.",
+    "readMore": "Loe lähemalt",
+    "backLink": "Kõik juhtumiuuringud",
+    "ctaTitle": "Tahad sarnaseid tulemusi?",
+    "ctaDescription": "Broneeri tasuta tutvumiskõne ja kaardistame, kus sinu ettevõttes aega ja raha lekib.",
+    "ctaButton": "Broneeri tutvumiskõne",
+    "beforeLabel": "Enne",
+    "solutionLabel": "Lahendus",
+    "resultsLabel": "Tulemused",
+    "items": {
+      "ovision-invoicing": {
+        "client": "Ovision",
+        "tag": "Arveldamine",
+        "title": "Arved ei hiline enam",
+        "summary": "Automaatne arveldamine GHL-ist Merit Aktivasse Äriregistri andmetega — arve tekib sekunditega, mitte päevadega.",
+        "before": {
+          "text": "Ovisionil polnud CRM-i — müügitoru oli Trellos. Arved tehti käsitsi Merit Aktivas: raamatupidaja kopeeris kliendi andmed, kontrollis Äriregistrist registrikoodi, arvutas viitenumbri ja sisestas tooteread. Iga arve võttis 10–15 minutit ja hilinesid regulaarselt.",
+          "items": [
+            "Iga arve käsitsi — 10–15 minutit",
+            "Arved hilinesid regulaarselt, eriti reedese tootmise puhul",
+            "Äriregistri andmeid kontrolliti käsitsi",
+            "Omaniku aeg kulus paberimajandusele"
+          ]
+        },
+        "solution": {
+          "text": "Ühendasime müügisüsteemi otse raamatupidamistarkvaraga. Kui tellimus liigub \u201Eootab arvet\u201C etappi, tekib arve automaatselt — koos Äriregistrist tõmmatud ametlike andmetega, õige kuupäevaga ja arvutatud viitenumbriga.",
+          "items": [
+            "GHL → Merit Aktiva automaatne ühendus",
+            "Äriregistri andmed tõmmatakse automaatselt",
+            "Viitenumber arvutatakse süsteemi poolt",
+            "Arve tekib tellimuse valmimise hetkel"
+          ]
+        },
+        "results": {
+          "text": "Martin saab keskenduda müügile ja tootmisele, mitte paberimajandusele.",
+          "items": [
+            "Arve tekib sekunditega, mitte päevadega",
+            "Arve kuupäev on alati õige",
+            "Äriregistri andmed on alati ajakohased",
+            "Raamatupidaja ei pea enam midagi käsitsi tegema"
+          ],
+          "highlight": "Sekunditega, mitte päevadega"
+        }
+      },
+      "gemoss-sales-kpis": {
+        "client": "Gemoss",
+        "tag": "Müügi KPI-d",
+        "title": "Müügimeeskonna KPI-d, mis päriselt toimivad",
+        "summary": "Tööaja-põhine vastamisaja kalkulaator ja automaatne igapäevane raporteerimissüsteem 6-liikmelisele müügimeeskonnale.",
+        "before": {
+          "text": "Gemossil polnud CRM-i — müügitoru oli Microsoft Teamsis. KPI-sid arvutati käsitsi Excelis kord kuus. Vastamisaja KPI arvestas sisse nädalavahetused ja öötunnid, mis andis valesid tulemusi ja mõjutas otse palka.",
+          "items": [
+            "KPI-sid arvutati käsitsi Excelis kord kuus",
+            "Vastamisaja KPI arvestas nädalavahetused sisse",
+            "Valed numbrid mõjutasid otse palka",
+            "Polnud reaalajalist ülevaadet müügist"
+          ]
+        },
+        "solution": {
+          "text": "Ehitasime vastamisaja kalkulaatori, mis arvestab ainult tööpäevi (E–R 9:00–17:30, Eesti pühad välja arvatud). Ühendasime ClickUpi ja Google Sheetsi igapäevase automaatse raporteerimisega.",
+          "items": [
+            "Tööpäevadel põhinev vastamisaja kalkulaator",
+            "Igapäevane automaatne raport Google Sheetsis",
+            "Kohvimasina lepingute automaatne loendus",
+            "Iga müügiinimese tulemused eraldi nähtavad"
+          ]
+        },
+        "results": {
+          "text": "Müügimeeskond usaldab süsteemi ja palgaarvestus põhineb tegelikel andmetel.",
+          "items": [
+            "Reaalajas ülevaade iga hommik",
+            "Aus vastamisaja KPI — ainult tööpäevad",
+            "Palgaarvestus põhineb tegelikel andmetel",
+            "Müügimeeskond usaldab süsteemi"
+          ],
+          "highlight": "Reaalajas, mitte kord kuus"
+        }
+      },
+      "ovision-production": {
+        "client": "Ovision",
+        "tag": "Tootmine",
+        "title": "Tootmine kontrolli all",
+        "summary": "Toote-põhised jälgimiskaardid, automaatne SharePointi failihaldus ja arveldamine kohe peale viimast toodet.",
+        "before": {
+          "text": "Ovisionil polnud tootmise jälgimise süsteemi üldse. Tootmisjuht pidi ise meeles pidama, millises etapis iga toode on. Disainifailide haldus oli lahtine küsimus ja vahel jäi mõni toode kahe silma vahele.",
+          "items": [
+            "Polnud struktureeritud jälgimissüsteemi",
+            "Tootmisjuht pidas staatuseid meeles",
+            "Disainifailid olid laiali emailides",
+            "Arveldamine viibis, sest polnud ülevaadet"
+          ]
+        },
+        "solution": {
+          "text": "Ehitasime süsteemi, kus iga toode saab oma jälgimiskaardi koos tähtaegade, trükimeetodi ja disainifailidega. Disainifailid lähevad automaatselt SharePointi. Viimase toote valmimisel liigub tellimus automaatselt arveldamisele.",
+          "items": [
+            "Iga toode saab oma jälgimiskaardi",
+            "Disainifailid automaatselt SharePointi",
+            "Tootmisesse liikumine ainult peale kinnitust",
+            "Automaatne arveldamine viimase toote järel"
+          ]
+        },
+        "results": {
+          "text": "Ükski toode ei jää märkamata ja arveldamine algab kohe peale viimast toodet.",
+          "items": [
+            "Iga toote staatus nähtav reaalajas",
+            "Ükski toode ei jää märkamata",
+            "Arveldamine algab kohe, mitte päevi hiljem",
+            "Disainifailid alati õiges kohas"
+          ],
+          "highlight": "Null toodet kahe silma vahele"
+        }
+      },
+      "swa-poland-recruitment": {
+        "client": "SWA Poland",
+        "tag": "Värbamine",
+        "title": "AI värbamiskampaania kolmes keeles",
+        "summary": "AI chatbot Instagramis ja Facebookis, kolmekeelne SMS+email kampaania ja no-show taastamine — automaatselt.",
+        "before": {
+          "text": "SWA Polandil polnud CRM-i ega struktureeritud värbamisprotsessi. Värbajad suhtlesid kandidaatidega käsitsi Instagrami ja Facebooki DM-ide kaudu. Kolmekeelne kommunikatsioon tähendas kolmekordset tööd.",
+          "items": [
+            "Kandidaatidega suheldi käsitsi DM-ides",
+            "Polnud ülevaadet pipeline'ist",
+            "SMS ja email kampaaniad käsitsi",
+            "Kolmekeelne kommunikatsioon = 3x töö"
+          ]
+        },
+        "solution": {
+          "text": "Ehitasime tervikliku värbamissüsteemi: AI-kvalifitseerimise bot sotsiaalmeedias, kolmekeelne automaatne kampaania ja no-show tuvastamise süsteem.",
+          "items": [
+            "AI chatbot Instagramis ja Facebookis",
+            "9 SMS + 6 email varianti kolmes keeles",
+            "No-show tuvastamine ja automaatne taastamine",
+            "Meta Ads kampaaniad 7 linna peale"
+          ]
+        },
+        "results": {
+          "text": "Värbajad saavad keskenduda kvalifitseeritud kandidaatidele, mitte käsitsi vestlemisele.",
+          "items": [
+            "AI teeb esmase kvalifitseerimise automaatselt",
+            "Kolmekeelne kampaania töötab automaatselt",
+            "Reaalajas ülevaade kandidaatidest ja etappidest",
+            "No-showd saavad automaatselt uue võimaluse"
+          ],
+          "highlight": "3 keelt, 0 käsitööd"
+        }
+      },
+      "ovision-quotes-costing": {
+        "client": "Ovision",
+        "tag": "Pakkumised",
+        "title": "Pakkumised ja kuluarvestus ühest kohast",
+        "summary": "Automaatne tootekataloogi hinnastamine, PDF genereerimine ja tsentraliseeritud failijuurdepääs kogu meeskonnale.",
+        "before": {
+          "text": "Pakkumiste tegemine käis täielikult käsitsi. Omahinnad vaadati järele tarnijate portaalidest, tarnija nimed kirjutati vabatekstina ja failid olid laiali erinevates arvutites.",
+          "items": [
+            "Pakkumiste koostamine tund aega käsitööd",
+            "Omahinnad kopeeriti käsitsi tarnijate portaalidest",
+            "Tarnija nimed ja trükimeetodid vabatekstina",
+            "Failid laiali erinevates arvutites"
+          ]
+        },
+        "solution": {
+          "text": "Tõime kogu protsessi ühte kohta. Tootehinnad tõmmatakse automaatselt kataloogist, kuluarvestus genereeritakse SharePointis ja pakkumise PDF tekib automaatselt.",
+          "items": [
+            "Hinnad automaatselt kataloogist",
+            "Kuluarvestus SharePointis tarnijate ja marginaalidega",
+            "Automaatne professionaalne PDF",
+            "Kogu meeskond näeb sama faili"
+          ]
+        },
+        "results": {
+          "text": "Pakkumise koostamine ühe nupuvajutusega ja kogu meeskond pääseb failidele ligi.",
+          "items": [
+            "Üks nupuvajutus, mitte tund käsitööd",
+            "Omahinnad automaatselt kataloogist",
+            "Professionaalne PDF iga kord",
+            "Kordustellimusel pole vaja nullist alustada"
+          ],
+          "highlight": "1 klikk, mitte 1 tund"
+        }
+      }
     }
   },
   "contact": {

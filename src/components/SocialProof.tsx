@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
 
@@ -265,73 +266,49 @@ export function SocialProof() {
           </div>
         </ScrollReveal>
 
-        {/* Case study card */}
+        {/* Case studies link */}
         <ScrollReveal delay={5} variant="scale">
           <div className="max-w-[800px] mx-auto">
-            <div className="flex justify-center mb-6">
-              <span
-                className="px-4 py-1.5 text-[11px] font-bold tracking-[2px] uppercase"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--amber)",
-                  background: "rgba(212,135,63,0.1)",
-                  borderRadius: "var(--radius-badge)",
-                }}
-              >
-                {t("caseStudyLabel")}
-              </span>
-            </div>
-
-            <div
-              className="border-l-4 p-8 md:p-10"
+            <Link
+              href="/case-studies"
+              className="group block border-l-4 p-8 md:p-10 no-underline transition-all duration-300 hover:border-[var(--amber)]"
               style={{
                 borderColor: "var(--spruce-light)",
                 background: "rgba(255,255,255,0.03)",
                 borderRadius: "var(--radius-card)",
               }}
             >
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <a
-                  href="https://www.koduaken.ee/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[20px] font-semibold transition-colors hover:text-[var(--spruce-light)]"
-                  style={{
-                    fontFamily: "var(--font-heading)",
-                    color: "var(--frost)",
-                  }}
-                >
-                  {t("caseStudy.client")}
-                </a>
+              <div className="flex justify-center mb-4">
                 <span
-                  className="px-3 py-1 text-[11px] font-bold tracking-[1px] uppercase"
+                  className="px-4 py-1.5 text-[11px] font-bold tracking-[2px] uppercase"
                   style={{
                     fontFamily: "var(--font-heading)",
-                    color: "var(--spruce-light)",
-                    background: "rgba(82,183,136,0.1)",
+                    color: "var(--amber)",
+                    background: "rgba(212,135,63,0.1)",
                     borderRadius: "var(--radius-badge)",
                   }}
                 >
-                  {t("caseStudy.industry")}
+                  {t("caseStudyLabel")}
                 </span>
               </div>
 
               <p
-                className="text-[14px] leading-[1.7] mb-2"
-                style={{ color: "var(--text-dark-muted)" }}
+                className="text-center text-[20px] md:text-[24px] font-semibold mb-3 group-hover:text-[var(--spruce-light)] transition-colors duration-200"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--frost)",
+                }}
               >
-                <strong style={{ color: "var(--frost)" }}>Challenge:</strong>{" "}
-                {t("caseStudy.challenge")}
+                {t("caseStudy.client")} · {t("caseStudy.industry")}
               </p>
               <p
-                className="text-[14px] leading-[1.7] mb-6"
+                className="text-center text-[14px] leading-[1.7] mb-4"
                 style={{ color: "var(--text-dark-muted)" }}
               >
-                <strong style={{ color: "var(--frost)" }}>Solution:</strong>{" "}
-                {t("caseStudy.solution")}
+                {t("caseStudy.challenge")}
               </p>
 
-              <div className="flex flex-wrap items-end gap-4">
+              <div className="flex justify-center items-end gap-4 mb-6">
                 <span
                   className="text-[48px] font-bold leading-none"
                   style={{
@@ -348,15 +325,19 @@ export function SocialProof() {
                   >
                     {t("caseStudy.resultLabel")}
                   </p>
-                  <p
-                    className="text-[13px]"
-                    style={{ color: "var(--text-dark-muted)" }}
-                  >
-                    {t("caseStudy.resultDetail")}
-                  </p>
                 </div>
               </div>
-            </div>
+
+              <p
+                className="text-center text-[14px] font-semibold group-hover:translate-x-1 transition-transform duration-200"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--spruce-light)",
+                }}
+              >
+                {t("caseStudyLabel")} &rarr;
+              </p>
+            </Link>
           </div>
         </ScrollReveal>
       </div>

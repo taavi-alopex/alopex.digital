@@ -8,6 +8,7 @@
     "about": "About",
     "services": "Services",
     "process": "Process",
+    "caseStudies": "Case Studies",
     "healthCheck": "Health Check",
     "contact": "Contact",
     "cta": "Book a Discovery Call"
@@ -332,6 +333,7 @@
     "company": [
       { "label": "About" },
       { "label": "Our Process" },
+      { "label": "Case Studies" },
       { "label": "Values" },
       { "label": "Contact" }
     ],
@@ -670,6 +672,196 @@
     "success": {
       "title": "You're In!",
       "message": "Thanks for subscribing. Check your inbox for a confirmation."
+    }
+  },
+  "caseStudies": {
+    "meta": {
+      "title": "Case Studies",
+      "description": "See how Alopex Digital has helped businesses automate processes and save time with n8n and GoHighLevel."
+    },
+    "label": "Case Studies",
+    "title": "Real results",
+    "titleAccent": "for real businesses",
+    "subtitle": "See how we've helped businesses automate processes, eliminate manual work, and focus on growth.",
+    "readMore": "Read more",
+    "backLink": "All case studies",
+    "ctaTitle": "Want similar results?",
+    "ctaDescription": "Book a free discovery call and we'll map where your business is leaking time and money.",
+    "ctaButton": "Book a Discovery Call",
+    "beforeLabel": "Before",
+    "solutionLabel": "Solution",
+    "resultsLabel": "Results",
+    "items": {
+      "ovision-invoicing": {
+        "client": "Ovision",
+        "tag": "Invoicing",
+        "title": "Invoices no longer delayed",
+        "summary": "Automated invoicing from GHL to Merit Aktiva with business registry data — invoices generated in seconds, not days.",
+        "before": {
+          "text": "Ovision had no CRM — their pipeline lived in Trello. Invoices were created manually in Merit Aktiva: the accountant copied client data, verified registry codes, calculated reference numbers, and entered product lines. Each invoice took 10–15 minutes and was regularly delayed.",
+          "items": [
+            "Each invoice done manually — 10–15 minutes",
+            "Invoices regularly delayed, especially after Friday production",
+            "Business registry data checked manually",
+            "Owner's time consumed by paperwork"
+          ]
+        },
+        "solution": {
+          "text": "We connected the sales system directly to the accounting software. When an order moves to the 'awaiting invoice' stage, the invoice is created automatically — with official data pulled from the Business Registry, correct dates, and calculated reference numbers.",
+          "items": [
+            "GHL → Merit Aktiva automatic connection",
+            "Business registry data pulled automatically",
+            "Reference numbers calculated by the system",
+            "Invoice generated the moment the order is complete"
+          ]
+        },
+        "results": {
+          "text": "Martin can now focus on sales and production instead of paperwork.",
+          "items": [
+            "Invoices generated in seconds, not days",
+            "Invoice date is always correct",
+            "Business registry data is always up to date",
+            "Accountant no longer needs to do anything manually"
+          ],
+          "highlight": "Seconds, not days"
+        }
+      },
+      "gemoss-sales-kpis": {
+        "client": "Gemoss",
+        "tag": "Sales KPIs",
+        "title": "Sales team KPIs that actually work",
+        "summary": "Business-hours response time calculator and automated daily reporting system for a 6-person sales team.",
+        "before": {
+          "text": "Gemoss had no CRM — their pipeline lived in Microsoft Teams. KPIs were calculated manually in Excel once a month. The response time KPI counted weekends and night hours, giving false results that directly affected salaries.",
+          "items": [
+            "KPIs calculated manually in Excel once a month",
+            "Response time KPI counted weekends",
+            "False numbers directly affected salaries",
+            "No real-time visibility into sales activity"
+          ]
+        },
+        "solution": {
+          "text": "We built a response time calculator that only counts business days (Mon–Fri 9:00–17:30, excluding Estonian holidays). Connected ClickUp and Google Sheets with daily automated reporting.",
+          "items": [
+            "Business-hours response time calculator",
+            "Daily automated report in Google Sheets",
+            "Automatic coffee machine contract counting",
+            "Individual results visible per salesperson"
+          ]
+        },
+        "results": {
+          "text": "The sales team trusts the system and payroll is based on real data.",
+          "items": [
+            "Real-time overview every morning",
+            "Fair response time KPI — business hours only",
+            "Payroll based on actual data, not broken numbers",
+            "Sales team trusts the system"
+          ],
+          "highlight": "Real-time, not once a month"
+        }
+      },
+      "ovision-production": {
+        "client": "Ovision",
+        "tag": "Production",
+        "title": "Production under control",
+        "summary": "Per-product tracking cards, automatic SharePoint file management, and invoicing triggered on last product completion.",
+        "before": {
+          "text": "Ovision had no production tracking system at all. The production manager had to remember which stage each product was in. Design file management was an open question and sometimes products fell through the cracks.",
+          "items": [
+            "No structured tracking system",
+            "Production manager tracked statuses from memory",
+            "Design files scattered across emails",
+            "Invoicing delayed due to lack of overview"
+          ]
+        },
+        "solution": {
+          "text": "We built a system where each product gets its own tracking card with deadlines, print methods, and design files. Design files go to SharePoint automatically. When the last product is complete, the order moves to invoicing automatically.",
+          "items": [
+            "Each product gets its own tracking card",
+            "Design files automatically to SharePoint",
+            "Production only starts after design approval",
+            "Automatic invoicing after last product"
+          ]
+        },
+        "results": {
+          "text": "No product falls through the cracks and invoicing starts immediately after the last product.",
+          "items": [
+            "Every product status visible in real-time",
+            "No product goes unnoticed",
+            "Invoicing starts immediately, not days later",
+            "Design files always in the right place"
+          ],
+          "highlight": "Zero products overlooked"
+        }
+      },
+      "swa-poland-recruitment": {
+        "client": "SWA Poland",
+        "tag": "Recruitment",
+        "title": "AI recruitment campaign in three languages",
+        "summary": "AI chatbot on Instagram and Facebook, trilingual SMS+email campaigns, and no-show recovery — all automated.",
+        "before": {
+          "text": "SWA Poland had no CRM or structured recruitment process. Recruiters communicated with candidates manually via Instagram and Facebook DMs. Trilingual communication meant triple the work.",
+          "items": [
+            "Candidates contacted manually via DMs",
+            "No pipeline visibility",
+            "SMS and email campaigns sent manually",
+            "Trilingual communication = 3x the work"
+          ]
+        },
+        "solution": {
+          "text": "We built a comprehensive recruitment system: AI qualification bot on social media, trilingual automated campaigns, and a no-show detection system.",
+          "items": [
+            "AI chatbot on Instagram and Facebook",
+            "9 SMS + 6 email variants in three languages",
+            "No-show detection and automatic recovery",
+            "Meta Ads campaigns across 7 cities"
+          ]
+        },
+        "results": {
+          "text": "Recruiters can focus on qualified candidates instead of manual messaging.",
+          "items": [
+            "AI handles initial qualification automatically",
+            "Trilingual campaign runs on autopilot",
+            "Real-time overview of candidates and stages",
+            "No-shows automatically get a second chance"
+          ],
+          "highlight": "3 languages, 0 manual work"
+        }
+      },
+      "ovision-quotes-costing": {
+        "client": "Ovision",
+        "tag": "Quotes",
+        "title": "Quotes and costing from one place",
+        "summary": "Automatic catalog pricing, PDF generation, and centralized file access for the entire team.",
+        "before": {
+          "text": "Quote creation was entirely manual. Cost prices were looked up in supplier portals, supplier names were written as free text, and files were scattered across different computers.",
+          "items": [
+            "Quote creation took an hour of manual work",
+            "Cost prices copied manually from supplier portals",
+            "Supplier names and print methods as free text",
+            "Files scattered across different computers"
+          ]
+        },
+        "solution": {
+          "text": "We brought the entire process into one place. Product prices are pulled automatically from the catalog, costing is generated in SharePoint, and quote PDFs are created automatically.",
+          "items": [
+            "Prices automatically from catalog",
+            "Costing in SharePoint with suppliers and margins",
+            "Automatic professional PDF",
+            "Entire team sees the same file"
+          ]
+        },
+        "results": {
+          "text": "Quote creation with one click and the entire team has file access.",
+          "items": [
+            "One click instead of an hour of manual work",
+            "Cost prices automatically from catalog",
+            "Professional PDF every time",
+            "Repeat orders don't need to start from scratch"
+          ],
+          "highlight": "1 click, not 1 hour"
+        }
+      }
     }
   },
   "contact": {
