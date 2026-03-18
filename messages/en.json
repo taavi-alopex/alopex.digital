@@ -885,5 +885,833 @@
     "team": {
       "title": "Direct Contacts"
     }
+  },
+  "ghlAgencyEurope": {
+    "meta": {
+      "title": "GoHighLevel Agency Europe | Certified GHL Partner | Alopex Digital",
+      "description": "Leading GoHighLevel agency serving businesses across Europe. GDPR-compliant CRM implementation, custom integrations, and ongoing support. Get your GHL system live in weeks."
+    },
+    "hero": {
+      "label": "GoHighLevel Agency Europe",
+      "title": "Your GoHighLevel Partner for European Businesses",
+      "subtitle": "We implement, customize, and support GoHighLevel for sales-led businesses across the EU. GDPR-compliant, locally supported, globally capable."
+    },
+    "whatIs": {
+      "title": "What is GoHighLevel?",
+      "p1": "GoHighLevel (also known as GHL or HighLevel) is an all-in-one sales and marketing platform designed for agencies and businesses. It combines CRM, email marketing, SMS messaging, funnel building, appointment scheduling, and automation into a single platform — replacing the need for multiple disconnected tools.",
+      "p2": "Originally built for marketing agencies in the US, GoHighLevel has grown into a global platform used by thousands of businesses. However, European companies face unique challenges when implementing GHL: GDPR compliance, local payment integrations, regional workflows, and time zone support. That's where a European GoHighLevel agency becomes essential.",
+      "featuresTitle": "Key GoHighLevel Features",
+      "features": [
+        "CRM & Pipeline Management",
+        "Email & SMS Marketing Automation",
+        "Funnel & Website Builder",
+        "Appointment Scheduling & Calendars",
+        "Reputation Management & Reviews",
+        "Invoicing & Payment Collection",
+        "Workflow Automation & Triggers",
+        "White-Label SaaS Capabilities"
+      ]
+    },
+    "whyLocal": {
+      "title": "Why European Businesses Need a Local GoHighLevel Partner",
+      "intro": "While GoHighLevel is a powerful platform, implementing it for European businesses requires specialized expertise that US-based agencies often lack.",
+      "reasons": [
+        {
+          "title": "GDPR Compliance",
+          "description": "European data protection laws require specific configurations for consent management, data processing agreements, and the right to be forgotten. We ensure your GHL setup is fully GDPR-compliant from day one."
+        },
+        {
+          "title": "Local System Integrations",
+          "description": "European businesses use local ERPs (Merit Aktiva, e-Arveldaja), payment gateways (Montonio, EveryPay), and e-signature platforms (Dokobit). We build custom integrations that connect GHL to your existing tech stack."
+        },
+        {
+          "title": "Time Zone & Language Support",
+          "description": "Working with a European agency means support during your business hours, communication in your language, and understanding of local business practices and cultural nuances."
+        },
+        {
+          "title": "Regional Tax & Invoicing",
+          "description": "European invoicing requirements differ from US standards. We configure GHL to handle VAT, local tax calculations, and regional invoice formats correctly."
+        }
+      ]
+    },
+    "services": {
+      "title": "Our GoHighLevel Services",
+      "intro": "We offer comprehensive GoHighLevel services tailored for European businesses — from initial implementation to ongoing optimization.",
+      "items": [
+        {
+          "title": "GoHighLevel Implementation",
+          "description": "Complete setup of your GoHighLevel account including CRM configuration, pipeline creation, automation workflows, email/SMS templates, and user training. We handle the technical complexity so you can focus on selling."
+        },
+        {
+          "title": "Custom Integrations via n8n",
+          "description": "Connect GoHighLevel to any system using custom API integrations. We specialize in integrating European ERPs, accounting software, payment gateways, and government portals that aren't natively supported."
+        },
+        {
+          "title": "Migration from Other CRMs",
+          "description": "Moving from HubSpot, Salesforce, Pipedrive, or spreadsheets? We migrate your data cleanly and configure GHL to match (and improve) your existing workflows."
+        },
+        {
+          "title": "White-Label SaaS Setup",
+          "description": "Launch your own branded CRM platform using GoHighLevel's white-label capabilities. We handle the technical setup while you focus on acquiring clients."
+        },
+        {
+          "title": "Ongoing Support & Optimization",
+          "description": "Continuous improvement of your GHL system with bi-weekly calls, workflow optimization, new feature implementation, and technical support during European business hours."
+        }
+      ]
+    },
+    "process": {
+      "title": "Our GoHighLevel Implementation Process",
+      "intro": "We follow a structured methodology to ensure your GoHighLevel implementation delivers results — not just a configured tool.",
+      "table": {
+        "phase": "Phase",
+        "activities": "Activities",
+        "deliverables": "Deliverables"
+      },
+      "steps": [
+        {
+          "phase": "1. Discovery",
+          "activities": "Audit current systems, map business processes, identify pain points and revenue leaks",
+          "deliverables": "Systems audit report, process maps"
+        },
+        {
+          "phase": "2. Blueprint",
+          "activities": "Design solution architecture, define integrations, scope timeline and resources",
+          "deliverables": "Strategic blueprint document"
+        },
+        {
+          "phase": "3. Build",
+          "activities": "Configure GHL, build automations, develop integrations, create templates",
+          "deliverables": "Configured GHL account, tested workflows"
+        },
+        {
+          "phase": "4. Launch",
+          "activities": "Data migration, team training, go-live support, UI refinements",
+          "deliverables": "Live system, trained team"
+        },
+        {
+          "phase": "5. Optimize",
+          "activities": "Monitor performance, refine workflows, add features, quarterly reviews",
+          "deliverables": "Ongoing improvements, performance reports"
+        }
+      ]
+    },
+    "comparison": {
+      "title": "GoHighLevel vs Other CRM Platforms",
+      "intro": "How does GoHighLevel compare to other popular CRM and marketing automation platforms? Here's an objective comparison for European businesses.",
+      "table": {
+        "feature": "Feature"
+      },
+      "rows": [
+        {
+          "feature": "All-in-One Platform",
+          "ghl": "Yes — CRM, marketing, funnels, scheduling in one",
+          "hubspot": "Partial — requires multiple hubs",
+          "salesforce": "No — requires add-ons"
+        },
+        {
+          "feature": "Pricing (SMB)",
+          "ghl": "€97–297/month flat",
+          "hubspot": "€0–800+/month (scales with contacts)",
+          "salesforce": "€25–300+/user/month"
+        },
+        {
+          "feature": "White-Label Option",
+          "ghl": "Yes — full rebrand possible",
+          "hubspot": "Limited",
+          "salesforce": "No"
+        },
+        {
+          "feature": "Learning Curve",
+          "ghl": "Moderate",
+          "hubspot": "Low to moderate",
+          "salesforce": "Steep"
+        },
+        {
+          "feature": "EU Data Hosting",
+          "ghl": "Available (EU region)",
+          "hubspot": "Available",
+          "salesforce": "Available"
+        },
+        {
+          "feature": "Best For",
+          "ghl": "Agencies, SMBs wanting all-in-one",
+          "hubspot": "Marketing-focused teams",
+          "salesforce": "Enterprise with budget"
+        }
+      ]
+    },
+    "industries": {
+      "title": "Industries We Serve with GoHighLevel",
+      "intro": "We specialize in implementing GoHighLevel for sales-led businesses across Europe. Our experience spans multiple industries with complex sales cycles.",
+      "items": [
+        {
+          "title": "High-Ticket Services",
+          "examples": "Solar, HVAC, Renewables, Construction",
+          "outcome": "Automated lead response and follow-up sequences that close €10-50k deals faster."
+        },
+        {
+          "title": "Professional Services",
+          "examples": "Real Estate, Legal, Consulting, Accounting",
+          "outcome": "Pipeline management and client nurturing that ensures no opportunity slips through."
+        },
+        {
+          "title": "Recruitment & Staffing",
+          "examples": "Agencies, Marketplaces, HR Tech",
+          "outcome": "Dual-pipeline management for candidates and clients with automated communication."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is a GoHighLevel agency?",
+          "answer": "A GoHighLevel agency is a certified partner that helps businesses implement, customize, and optimize the GoHighLevel platform. Unlike DIY setup, an agency brings expertise in CRM strategy, automation design, and technical integrations — ensuring you get results, not just a configured tool."
+        },
+        {
+          "question": "Is GoHighLevel GDPR compliant?",
+          "answer": "GoHighLevel can be configured to be GDPR compliant, but it requires proper setup. This includes consent management, data processing agreements, right-to-erasure workflows, and EU data hosting. As a European agency, we ensure all implementations meet GDPR requirements."
+        },
+        {
+          "question": "How long does GoHighLevel implementation take?",
+          "answer": "A typical GoHighLevel implementation takes 4-8 weeks depending on complexity. This includes discovery, configuration, integration development, data migration, and team training. We follow a structured process to ensure nothing is rushed or overlooked."
+        },
+        {
+          "question": "Can GoHighLevel integrate with European payment systems?",
+          "answer": "Yes, but it requires custom integration work. GoHighLevel natively supports Stripe, but European businesses often need Montonio, EveryPay, or local bank integrations. We build these connections using n8n automation."
+        },
+        {
+          "question": "How much does GoHighLevel cost?",
+          "answer": "GoHighLevel pricing starts at $97/month for the Starter plan and goes up to $497/month for the SaaS Pro plan. Unlike HubSpot or Salesforce, pricing is flat — not based on contacts or users. Implementation costs vary based on complexity and integration requirements."
+        },
+        {
+          "question": "Is GoHighLevel better than HubSpot?",
+          "answer": "It depends on your needs. GoHighLevel is better for agencies and SMBs wanting an all-in-one platform at a flat price. HubSpot is better for enterprise marketing teams with larger budgets. GoHighLevel offers more value for sales-led businesses that need CRM, automation, and funnels in one place."
+        },
+        {
+          "question": "Do you provide ongoing GoHighLevel support?",
+          "answer": "Yes, we offer ongoing support packages that include bi-weekly optimization calls, workflow improvements, new feature implementation, and technical support during European business hours. We believe implementation is just the beginning."
+        },
+        {
+          "question": "Can you migrate our data from another CRM?",
+          "answer": "Yes, we handle migrations from HubSpot, Salesforce, Pipedrive, ActiveCampaign, and even spreadsheets. We clean your data during migration and configure GHL to match your existing processes while improving what wasn't working."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to implement GoHighLevel for your business?",
+      "subtitle": "Book a free discovery call. We'll map your current systems and show you how GoHighLevel can streamline your operations.",
+      "button": "Book a Discovery Call",
+      "micro": "30-minute call. No obligation. No sales pitch."
+    }
+  },
+  "ghlExpert": {
+    "meta": {
+      "title": "GoHighLevel Expert | Certified GHL Consultant | Alopex Digital",
+      "description": "Work with certified GoHighLevel experts who understand your business. Strategic consulting, advanced automation, and custom development for GHL."
+    },
+    "hero": {
+      "label": "GoHighLevel Expert",
+      "title": "GoHighLevel Experts Who Deliver Results",
+      "subtitle": "Not just configuration — strategic implementation that transforms how your business operates. We bring deep GHL expertise combined with real-world business understanding."
+    },
+    "whatIs": {
+      "title": "What Does a GoHighLevel Expert Do?",
+      "p1": "A GoHighLevel expert is a specialist who goes beyond basic platform configuration. While anyone can watch YouTube tutorials and set up a basic GHL account, an expert understands how to architect the platform to match your specific business processes, integrate with your existing systems, and build automation that actually gets used.",
+      "p2": "The difference between DIY and expert implementation is the difference between having a tool and having a solution. Experts bring strategic thinking, technical depth, and implementation experience that prevents costly mistakes and ensures you get ROI from your GHL investment.",
+      "skillsTitle": "Core Competencies of a GHL Expert",
+      "skills": [
+        {
+          "title": "Strategic Architecture",
+          "description": "Designing CRM structures, pipelines, and workflows that align with your business model and growth plans."
+        },
+        {
+          "title": "Advanced Automation",
+          "description": "Building complex workflow automations with conditional logic, multi-branch triggers, and error handling."
+        },
+        {
+          "title": "Custom Integrations",
+          "description": "Connecting GHL to external systems via API, webhooks, and middleware like n8n or Zapier."
+        },
+        {
+          "title": "Data Migration",
+          "description": "Safely transferring data from legacy systems while maintaining data integrity and relationships."
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Analyzing and improving workflow efficiency, deliverability, and system performance."
+        },
+        {
+          "title": "Team Training",
+          "description": "Ensuring your team actually adopts and effectively uses the system day-to-day."
+        }
+      ]
+    },
+    "diyVsExpert": {
+      "title": "DIY Setup vs. Hiring a GoHighLevel Expert",
+      "intro": "GoHighLevel is marketed as easy to use, and for basic functions, it is. But most businesses underestimate the complexity of proper implementation.",
+      "diy": {
+        "title": "DIY Implementation",
+        "items": [
+          "Weeks of trial and error learning the platform",
+          "Workflows that break or don't trigger correctly",
+          "No integration with existing business systems",
+          "Team resistance due to poor UX design",
+          "Missing automation opportunities you don't know exist"
+        ]
+      },
+      "expert": {
+        "title": "Expert Implementation",
+        "items": [
+          "Live in weeks with proven architecture",
+          "Battle-tested workflows that handle edge cases",
+          "Seamless integration with your tech stack",
+          "User-friendly setup your team actually adopts",
+          "Advanced automation you didn't know was possible"
+        ]
+      }
+    },
+    "services": {
+      "title": "GoHighLevel Expert Services",
+      "intro": "We offer specialized GHL services for businesses that want more than basic setup.",
+      "items": [
+        {
+          "title": "GHL Strategy & Consulting",
+          "description": "Before touching the platform, we analyze your business processes, identify automation opportunities, and design a GHL architecture that supports your goals. This strategic foundation prevents expensive rebuilds later.",
+          "outcome": "Clear roadmap with prioritized implementation phases."
+        },
+        {
+          "title": "Advanced Workflow Automation",
+          "description": "Complex multi-step automations with conditional branching, time delays, custom field logic, and integration triggers. We build automations that handle real-world complexity, not just simple sequences.",
+          "outcome": "Automation that handles 80% of repetitive tasks without human intervention."
+        },
+        {
+          "title": "Custom API Development",
+          "description": "When native integrations don't exist, we build them. Custom webhooks, API connections, and middleware solutions that connect GHL to any system with an API.",
+          "outcome": "Unified data flow between all your business systems."
+        },
+        {
+          "title": "Migration & Data Transfer",
+          "description": "Moving from HubSpot, Salesforce, Pipedrive, or spreadsheets? We migrate your data cleanly, map fields correctly, and ensure nothing is lost in translation.",
+          "outcome": "Complete data migration with zero downtime."
+        },
+        {
+          "title": "Ongoing Optimization",
+          "description": "GHL expertise isn't just about initial setup. We provide ongoing optimization, new feature implementation, and strategic reviews to ensure your system evolves with your business.",
+          "outcome": "Continuous improvement and adaptation to new opportunities."
+        }
+      ]
+    },
+    "whenToHire": {
+      "title": "When Should You Hire a GoHighLevel Expert?",
+      "intro": "Not every business needs an expert. Here are the scenarios where expert help delivers the highest ROI.",
+      "scenarios": [
+        {
+          "title": "Complex Sales Process",
+          "description": "If your sales cycle involves multiple touchpoints, stakeholders, or stages, you need automation that handles complexity."
+        },
+        {
+          "title": "Integration Requirements",
+          "description": "When GHL needs to connect with your ERP, accounting software, or custom systems."
+        },
+        {
+          "title": "Migration from Another CRM",
+          "description": "Moving data and recreating workflows requires expertise to avoid losing critical information."
+        },
+        {
+          "title": "Team Adoption Issues",
+          "description": "If you've tried GHL before and your team didn't use it, the problem was likely implementation, not the platform."
+        },
+        {
+          "title": "Scaling Operations",
+          "description": "When manual processes are limiting growth and you need automation to handle increased volume."
+        },
+        {
+          "title": "Time Constraints",
+          "description": "When you need to be live quickly and can't afford months of learning curve."
+        }
+      ]
+    },
+    "howToChoose": {
+      "title": "How to Choose the Right GoHighLevel Expert",
+      "intro": "Not all GHL experts are equal. Here's what to look for when evaluating potential partners.",
+      "criteria": [
+        {
+          "title": "Business Understanding First",
+          "description": "Look for experts who ask about your business before talking about features. Technology should serve strategy, not the other way around."
+        },
+        {
+          "title": "Integration Capabilities",
+          "description": "Can they connect GHL to your existing systems? Ask about their experience with APIs, webhooks, and tools like n8n or Make."
+        },
+        {
+          "title": "Portfolio of Similar Work",
+          "description": "Have they implemented GHL for businesses similar to yours? Ask for case studies or references in your industry."
+        },
+        {
+          "title": "Ongoing Support Options",
+          "description": "Implementation is just the beginning. Ensure they offer support, training, and optimization after go-live."
+        },
+        {
+          "title": "Clear Process & Timeline",
+          "description": "Avoid experts who can't explain their methodology or provide realistic timelines. Vague promises lead to delayed projects."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is a GoHighLevel expert?",
+          "answer": "A GoHighLevel expert is a specialist with deep knowledge of the GHL platform who helps businesses implement, customize, and optimize their use of the software. Unlike general virtual assistants or basic setup services, experts bring strategic thinking and technical depth to ensure your GHL implementation actually delivers business results."
+        },
+        {
+          "question": "How much does a GoHighLevel expert cost?",
+          "answer": "GoHighLevel expert pricing varies widely based on scope and expertise. Basic setup might cost €500-2,000, while comprehensive implementations with custom integrations typically range from €5,000-15,000+. Ongoing support is usually €500-2,000/month. The key is to evaluate ROI, not just cost — a properly implemented system pays for itself many times over."
+        },
+        {
+          "question": "How long does it take to implement GoHighLevel properly?",
+          "answer": "A proper GHL implementation typically takes 4-8 weeks for most businesses. This includes discovery, architecture design, configuration, integration development, data migration, testing, and training. Rushing this process leads to problems that cost more to fix later."
+        },
+        {
+          "question": "Can I implement GoHighLevel myself?",
+          "answer": "You can implement basic GHL functionality yourself if you have time to learn the platform. However, most businesses underestimate the complexity of proper implementation. DIY often results in workflows that don't work correctly, poor team adoption, and missed automation opportunities. The question is whether your time is better spent on implementation or on running your business."
+        },
+        {
+          "question": "What's the difference between a GHL expert and a GHL agency?",
+          "answer": "The terms are often used interchangeably. An agency typically has a team of specialists and can handle larger or more complex projects. An individual expert might be more affordable for smaller projects. What matters most is their methodology, experience, and ability to understand your specific business needs."
+        },
+        {
+          "question": "Do I need ongoing support after implementation?",
+          "answer": "Most businesses benefit from ongoing support, at least initially. Your needs will evolve, new GHL features will be released, and optimization opportunities will emerge. We recommend at least 3 months of post-implementation support, transitioning to quarterly reviews as your team becomes self-sufficient."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to work with GoHighLevel experts?",
+      "subtitle": "Book a discovery call to discuss your business needs and how we can help you get more from GoHighLevel.",
+      "button": "Talk to an Expert",
+      "micro": "30-minute call. No obligation. Real answers to your questions."
+    }
+  },
+  "n8nAgency": {
+    "meta": {
+      "title": "n8n Automation Agency | Workflow Automation Experts | Alopex Digital",
+      "description": "Expert n8n automation agency for European businesses. Custom workflow development, API integrations, and business process automation. Self-hosted and GDPR-compliant."
+    },
+    "hero": {
+      "label": "n8n Automation Agency",
+      "title": "n8n Automation That Actually Works",
+      "subtitle": "We build workflow automations that connect your systems, eliminate manual tasks, and scale with your business. Open-source power, enterprise reliability."
+    },
+    "whatIs": {
+      "title": "What is n8n?",
+      "p1": "n8n is an open-source workflow automation platform that allows you to connect any application with an API. Unlike Zapier or Make, n8n can be self-hosted, giving you complete control over your data and unlimited workflow executions without per-task pricing.",
+      "p2": "Founded in Berlin in 2019, n8n has become the go-to choice for businesses that need powerful automation without vendor lock-in. With 400+ native integrations and the ability to connect any API, n8n handles automations that other platforms simply can't.",
+      "capabilitiesTitle": "What n8n Can Do",
+      "capabilities": [
+        "Connect any application with an API",
+        "Self-host for complete data control",
+        "Unlimited workflow executions",
+        "Complex conditional logic and branching",
+        "Custom code nodes (JavaScript/Python)",
+        "Scheduled and webhook-triggered workflows"
+      ]
+    },
+    "comparison": {
+      "title": "n8n vs Zapier vs Make",
+      "intro": "How does n8n compare to popular automation platforms? Here's an honest comparison.",
+      "table": {
+        "feature": "Feature"
+      },
+      "rows": [
+        {
+          "feature": "Pricing Model",
+          "n8n": "Flat fee or self-hosted (free)",
+          "zapier": "Per-task pricing (expensive at scale)",
+          "make": "Per-operation pricing"
+        },
+        {
+          "feature": "Self-Hosting",
+          "n8n": "Yes — full control",
+          "zapier": "No",
+          "make": "No"
+        },
+        {
+          "feature": "Data Privacy",
+          "n8n": "Your server, your data",
+          "zapier": "US-hosted only",
+          "make": "EU option available"
+        },
+        {
+          "feature": "Complex Logic",
+          "n8n": "Excellent — loops, branching, code",
+          "zapier": "Limited",
+          "make": "Good"
+        },
+        {
+          "feature": "Custom Code",
+          "n8n": "JavaScript & Python nodes",
+          "zapier": "Limited code steps",
+          "make": "Webhook/HTTP only"
+        },
+        {
+          "feature": "Best For",
+          "n8n": "Technical teams, complex workflows",
+          "zapier": "Simple automations, non-technical users",
+          "make": "Visual workflows, moderate complexity"
+        }
+      ]
+    },
+    "services": {
+      "title": "Our n8n Automation Services",
+      "intro": "We provide end-to-end n8n services from strategy to ongoing optimization.",
+      "items": [
+        {
+          "title": "Workflow Development",
+          "description": "Custom n8n workflows designed around your business processes. We handle complex logic, error handling, and edge cases that break simple automations."
+        },
+        {
+          "title": "API Integrations",
+          "description": "Connect any system with an API to your workflow. We build custom integrations for European ERPs, payment systems, and government portals."
+        },
+        {
+          "title": "n8n Self-Hosting Setup",
+          "description": "Deploy n8n on your own infrastructure for maximum control and GDPR compliance. We handle server setup, security, and ongoing maintenance."
+        },
+        {
+          "title": "Migration from Other Platforms",
+          "description": "Moving from Zapier or Make? We migrate your workflows to n8n, often reducing costs by 80% or more at scale."
+        },
+        {
+          "title": "Workflow Optimization",
+          "description": "Already using n8n but workflows are slow or breaking? We audit and optimize for reliability and performance."
+        },
+        {
+          "title": "Training & Documentation",
+          "description": "Empower your team to manage workflows independently with comprehensive training and documentation."
+        }
+      ]
+    },
+    "integrations": {
+      "title": "Integration Examples",
+      "intro": "Real-world automations we've built for European businesses.",
+      "examples": [
+        {
+          "title": "CRM to Accounting Sync",
+          "description": "Automatically create invoices in Merit Aktiva or e-Arveldaja when deals close in GoHighLevel or HubSpot. Include business registry data lookup and reference number calculation.",
+          "tools": "GoHighLevel → n8n → Merit Aktiva"
+        },
+        {
+          "title": "Lead Qualification Pipeline",
+          "description": "Enrich incoming leads with company data, score them based on criteria, and route to the right sales rep with personalized follow-up sequences.",
+          "tools": "Web Form → n8n → CRM + Email"
+        },
+        {
+          "title": "E-commerce Order Processing",
+          "description": "Sync orders across platforms, update inventory, generate shipping labels, and notify customers — all automatically.",
+          "tools": "WooCommerce → n8n → ERP + Shipping"
+        },
+        {
+          "title": "Document Generation",
+          "description": "Generate contracts, proposals, or reports from templates when triggered by CRM events. Automatically send for e-signature via Dokobit.",
+          "tools": "CRM → n8n → Google Docs → Dokobit"
+        }
+      ]
+    },
+    "whyEurope": {
+      "title": "Why European Businesses Choose n8n",
+      "intro": "n8n offers unique advantages for businesses operating in the EU.",
+      "reasons": [
+        {
+          "title": "GDPR Compliance by Design",
+          "description": "Self-host n8n on EU servers and your data never leaves European jurisdiction. No US cloud providers in the chain."
+        },
+        {
+          "title": "Berlin-Based Company",
+          "description": "n8n GmbH is headquartered in Berlin. Support, documentation, and company values align with European business expectations."
+        },
+        {
+          "title": "No Per-Task Pricing",
+          "description": "Unlike Zapier's per-task model that gets expensive fast, n8n offers predictable pricing that scales with your business."
+        },
+        {
+          "title": "Local System Support",
+          "description": "We build integrations with European systems (Merit, Montonio, Dokobit) that aren't available on US-centric platforms."
+        }
+      ]
+    },
+    "process": {
+      "title": "How We Work",
+      "intro": "Our process for delivering n8n automation that works reliably.",
+      "steps": [
+        {
+          "title": "Process Mapping",
+          "description": "We document your current workflow, identify automation opportunities, and design the target state."
+        },
+        {
+          "title": "Solution Architecture",
+          "description": "Design the technical solution including integrations, data flows, error handling, and hosting requirements."
+        },
+        {
+          "title": "Development & Testing",
+          "description": "Build the workflows with proper error handling, then test thoroughly with real data before going live."
+        },
+        {
+          "title": "Deployment & Training",
+          "description": "Deploy to production, train your team on monitoring and basic troubleshooting."
+        },
+        {
+          "title": "Monitoring & Optimization",
+          "description": "Ongoing monitoring, performance optimization, and iteration based on real-world usage."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is an n8n agency?",
+          "answer": "An n8n agency is a team of specialists who help businesses implement workflow automation using the n8n platform. We design, build, and maintain automated workflows that connect your business systems and eliminate manual tasks."
+        },
+        {
+          "question": "Is n8n better than Zapier?",
+          "answer": "n8n is better for businesses that need complex workflows, want to self-host for data privacy, or are hitting Zapier's pricing limits. Zapier is easier for simple automations and non-technical users. For European businesses with GDPR concerns, n8n's self-hosting capability is a significant advantage."
+        },
+        {
+          "question": "Can n8n be self-hosted?",
+          "answer": "Yes, n8n can be self-hosted on your own servers, giving you complete control over your data. This is particularly valuable for GDPR compliance as your data never leaves your infrastructure. We handle the server setup, security, and maintenance."
+        },
+        {
+          "question": "How much does n8n cost?",
+          "answer": "n8n offers a free self-hosted option and a cloud version starting at €20/month. Unlike Zapier, there's no per-task pricing, so costs are predictable regardless of volume. Implementation costs vary based on complexity — simple workflows might cost €1,000-3,000, while complex integrations range from €5,000-15,000+."
+        },
+        {
+          "question": "What systems can n8n integrate with?",
+          "answer": "n8n can integrate with any system that has an API. It has 400+ native integrations including CRMs, ERPs, email platforms, databases, and more. For systems without native integrations, we build custom connections using n8n's HTTP and code nodes."
+        },
+        {
+          "question": "How long does n8n implementation take?",
+          "answer": "Simple workflows can be built in 1-2 weeks. Complex integrations with multiple systems typically take 4-8 weeks. The timeline depends on the number of systems involved, data complexity, and testing requirements."
+        },
+        {
+          "question": "Do you provide ongoing n8n support?",
+          "answer": "Yes, we offer ongoing support packages that include monitoring, troubleshooting, optimization, and new workflow development. Most clients start with active support and transition to lighter maintenance as their team becomes familiar with the system."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to automate your business processes?",
+      "subtitle": "Book a discovery call to discuss your automation needs and see how n8n can eliminate manual work.",
+      "button": "Talk to an Automation Expert",
+      "micro": "30-minute call. We'll map your automation opportunities."
+    }
+  },
+  "revopsAgency": {
+    "meta": {
+      "title": "RevOps Agency Europe | Revenue Operations Experts | Alopex Digital",
+      "description": "Revenue Operations agency serving European businesses. We align sales, marketing, and customer success to drive predictable revenue growth. GDPR-compliant, locally supported."
+    },
+    "hero": {
+      "label": "RevOps Agency Europe",
+      "title": "Revenue Operations That Drive Growth",
+      "subtitle": "We align your sales, marketing, and customer success operations to eliminate friction, improve conversion, and create predictable revenue. European expertise, global best practices."
+    },
+    "whatIs": {
+      "title": "What is Revenue Operations (RevOps)?",
+      "p1": "Revenue Operations (RevOps) is the strategic alignment of sales, marketing, and customer success operations to drive efficient revenue growth. Rather than each department operating in silos with separate tools and metrics, RevOps creates unified processes, shared data, and aligned goals across the entire revenue team.",
+      "p2": "The result? Faster sales cycles, higher conversion rates, better customer retention, and most importantly — predictable, scalable revenue growth. Companies with mature RevOps functions see 10-20% increases in sales productivity and significant improvements in forecast accuracy.",
+      "pillarsTitle": "The Three Pillars of RevOps",
+      "pillars": [
+        {
+          "title": "Process",
+          "description": "Unified workflows that eliminate handoff friction between marketing, sales, and customer success."
+        },
+        {
+          "title": "Technology",
+          "description": "Integrated tech stack with clean data flow between CRM, marketing automation, and analytics tools."
+        },
+        {
+          "title": "Data",
+          "description": "Single source of truth with consistent metrics and reporting across all revenue teams."
+        }
+      ]
+    },
+    "signs": {
+      "title": "Signs Your Business Needs RevOps",
+      "intro": "Revenue operations problems often hide in plain sight. Here are the warning signs.",
+      "items": [
+        {
+          "title": "Leads Falling Through Cracks",
+          "description": "Leads come in but don't get followed up. Handoffs between marketing and sales break down regularly."
+        },
+        {
+          "title": "No Single Source of Truth",
+          "description": "Sales, marketing, and finance each have different numbers. Nobody trusts the data."
+        },
+        {
+          "title": "Manual Reporting Chaos",
+          "description": "Hours spent pulling reports from multiple systems. Spreadsheets everywhere."
+        },
+        {
+          "title": "Unpredictable Revenue",
+          "description": "Forecasts are guesswork. You don't know what's closing this month until it closes."
+        },
+        {
+          "title": "Tool Sprawl",
+          "description": "Too many disconnected tools. Each team bought their own software that doesn't talk to others."
+        },
+        {
+          "title": "Scaling Pains",
+          "description": "What worked at 10 employees breaks at 50. Processes that were informal now cause chaos."
+        }
+      ]
+    },
+    "services": {
+      "title": "Our RevOps Services",
+      "intro": "We provide end-to-end revenue operations services tailored for European businesses.",
+      "items": [
+        {
+          "title": "RevOps Strategy & Assessment",
+          "description": "We audit your current revenue operations, identify gaps and friction points, and design a roadmap for improvement. This includes process mapping, tech stack evaluation, and data quality assessment."
+        },
+        {
+          "title": "CRM Implementation & Optimization",
+          "description": "We implement and configure CRM systems (GoHighLevel, HubSpot, Salesforce) to support your revenue processes. This includes pipeline design, automation setup, and integration with other tools."
+        },
+        {
+          "title": "Sales Process Engineering",
+          "description": "We design and implement sales processes that convert more leads, shorten sales cycles, and provide visibility into pipeline health. From lead scoring to deal stages to forecasting."
+        },
+        {
+          "title": "Marketing-Sales Alignment",
+          "description": "We create seamless handoffs between marketing and sales with lead qualification frameworks, SLAs, and shared metrics. No more fighting over lead quality."
+        },
+        {
+          "title": "Revenue Analytics & Reporting",
+          "description": "We build dashboards and reporting systems that provide real-time visibility into revenue performance. Single source of truth that everyone trusts."
+        }
+      ]
+    },
+    "comparison": {
+      "title": "Traditional Operations vs RevOps",
+      "intro": "The difference between siloed operations and unified RevOps.",
+      "table": {
+        "aspect": "Aspect",
+        "traditional": "Traditional",
+        "revops": "RevOps"
+      },
+      "rows": [
+        {
+          "aspect": "Team Structure",
+          "traditional": "Separate ops for sales, marketing, CS",
+          "revops": "Unified revenue operations team"
+        },
+        {
+          "aspect": "Data",
+          "traditional": "Multiple systems, conflicting numbers",
+          "revops": "Single source of truth"
+        },
+        {
+          "aspect": "Handoffs",
+          "traditional": "Manual, prone to drops",
+          "revops": "Automated, tracked, accountable"
+        },
+        {
+          "aspect": "Reporting",
+          "traditional": "Hours of manual work weekly",
+          "revops": "Real-time automated dashboards"
+        },
+        {
+          "aspect": "Forecasting",
+          "traditional": "Guesswork, low accuracy",
+          "revops": "Data-driven, high accuracy"
+        }
+      ]
+    },
+    "stack": {
+      "title": "The RevOps Technology Stack",
+      "intro": "We implement and integrate the right tools for your revenue operations.",
+      "categories": [
+        {
+          "title": "CRM & Pipeline",
+          "description": "Central hub for all customer data and sales pipeline management.",
+          "tools": "GoHighLevel, HubSpot, Salesforce, Pipedrive"
+        },
+        {
+          "title": "Marketing Automation",
+          "description": "Automated nurturing, lead scoring, and campaign management.",
+          "tools": "GoHighLevel, ActiveCampaign, Mailchimp, Klaviyo"
+        },
+        {
+          "title": "Integration & Automation",
+          "description": "Connect systems and automate workflows between tools.",
+          "tools": "n8n, Zapier, Make, custom APIs"
+        },
+        {
+          "title": "Analytics & BI",
+          "description": "Dashboards, reporting, and business intelligence.",
+          "tools": "Google Data Studio, Tableau, Metabase, custom dashboards"
+        }
+      ]
+    },
+    "whyEurope": {
+      "title": "Why European Businesses Need Local RevOps Expertise",
+      "intro": "RevOps principles are universal, but implementation requires local knowledge.",
+      "reasons": [
+        {
+          "title": "GDPR Compliance",
+          "description": "Revenue operations involves processing customer data across multiple systems. We ensure your RevOps stack is fully GDPR compliant."
+        },
+        {
+          "title": "Local System Integration",
+          "description": "European businesses use local ERPs, accounting systems, and payment providers. We integrate these into your RevOps stack."
+        },
+        {
+          "title": "Time Zone & Culture",
+          "description": "Working with a European agency means support during your hours and understanding of local business practices."
+        },
+        {
+          "title": "Regional Sales Processes",
+          "description": "B2B sales in Europe often differ from US patterns. We understand relationship-based selling and longer decision cycles."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is a RevOps agency?",
+          "answer": "A RevOps agency helps businesses align their sales, marketing, and customer success operations to drive efficient revenue growth. We implement processes, technology, and analytics that eliminate silos and create predictable revenue. Think of us as architects and builders for your revenue engine."
+        },
+        {
+          "question": "What's the difference between RevOps and Sales Ops?",
+          "answer": "Sales Ops focuses specifically on supporting the sales team — CRM administration, territory planning, commission tracking. RevOps takes a broader view, aligning sales, marketing, and customer success operations together. RevOps owns the entire revenue process, not just one department."
+        },
+        {
+          "question": "How much does RevOps implementation cost?",
+          "answer": "RevOps projects typically range from €10,000-50,000+ depending on scope. A focused project like CRM implementation might be €10,000-20,000. A comprehensive RevOps transformation involving multiple systems and process redesign is €30,000-50,000+. Ongoing support is typically €2,000-5,000/month."
+        },
+        {
+          "question": "How long does RevOps implementation take?",
+          "answer": "A typical RevOps implementation takes 3-6 months. The first month focuses on assessment and strategy. Months 2-4 involve technology implementation and process deployment. Months 5-6 are for optimization and team training. Quick wins often appear within the first 30 days."
+        },
+        {
+          "question": "Do we need RevOps if we're a small company?",
+          "answer": "RevOps becomes critical around 10-20 employees when informal processes start breaking. However, even smaller companies benefit from proper CRM setup and basic automation. It's easier to build good habits early than to fix bad ones later. We offer scaled packages for growing businesses."
+        },
+        {
+          "question": "What ROI can we expect from RevOps?",
+          "answer": "Companies with mature RevOps functions see 10-20% increases in sales productivity, 15-20% faster sales cycles, and significant improvements in forecast accuracy. The exact ROI depends on your current state — the more broken your processes, the bigger the improvement potential."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to fix your revenue operations?",
+      "subtitle": "Book a discovery call. We'll assess your current state and show you where the biggest opportunities are hiding.",
+      "button": "Talk to a RevOps Expert",
+      "micro": "30-minute call. We'll map where you're losing revenue."
+    }
   }
 }
