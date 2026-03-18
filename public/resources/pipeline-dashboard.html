@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline Health Dashboard Template | Alopex Digital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f8faf9; color: #282c3e; line-height: 1.6; padding: 40px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #161929 0%, #1E2138 100%); padding: 40px; text-align: center; border-radius: 16px 16px 0 0; }
+    .header img { width: 56px; margin-bottom: 16px; }
+    .header h1 { color: #E8EDF2; font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+    .header p { color: #C4CED8; font-size: 14px; }
+    .gradient-bar { height: 4px; background: linear-gradient(90deg, #2D6A4F, #D4873F); }
+    .dashboard { background: white; border-radius: 0 0 16px 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 32px; }
+    .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+    .kpi-card { background: #f8faf9; border-radius: 12px; padding: 20px; text-align: center; }
+    .kpi-value { font-size: 32px; font-weight: 700; color: #2D6A4F; }
+    .kpi-value.warning { color: #f59e0b; }
+    .kpi-value.danger { color: #ef4444; }
+    .kpi-label { font-size: 12px; color: #6B7280; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .kpi-target { font-size: 11px; color: #9CA3AF; margin-top: 4px; }
+    .section { margin-bottom: 32px; }
+    .section-title { font-size: 16px; font-weight: 600; color: #282c3e; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .section-title::before { content: ''; width: 4px; height: 20px; background: #2D6A4F; border-radius: 2px; }
+    .pipeline-visual { display: flex; gap: 4px; margin-bottom: 20px; }
+    .stage { flex: 1; text-align: center; }
+    .stage-bar { height: 60px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 14px; }
+    .stage-label { font-size: 11px; color: #6B7280; margin-top: 8px; }
+    .stage-count { font-size: 12px; color: #282c3e; font-weight: 500; }
+    .metric-table { width: 100%; border-collapse: collapse; }
+    .metric-table th { background: #f3f4f6; padding: 12px 16px; text-align: left; font-size: 12px; font-weight: 600; color: #6B7280; text-transform: uppercase; letter-spacing: 0.5px; }
+    .metric-table td { padding: 12px 16px; border-bottom: 1px solid #f3f4f6; font-size: 14px; }
+    .metric-table tr:last-child td { border-bottom: none; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+    .status-dot.green { background: #22c55e; }
+    .status-dot.yellow { background: #f59e0b; }
+    .status-dot.red { background: #ef4444; }
+    .health-score { display: flex; align-items: center; justify-content: center; gap: 24px; padding: 32px; background: linear-gradient(135deg, rgba(45,106,79,0.1) 0%, rgba(212,135,63,0.1) 100%); border-radius: 12px; margin-top: 32px; }
+    .health-circle { width: 120px; height: 120px; border-radius: 50%; background: conic-gradient(#2D6A4F 0% 75%, #e5e7eb 75% 100%); display: flex; align-items: center; justify-content: center; position: relative; }
+    .health-circle::before { content: ''; position: absolute; width: 90px; height: 90px; background: white; border-radius: 50%; }
+    .health-value { position: relative; z-index: 1; font-size: 28px; font-weight: 700; color: #2D6A4F; }
+    .health-breakdown { text-align: left; }
+    .health-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; }
+    .formula-box { background: #161929; color: #C4CED8; padding: 20px; border-radius: 12px; margin-top: 32px; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    .formula-box h4 { color: #52B788; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-family: 'Inter', sans-serif; }
+    @media print { body { padding: 20px; } .container { max-width: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://alopex.digital/alopex-logo.png" alt="Alopex Digital">
+      <h1>Pipeline Health Dashboard</h1>
+      <p>Your real-time revenue visibility</p>
+    </div>
+    <div class="gradient-bar"></div>
+
+    <div class="dashboard">
+      <!-- KPI Row -->
+      <div class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-value">€_____</div>
+          <div class="kpi-label">Total Pipeline</div>
+          <div class="kpi-target">Target: €_____ (3x quota)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">____</div>
+          <div class="kpi-label">Active Deals</div>
+          <div class="kpi-target">vs last month: +/- ___%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value warning">___d</div>
+          <div class="kpi-label">Avg Deal Age</div>
+          <div class="kpi-target">Target: < 45 days</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">___%</div>
+          <div class="kpi-label">Win Rate</div>
+          <div class="kpi-target">vs target: ___%</div>
+        </div>
+      </div>
+
+      <!-- Pipeline Visualization -->
+      <div class="section">
+        <h3 class="section-title">Pipeline by Stage</h3>
+        <div class="pipeline-visual">
+          <div class="stage">
+            <div class="stage-bar" style="background: #94a3b8;">€___K</div>
+            <div class="stage-label">Discovery</div>
+            <div class="stage-count">__ deals</div>
+          </div>
+          <div class="stage">
+            <div class="stage-bar" style="background: #64748b;">€___K</div>
+            <div class="stage-label">Qualified</div>
+            <div class="stage-count">__ deals</div>
+          </div>
+          <div class="stage">
+            <div class="stage-bar" style="background: #475569;">€___K</div>
+            <div class="stage-label">Proposal</div>
+            <div class="stage-count">__ deals</div>
+          </div>
+          <div class="stage">
+            <div class="stage-bar" style="background: #2D6A4F;">€___K</div>
+            <div class="stage-label">Negotiation</div>
+            <div class="stage-count">__ deals</div>
+          </div>
+          <div class="stage">
+            <div class="stage-bar" style="background: #166534;">€___K</div>
+            <div class="stage-label">Closing</div>
+            <div class="stage-count">__ deals</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Health Metrics Table -->
+      <div class="section">
+        <h3 class="section-title">Key Health Metrics</h3>
+        <table class="metric-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Current</th>
+              <th>Target</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pipeline Coverage (vs Quota)</td>
+              <td>___x</td>
+              <td>3x minimum</td>
+              <td><span class="status-dot green"></span>Healthy</td>
+            </tr>
+            <tr>
+              <td>Deals with Past Due Close Date</td>
+              <td>___%</td>
+              <td>< 20%</td>
+              <td><span class="status-dot yellow"></span>Warning</td>
+            </tr>
+            <tr>
+              <td>Deals with No Activity (14+ days)</td>
+              <td>___%</td>
+              <td>< 15%</td>
+              <td><span class="status-dot red"></span>Action Needed</td>
+            </tr>
+            <tr>
+              <td>Average Sales Cycle (days)</td>
+              <td>___</td>
+              <td>< 45</td>
+              <td><span class="status-dot green"></span>Healthy</td>
+            </tr>
+            <tr>
+              <td>Stage-to-Stage Conversion</td>
+              <td>___%</td>
+              <td>> 30%</td>
+              <td><span class="status-dot green"></span>Healthy</td>
+            </tr>
+            <tr>
+              <td>Single-Threaded Deals</td>
+              <td>___%</td>
+              <td>< 25%</td>
+              <td><span class="status-dot yellow"></span>Warning</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Overall Health Score -->
+      <div class="health-score">
+        <div class="health-circle">
+          <span class="health-value">__%</span>
+        </div>
+        <div class="health-breakdown">
+          <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 12px;">Pipeline Health Score</h4>
+          <div class="health-item"><span class="status-dot green"></span>Coverage: __/25 pts</div>
+          <div class="health-item"><span class="status-dot green"></span>Freshness: __/25 pts</div>
+          <div class="health-item"><span class="status-dot yellow"></span>Accuracy: __/25 pts</div>
+          <div class="health-item"><span class="status-dot red"></span>Activity: __/25 pts</div>
+        </div>
+      </div>
+
+      <!-- Formula Reference -->
+      <div class="formula-box">
+        <h4>Quick Reference: Key Formulas</h4>
+        <p>Pipeline Coverage = Total Pipeline Value / Monthly Quota</p>
+        <p>Win Rate = Closed Won Deals / Total Closed Deals × 100</p>
+        <p>Sales Velocity = (# Deals × Avg Value × Win Rate) / Sales Cycle Days</p>
+        <p>Weighted Pipeline = Σ (Deal Value × Stage Probability)</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

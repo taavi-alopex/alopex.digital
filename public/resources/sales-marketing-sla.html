@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales & Marketing SLA Template | Alopex Digital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f8faf9; color: #282c3e; line-height: 1.6; padding: 40px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden; }
+    .header { background: linear-gradient(135deg, #161929 0%, #1E2138 100%); padding: 40px; text-align: center; }
+    .header img { width: 56px; margin-bottom: 16px; }
+    .header h1 { color: #E8EDF2; font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+    .header p { color: #C4CED8; font-size: 14px; }
+    .gradient-bar { height: 4px; background: linear-gradient(90deg, #2D6A4F, #D4873F); }
+    .content { padding: 40px; }
+    .section { margin-bottom: 36px; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb; }
+    .section-number { width: 32px; height: 32px; background: #2D6A4F; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+    .section-title { font-size: 18px; font-weight: 600; color: #282c3e; }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-weight: 600; font-size: 14px; color: #282c3e; margin-bottom: 8px; }
+    .form-input { width: 100%; padding: 12px 16px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 14px; color: #282c3e; }
+    .form-input:focus { outline: none; border-color: #2D6A4F; }
+    .form-hint { font-size: 12px; color: #6B7280; margin-top: 4px; }
+    .definition-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+    .definition-table th { background: #f3f4f6; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; color: #282c3e; border-bottom: 2px solid #e5e7eb; }
+    .definition-table td { padding: 12px 16px; border-bottom: 1px solid #f3f4f6; font-size: 14px; }
+    .definition-table .editable { background: #fffbeb; min-width: 150px; }
+    .metric-row { display: flex; align-items: center; gap: 16px; padding: 16px; background: #f8faf9; border-radius: 8px; margin-bottom: 12px; }
+    .metric-label { flex: 1; font-weight: 500; }
+    .metric-value { width: 120px; }
+    .metric-unit { width: 80px; color: #6B7280; font-size: 13px; }
+    .signature-section { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; padding-top: 32px; border-top: 2px solid #e5e7eb; }
+    .signature-box { text-align: center; }
+    .signature-line { border-bottom: 2px solid #282c3e; height: 60px; margin-bottom: 8px; }
+    .signature-title { font-weight: 600; font-size: 14px; color: #282c3e; }
+    .signature-role { font-size: 12px; color: #6B7280; }
+    .highlight-box { background: linear-gradient(135deg, rgba(45,106,79,0.1) 0%, rgba(212,135,63,0.1) 100%); border-radius: 12px; padding: 20px; margin: 20px 0; }
+    .highlight-box h4 { font-size: 14px; font-weight: 600; color: #2D6A4F; margin-bottom: 8px; }
+    .highlight-box p { font-size: 13px; color: #6B7280; }
+    @media print { body { padding: 0; background: white; } .container { box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://alopex.digital/alopex-logo.png" alt="Alopex Digital">
+      <h1>Sales & Marketing SLA</h1>
+      <p>Service Level Agreement Template</p>
+    </div>
+    <div class="gradient-bar"></div>
+
+    <div class="content">
+      <!-- Agreement Details -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">1</div>
+          <h2 class="section-title">Agreement Details</h2>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Company Name</label>
+          <input type="text" class="form-input" placeholder="Enter company name">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="form-group">
+            <label class="form-label">Effective Date</label>
+            <input type="text" class="form-input" placeholder="DD/MM/YYYY">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Review Date</label>
+            <input type="text" class="form-input" placeholder="DD/MM/YYYY (quarterly recommended)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Lead Definitions -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">2</div>
+          <h2 class="section-title">Lead Definitions</h2>
+        </div>
+
+        <table class="definition-table">
+          <thead>
+            <tr>
+              <th>Lead Type</th>
+              <th>Definition</th>
+              <th>Criteria</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Subscriber</strong></td>
+              <td>Contact who has opted in to receive content</td>
+              <td class="editable">Newsletter signup, content download</td>
+            </tr>
+            <tr>
+              <td><strong>Lead</strong></td>
+              <td>Contact who has shown interest in our solution</td>
+              <td class="editable">Visited pricing page, attended webinar</td>
+            </tr>
+            <tr>
+              <td><strong>MQL</strong></td>
+              <td>Marketing Qualified Lead - meets ideal customer criteria</td>
+              <td class="editable">Matches ICP, engagement score > 50</td>
+            </tr>
+            <tr>
+              <td><strong>SQL</strong></td>
+              <td>Sales Qualified Lead - sales-ready opportunity</td>
+              <td class="editable">Budget confirmed, timeline < 3 months</td>
+            </tr>
+            <tr>
+              <td><strong>Opportunity</strong></td>
+              <td>Active sales conversation with decision maker</td>
+              <td class="editable">Demo completed, proposal requested</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-box">
+          <h4>Pro Tip</h4>
+          <p>The most successful teams use lead scoring (behavioral + demographic) to automatically qualify MQLs. This removes subjectivity and speeds up handoffs.</p>
+        </div>
+      </div>
+
+      <!-- Marketing Commitments -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">3</div>
+          <h2 class="section-title">Marketing Commitments</h2>
+        </div>
+
+        <div class="metric-row">
+          <span class="metric-label">Monthly MQL Target</span>
+          <input type="text" class="form-input metric-value" placeholder="___">
+          <span class="metric-unit">MQLs/month</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Lead Data Completeness</span>
+          <input type="text" class="form-input metric-value" placeholder="___">
+          <span class="metric-unit">% complete</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Lead Source Attribution</span>
+          <input type="text" class="form-input metric-value" placeholder="___">
+          <span class="metric-unit">% attributed</span>
+        </div>
+
+        <div class="form-group" style="margin-top: 20px;">
+          <label class="form-label">Required Lead Data Fields</label>
+          <input type="text" class="form-input" placeholder="e.g., Name, Email, Company, Phone, Source, Score">
+          <p class="form-hint">List all fields marketing must populate before handoff</p>
+        </div>
+      </div>
+
+      <!-- Sales Commitments -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">4</div>
+          <h2 class="section-title">Sales Commitments</h2>
+        </div>
+
+        <div class="metric-row">
+          <span class="metric-label">Initial Response Time (Hot Leads)</span>
+          <input type="text" class="form-input metric-value" placeholder="___">
+          <span class="metric-unit">minutes</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Initial Response Time (MQLs)</span>
+          <input type="text" class="form-input metric-value" placeholder="___">
+          <span class="metric-unit">hours</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Minimum Contact Attempts</span>
+          <input type="text" class="form-input metric-value" placeholder="___">
+          <span class="metric-unit">attempts</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Lead Status Update Frequency</span>
+          <input type="text" class="form-input metric-value" placeholder="___">
+          <span class="metric-unit">hours max</span>
+        </div>
+
+        <div class="highlight-box">
+          <h4>Industry Benchmark</h4>
+          <p>Leads contacted within 5 minutes are 9x more likely to convert. Best-in-class teams respond to hot leads in under 60 seconds using automation.</p>
+        </div>
+      </div>
+
+      <!-- Feedback Loop -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">5</div>
+          <h2 class="section-title">Feedback & Reporting</h2>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Lead Rejection Process</label>
+          <input type="text" class="form-input" placeholder="e.g., Sales marks 'Rejected' with reason code within 48 hours">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Weekly Sync Meeting</label>
+          <input type="text" class="form-input" placeholder="e.g., Every Monday 10:00 AM - Pipeline review and lead quality">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Monthly Review Meeting</label>
+          <input type="text" class="form-input" placeholder="e.g., First Friday - SLA metrics review and adjustments">
+        </div>
+      </div>
+
+      <!-- Signatures -->
+      <div class="signature-section">
+        <div class="signature-box">
+          <div class="signature-line"></div>
+          <p class="signature-title">Marketing Leader</p>
+          <p class="signature-role">Name / Date</p>
+        </div>
+        <div class="signature-box">
+          <div class="signature-line"></div>
+          <p class="signature-title">Sales Leader</p>
+          <p class="signature-role">Name / Date</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RevOps Maturity Assessment | Alopex Digital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8faf9;
+      color: #282c3e;
+      line-height: 1.6;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #161929 0%, #1E2138 100%);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .header img {
+      width: 56px;
+      margin-bottom: 16px;
+    }
+
+    .header h1 {
+      color: #E8EDF2;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #C4CED8;
+      font-size: 14px;
+    }
+
+    .gradient-bar {
+      height: 4px;
+      background: linear-gradient(90deg, #2D6A4F, #D4873F);
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    .intro {
+      background: #f8faf9;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .intro h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2D6A4F;
+      margin-bottom: 8px;
+    }
+
+    .intro p {
+      font-size: 14px;
+      color: #6B7280;
+    }
+
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .section-number {
+      width: 32px;
+      height: 32px;
+      background: #2D6A4F;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #282c3e;
+    }
+
+    .checklist {
+      list-style: none;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+
+    .checkbox {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #d1d5db;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .item-content {
+      flex: 1;
+    }
+
+    .item-title {
+      font-weight: 500;
+      color: #282c3e;
+      margin-bottom: 4px;
+    }
+
+    .item-desc {
+      font-size: 13px;
+      color: #6B7280;
+    }
+
+    .scoring {
+      background: linear-gradient(135deg, rgba(45,106,79,0.1) 0%, rgba(212,135,63,0.1) 100%);
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 40px;
+    }
+
+    .scoring h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #282c3e;
+      margin-bottom: 16px;
+    }
+
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .score-item {
+      text-align: center;
+      padding: 16px;
+      background: white;
+      border-radius: 8px;
+    }
+
+    .score-range {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .score-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .score-item.starter .score-range { color: #ef4444; }
+    .score-item.starter .score-label { color: #ef4444; }
+    .score-item.developing .score-range { color: #f59e0b; }
+    .score-item.developing .score-label { color: #f59e0b; }
+    .score-item.established .score-range { color: #2D6A4F; }
+    .score-item.established .score-label { color: #2D6A4F; }
+    .score-item.optimized .score-range { color: #059669; }
+    .score-item.optimized .score-label { color: #059669; }
+
+    .your-score {
+      margin-top: 24px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .your-score-label {
+      font-weight: 600;
+      color: #282c3e;
+    }
+
+    .score-input {
+      width: 80px;
+      height: 48px;
+      border: 2px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      color: #2D6A4F;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 13px;
+      color: #6B7280;
+      margin-bottom: 16px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #D4873F;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 8px;
+    }
+
+    @media print {
+      body { padding: 0; background: white; }
+      .container { box-shadow: none; }
+      .cta-button { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://alopex.digital/alopex-logo.png" alt="Alopex Digital">
+      <h1>RevOps Maturity Assessment</h1>
+      <p>Evaluate your revenue operations readiness</p>
+    </div>
+    <div class="gradient-bar"></div>
+
+    <div class="content">
+      <div class="intro">
+        <h2>How to Use This Assessment</h2>
+        <p>Check each item that applies to your organization. Be honest — this is for your benefit. Count your checkmarks at the end to see where you stand and identify improvement areas.</p>
+      </div>
+
+      <!-- Section 1: Data -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">1</div>
+          <h2 class="section-title">Data Foundation</h2>
+        </div>
+        <ul class="checklist">
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Single source of truth for customer data</div>
+              <div class="item-desc">All teams reference the same CRM/database for customer information</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Standardized data entry processes</div>
+              <div class="item-desc">Clear rules for how contacts, deals, and activities are logged</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Regular data hygiene practices</div>
+              <div class="item-desc">Scheduled cleanup of duplicates, outdated records, and incomplete entries</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Clear data ownership</div>
+              <div class="item-desc">Defined responsibility for data quality and maintenance</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Lead source tracking</div>
+              <div class="item-desc">Every lead's origin is captured and attributed correctly</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 2: Process -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">2</div>
+          <h2 class="section-title">Process & Workflow</h2>
+        </div>
+        <ul class="checklist">
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Documented sales process</div>
+              <div class="item-desc">Clear stages from lead to close with defined criteria for each</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Lead handoff process defined</div>
+              <div class="item-desc">Marketing to sales handoff is clear with SLAs</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Follow-up sequences automated</div>
+              <div class="item-desc">No leads fall through cracks due to manual follow-up failures</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Onboarding process standardized</div>
+              <div class="item-desc">New customer experience is consistent and documented</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Renewal/upsell workflows exist</div>
+              <div class="item-desc">Proactive processes for customer expansion and retention</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 3: Technology -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">3</div>
+          <h2 class="section-title">Technology Stack</h2>
+        </div>
+        <ul class="checklist">
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">CRM is actively used by all revenue teams</div>
+              <div class="item-desc">Sales, marketing, and CS all work from the same system</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Marketing automation connected to CRM</div>
+              <div class="item-desc">Email, forms, and campaigns sync automatically</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">No manual data transfer between tools</div>
+              <div class="item-desc">Integrations handle data flow automatically</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Communication tools integrated</div>
+              <div class="item-desc">Email, calls, and meetings logged automatically</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Document/proposal tools connected</div>
+              <div class="item-desc">Quotes and contracts sync with deals</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 4: Insights -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">4</div>
+          <h2 class="section-title">Reporting & Insights</h2>
+        </div>
+        <ul class="checklist">
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Revenue dashboard exists and is current</div>
+              <div class="item-desc">Real-time visibility into pipeline and performance</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Conversion rates tracked at each stage</div>
+              <div class="item-desc">Know exactly where deals get stuck or lost</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Customer acquisition cost (CAC) known</div>
+              <div class="item-desc">Can calculate cost to acquire by channel</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Customer lifetime value (LTV) calculated</div>
+              <div class="item-desc">Understand long-term customer worth</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Regular reporting rhythm established</div>
+              <div class="item-desc">Weekly/monthly reviews with actionable insights</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Scoring -->
+      <div class="scoring">
+        <h3>Score Your Results</h3>
+        <div class="score-grid">
+          <div class="score-item starter">
+            <div class="score-range">0-5</div>
+            <div class="score-label">Starter</div>
+          </div>
+          <div class="score-item developing">
+            <div class="score-range">6-10</div>
+            <div class="score-label">Developing</div>
+          </div>
+          <div class="score-item established">
+            <div class="score-range">11-15</div>
+            <div class="score-label">Established</div>
+          </div>
+          <div class="score-item optimized">
+            <div class="score-range">16-20</div>
+            <div class="score-label">Optimized</div>
+          </div>
+        </div>
+        <div class="your-score">
+          <span class="your-score-label">Your Score:</span>
+          <input type="text" class="score-input" placeholder="__" /> / 20
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>Want help improving your score? Let's map out your RevOps roadmap together.</p>
+        <a href="https://api.leadconnectorhq.com/widget/booking/YFpWDPuPHUrGFkubfnlX" class="cta-button">Book a Free Assessment Call</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

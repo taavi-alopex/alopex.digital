@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churn Prevention Checklist | Alopex Digital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f8faf9; color: #282c3e; line-height: 1.6; padding: 40px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden; }
+    .header { background: linear-gradient(135deg, #161929 0%, #1E2138 100%); padding: 40px; text-align: center; }
+    .header img { width: 56px; margin-bottom: 16px; }
+    .header h1 { color: #E8EDF2; font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+    .header p { color: #C4CED8; font-size: 14px; }
+    .gradient-bar { height: 4px; background: linear-gradient(90deg, #2D6A4F, #D4873F); }
+    .content { padding: 40px; }
+    .section { margin-bottom: 36px; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #2D6A4F; }
+    .section-icon { width: 32px; height: 32px; background: #2D6A4F; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .section-title { font-size: 18px; font-weight: 600; color: #282c3e; }
+    .checklist { list-style: none; }
+    .checklist li { display: flex; align-items: flex-start; gap: 12px; padding: 12px; background: #f8faf9; border-radius: 8px; margin-bottom: 8px; }
+    .checkbox { width: 20px; height: 20px; border: 2px solid #d1d5db; border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+    .item-content { flex: 1; }
+    .item-title { font-weight: 600; font-size: 14px; color: #282c3e; margin-bottom: 4px; }
+    .item-action { font-size: 13px; color: #6B7280; }
+    .item-automation { display: inline-block; margin-top: 6px; padding: 3px 8px; background: #dbeafe; color: #1e40af; font-size: 11px; font-weight: 600; border-radius: 4px; }
+    .risk-score { background: linear-gradient(135deg, rgba(239,68,68,0.1) 0%, rgba(239,68,68,0.05) 100%); border-radius: 12px; padding: 24px; margin-bottom: 32px; }
+    .risk-title { font-size: 14px; font-weight: 700; color: #ef4444; margin-bottom: 16px; }
+    .risk-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .risk-item { display: flex; align-items: center; gap: 8px; padding: 12px; background: white; border-radius: 8px; }
+    .risk-indicator { width: 12px; height: 12px; border-radius: 50%; }
+    .risk-indicator.high { background: #ef4444; }
+    .risk-indicator.medium { background: #f59e0b; }
+    .risk-indicator.low { background: #22c55e; }
+    .risk-text { font-size: 13px; color: #282c3e; }
+    .playbook-section { background: linear-gradient(135deg, rgba(45,106,79,0.1) 0%, rgba(212,135,63,0.1) 100%); border-radius: 12px; padding: 24px; margin-top: 32px; }
+    .playbook-title { font-size: 14px; font-weight: 700; color: #2D6A4F; margin-bottom: 16px; }
+    .playbook-steps { counter-reset: step; }
+    .playbook-step { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(45,106,79,0.2); }
+    .playbook-step:last-child { border-bottom: none; }
+    .step-number { counter-increment: step; width: 24px; height: 24px; background: #2D6A4F; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+    .step-number::before { content: counter(step); }
+    .step-content { flex: 1; }
+    .step-title { font-weight: 600; font-size: 14px; color: #282c3e; margin-bottom: 2px; }
+    .step-desc { font-size: 13px; color: #6B7280; }
+    @media print { body { padding: 20px; } .container { box-shadow: none; } .checkbox { border-color: #000; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://alopex.digital/alopex-logo.png" alt="Alopex Digital">
+      <h1>Churn Prevention Checklist</h1>
+      <p>Identify risks early. Act before it's too late.</p>
+    </div>
+    <div class="gradient-bar"></div>
+
+    <div class="content">
+      <!-- Risk Scoring -->
+      <div class="risk-score">
+        <div class="risk-title">Customer Health Indicators</div>
+        <div class="risk-grid">
+          <div class="risk-item">
+            <div class="risk-indicator high"></div>
+            <div class="risk-text">Login drop >50% from baseline</div>
+          </div>
+          <div class="risk-item">
+            <div class="risk-indicator high"></div>
+            <div class="risk-text">Open support ticket >7 days</div>
+          </div>
+          <div class="risk-item">
+            <div class="risk-indicator medium"></div>
+            <div class="risk-text">Key feature unused 30+ days</div>
+          </div>
+          <div class="risk-item">
+            <div class="risk-indicator medium"></div>
+            <div class="risk-text">Champion left company</div>
+          </div>
+          <div class="risk-item">
+            <div class="risk-indicator medium"></div>
+            <div class="risk-text">Payment failure (any)</div>
+          </div>
+          <div class="risk-item">
+            <div class="risk-indicator low"></div>
+            <div class="risk-text">No QBR scheduled this quarter</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proactive Monitoring -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">👁</div>
+          <h2 class="section-title">Proactive Monitoring</h2>
+        </div>
+        <ul class="checklist">
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Set up usage tracking alerts</div>
+              <div class="item-action">Get notified when customer activity drops below threshold</div>
+              <span class="item-automation">Automate: Daily usage report → Alert if <50% of baseline</span>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Monitor support ticket sentiment</div>
+              <div class="item-action">Flag frustrated customers before they escalate</div>
+              <span class="item-automation">Automate: Negative sentiment → Escalate to CSM</span>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Track champion job changes</div>
+              <div class="item-action">Know when your main contact leaves or changes roles</div>
+              <span class="item-automation">Automate: LinkedIn integration → Alert on job change</span>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Payment failure recovery</div>
+              <div class="item-action">Don't let involuntary churn happen</div>
+              <span class="item-automation">Automate: Failed charge → Email sequence + CSM alert</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Engagement Rituals -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">🤝</div>
+          <h2 class="section-title">Engagement Rituals</h2>
+        </div>
+        <ul class="checklist">
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Quarterly Business Reviews (QBRs)</div>
+              <div class="item-action">Review ROI, set goals, identify expansion opportunities</div>
+              <span class="item-automation">Automate: QBR calendar invites 2 weeks before quarter end</span>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">New feature announcements</div>
+              <div class="item-action">Keep customers excited about product improvements</div>
+              <span class="item-automation">Automate: Feature release → Personalized email to relevant customers</span>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Success milestone celebrations</div>
+              <div class="item-action">Acknowledge when customers hit key achievements</div>
+              <span class="item-automation">Automate: 100th lead captured → Congratulations email</span>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Renewal check-in (90 days out)</div>
+              <div class="item-action">Start renewal conversation early</div>
+              <span class="item-automation">Automate: 90 days before renewal → CSM task + customer email</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Save Playbook -->
+      <div class="playbook-section">
+        <div class="playbook-title">At-Risk Customer Save Playbook</div>
+        <div class="playbook-steps">
+          <div class="playbook-step">
+            <div class="step-number"></div>
+            <div class="step-content">
+              <div class="step-title">Acknowledge quickly (within 24 hours)</div>
+              <div class="step-desc">Personal outreach from CSM. "I noticed [specific issue]. Let's talk."</div>
+            </div>
+          </div>
+          <div class="playbook-step">
+            <div class="step-number"></div>
+            <div class="step-content">
+              <div class="step-title">Listen and diagnose</div>
+              <div class="step-desc">Schedule call. Ask open questions. Understand root cause before proposing solutions.</div>
+            </div>
+          </div>
+          <div class="playbook-step">
+            <div class="step-number"></div>
+            <div class="step-content">
+              <div class="step-title">Propose specific solution</div>
+              <div class="step-desc">Training session, feature walkthrough, process adjustment — match solution to problem.</div>
+            </div>
+          </div>
+          <div class="playbook-step">
+            <div class="step-number"></div>
+            <div class="step-content">
+              <div class="step-title">Follow up relentlessly</div>
+              <div class="step-desc">Check in at 1 week, 2 weeks, 1 month. Ensure issue is truly resolved.</div>
+            </div>
+          </div>
+          <div class="playbook-step">
+            <div class="step-number"></div>
+            <div class="step-content">
+              <div class="step-title">Document and learn</div>
+              <div class="step-desc">Log the issue and resolution. Look for patterns to prevent for other customers.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

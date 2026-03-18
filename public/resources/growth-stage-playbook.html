@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growth Stage Playbook | Alopex Digital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f8faf9; color: #282c3e; line-height: 1.6; padding: 40px; }
+    .container { max-width: 850px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden; }
+    .header { background: linear-gradient(135deg, #161929 0%, #1E2138 100%); padding: 40px; text-align: center; }
+    .header img { width: 56px; margin-bottom: 16px; }
+    .header h1 { color: #E8EDF2; font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+    .header p { color: #C4CED8; font-size: 14px; }
+    .gradient-bar { height: 4px; background: linear-gradient(90deg, #2D6A4F, #D4873F); }
+    .content { padding: 40px; }
+    .stage { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 2px solid #f3f4f6; }
+    .stage:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .stage-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .stage-badge { padding: 8px 16px; border-radius: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .stage-badge.foundation { background: #fef3c7; color: #92400e; }
+    .stage-badge.traction { background: #dcfce7; color: #166534; }
+    .stage-badge.scale { background: #dbeafe; color: #1e40af; }
+    .stage-badge.optimize { background: #f3e8ff; color: #7c3aed; }
+    .stage-title { font-size: 22px; font-weight: 600; color: #282c3e; }
+    .stage-revenue { font-size: 14px; color: #6B7280; }
+    .stage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .stage-section { background: #f8faf9; border-radius: 12px; padding: 20px; }
+    .stage-section h4 { font-size: 12px; font-weight: 700; color: #2D6A4F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .stage-section ul { list-style: none; }
+    .stage-section li { padding: 6px 0; font-size: 14px; color: #282c3e; display: flex; align-items: flex-start; gap: 8px; }
+    .stage-section li::before { content: '→'; color: #2D6A4F; flex-shrink: 0; }
+    .metrics-box { background: linear-gradient(135deg, rgba(45,106,79,0.1) 0%, rgba(212,135,63,0.1) 100%); border-radius: 12px; padding: 20px; margin-top: 20px; }
+    .metrics-title { font-size: 12px; font-weight: 700; color: #D4873F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { text-align: center; }
+    .metric-value { font-size: 24px; font-weight: 700; color: #2D6A4F; }
+    .metric-label { font-size: 11px; color: #6B7280; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-top: 16px; }
+    .warning-box p { font-size: 13px; color: #991b1b; margin: 0; }
+    .warning-box strong { color: #7f1d1d; }
+    @media print { body { padding: 20px; } .container { box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://alopex.digital/alopex-logo.png" alt="Alopex Digital">
+      <h1>Growth Stage Playbook</h1>
+      <p>What to focus on at each revenue milestone</p>
+    </div>
+    <div class="gradient-bar"></div>
+
+    <div class="content">
+      <!-- Stage 1: Foundation -->
+      <div class="stage">
+        <div class="stage-header">
+          <span class="stage-badge foundation">Stage 1</span>
+          <div>
+            <h2 class="stage-title">Foundation</h2>
+            <p class="stage-revenue">€0 - €10K MRR</p>
+          </div>
+        </div>
+
+        <div class="stage-grid">
+          <div class="stage-section">
+            <h4>Primary Focus</h4>
+            <ul>
+              <li>Find product-market fit</li>
+              <li>Define ideal customer profile</li>
+              <li>Establish repeatable sales process</li>
+              <li>Set up basic CRM tracking</li>
+            </ul>
+          </div>
+          <div class="stage-section">
+            <h4>Tools to Implement</h4>
+            <ul>
+              <li>Simple CRM (HubSpot Free, Pipedrive)</li>
+              <li>Basic email tool (Mailchimp, ConvertKit)</li>
+              <li>Calendar booking (Calendly)</li>
+              <li>Analytics (Google Analytics)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="metrics-box">
+          <div class="metrics-title">Key Metrics to Track</div>
+          <div class="metrics-grid">
+            <div class="metric">
+              <div class="metric-value">30%+</div>
+              <div class="metric-label">Close Rate</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">&lt;30d</div>
+              <div class="metric-label">Sales Cycle</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">&lt;5%</div>
+              <div class="metric-label">Monthly Churn</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 2: Traction -->
+      <div class="stage">
+        <div class="stage-header">
+          <span class="stage-badge traction">Stage 2</span>
+          <div>
+            <h2 class="stage-title">Traction</h2>
+            <p class="stage-revenue">€10K - €50K MRR</p>
+          </div>
+        </div>
+
+        <div class="stage-grid">
+          <div class="stage-section">
+            <h4>Primary Focus</h4>
+            <ul>
+              <li>Systematize what's working</li>
+              <li>Build lead generation engine</li>
+              <li>Create onboarding playbook</li>
+              <li>Implement basic automations</li>
+            </ul>
+          </div>
+          <div class="stage-section">
+            <h4>Tools to Add</h4>
+            <ul>
+              <li>Marketing automation platform</li>
+              <li>Lead scoring system</li>
+              <li>Customer success tools</li>
+              <li>Workflow automation (n8n, Zapier)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="metrics-box">
+          <div class="metrics-title">Key Metrics to Track</div>
+          <div class="metrics-grid">
+            <div class="metric">
+              <div class="metric-value">3:1</div>
+              <div class="metric-label">LTV:CAC Ratio</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">&lt;12mo</div>
+              <div class="metric-label">CAC Payback</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">100%+</div>
+              <div class="metric-label">Net Revenue Retention</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="warning-box">
+          <p><strong>Common Mistake:</strong> Hiring before systems. You'll just replicate chaos. Build the playbook first, then hire people to run it.</p>
+        </div>
+      </div>
+
+      <!-- Stage 3: Scale -->
+      <div class="stage">
+        <div class="stage-header">
+          <span class="stage-badge scale">Stage 3</span>
+          <div>
+            <h2 class="stage-title">Scale</h2>
+            <p class="stage-revenue">€50K - €200K MRR</p>
+          </div>
+        </div>
+
+        <div class="stage-grid">
+          <div class="stage-section">
+            <h4>Primary Focus</h4>
+            <ul>
+              <li>Build specialized teams (SDR, CS)</li>
+              <li>Implement RevOps function</li>
+              <li>Advanced lead routing & scoring</li>
+              <li>Customer expansion automation</li>
+            </ul>
+          </div>
+          <div class="stage-section">
+            <h4>Tools to Add</h4>
+            <ul>
+              <li>Revenue intelligence (Gong, Chorus)</li>
+              <li>Advanced CRM (Salesforce, HubSpot Pro)</li>
+              <li>BI/reporting tools</li>
+              <li>Customer health scoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="metrics-box">
+          <div class="metrics-title">Key Metrics to Track</div>
+          <div class="metrics-grid">
+            <div class="metric">
+              <div class="metric-value">€X</div>
+              <div class="metric-label">Revenue per Rep</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">XX%</div>
+              <div class="metric-label">Pipeline Coverage</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">XX%</div>
+              <div class="metric-label">Forecast Accuracy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 4: Optimize -->
+      <div class="stage">
+        <div class="stage-header">
+          <span class="stage-badge optimize">Stage 4</span>
+          <div>
+            <h2 class="stage-title">Optimize</h2>
+            <p class="stage-revenue">€200K+ MRR</p>
+          </div>
+        </div>
+
+        <div class="stage-grid">
+          <div class="stage-section">
+            <h4>Primary Focus</h4>
+            <ul>
+              <li>Multi-channel attribution</li>
+              <li>Predictive analytics</li>
+              <li>Account-based strategies</li>
+              <li>International expansion</li>
+            </ul>
+          </div>
+          <div class="stage-section">
+            <h4>Tools to Add</h4>
+            <ul>
+              <li>ABM platforms (6sense, Demandbase)</li>
+              <li>Advanced analytics (Mixpanel, Amplitude)</li>
+              <li>Revenue forecasting tools</li>
+              <li>AI/ML for lead scoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="metrics-box">
+          <div class="metrics-title">Key Metrics to Track</div>
+          <div class="metrics-grid">
+            <div class="metric">
+              <div class="metric-value">XX%</div>
+              <div class="metric-label">Magic Number</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">XX%</div>
+              <div class="metric-label">Rule of 40</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">XX%</div>
+              <div class="metric-label">Gross Margin</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

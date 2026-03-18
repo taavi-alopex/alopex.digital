@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM Audit Checklist | Alopex Digital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f8faf9; color: #282c3e; line-height: 1.6; padding: 40px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden; }
+    .header { background: linear-gradient(135deg, #161929 0%, #1E2138 100%); padding: 40px; text-align: center; }
+    .header img { width: 56px; margin-bottom: 16px; }
+    .header h1 { color: #E8EDF2; font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+    .header p { color: #C4CED8; font-size: 14px; }
+    .gradient-bar { height: 4px; background: linear-gradient(90deg, #2D6A4F, #D4873F); }
+    .content { padding: 40px; }
+    .category { margin-bottom: 36px; }
+    .category-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #2D6A4F; }
+    .category-icon { width: 36px; height: 36px; background: #2D6A4F; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .category-title { font-size: 18px; font-weight: 600; color: #282c3e; }
+    .checklist { list-style: none; }
+    .checklist li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f3f4f6; }
+    .checklist li:last-child { border-bottom: none; }
+    .checkbox { width: 22px; height: 22px; border: 2px solid #d1d5db; border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+    .item-content { flex: 1; }
+    .item-title { font-weight: 500; color: #282c3e; margin-bottom: 2px; }
+    .item-desc { font-size: 13px; color: #6B7280; }
+    .priority-high { border-left: 3px solid #ef4444; padding-left: 12px; margin-left: -12px; }
+    .priority-medium { border-left: 3px solid #f59e0b; padding-left: 12px; margin-left: -12px; }
+    .priority-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-left: 8px; }
+    .priority-badge.high { background: #fef2f2; color: #ef4444; }
+    .priority-badge.medium { background: #fffbeb; color: #f59e0b; }
+    .stats-box { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+    .stat-item { text-align: center; padding: 20px; background: #f8faf9; border-radius: 12px; }
+    .stat-value { font-size: 28px; font-weight: 700; color: #2D6A4F; }
+    .stat-label { font-size: 12px; color: #6B7280; margin-top: 4px; }
+    .progress-section { margin-top: 40px; padding: 24px; background: linear-gradient(135deg, rgba(45,106,79,0.1) 0%, rgba(212,135,63,0.1) 100%); border-radius: 12px; }
+    .progress-title { font-size: 14px; font-weight: 600; color: #282c3e; margin-bottom: 16px; }
+    .progress-bar { height: 12px; background: #e5e7eb; border-radius: 6px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #2D6A4F, #52B788); border-radius: 6px; width: 0%; }
+    .progress-stats { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: #6B7280; }
+    @media print { body { padding: 0; background: white; } .container { box-shadow: none; } .checkbox { border-color: #000; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://alopex.digital/alopex-logo.png" alt="Alopex Digital">
+      <h1>CRM Audit Checklist</h1>
+      <p>Clean data = better decisions = more revenue</p>
+    </div>
+    <div class="gradient-bar"></div>
+
+    <div class="content">
+      <div class="stats-box">
+        <div class="stat-item">
+          <div class="stat-value">17</div>
+          <div class="stat-label">Total Items</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">__</div>
+          <div class="stat-label">Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">__%</div>
+          <div class="stat-label">Health Score</div>
+        </div>
+      </div>
+
+      <!-- Contact Data -->
+      <div class="category">
+        <div class="category-header">
+          <div class="category-icon">👥</div>
+          <h2 class="category-title">Contact Data Quality</h2>
+        </div>
+        <ul class="checklist">
+          <li class="priority-high">
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Merge duplicate contacts <span class="priority-badge high">High</span></div>
+              <div class="item-desc">Run duplicate detection and merge/delete. Check by email, phone, and name variations.</div>
+            </div>
+          </li>
+          <li class="priority-high">
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Remove bounced/invalid emails <span class="priority-badge high">High</span></div>
+              <div class="item-desc">Export all contacts with hard bounces. Archive or delete to protect sender reputation.</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Archive inactive contacts (12+ months)</div>
+              <div class="item-desc">Contacts with no opens, clicks, or activity for over a year. Move to archive list.</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Fill missing required fields</div>
+              <div class="item-desc">Run report on contacts missing company, phone, or other critical fields.</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Standardize field formats</div>
+              <div class="item-desc">Phone numbers, addresses, company names — ensure consistent formatting.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Deal/Pipeline -->
+      <div class="category">
+        <div class="category-header">
+          <div class="category-icon">💰</div>
+          <h2 class="category-title">Deals & Pipeline</h2>
+        </div>
+        <ul class="checklist">
+          <li class="priority-high">
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Close stale deals <span class="priority-badge high">High</span></div>
+              <div class="item-desc">Deals with no activity for 60+ days. Mark as lost or follow up immediately.</div>
+            </div>
+          </li>
+          <li class="priority-medium">
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Verify deal amounts <span class="priority-badge medium">Medium</span></div>
+              <div class="item-desc">Check that deal values are realistic and updated after negotiations.</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Update close dates</div>
+              <div class="item-desc">Past-due close dates destroy forecast accuracy. Update or close.</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Ensure owner assignment</div>
+              <div class="item-desc">Every deal should have an owner. Unassigned = forgotten.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Companies -->
+      <div class="category">
+        <div class="category-header">
+          <div class="category-icon">🏢</div>
+          <h2 class="category-title">Companies & Accounts</h2>
+        </div>
+        <ul class="checklist">
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Merge duplicate companies</div>
+              <div class="item-desc">Same company, different spellings (Inc vs Inc. vs Incorporated).</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Link orphan contacts to companies</div>
+              <div class="item-desc">Contacts without company associations miss important context.</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Update company information</div>
+              <div class="item-desc">Industry, size, revenue — enrich from LinkedIn or data providers.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- System & Process -->
+      <div class="category">
+        <div class="category-header">
+          <div class="category-icon">⚙️</div>
+          <h2 class="category-title">System & Process</h2>
+        </div>
+        <ul class="checklist">
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Review custom fields</div>
+              <div class="item-desc">Delete unused fields. Consolidate similar ones. Document what each means.</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Audit pipeline stages</div>
+              <div class="item-desc">Are stages clearly defined? Do they match your actual sales process?</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Check automation triggers</div>
+              <div class="item-desc">Review workflows. Disable broken ones. Update outdated triggers.</div>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox"></div>
+            <div class="item-content">
+              <div class="item-title">Verify integrations</div>
+              <div class="item-desc">Are all connected apps still syncing correctly? Check error logs.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Progress Tracker -->
+      <div class="progress-section">
+        <div class="progress-title">Your Audit Progress</div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <div class="progress-stats">
+          <span>__ of 17 completed</span>
+          <span>Estimated time remaining: __ hours</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

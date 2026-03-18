@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annual RevOps Planner 2027 | Alopex Digital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f8faf9; color: #282c3e; line-height: 1.6; padding: 40px; }
+    .container { max-width: 850px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden; }
+    .header { background: linear-gradient(135deg, #161929 0%, #1E2138 100%); padding: 40px; text-align: center; }
+    .header img { width: 56px; margin-bottom: 16px; }
+    .header h1 { color: #E8EDF2; font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+    .header p { color: #C4CED8; font-size: 14px; }
+    .gradient-bar { height: 4px; background: linear-gradient(90deg, #2D6A4F, #D4873F); }
+    .content { padding: 40px; }
+    .section { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 2px solid #f3f4f6; }
+    .section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .section-number { width: 32px; height: 32px; background: #2D6A4F; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+    .section-title { font-size: 20px; font-weight: 600; color: #282c3e; }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-weight: 600; font-size: 14px; color: #282c3e; margin-bottom: 8px; }
+    .form-input { width: 100%; padding: 12px 16px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 14px; }
+    .form-input:focus { outline: none; border-color: #2D6A4F; }
+    .form-hint { font-size: 12px; color: #6B7280; margin-top: 4px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .quarter-card { background: #f8faf9; border-radius: 12px; padding: 20px; }
+    .quarter-label { font-size: 12px; font-weight: 700; color: #2D6A4F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .quarter-goal { margin-bottom: 12px; }
+    .quarter-goal input { width: 100%; padding: 8px 12px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 13px; }
+    .priority-list { list-style: none; }
+    .priority-list li { display: flex; align-items: flex-start; gap: 8px; padding: 8px 0; }
+    .priority-number { width: 20px; height: 20px; background: #D4873F; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+    .priority-input { flex: 1; padding: 8px 12px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 13px; }
+    .metrics-table { width: 100%; border-collapse: collapse; }
+    .metrics-table th { background: #f3f4f6; padding: 12px; text-align: left; font-size: 12px; font-weight: 700; color: #6B7280; text-transform: uppercase; }
+    .metrics-table td { padding: 12px; border-bottom: 1px solid #f3f4f6; }
+    .metrics-table input { width: 100%; padding: 6px 10px; border: 1px solid #e5e7eb; border-radius: 4px; font-size: 13px; }
+    .budget-section { background: linear-gradient(135deg, rgba(45,106,79,0.1) 0%, rgba(212,135,63,0.1) 100%); border-radius: 12px; padding: 24px; }
+    .budget-title { font-size: 14px; font-weight: 700; color: #2D6A4F; margin-bottom: 16px; }
+    .budget-row { display: flex; align-items: center; gap: 16px; padding: 10px 0; border-bottom: 1px solid rgba(45,106,79,0.2); }
+    .budget-row:last-child { border-bottom: none; }
+    .budget-label { flex: 1; font-size: 14px; color: #282c3e; }
+    .budget-input { width: 120px; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; text-align: right; }
+    .budget-percent { width: 60px; font-size: 13px; color: #6B7280; }
+    .tech-stack { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .tech-item { background: #f8faf9; border-radius: 8px; padding: 12px; }
+    .tech-label { font-size: 11px; font-weight: 600; color: #6B7280; text-transform: uppercase; margin-bottom: 6px; }
+    .tech-input { width: 100%; padding: 8px 10px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 13px; }
+    @media print { body { padding: 20px; } .container { box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://alopex.digital/alopex-logo.png" alt="Alopex Digital">
+      <h1>Annual RevOps Planner</h1>
+      <p>Your strategic roadmap for 2027</p>
+    </div>
+    <div class="gradient-bar"></div>
+
+    <div class="content">
+      <!-- Section 1: Vision & Goals -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">1</div>
+          <h2 class="section-title">Vision & Revenue Goals</h2>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">2027 Revenue Vision</label>
+          <input type="text" class="form-input" placeholder="What does success look like at the end of 2027?">
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label">Annual Revenue Target (€)</label>
+            <input type="text" class="form-input" placeholder="€">
+          </div>
+          <div class="form-group">
+            <label class="form-label">YoY Growth Target (%)</label>
+            <input type="text" class="form-input" placeholder="%">
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label">New Customer Target</label>
+            <input type="text" class="form-input" placeholder="# of new customers">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Net Revenue Retention Target</label>
+            <input type="text" class="form-input" placeholder="% (aim for 100%+)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Quarterly Breakdown -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">2</div>
+          <h2 class="section-title">Quarterly Breakdown</h2>
+        </div>
+
+        <div class="grid-4">
+          <div class="quarter-card">
+            <div class="quarter-label">Q1 2027</div>
+            <div class="quarter-goal">
+              <input type="text" placeholder="Revenue target: €">
+            </div>
+            <div class="quarter-goal">
+              <input type="text" placeholder="Key initiative">
+            </div>
+          </div>
+          <div class="quarter-card">
+            <div class="quarter-label">Q2 2027</div>
+            <div class="quarter-goal">
+              <input type="text" placeholder="Revenue target: €">
+            </div>
+            <div class="quarter-goal">
+              <input type="text" placeholder="Key initiative">
+            </div>
+          </div>
+          <div class="quarter-card">
+            <div class="quarter-label">Q3 2027</div>
+            <div class="quarter-goal">
+              <input type="text" placeholder="Revenue target: €">
+            </div>
+            <div class="quarter-goal">
+              <input type="text" placeholder="Key initiative">
+            </div>
+          </div>
+          <div class="quarter-card">
+            <div class="quarter-label">Q4 2027</div>
+            <div class="quarter-goal">
+              <input type="text" placeholder="Revenue target: €">
+            </div>
+            <div class="quarter-goal">
+              <input type="text" placeholder="Key initiative">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Strategic Priorities -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">3</div>
+          <h2 class="section-title">Top 5 RevOps Priorities</h2>
+        </div>
+
+        <ul class="priority-list">
+          <li>
+            <span class="priority-number">1</span>
+            <input type="text" class="priority-input" placeholder="Highest priority initiative">
+          </li>
+          <li>
+            <span class="priority-number">2</span>
+            <input type="text" class="priority-input" placeholder="Second priority">
+          </li>
+          <li>
+            <span class="priority-number">3</span>
+            <input type="text" class="priority-input" placeholder="Third priority">
+          </li>
+          <li>
+            <span class="priority-number">4</span>
+            <input type="text" class="priority-input" placeholder="Fourth priority">
+          </li>
+          <li>
+            <span class="priority-number">5</span>
+            <input type="text" class="priority-input" placeholder="Fifth priority">
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 4: Key Metrics -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">4</div>
+          <h2 class="section-title">Key Metrics to Track</h2>
+        </div>
+
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>2026 Actual</th>
+              <th>2027 Target</th>
+              <th>Owner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MQL to SQL Conversion</td>
+              <td><input type="text" placeholder="%"></td>
+              <td><input type="text" placeholder="%"></td>
+              <td><input type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+              <td>SQL to Opportunity</td>
+              <td><input type="text" placeholder="%"></td>
+              <td><input type="text" placeholder="%"></td>
+              <td><input type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+              <td>Win Rate</td>
+              <td><input type="text" placeholder="%"></td>
+              <td><input type="text" placeholder="%"></td>
+              <td><input type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+              <td>Average Deal Size</td>
+              <td><input type="text" placeholder="€"></td>
+              <td><input type="text" placeholder="€"></td>
+              <td><input type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+              <td>Sales Cycle (days)</td>
+              <td><input type="text" placeholder="days"></td>
+              <td><input type="text" placeholder="days"></td>
+              <td><input type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+              <td>CAC</td>
+              <td><input type="text" placeholder="€"></td>
+              <td><input type="text" placeholder="€"></td>
+              <td><input type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+              <td>LTV:CAC Ratio</td>
+              <td><input type="text" placeholder="x:1"></td>
+              <td><input type="text" placeholder="x:1"></td>
+              <td><input type="text" placeholder="Name"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 5: Budget Allocation -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">5</div>
+          <h2 class="section-title">Budget Allocation</h2>
+        </div>
+
+        <div class="budget-section">
+          <div class="budget-title">Annual RevOps Budget Distribution</div>
+          <div class="budget-row">
+            <span class="budget-label">Technology / Tools</span>
+            <input type="text" class="budget-input" placeholder="€">
+            <span class="budget-percent">____%</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-label">People / Headcount</span>
+            <input type="text" class="budget-input" placeholder="€">
+            <span class="budget-percent">____%</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-label">Training / Enablement</span>
+            <input type="text" class="budget-input" placeholder="€">
+            <span class="budget-percent">____%</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-label">External Consulting</span>
+            <input type="text" class="budget-input" placeholder="€">
+            <span class="budget-percent">____%</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-label"><strong>Total Budget</strong></span>
+            <input type="text" class="budget-input" placeholder="€" style="font-weight: 700;">
+            <span class="budget-percent">100%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 6: Tech Stack -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">6</div>
+          <h2 class="section-title">Tech Stack Plan</h2>
+        </div>
+
+        <div class="tech-stack">
+          <div class="tech-item">
+            <div class="tech-label">CRM</div>
+            <input type="text" class="tech-input" placeholder="Current tool">
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">Marketing Automation</div>
+            <input type="text" class="tech-input" placeholder="Current tool">
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">Revenue Intelligence</div>
+            <input type="text" class="tech-input" placeholder="Current tool">
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">Data Enrichment</div>
+            <input type="text" class="tech-input" placeholder="Current tool">
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">Workflow Automation</div>
+            <input type="text" class="tech-input" placeholder="Current tool">
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">BI / Reporting</div>
+            <input type="text" class="tech-input" placeholder="Current tool">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 20px;">
+          <label class="form-label">Tools to Add in 2027</label>
+          <input type="text" class="form-input" placeholder="New tools you're evaluating">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tools to Remove/Replace</label>
+          <input type="text" class="form-input" placeholder="Tools to sunset">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
