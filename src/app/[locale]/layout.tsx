@@ -11,6 +11,12 @@
   import { NewsletterProvider } from "@/components/NewsletterProvider";
   import { MetaPixel } from "@/components/MetaPixel";
   import { ChatWidget } from "@/components/ChatWidget";
+  import {
+    OrganizationSchema,
+    LocalBusinessSchema,
+    FAQPageSchema,
+    WebSiteSchema,
+  } from "@/components/StructuredData";
   import "../globals.css";
 
   const instrumentSerif = Instrument_Serif({
@@ -107,24 +113,10 @@
             src="https://cdn-cookieyes.com/client_data/0fa48870f6545632d245c569fd209db8/script.js"
             strategy="beforeInteractive"
           />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "Alopex Digital",
-                url: "https://alopex.digital",
-                logo: "https://alopex.digital/alopex-logo.png",
-                description: "GoHighLevel & n8n agency for sales-led businesses across the EU.",
-                areaServed: {
-                  "@type": "Place",
-                  name: "European Union",
-                },
-                sameAs: [],
-              }),
-            }}
-          />
+          <OrganizationSchema />
+          <LocalBusinessSchema />
+          <FAQPageSchema />
+          <WebSiteSchema />
         </head>
         <body
           className={`${instrumentSerif.variable} ${outfit.variable} ${montserrat.variable} ${jetbrainsMono.variable} antialiased`}

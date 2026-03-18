@@ -1,0 +1,56 @@
+import type { MetadataRoute } from "next";
+
+const locales = ["en", "et", "pl"];
+const baseUrl = "https://alopex.digital";
+
+// Case studies slugs
+const caseStudies = [
+  "ovision-invoicing",
+  "gemoss-sales-kpis",
+  "ovision-production",
+  "swa-poland-recruitment",
+  "ovision-quotes-costing",
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const routes: MetadataRoute.Sitemap = [];
+
+  // Static pages
+  const staticPages = [
+    "",
+    "/about",
+    "/services",
+    "/process",
+    "/contact",
+    "/case-studies",
+    "/health-check",
+    "/privacy-policy",
+    "/terms",
+  ];
+
+  // Add all static pages for each locale
+  for (const locale of locales) {
+    for (const page of staticPages) {
+      routes.push({
+        url: `${baseUrl}/${locale}${page}`,
+        lastModified: new Date(),
+        changeFrequency: page === "" ? "weekly" : "monthly",
+        priority: page === "" ? 1 : page === "/services" ? 0.9 : 0.8,
+      });
+    }
+  }
+
+  // Add case studies
+  for (const locale of locales) {
+    for (const slug of caseStudies) {
+      routes.push({
+        url: `${baseUrl}/${locale}/case-studies/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+      });
+    }
+  }
+
+  return routes;
+}

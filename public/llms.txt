@@ -1,0 +1,97 @@
+# Alopex Digital
+
+> GoHighLevel & n8n agency for sales-led businesses across the European Union.
+
+## About
+
+Alopex Digital is a revenue operations (RevOps) agency headquartered in Estonia, serving businesses across the European Union. We specialize in GoHighLevel implementation and custom n8n automation integrations.
+
+We architect, build, and launch revenue operations infrastructure that stops leads from leaking through manual chaos. Our approach: we map your entire business process before building a single workflow.
+
+## Services
+
+### GoHighLevel Platform Implementation
+- CRM & Pipeline Management
+- Marketing Automation (email, SMS, workflow sequences)
+- Calendar & Booking Systems
+- Reputation Management
+- Websites & Funnels
+- Forms & Surveys
+- Invoicing & Payments
+- Reporting & Dashboards
+
+### Custom n8n Integrations
+- ERP & Accounting Systems (Merit Aktiva, e-Arveldaja)
+- E-Signature Platforms (Dokobit, SignHere)
+- Local Payment Gateways (Montonio, EveryPay)
+- Government & Tax Portals
+- Legacy CRM Migration
+- Custom API Bridges
+
+## Process: The Systems Orchestration Method
+
+1. **The Systems Audit** (Discovery) - We assess current pains, processes, and bottlenecks to identify revenue leaks.
+2. **The Strategic Blueprint** (Planning) - Clear roadmap with full solution architecture and timeline.
+3. **The Architecture Build** (Implementation) - GoHighLevel infrastructure, n8n integrations, with weekly reporting.
+4. **The Frictionless Launch** (Onboarding) - Hands-on training until your team is comfortable.
+5. **The Growth Loop** (Ongoing) - Bi-weekly stabilization calls, quarterly strategy reviews.
+
+## Industries We Serve
+
+- **High-Ticket Install**: Solar, Renewables, HVAC (10-50k EUR deals)
+- **Relationship Pipeline**: Real Estate, Consulting, Legal
+- **Double-Sided Marketplace**: Recruitment, Staffing, Marketplaces
+
+## Key Differentiators
+
+1. **Strategic Blueprinting** - We architect before we build, mitigating risk by thinking like an owner first.
+2. **Advanced API Ecosystems** - Custom API bridges connecting GoHighLevel to any legacy or local system.
+3. **Regional RevOps Fluency** - GDPR compliance, local payment gateways, regional tax logic expertise.
+
+## Results
+
+- 150+ Systems Launched
+- 3x More Leads in 90 Days (typical client result)
+- 85% Less Manual Follow-Up
+- 12 min Average Lead Response Time
+
+## Guarantees
+
+- **User Adoption Promise**: Additional retraining sessions at no cost if your team isn't confident using the system.
+- **Blueprint Credit**: 100% of Blueprint fee credited toward implementation if you choose us for the Build.
+
+## Company Information
+
+- **Company Name**: Alopex Digital OÜ
+- **Registry Code**: 17180489
+- **Location**: Estonia
+- **Service Area**: European Union
+- **Website**: https://alopex.digital
+- **Email**: info@alopex.digital
+
+## Languages
+
+- English
+- Estonian (Eesti)
+- Polish (Polski)
+
+## Topics & Keywords
+
+GoHighLevel, GoHighLevel agency, GoHighLevel implementation, GoHighLevel expert, GoHighLevel Europe, GoHighLevel Estonia, n8n automation, n8n agency, RevOps, revenue operations, CRM automation, marketing automation, sales automation, pipeline management, lead management, lead response automation, business process automation, workflow automation, API integrations, Merit Aktiva integration, Estonian business software, European Union CRM, GDPR compliant CRM, sales-led business automation.
+
+## FAQ
+
+### What is GoHighLevel?
+GoHighLevel is an all-in-one sales and marketing platform that combines CRM, email marketing, SMS, calendars, funnels, and more into a single platform. Alopex Digital specializes in implementing and customizing GoHighLevel for European businesses.
+
+### What is n8n?
+n8n is an open-source workflow automation tool that allows connecting different applications and services. Alopex Digital uses n8n to create custom integrations between GoHighLevel and local European systems like Merit Aktiva, Montonio, and government portals.
+
+### What is RevOps (Revenue Operations)?
+Revenue Operations is the strategic alignment of sales, marketing, and customer success operations to drive efficient revenue growth. It focuses on breaking down silos, improving processes, and leveraging technology to maximize revenue.
+
+### Where does Alopex Digital operate?
+Alopex Digital is based in Estonia and serves sales-led businesses across the entire European Union, with particular expertise in Estonia, Poland, and the CEE region.
+
+### What makes Alopex different from other agencies?
+Unlike agencies that jump straight into building, Alopex maps your entire business process first through our Strategic Blueprint phase. We also specialize in connecting GoHighLevel to local European systems through custom n8n integrations.
