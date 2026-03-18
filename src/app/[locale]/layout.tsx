@@ -10,6 +10,7 @@
   import { RecruitmentProvider } from "@/components/RecruitmentProvider";
   import { NewsletterProvider } from "@/components/NewsletterProvider";
   import { MetaPixel } from "@/components/MetaPixel";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
   import { ChatWidget } from "@/components/ChatWidget";
   import {
     OrganizationSchema,
@@ -123,6 +124,7 @@
           suppressHydrationWarning
         >
           <MetaPixel />
+          <GoogleAnalytics />
           <NextIntlClientProvider messages={messages}>
             <BookingProvider>
               <AssessmentProvider>
