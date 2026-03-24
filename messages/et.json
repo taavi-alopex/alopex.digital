@@ -16,8 +16,8 @@
   "hero": {
     "label": "GoHighLevel & n8n agentuur",
     "title": "Sinu müügimasin,",
-    "titleAccent": "projekteeritud ja käivitatud",
-    "subtitle": "Me kaardistame su äriprotsessi, ehitame GoHighLevel taristu ja tagame, et su meeskond seda päriselt kasutab. Lõpp müügivihjete lekkimisele käsitsi kaoses.",
+    "titleAccent": "valmis ja töötab",
+    "subtitle": "Kaardistame su müügiprotsessi, ehitame GoHighLevel taristu ja tagame, et su meeskond seda päriselt kasutab. Lead'id ei kao enam käsitsi segaduses.",
     "ctaPrimary": "Broneeri tutvumiskõne",
     "ctaPrimaryMicro": "30-minutiline kõne. Kohustuseta.",
     "ctaSecondary": "Meie protsess",
@@ -68,25 +68,25 @@
   "clients": {
     "label": "Keda me teenindame",
     "title": "Loodud",
-    "titleAccent": "müügipõhistele ettevõtetele",
+    "titleAccent": "müügist elavatele ettevõtetele",
     "items": [
       {
         "industry": "Kõrge väärtusega paigaldus",
         "examples": "Päikeseenergia, taastuvenergia, küte ja ventilatsioon",
-        "pain": "Müügivihjed kaovad halva järeltegevuse tõttu 10–50k EUR tehingute puhul",
-        "outcome": "Automatiseeritud järeltegevuse järjestused, mis sulgevad lõhe müügivihje ja allkirjastatud lepingu vahel."
+        "pain": "Lead'id kaovad halva follow-up'i tõttu — isegi 10–50k tehingutel",
+        "outcome": "Automaatsed follow-up jadad, mis viivad lead'i pakkumisest lepinguni."
       },
       {
         "industry": "Suhtel põhinev müügitoru",
         "examples": "Kinnisvara, konsultatsioon, õigusteenused",
-        "pain": "Ostja/müüja torude haldamine, kus sobitamata kontaktid kaovad ära",
-        "outcome": "CRM töövood, mis sobitavad, hooldavad ja ei lase ühelgi soojal kontaktil kaduda."
+        "pain": "Ostjate ja müüjate pipeline'id, kus sobitamata kontaktid ära kaovad",
+        "outcome": "CRM automaatika, mis sobitab, hooldab ja ei lase ühtki sooja kontakti kaduda."
       },
       {
         "industry": "Kahepoolne turg",
         "examples": "Värbamine, personaliteenus, turuplatsid",
-        "pain": "Kandidaatide halb kogemus ja kaduvad kontaktid B2B + B2C voogudes",
-        "outcome": "Kandidaadi ja kliendi kogemused, mis kaitsevad brändi ja täidavad kohad kiiremini."
+        "pain": "Kandidaadid saavad halba kogemust ja kontaktid kaovad B2B + B2C poolel",
+        "outcome": "Kandidaadi ja kliendi teekond on korras — bränd püsib ja kohad täituvad kiiremini."
       }
     ]
   },
@@ -257,9 +257,9 @@
   "stats": {
     "items": [
       { "value": 150, "suffix": "+", "label": "Käivitatud süsteemi" },
-      { "value": 3, "suffix": "x", "label": "Rohkem müügivihjeid 90 päevaga" },
-      { "value": 85, "suffix": "%", "label": "Vähem käsitsi järeltegevust" },
-      { "value": 12, "suffix": "min", "label": "Keskm. müügivihje vastus" }
+      { "value": 3, "suffix": "x", "label": "Rohkem lead'e 90 päevaga" },
+      { "value": 85, "suffix": "%", "label": "Vähem käsitsi follow-up'i" },
+      { "value": 12, "suffix": "min", "label": "Keskm. lead'ile vastamise aeg" }
     ]
   },
   "values": {
@@ -300,21 +300,21 @@
     "titleAccent": "täielik kindlustunne",
     "items": [
       {
-        "title": "Kasutuselevõtu lubadus",
-        "description": "Me ei ehita lihtsalt — me tagame, et sa kasutad seda. Kui su meeskond ei tunne end pärast käivituskoolitust süsteemiga kindlalt, pakume lisaks tasuta ümberõppe seansse, kuni nad tunnevad.",
+        "title": "Meie lubadus: sa hakkad seda kasutama",
+        "description": "Me ei ehita lihtsalt — me tagame, et su tiim seda ka päriselt kasutab. Kui meeskond ei tunne end pärast koolitust kindlalt, teeme tasuta lisakoolitusi, kuni tunnevad.",
         "highlight": "Ümberõpe ilma lisatasuta"
       },
       {
-        "title": "Kavandi krediit",
-        "description": "Maksad arhitektuuri eest, mitte müügikõne eest. Kui valid meid ehitama, krediteeritakse 100% kavandi tasust teostuse arvesse. Kui lähed mujale, jäävad plaanid sulle.",
+        "title": "Kavandi tasu — arvestatakse maha",
+        "description": "Maksad arhitektuuri eest, mitte müügikõne eest. Kui valid meid ehitama, arvestame 100% kavandi tasu ehituse hinnast maha. Kui lähed mujale, jäävad plaanid sulle.",
         "highlight": "100% kavandi tasu krediteeritud"
       }
     ]
   },
   "cta": {
-    "title": "Valmis lõpetama",
-    "titleAccent": "tulu lekkimise?",
-    "description": "Broneeri tasuta tutvumiskõne. Kaardistame su praegused valukohad ja näitame täpselt, kus võimalused peituvad — ilma kohustuste ja müügikõneta.",
+    "title": "Lõpetame",
+    "titleAccent": "müügivõimaluste näppude vahelt puterdamise",
+    "description": "Broneeri tasuta tutvumiskõne. Vaatame su praeguse olukorra üle ja näitame, kust raha lauale jääb — ilma kohustuseta.",
     "button": "Broneeri tutvumiskõne",
     "microCopy": "30-minutiline kõne. Kohustuseta. Kaardistame, kust tulu lekib.",
     "emailPrefix": "Või kirjuta meile otse"
@@ -363,7 +363,7 @@
   "socialProof": {
     "label": "Klientide lood",
     "title": "Mida meie kliendid",
-    "titleAccent": "meie kohta ütlevad",
+    "titleAccent": "ütlevad",
     "testimonials": [
       {
         "quote": "Mul oli palju ideid, aga ma ei teadnud, mis on tehniliselt võimalik. GoHighLevel oli tööriist, mida vajasin oma äride automatiseerimiseks.",
@@ -396,8 +396,8 @@
     }
   },
   "anchoring": {
-    "label": "Nutikas investeering",
-    "title": "Palgaline RevOps spetsialist",
+    "label": "Miks see mõttekam on",
+    "title": "Oma RevOps inimene",
     "titleAccent": "vs. Alopex",
     "inHouse": {
       "title": "Palka majja",
@@ -415,7 +415,7 @@
       "items": [
         "Spetsialistide meeskond esimesest päevast",
         "Töötab nädalatega, mitte kuudega",
-        "Parimad praktikad sisseehitatud",
+        "Toimivad lahendused kohe kaasas",
         "Jätkuv tugi ja areng",
         "GoHighLevel litsents kaasas"
       ],
