@@ -8,7 +8,7 @@
     "about": "Meist",
     "services": "Teenused",
     "process": "Protsess",
-    "caseStudies": "Juhtumiuuringud",
+    "caseStudies": "Kliendilood",
     "healthCheck": "Tervisekontroll",
     "contact": "Kontakt",
     "cta": "Broneeri tutvumiskõne"
@@ -30,7 +30,7 @@
     "titleAccent": "teist kontakti",
     "subtitle": "See on kümneid tuhandeid eurosid käivet, mis kõnnib igal kuul uksest välja. Aeglane järelkontakt, ühendamata tööriistad ja manuaalne kaos tapavad su pipeline'i vaikselt.",
     "hook": "Millal sa viimati oma olemasolevale kliendibaasile järelkontakti tegid?",
-    "ctaPrimary": "Leia oma käibelekked",
+    "ctaPrimary": "Vaata, kust raha kaotsi läheb",
     "ctaSecondary": "Vaata, kuidas me seda parandame",
     "scroll": "Keri",
     "assessmentLink": "Tee tasuta müügisüsteemi audit",
@@ -333,7 +333,7 @@
     "company": [
       { "label": "Meist" },
       { "label": "Meie protsess" },
-      { "label": "Juhtumiuuringud" },
+      { "label": "Kliendilood" },
       { "label": "Väärtused" },
       { "label": "Kontakt" }
     ],
@@ -384,7 +384,7 @@
         "logo": "/ovision-logo.svg"
       }
     ],
-    "caseStudyLabel": "Juhtumiuuring",
+    "caseStudyLabel": "Kliendilugu",
     "caseStudy": {
       "client": "Koduaken",
       "industry": "Aknatootmine",
@@ -611,7 +611,7 @@
   "qualification": {
     "step1": {
       "title": "Alustame sinu e-postiga",
-      "subtitle": "Kasutame seda kokkuvõtte saatmiseks ja sind kursis hoidmiseks.",
+      "subtitle": "Saadame sulle kokkuvõtte ja hoiame sind kursis.",
       "placeholder": "sinu@email.ee"
     },
     "step2": {
@@ -676,15 +676,15 @@
   },
   "caseStudies": {
     "meta": {
-      "title": "Juhtumiuuringud",
+      "title": "Kliendilood",
       "description": "Vaata, kuidas Alopex Digital on aidanud ettevõtetel automatiseerida protsesse ja säästa aega n8n ja GoHighLevel abil."
     },
-    "label": "Juhtumiuuringud",
+    "label": "Kliendilood",
     "title": "Päris tulemused",
     "titleAccent": "päris ettevõtetele",
     "subtitle": "Vaata, kuidas me oleme aidanud ettevõtetel automatiseerida protsesse, kaotada käsitööd ja keskenduda kasvule.",
     "readMore": "Loe lähemalt",
-    "backLink": "Kõik juhtumiuuringud",
+    "backLink": "Kõik kliendilood",
     "ctaTitle": "Tahad sarnaseid tulemusi?",
     "ctaDescription": "Broneeri tasuta tutvumiskõne ja kaardistame, kus sinu ettevõttes aega ja raha lekib.",
     "ctaButton": "Broneeri tutvumiskõne",
