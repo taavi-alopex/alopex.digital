@@ -95,8 +95,8 @@ const socialLinks = [
 ];
 
 const teamMembers = [
-  { name: "Taavi Ilmjärv", role: "Founder", email: "taavi@alopex.digital" },
-  { name: "Martin Teras", role: "Partner", email: "martin@alopex.digital" },
+  { name: "Taavi", role: "Founder", email: "taavi@alopex.digital" },
+  { name: "Martin", role: "Partner", email: "martin@alopex.digital" },
 ];
 
 export function ContactPage() {
