@@ -2,238 +2,544 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { ScrollReveal } from "./ScrollReveal";
+import { SectionLabel } from "./SectionLabel";
 
 function ROICalculator() {
   const [quotes, setQuotes] = useState(100);
   const [dealValue, setDealValue] = useState(5000);
   const [conversionRate, setConversionRate] = useState(10);
 
-  // Calculations
   const currentOrders = Math.round((quotes * conversionRate) / 100);
-  const additionalOrders = Math.round(currentOrders * 0.16); // +16% improvement
+  const additionalOrders = Math.round(currentOrders * 0.16);
   const newOrders = currentOrders + additionalOrders;
   const additionalRevenue = additionalOrders * dealValue;
   const annualRevenue = additionalRevenue * 12;
-
-  // PLN conversion (approximate rate)
   const plnRate = 4.3;
   const additionalRevenuePLN = Math.round(additionalRevenue * plnRate);
   const annualRevenuePLN = Math.round(annualRevenue * plnRate);
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
-      <h3 className="font-instrument text-2xl text-[var(--midnight)] mb-6 text-center">
-        Kalkulator ROI
-      </h3>
-      <p className="text-center text-[var(--midnight)]/60 mb-8 text-sm">
-        Dostosuj wartości do swojej firmy
-      </p>
-
-      <div className="space-y-6">
-        {/* Quotes per month */}
-        <div>
-          <label className="block text-sm font-medium text-[var(--midnight)] mb-2">
-            Ofert miesięcznie: <span className="font-bold text-[var(--accent)]">{quotes}</span>
-          </label>
-          <input
-            type="range"
-            min="20"
-            max="500"
-            step="10"
-            value={quotes}
-            onChange={(e) => setQuotes(Number(e.target.value))}
-            className="w-full h-2 bg-[var(--midnight)]/10 rounded-lg appearance-none cursor-pointer accent-[var(--accent)]"
-          />
-          <div className="flex justify-between text-xs text-[var(--midnight)]/40 mt-1">
-            <span>20</span>
-            <span>500</span>
-          </div>
+    <ScrollReveal delay={2}>
+      <div
+        className="p-8 md:p-10"
+        style={{
+          background: "var(--white)",
+          borderRadius: "var(--radius-card)",
+          boxShadow: "0 4px 40px rgba(0,0,0,0.08)",
+          border: "1px solid var(--frost)",
+        }}
+      >
+        <div className="text-center mb-8">
+          <span
+            className="text-[10px] font-bold tracking-[2px] uppercase mb-2 inline-block"
+            style={{
+              fontFamily: "var(--font-heading)",
+              color: "var(--spruce)",
+            }}
+          >
+            Kalkulator ROI
+          </span>
+          <p
+            className="text-[13px]"
+            style={{ color: "var(--dark-gray)" }}
+          >
+            Dostosuj wartości do swojej firmy
+          </p>
         </div>
 
-        {/* Deal value */}
-        <div>
-          <label className="block text-sm font-medium text-[var(--midnight)] mb-2">
-            Średnia wartość zamówienia: <span className="font-bold text-[var(--accent)]">{dealValue.toLocaleString()} €</span>
-          </label>
-          <input
-            type="range"
-            min="1000"
-            max="20000"
-            step="500"
-            value={dealValue}
-            onChange={(e) => setDealValue(Number(e.target.value))}
-            className="w-full h-2 bg-[var(--midnight)]/10 rounded-lg appearance-none cursor-pointer accent-[var(--accent)]"
-          />
-          <div className="flex justify-between text-xs text-[var(--midnight)]/40 mt-1">
-            <span>1 000 €</span>
-            <span>20 000 €</span>
+        <div className="space-y-8">
+          {/* Quotes per month */}
+          <div>
+            <div className="flex justify-between items-baseline mb-3">
+              <label
+                className="text-[13px] font-medium"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--midnight)",
+                }}
+              >
+                Ofert miesięcznie
+              </label>
+              <span
+                className="text-[18px] font-bold"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--spruce)",
+                }}
+              >
+                {quotes}
+              </span>
+            </div>
+            <input
+              type="range"
+              min="20"
+              max="500"
+              step="10"
+              value={quotes}
+              onChange={(e) => setQuotes(Number(e.target.value))}
+              className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+              style={{
+                background: `linear-gradient(to right, var(--spruce) 0%, var(--spruce) ${((quotes - 20) / 480) * 100}%, var(--frost) ${((quotes - 20) / 480) * 100}%, var(--frost) 100%)`,
+              }}
+            />
+            <div
+              className="flex justify-between text-[11px] mt-2"
+              style={{ color: "var(--dark-gray)" }}
+            >
+              <span>20</span>
+              <span>500</span>
+            </div>
           </div>
-        </div>
 
-        {/* Current conversion */}
-        <div>
-          <label className="block text-sm font-medium text-[var(--midnight)] mb-2">
-            Obecna konwersja: <span className="font-bold text-[var(--accent)]">{conversionRate}%</span>
-          </label>
-          <input
-            type="range"
-            min="5"
-            max="30"
-            step="1"
-            value={conversionRate}
-            onChange={(e) => setConversionRate(Number(e.target.value))}
-            className="w-full h-2 bg-[var(--midnight)]/10 rounded-lg appearance-none cursor-pointer accent-[var(--accent)]"
-          />
-          <div className="flex justify-between text-xs text-[var(--midnight)]/40 mt-1">
-            <span>5%</span>
-            <span>30%</span>
+          {/* Deal value */}
+          <div>
+            <div className="flex justify-between items-baseline mb-3">
+              <label
+                className="text-[13px] font-medium"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--midnight)",
+                }}
+              >
+                Średnia wartość zamówienia
+              </label>
+              <span
+                className="text-[18px] font-bold"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--spruce)",
+                }}
+              >
+                {dealValue.toLocaleString()} €
+              </span>
+            </div>
+            <input
+              type="range"
+              min="1000"
+              max="20000"
+              step="500"
+              value={dealValue}
+              onChange={(e) => setDealValue(Number(e.target.value))}
+              className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+              style={{
+                background: `linear-gradient(to right, var(--spruce) 0%, var(--spruce) ${((dealValue - 1000) / 19000) * 100}%, var(--frost) ${((dealValue - 1000) / 19000) * 100}%, var(--frost) 100%)`,
+              }}
+            />
+            <div
+              className="flex justify-between text-[11px] mt-2"
+              style={{ color: "var(--dark-gray)" }}
+            >
+              <span>1 000 €</span>
+              <span>20 000 €</span>
+            </div>
           </div>
-        </div>
-      </div>
 
-      {/* Results */}
-      <div className="mt-8 pt-8 border-t border-[var(--midnight)]/10">
-        <div className="grid grid-cols-2 gap-4 mb-6">
-          <div className="text-center p-4 bg-[var(--midnight)]/5 rounded-lg">
-            <div className="text-sm text-[var(--midnight)]/60">Teraz</div>
-            <div className="text-2xl font-bold text-[var(--midnight)]">{currentOrders}</div>
-            <div className="text-xs text-[var(--midnight)]/40">zamówień/mies.</div>
-          </div>
-          <div className="text-center p-4 bg-[var(--accent)]/10 rounded-lg border-2 border-[var(--accent)]">
-            <div className="text-sm text-[var(--accent)]">Po wdrożeniu</div>
-            <div className="text-2xl font-bold text-[var(--accent)]">{newOrders}</div>
-            <div className="text-xs text-[var(--midnight)]/40">zamówień/mies.</div>
-          </div>
-        </div>
-
-        <div className="bg-[var(--accent)] text-[var(--midnight)] rounded-xl p-6 text-center">
-          <div className="text-sm opacity-80 mb-1">Dodatkowy przychód miesięcznie</div>
-          <div className="text-3xl font-bold mb-1">
-            +{additionalRevenue.toLocaleString()} €
-          </div>
-          <div className="text-sm opacity-70">
-            (~{additionalRevenuePLN.toLocaleString()} PLN)
-          </div>
-          <div className="mt-4 pt-4 border-t border-[var(--midnight)]/20">
-            <div className="text-sm opacity-80">Rocznie to</div>
-            <div className="text-xl font-bold">
-              +{annualRevenue.toLocaleString()} € <span className="font-normal opacity-70">(~{annualRevenuePLN.toLocaleString()} PLN)</span>
+          {/* Conversion rate */}
+          <div>
+            <div className="flex justify-between items-baseline mb-3">
+              <label
+                className="text-[13px] font-medium"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--midnight)",
+                }}
+              >
+                Obecna konwersja
+              </label>
+              <span
+                className="text-[18px] font-bold"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--spruce)",
+                }}
+              >
+                {conversionRate}%
+              </span>
+            </div>
+            <input
+              type="range"
+              min="5"
+              max="30"
+              step="1"
+              value={conversionRate}
+              onChange={(e) => setConversionRate(Number(e.target.value))}
+              className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+              style={{
+                background: `linear-gradient(to right, var(--spruce) 0%, var(--spruce) ${((conversionRate - 5) / 25) * 100}%, var(--frost) ${((conversionRate - 5) / 25) * 100}%, var(--frost) 100%)`,
+              }}
+            />
+            <div
+              className="flex justify-between text-[11px] mt-2"
+              style={{ color: "var(--dark-gray)" }}
+            >
+              <span>5%</span>
+              <span>30%</span>
             </div>
           </div>
         </div>
 
-        <p className="text-center text-xs text-[var(--midnight)]/40 mt-4">
-          * Szacunki oparte na +16% wzrostu konwersji (case study Koduaken)
-        </p>
+        {/* Results */}
+        <div
+          className="mt-10 pt-8"
+          style={{ borderTop: "1px solid var(--frost)" }}
+        >
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div
+              className="text-center p-5"
+              style={{
+                background: "var(--off-white)",
+                borderRadius: "var(--radius-card)",
+              }}
+            >
+              <div
+                className="text-[11px] font-bold tracking-[1px] uppercase mb-1"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--dark-gray)",
+                }}
+              >
+                Teraz
+              </div>
+              <div
+                className="text-[32px] font-bold"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--midnight)",
+                }}
+              >
+                {currentOrders}
+              </div>
+              <div
+                className="text-[11px]"
+                style={{ color: "var(--dark-gray)" }}
+              >
+                zamówień/mies.
+              </div>
+            </div>
+            <div
+              className="text-center p-5"
+              style={{
+                background: "var(--spruce-pale)",
+                borderRadius: "var(--radius-card)",
+                border: "2px solid var(--spruce)",
+              }}
+            >
+              <div
+                className="text-[11px] font-bold tracking-[1px] uppercase mb-1"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--spruce)",
+                }}
+              >
+                Po wdrożeniu
+              </div>
+              <div
+                className="text-[32px] font-bold"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--spruce)",
+                }}
+              >
+                {newOrders}
+              </div>
+              <div
+                className="text-[11px]"
+                style={{ color: "var(--dark-gray)" }}
+              >
+                zamówień/mies.
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="p-6 text-center"
+            style={{
+              background: "var(--amber)",
+              borderRadius: "var(--radius-card)",
+            }}
+          >
+            <div
+              className="text-[11px] font-bold tracking-[1px] uppercase mb-1"
+              style={{
+                fontFamily: "var(--font-heading)",
+                color: "var(--midnight)",
+                opacity: 0.7,
+              }}
+            >
+              Dodatkowy przychód miesięcznie
+            </div>
+            <div
+              className="text-[36px] font-bold"
+              style={{
+                fontFamily: "var(--font-heading)",
+                color: "var(--midnight)",
+              }}
+            >
+              +{additionalRevenue.toLocaleString()} €
+            </div>
+            <div
+              className="text-[13px]"
+              style={{ color: "var(--midnight)", opacity: 0.6 }}
+            >
+              (~{additionalRevenuePLN.toLocaleString()} PLN)
+            </div>
+            <div
+              className="mt-4 pt-4"
+              style={{ borderTop: "1px solid rgba(0,0,0,0.1)" }}
+            >
+              <span
+                className="text-[13px]"
+                style={{ color: "var(--midnight)", opacity: 0.7 }}
+              >
+                Rocznie to{" "}
+              </span>
+              <span
+                className="text-[18px] font-bold"
+                style={{ color: "var(--midnight)" }}
+              >
+                +{annualRevenue.toLocaleString()} €
+              </span>
+            </div>
+          </div>
+
+          <p
+            className="text-center text-[11px] mt-4"
+            style={{ color: "var(--dark-gray)" }}
+          >
+            * Szacunki oparte na +16% wzrostu konwersji (case study Koduaken)
+          </p>
+        </div>
       </div>
-    </div>
+    </ScrollReveal>
   );
 }
 
 function CaseStudySection() {
   return (
-    <section className="py-20 px-6 bg-[var(--midnight)] text-[var(--off-white)]">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <span className="inline-block px-4 py-2 bg-[var(--accent)]/20 text-[var(--accent)] rounded-full text-sm font-medium mb-4">
-            Case Study
-          </span>
-          <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl">
-            Jak firma okienna zwiększyła sprzedaż o 16%
-          </h2>
-          <p className="mt-4 text-xl text-[var(--off-white)]/60">
-            bez zatrudniania dodatkowych pracowników
-          </p>
+    <section
+      id="case-study"
+      className="relative py-24 md:py-32 overflow-hidden frost-noise"
+      style={{ background: "var(--midnight)" }}
+    >
+      <div className="relative z-10 max-w-[900px] mx-auto px-5 md:px-8">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <ScrollReveal>
+            <div className="flex justify-center">
+              <SectionLabel text="Case Study" />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={1}>
+            <h2
+              className="text-[clamp(28px,4vw,42px)]"
+              style={{ color: "var(--frost)" }}
+            >
+              Jak firma okienna zwiększyła sprzedaż{" "}
+              <span className="italic" style={{ color: "var(--spruce-light)" }}>
+                o 16%
+              </span>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={2}>
+            <p
+              className="text-[17px] mt-4"
+              style={{ color: "var(--text-dark-muted)" }}
+            >
+              bez zatrudniania dodatkowych pracowników
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Problem */}
-        <div className="mb-12">
-          <h3 className="font-outfit font-semibold text-xl text-[var(--accent)] mb-4">Problem</h3>
-          <p className="text-lg text-[var(--off-white)]/80 leading-relaxed">
-            Estońska firma <strong>Koduaken</strong> wysyłała około <strong>400 ofert miesięcznie</strong>.
-            Ich zespół sprzedaży był przeciążony — cały czas pochłaniało przygotowywanie wycen
-            i bieżąca komunikacja z klientami.
-          </p>
-          <p className="text-lg text-[var(--off-white)]/80 leading-relaxed mt-4">
-            Problem nie leżał w jakości ofert. Problem polegał na tym, że <strong>po wysłaniu oferty
-            nikt nie miał czasu</strong>, żeby skontaktować się z klientem. Oferta była wysyłana i...
-            czekano, aż klient sam odpowie.
-          </p>
-        </div>
-
-        {/* Before numbers */}
-        <div className="grid md:grid-cols-4 gap-4 mb-12">
-          <div className="bg-[var(--off-white)]/5 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-[var(--off-white)]">388</div>
-            <div className="text-sm text-[var(--off-white)]/60">ofert/miesiąc</div>
-          </div>
-          <div className="bg-[var(--off-white)]/5 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-[var(--off-white)]">47</div>
-            <div className="text-sm text-[var(--off-white)]/60">odpowiedzi</div>
-          </div>
-          <div className="bg-[var(--off-white)]/5 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-[var(--off-white)]">37</div>
-            <div className="text-sm text-[var(--off-white)]/60">zamówień</div>
-          </div>
-          <div className="bg-red-500/20 rounded-xl p-6 text-center border border-red-500/30">
-            <div className="text-3xl font-bold text-red-400">341</div>
-            <div className="text-sm text-red-400/80">ofert bez odpowiedzi</div>
-          </div>
-        </div>
-
-        {/* Solution */}
-        <div className="mb-12">
-          <h3 className="font-outfit font-semibold text-xl text-[var(--accent)] mb-4">Rozwiązanie</h3>
-          <p className="text-lg text-[var(--off-white)]/80 leading-relaxed">
-            Zbudowaliśmy prosty system automatycznego follow-upu, który:
-          </p>
-          <ul className="mt-4 space-y-3">
-            <li className="flex items-start gap-3">
-              <span className="text-[var(--accent)] mt-1">✓</span>
-              <span className="text-[var(--off-white)]/80">Śledzi każdą wysłaną ofertę</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-[var(--accent)] mt-1">✓</span>
-              <span className="text-[var(--off-white)]/80">Automatycznie wysyła przyjazne przypomnienie, gdy klient nie odpowiada</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-[var(--accent)] mt-1">✓</span>
-              <span className="text-[var(--off-white)]/80">Handlowiec nie musi nic robić ręcznie — system działa w tle</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-[var(--accent)] mt-1">✓</span>
-              <span className="text-[var(--off-white)]/80">Odpowiedzi trafiają bezpośrednio do skrzynki handlowca</span>
-            </li>
-          </ul>
-        </div>
-
-        {/* Results */}
-        <div className="bg-[var(--accent)] text-[var(--midnight)] rounded-2xl p-8 md:p-12">
-          <h3 className="font-outfit font-semibold text-xl mb-6">Wyniki</h3>
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold">+16%</div>
-              <div className="text-sm opacity-80 mt-2">więcej transakcji</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold">+6</div>
-              <div className="text-sm opacity-80 mt-2">zamówień/miesiąc</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold">0</div>
-              <div className="text-sm opacity-80 mt-2">dodatkowych pracowników</div>
-            </div>
-          </div>
-          <div className="border-t border-[var(--midnight)]/20 pt-6">
-            <p className="text-center text-lg">
-              Przy średniej wartości zamówienia <strong>5 000 €</strong>, to <strong>30 000 € dodatkowego przychodu miesięcznie</strong>.
+        <ScrollReveal delay={3} variant="fadeLeft">
+          <div className="mb-12">
+            <span
+              className="text-[11px] font-bold tracking-[2px] uppercase mb-4 inline-block"
+              style={{
+                fontFamily: "var(--font-heading)",
+                color: "var(--spruce-light)",
+              }}
+            >
+              Problem
+            </span>
+            <p
+              className="text-[16px] leading-[1.8]"
+              style={{ color: "var(--text-dark-body)" }}
+            >
+              Estońska firma <strong style={{ color: "var(--frost)" }}>Koduaken</strong> wysyłała
+              około <strong style={{ color: "var(--frost)" }}>400 ofert miesięcznie</strong>. Zespół
+              sprzedaży był przeciążony — cały czas pochłaniało przygotowywanie wycen i bieżąca
+              komunikacja z klientami.
+            </p>
+            <p
+              className="text-[16px] leading-[1.8] mt-4"
+              style={{ color: "var(--text-dark-body)" }}
+            >
+              Problem nie leżał w jakości ofert. Problem polegał na tym, że{" "}
+              <strong style={{ color: "var(--frost)" }}>po wysłaniu oferty nikt nie miał czasu</strong>,
+              żeby skontaktować się z klientem. Oferta była wysyłana i... czekano, aż klient sam odpowie.
             </p>
           </div>
-        </div>
+        </ScrollReveal>
 
-        <p className="text-center text-sm text-[var(--off-white)]/40 mt-8">
+        {/* Before numbers */}
+        <ScrollReveal delay={4}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-14">
+            {[
+              { value: "388", label: "ofert/miesiąc", accent: false },
+              { value: "47", label: "odpowiedzi", accent: false },
+              { value: "37", label: "zamówień", accent: false },
+              { value: "341", label: "ofert bez odpowiedzi", accent: true },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="text-center p-5"
+                style={{
+                  background: stat.accent ? "rgba(220, 80, 80, 0.1)" : "var(--dark-elevated)",
+                  borderRadius: "var(--radius-card)",
+                  border: stat.accent ? "1px solid rgba(220, 80, 80, 0.3)" : "1px solid var(--dark-border)",
+                }}
+              >
+                <div
+                  className="text-[28px] font-bold"
+                  style={{
+                    fontFamily: "var(--font-heading)",
+                    color: stat.accent ? "#dc5050" : "var(--frost)",
+                  }}
+                >
+                  {stat.value}
+                </div>
+                <div
+                  className="text-[11px]"
+                  style={{ color: stat.accent ? "rgba(220, 80, 80, 0.8)" : "var(--text-dark-muted)" }}
+                >
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+
+        {/* Solution */}
+        <ScrollReveal delay={5} variant="fadeRight">
+          <div className="mb-14">
+            <span
+              className="text-[11px] font-bold tracking-[2px] uppercase mb-4 inline-block"
+              style={{
+                fontFamily: "var(--font-heading)",
+                color: "var(--spruce-light)",
+              }}
+            >
+              Rozwiązanie
+            </span>
+            <p
+              className="text-[16px] leading-[1.8] mb-6"
+              style={{ color: "var(--text-dark-body)" }}
+            >
+              Zbudowaliśmy prosty system automatycznego follow-upu:
+            </p>
+            <div className="space-y-3">
+              {[
+                "Śledzi każdą wysłaną ofertę",
+                "Automatycznie wysyła przyjazne przypomnienie, gdy klient nie odpowiada",
+                "Handlowiec nie musi nic robić ręcznie — system działa w tle",
+                "Odpowiedzi trafiają bezpośrednio do skrzynki handlowca",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    className="flex-shrink-0 mt-0.5"
+                  >
+                    <circle cx="10" cy="10" r="10" fill="var(--spruce)" fillOpacity="0.2" />
+                    <path
+                      d="M6 10l3 3 5-6"
+                      stroke="var(--spruce-light)"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span
+                    className="text-[15px]"
+                    style={{ color: "var(--text-dark-body)" }}
+                  >
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Results */}
+        <ScrollReveal delay={6} variant="scale">
+          <div
+            className="p-8 md:p-10"
+            style={{
+              background: "var(--amber)",
+              borderRadius: "var(--radius-card)",
+            }}
+          >
+            <span
+              className="text-[11px] font-bold tracking-[2px] uppercase mb-6 inline-block"
+              style={{
+                fontFamily: "var(--font-heading)",
+                color: "var(--midnight)",
+                opacity: 0.7,
+              }}
+            >
+              Wyniki
+            </span>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {[
+                { value: "+16%", label: "więcej transakcji" },
+                { value: "+6", label: "zamówień/miesiąc" },
+                { value: "0", label: "dodatkowych pracowników" },
+              ].map((result, i) => (
+                <div key={i} className="text-center">
+                  <div
+                    className="text-[clamp(36px,5vw,48px)] font-bold"
+                    style={{
+                      fontFamily: "var(--font-heading)",
+                      color: "var(--midnight)",
+                    }}
+                  >
+                    {result.value}
+                  </div>
+                  <div
+                    className="text-[13px]"
+                    style={{ color: "var(--midnight)", opacity: 0.7 }}
+                  >
+                    {result.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div
+              className="pt-6 text-center"
+              style={{ borderTop: "1px solid rgba(0,0,0,0.1)" }}
+            >
+              <p
+                className="text-[16px]"
+                style={{ color: "var(--midnight)" }}
+              >
+                Przy średniej wartości zamówienia{" "}
+                <strong>5 000 €</strong>, to{" "}
+                <strong>30 000 € dodatkowego przychodu miesięcznie</strong>.
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <p
+          className="text-center text-[12px] mt-8"
+          style={{ color: "var(--text-dark-muted)" }}
+        >
           * Case study na podstawie wdrożenia w estońskiej firmie z branży okien i drzwi (2025).
-          Wyniki mogą się różnić w zależności od branży i procesu sprzedaży.
         </p>
       </div>
     </section>
@@ -244,53 +550,120 @@ function HowItWorks() {
   const steps = [
     {
       number: "01",
+      phase: "Tydzień 1",
       title: "Audyt procesu",
-      description: "Mapujemy Państwa obecny proces ofertowania — od pierwszego kontaktu po zamówienie. Identyfikujemy gdzie \"giną\" oferty.",
+      description:
+        "Mapujemy Państwa obecny proces ofertowania — od pierwszego kontaktu po zamówienie. Identyfikujemy gdzie giną oferty.",
     },
     {
       number: "02",
+      phase: "Tydzień 1-2",
       title: "Konfiguracja systemu",
-      description: "Ustawiamy automatyczne przypomnienia dopasowane do Państwa procesu. Treść, timing, kanał — wszystko pod Państwa markę.",
+      description:
+        "Ustawiamy automatyczne przypomnienia dopasowane do Państwa procesu. Treść, timing, kanał — wszystko pod Państwa markę.",
     },
     {
       number: "03",
+      phase: "Tydzień 2",
       title: "Integracja",
-      description: "Łączymy system z Państwa obecnymi narzędziami (email, CRM, kalendarz). Bez zmiany sposobu pracy zespołu.",
+      description:
+        "Łączymy system z Państwa obecnymi narzędziami (email, CRM, kalendarz). Bez zmiany sposobu pracy zespołu.",
     },
     {
       number: "04",
+      phase: "Tydzień 3+",
       title: "Uruchomienie + monitoring",
-      description: "Startujemy i monitorujemy wyniki. Dashboard pokazuje ile ofert dostało follow-up i ile wróciło jako zamówienia.",
+      description:
+        "Startujemy i monitorujemy wyniki. Dashboard pokazuje ile ofert dostało follow-up i ile wróciło jako zamówienia.",
     },
   ];
 
   return (
-    <section className="py-20 px-6 bg-[var(--off-white)]">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="font-instrument text-3xl md:text-4xl text-[var(--midnight)]">
-            Jak to działa?
-          </h2>
-          <p className="mt-4 text-lg text-[var(--midnight)]/60">
-            Od audytu do działającego systemu w 2-3 tygodnie
-          </p>
+    <section
+      className="relative py-24 md:py-32 overflow-hidden topo-texture"
+      style={{ background: "var(--off-white)" }}
+    >
+      <div className="relative z-10 max-w-[900px] mx-auto px-5 md:px-8">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <ScrollReveal>
+            <div className="flex justify-center">
+              <SectionLabel text="Proces" light />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={1}>
+            <h2
+              className="text-[clamp(28px,4vw,42px)]"
+              style={{ color: "var(--midnight)" }}
+            >
+              Jak to{" "}
+              <span className="italic" style={{ color: "var(--spruce)" }}>
+                działa?
+              </span>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={2}>
+            <p
+              className="text-[17px] mt-4"
+              style={{ color: "var(--dark-gray)" }}
+            >
+              Od audytu do działającego systemu w 2-3 tygodnie
+            </p>
+          </ScrollReveal>
         </div>
 
-        <div className="space-y-8">
+        {/* Steps */}
+        <div className="space-y-6">
           {steps.map((step, i) => (
-            <div key={i} className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-16 h-16 bg-[var(--midnight)] text-[var(--accent)] rounded-full flex items-center justify-center font-outfit font-bold text-xl">
-                {step.number}
+            <ScrollReveal key={step.number} delay={i + 3} variant={i % 2 === 0 ? "fadeLeft" : "fadeRight"}>
+              <div
+                className="flex gap-6 p-6 md:p-8 card-hover-glow"
+                style={{
+                  background: "var(--white)",
+                  borderRadius: "var(--radius-card)",
+                  boxShadow: "0 2px 20px rgba(0,0,0,0.04)",
+                  border: "1px solid var(--frost)",
+                }}
+              >
+                <div
+                  className="flex-shrink-0 w-12 h-12 flex items-center justify-center text-[13px] font-bold"
+                  style={{
+                    fontFamily: "var(--font-heading)",
+                    background: i === steps.length - 1 ? "var(--amber)" : "var(--spruce)",
+                    color: "white",
+                    borderRadius: "var(--radius-icon)",
+                  }}
+                >
+                  {step.number}
+                </div>
+                <div>
+                  <span
+                    className="text-[10px] font-bold tracking-[2px] uppercase"
+                    style={{
+                      fontFamily: "var(--font-heading)",
+                      color: i === steps.length - 1 ? "var(--amber)" : "var(--spruce)",
+                    }}
+                  >
+                    {step.phase}
+                  </span>
+                  <h3
+                    className="text-[18px] font-semibold mt-1 mb-2"
+                    style={{
+                      fontFamily: "var(--font-heading)",
+                      color: "var(--midnight)",
+                    }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p
+                    className="text-[14px] leading-[1.7]"
+                    style={{ color: "var(--dark-gray)" }}
+                  >
+                    {step.description}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-outfit font-semibold text-xl text-[var(--midnight)] mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-[var(--midnight)]/70">
-                  {step.description}
-                </p>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -299,75 +672,112 @@ function HowItWorks() {
 }
 
 function TeamSection() {
+  const team = [
+    {
+      name: "Mikita",
+      role: "CRM Specialist",
+      bio: "Specjalizuje się w automatyzacji procesów sprzedażowych dla firm B2B. Mówi po polsku.",
+      image: "/images/team/mikita.jpg",
+      linkedin: "https://www.linkedin.com/in/mikita-kutsenka/",
+    },
+    {
+      name: "Taavi",
+      role: "Founder & Automation Architect",
+      bio: "Zbudował system follow-up dla Koduaken. Projektuje architekturę automatyzacji dla firm w całej Europie.",
+      image: "/images/team/taavi.jpg",
+      linkedin: "https://www.linkedin.com/in/taavi-ilmj%C3%A4rv-6b21543a/",
+    },
+  ];
+
   return (
-    <section className="py-20 px-6 bg-[var(--midnight)] text-[var(--off-white)]">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="font-instrument text-3xl md:text-4xl">
-            Z kim będziesz rozmawiać?
-          </h2>
+    <section
+      className="relative py-24 md:py-32 overflow-hidden frost-noise"
+      style={{ background: "var(--midnight)" }}
+    >
+      <div className="relative z-10 max-w-[900px] mx-auto px-5 md:px-8">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <ScrollReveal>
+            <div className="flex justify-center">
+              <SectionLabel text="Zespół" />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={1}>
+            <h2
+              className="text-[clamp(28px,4vw,42px)]"
+              style={{ color: "var(--frost)" }}
+            >
+              Z kim będziesz{" "}
+              <span className="italic" style={{ color: "var(--spruce-light)" }}>
+                rozmawiać?
+              </span>
+            </h2>
+          </ScrollReveal>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Mikita */}
-          <div className="bg-[var(--off-white)]/5 rounded-2xl p-8 text-center">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[var(--accent)]">
-              <Image
-                src="/images/team/mikita.jpg"
-                alt="Mikita"
-                width={128}
-                height={128}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="font-outfit font-semibold text-xl mb-2">Mikita</h3>
-            <p className="text-[var(--accent)] text-sm mb-4">CRM Specialist</p>
-            <p className="text-[var(--off-white)]/70 text-sm mb-6">
-              Specjalizuje się w automatyzacji procesów sprzedażowych dla firm B2B.
-              Mówi po polsku.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/mikita-kutsenka/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[var(--accent)] hover:underline text-sm"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-              LinkedIn
-            </a>
-          </div>
-
-          {/* Taavi */}
-          <div className="bg-[var(--off-white)]/5 rounded-2xl p-8 text-center">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[var(--accent)]">
-              <Image
-                src="/images/team/taavi.jpg"
-                alt="Taavi"
-                width={128}
-                height={128}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="font-outfit font-semibold text-xl mb-2">Taavi</h3>
-            <p className="text-[var(--accent)] text-sm mb-4">Founder & Automation Architect</p>
-            <p className="text-[var(--off-white)]/70 text-sm mb-6">
-              Zbudował system follow-up dla Koduaken.
-              Projektuje architekturę automatyzacji dla firm w całej Europie.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/taavi-ilmj%C3%A4rv-6b21543a/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[var(--accent)] hover:underline text-sm"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-              LinkedIn
-            </a>
-          </div>
+        {/* Team cards */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {team.map((member, i) => (
+            <ScrollReveal key={member.name} delay={i + 2} variant={i === 0 ? "fadeLeft" : "fadeRight"}>
+              <div
+                className="group p-8 text-center card-hover-glow-dark"
+                style={{
+                  background: "var(--dark-elevated)",
+                  borderRadius: "var(--radius-card)",
+                  border: "1px solid var(--dark-border)",
+                }}
+              >
+                <div
+                  className="w-28 h-28 mx-auto mb-6 overflow-hidden"
+                  style={{
+                    borderRadius: "50%",
+                    border: "3px solid var(--spruce)",
+                  }}
+                >
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={112}
+                    height={112}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <h3
+                  className="text-[20px] font-semibold"
+                  style={{
+                    fontFamily: "var(--font-heading)",
+                    color: "var(--frost)",
+                  }}
+                >
+                  {member.name}
+                </h3>
+                <p
+                  className="text-[12px] font-medium mt-1 mb-4"
+                  style={{ color: "var(--spruce-light)" }}
+                >
+                  {member.role}
+                </p>
+                <p
+                  className="text-[14px] leading-[1.7] mb-6"
+                  style={{ color: "var(--text-dark-body)" }}
+                >
+                  {member.bio}
+                </p>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[13px] font-medium transition-colors duration-200"
+                  style={{ color: "var(--spruce-light)" }}
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
@@ -375,31 +785,52 @@ function TeamSection() {
 }
 
 function TrustSignals() {
+  const signals = [
+    {
+      title: "GDPR & UŚUDE",
+      description: "Pełna zgodność z europejskimi regulacjami ochrony danych i polską ustawą o świadczeniu usług drogą elektroniczną.",
+    },
+    {
+      title: "Cennik w EUR/PLN",
+      description: "Faktury w EUR lub PLN według preferencji. Stały kurs, brak niespodzianek walutowych.",
+    },
+    {
+      title: "Dane w EU",
+      description: "Wszystkie dane przechowywane na serwerach w Unii Europejskiej. Bez transferu do USA.",
+    },
+  ];
+
   return (
-    <section className="py-12 px-6 bg-[var(--off-white)] border-t border-[var(--midnight)]/10">
-      <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div>
-            <div className="text-2xl mb-2">🇪🇺</div>
-            <h4 className="font-outfit font-semibold text-[var(--midnight)] mb-1">GDPR & UŚUDE</h4>
-            <p className="text-sm text-[var(--midnight)]/60">
-              Pełna zgodność z europejskimi regulacjami ochrony danych i polską ustawą o świadczeniu usług drogą elektroniczną.
-            </p>
-          </div>
-          <div>
-            <div className="text-2xl mb-2">💶</div>
-            <h4 className="font-outfit font-semibold text-[var(--midnight)] mb-1">Cennik w EUR</h4>
-            <p className="text-sm text-[var(--midnight)]/60">
-              Faktury w EUR lub PLN według preferencji. Stały kurs, brak niespodzianek walutowych.
-            </p>
-          </div>
-          <div>
-            <div className="text-2xl mb-2">🔒</div>
-            <h4 className="font-outfit font-semibold text-[var(--midnight)] mb-1">Dane w EU</h4>
-            <p className="text-sm text-[var(--midnight)]/60">
-              Wszystkie dane przechowywane na serwerach w Unii Europejskiej. Bez transferu do USA.
-            </p>
-          </div>
+    <section
+      className="relative py-16 md:py-20"
+      style={{
+        background: "var(--off-white)",
+        borderTop: "1px solid var(--frost)",
+      }}
+    >
+      <div className="max-w-[900px] mx-auto px-5 md:px-8">
+        <div className="grid md:grid-cols-3 gap-8">
+          {signals.map((signal, i) => (
+            <ScrollReveal key={i} delay={i}>
+              <div className="text-center">
+                <h4
+                  className="text-[14px] font-semibold mb-2"
+                  style={{
+                    fontFamily: "var(--font-heading)",
+                    color: "var(--midnight)",
+                  }}
+                >
+                  {signal.title}
+                </h4>
+                <p
+                  className="text-[13px] leading-[1.7]"
+                  style={{ color: "var(--dark-gray)" }}
+                >
+                  {signal.description}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
@@ -408,26 +839,56 @@ function TrustSignals() {
 
 function CTASection() {
   return (
-    <section className="py-20 px-6 bg-[var(--accent)]">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl text-[var(--midnight)] mb-6">
-          Zarezerwuj 20-minutowy audyt
-        </h2>
-        <p className="text-xl text-[var(--midnight)]/80 mb-8">
-          Zmapujemy Państwa proces ofertowania i pokażemy, gdzie „giną" potencjalne zamówienia.
-          Bez zobowiązań.
-        </p>
-        <a
-          href="https://api.leadconnectorhq.com/widget/booking/QRDz2smDfgEZvhTtyePu"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-[var(--midnight)] text-[var(--off-white)] px-10 py-5 rounded-xl font-outfit font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg"
-        >
-          Zarezerwuj audyt →
-        </a>
-        <p className="mt-6 text-sm text-[var(--midnight)]/60">
-          Rozmowa po polsku z Mikitą lub po angielsku z Taavim
-        </p>
+    <section
+      className="relative py-24 md:py-32"
+      style={{ background: "var(--amber)" }}
+    >
+      <div className="max-w-[700px] mx-auto px-5 md:px-8 text-center">
+        <ScrollReveal>
+          <h2
+            className="text-[clamp(28px,4vw,42px)] mb-6"
+            style={{
+              fontFamily: "var(--font-display)",
+              color: "var(--midnight)",
+            }}
+          >
+            Zarezerwuj 20-minutowy audyt
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal delay={1}>
+          <p
+            className="text-[17px] leading-[1.7] mb-10"
+            style={{ color: "var(--midnight)", opacity: 0.8 }}
+          >
+            Zmapujemy Państwa proces ofertowania i pokażemy, gdzie giną potencjalne zamówienia.
+            Bez zobowiązań.
+          </p>
+        </ScrollReveal>
+        <ScrollReveal delay={2}>
+          <a
+            href="https://api.leadconnectorhq.com/widget/booking/QRDz2smDfgEZvhTtyePu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-10 py-5 text-[14px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5"
+            style={{
+              fontFamily: "var(--font-heading)",
+              background: "var(--midnight)",
+              color: "var(--frost)",
+              borderRadius: "var(--radius-button)",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+            }}
+          >
+            Zarezerwuj audyt
+          </a>
+        </ScrollReveal>
+        <ScrollReveal delay={3}>
+          <p
+            className="text-[13px] mt-6"
+            style={{ color: "var(--midnight)", opacity: 0.6 }}
+          >
+            Rozmowa po polsku z Mikitą lub po angielsku z Taavim
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );
@@ -437,57 +898,133 @@ export function QuoteFollowUpPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-[var(--midnight)] text-[var(--off-white)] py-20 md:py-32 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block px-4 py-2 bg-[var(--accent)]/20 text-[var(--accent)] rounded-full text-sm font-medium mb-6">
-            Dla firm z branży okien i drzwi
-          </span>
-          <h1 className="font-instrument text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
-            Wysyłasz 50+ ofert miesięcznie.
-            <br />
-            <span className="text-[var(--accent)]">73% nigdy nie dostaje drugiego kontaktu.</span>
-          </h1>
-          <p className="text-xl text-[var(--off-white)]/70 max-w-2xl mx-auto mb-10">
-            Nie dlatego, że cena nie pasuje. Dlatego, że nikt nie ma czasu zadzwonić i zapytać.
-            <br />
-            <strong className="text-[var(--off-white)]">Automatyczny follow-up rozwiązuje ten problem.</strong>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#kalkulator"
-              className="inline-block bg-[var(--accent)] text-[var(--midnight)] px-8 py-4 rounded-xl font-outfit font-semibold hover:opacity-90 transition-opacity"
+      <section
+        className="relative min-h-[80vh] flex items-center overflow-hidden frost-noise"
+        style={{ background: "var(--midnight)" }}
+      >
+        {/* Subtle geometric grid */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.03]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(82,183,136,0.5) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(82,183,136,0.5) 1px, transparent 1px)
+            `,
+            backgroundSize: "80px 80px",
+          }}
+        />
+
+        <div className="relative z-10 max-w-[900px] mx-auto px-5 md:px-8 py-24 md:py-32 text-center">
+          <ScrollReveal>
+            <span
+              className="inline-block px-4 py-2 text-[11px] font-bold tracking-[2px] uppercase mb-8"
+              style={{
+                fontFamily: "var(--font-heading)",
+                color: "var(--amber)",
+                background: "rgba(212,135,63,0.1)",
+                borderRadius: "var(--radius-badge)",
+              }}
             >
-              Oblicz potencjalny wzrost →
-            </a>
-            <a
-              href="#case-study"
-              className="inline-block border-2 border-[var(--off-white)]/30 text-[var(--off-white)] px-8 py-4 rounded-xl font-outfit font-semibold hover:bg-[var(--off-white)]/10 transition-colors"
+              Dla firm z branży okien i drzwi
+            </span>
+          </ScrollReveal>
+
+          <ScrollReveal delay={1}>
+            <h1
+              className="text-[clamp(32px,5vw,52px)] leading-[1.15] mb-8"
+              style={{ color: "var(--frost)" }}
             >
-              Zobacz case study
-            </a>
-          </div>
+              Wysyłasz 50+ ofert miesięcznie.
+              <br />
+              <span className="italic" style={{ color: "var(--spruce-light)" }}>
+                73% nigdy nie dostaje drugiego kontaktu.
+              </span>
+            </h1>
+          </ScrollReveal>
+
+          <ScrollReveal delay={2}>
+            <p
+              className="text-[clamp(15px,1.8vw,18px)] leading-[1.7] max-w-[600px] mx-auto mb-10"
+              style={{ color: "var(--text-dark-muted)" }}
+            >
+              Nie dlatego, że cena nie pasuje. Dlatego, że nikt nie ma czasu zadzwonić i zapytać.
+              <br />
+              <strong style={{ color: "var(--frost)" }}>
+                Automatyczny follow-up rozwiązuje ten problem.
+              </strong>
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={3}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#kalkulator"
+                className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  background: "var(--amber)",
+                  color: "var(--midnight)",
+                  borderRadius: "var(--radius-button)",
+                }}
+              >
+                Oblicz potencjalny wzrost
+              </a>
+              <a
+                href="#case-study"
+                className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,255,255,0.08)]"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  border: "2px solid rgba(255,255,255,0.2)",
+                  color: "var(--frost)",
+                  borderRadius: "var(--radius-button)",
+                }}
+              >
+                Zobacz case study
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
+
+        {/* Bottom gradient */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+          style={{
+            background: "linear-gradient(to top, var(--off-white), transparent)",
+          }}
+        />
       </section>
 
       {/* ROI Calculator Section */}
-      <section id="kalkulator" className="py-20 px-6 bg-gradient-to-b from-[var(--midnight)] to-[var(--off-white)]">
-        <div className="max-w-4xl mx-auto">
+      <section
+        id="kalkulator"
+        className="relative py-24 md:py-32 topo-texture"
+        style={{ background: "var(--off-white)" }}
+      >
+        <div className="max-w-[600px] mx-auto px-5 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-instrument text-3xl md:text-4xl text-[var(--off-white)] mb-4">
-              Ile zostawiacie na stole?
-            </h2>
-            <p className="text-lg text-[var(--off-white)]/60">
-              Przesuń suwaki, żeby zobaczyć potencjalny wzrost
-            </p>
+            <ScrollReveal>
+              <div className="flex justify-center">
+                <SectionLabel text="Kalkulator" light />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={1}>
+              <h2
+                className="text-[clamp(28px,4vw,42px)]"
+                style={{ color: "var(--midnight)" }}
+              >
+                Ile zostawiacie{" "}
+                <span className="italic" style={{ color: "var(--spruce)" }}>
+                  na stole?
+                </span>
+              </h2>
+            </ScrollReveal>
           </div>
           <ROICalculator />
         </div>
       </section>
 
       {/* Case Study */}
-      <div id="case-study">
-        <CaseStudySection />
-      </div>
+      <CaseStudySection />
 
       {/* How it works */}
       <HowItWorks />
