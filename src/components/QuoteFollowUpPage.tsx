@@ -1,317 +1,140 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionLabel } from "./SectionLabel";
 
-function ROICalculator() {
-  const [quotes, setQuotes] = useState(100);
-  const [dealValue, setDealValue] = useState(5000);
-  const [conversionRate, setConversionRate] = useState(10);
+function LossCalculator() {
+  const [dealValue, setDealValue] = useState(2000);
+  const [leadsPerMonth, setLeadsPerMonth] = useState(50);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const currentOrders = Math.round((quotes * conversionRate) / 100);
-  const additionalOrders = Math.round(currentOrders * 0.16);
-  const newOrders = currentOrders + additionalOrders;
-  const additionalRevenue = additionalOrders * dealValue;
-  const annualRevenue = additionalRevenue * 12;
-  const plnRate = 4.3;
-  const additionalRevenuePLN = Math.round(additionalRevenue * plnRate);
-  const annualRevenuePLN = Math.round(annualRevenue * plnRate);
+  // 73% of leads never get follow-up
+  // Assume 10% of those would convert if followed up
+  const lostLeads = Math.round(leadsPerMonth * 0.73);
+  const conversionRate = 0.10;
+  const lostDeals = lostLeads * conversionRate;
+  const monthlyLoss = Math.round(lostDeals * dealValue);
+  const yearlyLoss = monthlyLoss * 12;
+
+  useEffect(() => {
+    setIsAnimating(true);
+    const timer = setTimeout(() => setIsAnimating(false), 300);
+    return () => clearTimeout(timer);
+  }, [dealValue, leadsPerMonth]);
 
   return (
-    <ScrollReveal delay={2}>
-      <div
-        className="p-8 md:p-10"
-        style={{
-          background: "var(--white)",
-          borderRadius: "var(--radius-card)",
-          boxShadow: "0 4px 40px rgba(0,0,0,0.08)",
-          border: "1px solid var(--frost)",
-        }}
-      >
-        <div className="text-center mb-8">
-          <span
-            className="text-[10px] font-bold tracking-[2px] uppercase mb-2 inline-block"
+    <div
+      className="max-w-[600px] mx-auto"
+      style={{
+        background: "rgba(255,255,255,0.95)",
+        borderRadius: "var(--radius-card)",
+        boxShadow: "0 8px 40px rgba(0,0,0,0.15)",
+        overflow: "hidden",
+      }}
+    >
+      {/* Input fields */}
+      <div className="grid grid-cols-2">
+        <div
+          className="p-6"
+          style={{ borderRight: "1px solid var(--frost)" }}
+        >
+          <label
+            className="block text-[10px] font-bold tracking-[1.5px] uppercase mb-3 text-center"
             style={{
               fontFamily: "var(--font-heading)",
-              color: "var(--spruce)",
+              color: "var(--dark-gray)",
             }}
           >
-            Kalkulator ROI
-          </span>
-          <p
-            className="text-[13px]"
-            style={{ color: "var(--dark-gray)" }}
-          >
-            Dostosuj wartości do swojej firmy
-          </p>
-        </div>
-
-        <div className="space-y-8">
-          {/* Quotes per month */}
-          <div>
-            <div className="flex justify-between items-baseline mb-3">
-              <label
-                className="text-[13px] font-medium"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--midnight)",
-                }}
-              >
-                Ofert miesięcznie
-              </label>
-              <span
-                className="text-[18px] font-bold"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--spruce)",
-                }}
-              >
-                {quotes}
-              </span>
-            </div>
-            <input
-              type="range"
-              min="20"
-              max="500"
-              step="10"
-              value={quotes}
-              onChange={(e) => setQuotes(Number(e.target.value))}
-              className="w-full h-2 rounded-lg appearance-none cursor-pointer"
-              style={{
-                background: `linear-gradient(to right, var(--spruce) 0%, var(--spruce) ${((quotes - 20) / 480) * 100}%, var(--frost) ${((quotes - 20) / 480) * 100}%, var(--frost) 100%)`,
-              }}
-            />
-            <div
-              className="flex justify-between text-[11px] mt-2"
+            Śr. wartość transakcji (€)
+          </label>
+          <div className="relative">
+            <span
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-[16px]"
               style={{ color: "var(--dark-gray)" }}
             >
-              <span>20</span>
-              <span>500</span>
-            </div>
-          </div>
-
-          {/* Deal value */}
-          <div>
-            <div className="flex justify-between items-baseline mb-3">
-              <label
-                className="text-[13px] font-medium"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--midnight)",
-                }}
-              >
-                Średnia wartość zamówienia
-              </label>
-              <span
-                className="text-[18px] font-bold"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--spruce)",
-                }}
-              >
-                {dealValue.toLocaleString()} €
-              </span>
-            </div>
+              €
+            </span>
             <input
-              type="range"
-              min="1000"
-              max="20000"
-              step="500"
+              type="number"
               value={dealValue}
-              onChange={(e) => setDealValue(Number(e.target.value))}
-              className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+              onChange={(e) => setDealValue(Number(e.target.value) || 0)}
+              className="w-full p-4 pl-8 text-[18px] font-semibold text-center border-0 outline-none"
               style={{
-                background: `linear-gradient(to right, var(--spruce) 0%, var(--spruce) ${((dealValue - 1000) / 19000) * 100}%, var(--frost) ${((dealValue - 1000) / 19000) * 100}%, var(--frost) 100%)`,
+                fontFamily: "var(--font-heading)",
+                color: "var(--midnight)",
+                background: "var(--off-white)",
+                borderRadius: "var(--radius-button)",
               }}
             />
-            <div
-              className="flex justify-between text-[11px] mt-2"
-              style={{ color: "var(--dark-gray)" }}
-            >
-              <span>1 000 €</span>
-              <span>20 000 €</span>
-            </div>
-          </div>
-
-          {/* Conversion rate */}
-          <div>
-            <div className="flex justify-between items-baseline mb-3">
-              <label
-                className="text-[13px] font-medium"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--midnight)",
-                }}
-              >
-                Obecna konwersja
-              </label>
-              <span
-                className="text-[18px] font-bold"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--spruce)",
-                }}
-              >
-                {conversionRate}%
-              </span>
-            </div>
-            <input
-              type="range"
-              min="5"
-              max="30"
-              step="1"
-              value={conversionRate}
-              onChange={(e) => setConversionRate(Number(e.target.value))}
-              className="w-full h-2 rounded-lg appearance-none cursor-pointer"
-              style={{
-                background: `linear-gradient(to right, var(--spruce) 0%, var(--spruce) ${((conversionRate - 5) / 25) * 100}%, var(--frost) ${((conversionRate - 5) / 25) * 100}%, var(--frost) 100%)`,
-              }}
-            />
-            <div
-              className="flex justify-between text-[11px] mt-2"
-              style={{ color: "var(--dark-gray)" }}
-            >
-              <span>5%</span>
-              <span>30%</span>
-            </div>
           </div>
         </div>
-
-        {/* Results */}
-        <div
-          className="mt-10 pt-8"
-          style={{ borderTop: "1px solid var(--frost)" }}
-        >
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            <div
-              className="text-center p-5"
-              style={{
-                background: "var(--off-white)",
-                borderRadius: "var(--radius-card)",
-              }}
-            >
-              <div
-                className="text-[11px] font-bold tracking-[1px] uppercase mb-1"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--dark-gray)",
-                }}
-              >
-                Teraz
-              </div>
-              <div
-                className="text-[32px] font-bold"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--midnight)",
-                }}
-              >
-                {currentOrders}
-              </div>
-              <div
-                className="text-[11px]"
-                style={{ color: "var(--dark-gray)" }}
-              >
-                zamówień/mies.
-              </div>
-            </div>
-            <div
-              className="text-center p-5"
-              style={{
-                background: "var(--spruce-pale)",
-                borderRadius: "var(--radius-card)",
-                border: "2px solid var(--spruce)",
-              }}
-            >
-              <div
-                className="text-[11px] font-bold tracking-[1px] uppercase mb-1"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--spruce)",
-                }}
-              >
-                Po wdrożeniu
-              </div>
-              <div
-                className="text-[32px] font-bold"
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  color: "var(--spruce)",
-                }}
-              >
-                {newOrders}
-              </div>
-              <div
-                className="text-[11px]"
-                style={{ color: "var(--dark-gray)" }}
-              >
-                zamówień/mies.
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="p-6 text-center"
+        <div className="p-6">
+          <label
+            className="block text-[10px] font-bold tracking-[1.5px] uppercase mb-3 text-center"
             style={{
-              background: "var(--amber)",
-              borderRadius: "var(--radius-card)",
+              fontFamily: "var(--font-heading)",
+              color: "var(--dark-gray)",
             }}
           >
-            <div
-              className="text-[11px] font-bold tracking-[1px] uppercase mb-1"
-              style={{
-                fontFamily: "var(--font-heading)",
-                color: "var(--midnight)",
-                opacity: 0.7,
-              }}
-            >
-              Dodatkowy przychód miesięcznie
-            </div>
-            <div
-              className="text-[36px] font-bold"
-              style={{
-                fontFamily: "var(--font-heading)",
-                color: "var(--midnight)",
-              }}
-            >
-              +{additionalRevenue.toLocaleString()} €
-            </div>
-            <div
-              className="text-[13px]"
-              style={{ color: "var(--midnight)", opacity: 0.6 }}
-            >
-              (~{additionalRevenuePLN.toLocaleString()} PLN)
-            </div>
-            <div
-              className="mt-4 pt-4"
-              style={{ borderTop: "1px solid rgba(0,0,0,0.1)" }}
-            >
-              <span
-                className="text-[13px]"
-                style={{ color: "var(--midnight)", opacity: 0.7 }}
-              >
-                Rocznie to{" "}
-              </span>
-              <span
-                className="text-[18px] font-bold"
-                style={{ color: "var(--midnight)" }}
-              >
-                +{annualRevenue.toLocaleString()} €
-              </span>
-            </div>
-          </div>
-
-          <p
-            className="text-center text-[11px] mt-4"
-            style={{ color: "var(--dark-gray)" }}
-          >
-            * Szacunki oparte na +16% wzrostu konwersji (case study Koduaken)
-          </p>
+            Leadów miesięcznie
+          </label>
+          <input
+            type="number"
+            value={leadsPerMonth}
+            onChange={(e) => setLeadsPerMonth(Number(e.target.value) || 0)}
+            className="w-full p-4 text-[18px] font-semibold text-center border-0 outline-none"
+            style={{
+              fontFamily: "var(--font-heading)",
+              color: "var(--midnight)",
+              background: "var(--off-white)",
+              borderRadius: "var(--radius-button)",
+            }}
+          />
         </div>
       </div>
-    </ScrollReveal>
+
+      {/* Result */}
+      <div
+        className="p-8 text-center"
+        style={{
+          background: "var(--off-white)",
+          borderTop: "1px solid var(--frost)",
+        }}
+      >
+        <div
+          className="text-[10px] font-bold tracking-[2px] uppercase mb-3"
+          style={{
+            fontFamily: "var(--font-heading)",
+            color: "#dc5050",
+          }}
+        >
+          Prawdopodobnie tracisz
+        </div>
+        <div
+          className={`text-[clamp(36px,6vw,52px)] font-bold transition-all duration-300 ${isAnimating ? "scale-105" : "scale-100"}`}
+          style={{
+            fontFamily: "var(--font-heading)",
+            color: "#dc5050",
+          }}
+        >
+          €{monthlyLoss.toLocaleString()}
+          <span
+            className="text-[20px] font-normal"
+            style={{ color: "var(--dark-gray)" }}
+          >
+            /mies.
+          </span>
+        </div>
+        <p
+          className="text-[13px] mt-3"
+          style={{ color: "var(--dark-gray)" }}
+        >
+          {lostLeads} utraconych leadów × {Math.round(conversionRate * 100)}% konwersja = {lostDeals.toFixed(1)} utraconych transakcji · €{yearlyLoss.toLocaleString()}/rok
+        </p>
+      </div>
+    </div>
   );
 }
 
@@ -378,7 +201,7 @@ function CaseStudySection() {
             >
               Problem nie leżał w jakości ofert. Problem polegał na tym, że{" "}
               <strong style={{ color: "var(--frost)" }}>po wysłaniu oferty nikt nie miał czasu</strong>,
-              żeby skontaktować się z klientem. Oferta była wysyłana i... czekano, aż klient sam odpowie.
+              żeby skontaktować się z klientem.
             </p>
           </div>
         </ScrollReveal>
@@ -442,7 +265,7 @@ function CaseStudySection() {
             <div className="space-y-3">
               {[
                 "Śledzi każdą wysłaną ofertę",
-                "Automatycznie wysyła przyjazne przypomnienie, gdy klient nie odpowiada",
+                "Automatycznie wysyła przypomnienie, gdy klient nie odpowiada",
                 "Handlowiec nie musi nic robić ręcznie — system działa w tle",
                 "Odpowiedzi trafiają bezpośrednio do skrzynki handlowca",
               ].map((item, i) => (
@@ -534,13 +357,6 @@ function CaseStudySection() {
             </div>
           </div>
         </ScrollReveal>
-
-        <p
-          className="text-center text-[12px] mt-8"
-          style={{ color: "var(--text-dark-muted)" }}
-        >
-          * Case study na podstawie wdrożenia w estońskiej firmie z branży okien i drzwi (2025).
-        </p>
       </div>
     </section>
   );
@@ -580,6 +396,7 @@ function HowItWorks() {
 
   return (
     <section
+      id="process"
       className="relative py-24 md:py-32 overflow-hidden topo-texture"
       style={{ background: "var(--off-white)" }}
     >
@@ -788,15 +605,15 @@ function TrustSignals() {
   const signals = [
     {
       title: "GDPR & UŚUDE",
-      description: "Pełna zgodność z europejskimi regulacjami ochrony danych i polską ustawą o świadczeniu usług drogą elektroniczną.",
+      description: "Pełna zgodność z europejskimi regulacjami ochrony danych.",
     },
     {
       title: "Cennik w EUR/PLN",
-      description: "Faktury w EUR lub PLN według preferencji. Stały kurs, brak niespodzianek walutowych.",
+      description: "Faktury w EUR lub PLN według preferencji.",
     },
     {
       title: "Dane w EU",
-      description: "Wszystkie dane przechowywane na serwerach w Unii Europejskiej. Bez transferu do USA.",
+      description: "Wszystkie dane przechowywane na serwerach w Unii Europejskiej.",
     },
   ];
 
@@ -897,14 +714,33 @@ function CTASection() {
 export function QuoteFollowUpPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section
-        className="relative min-h-[80vh] flex items-center overflow-hidden frost-noise"
-        style={{ background: "var(--midnight)" }}
-      >
-        {/* Subtle geometric grid */}
+      {/* Hero Section - matching services page style */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background forest image */}
+        <div className="absolute inset-0 z-[0]">
+          <Image
+            src="/images/hero-forest.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+            quality={85}
+          />
+          {/* Dark overlay */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "linear-gradient(160deg, rgba(22, 25, 41, 0.85), rgba(22, 25, 41, 0.75) 40%, rgba(45, 106, 79, 0.5))",
+            }}
+          />
+        </div>
+
+        {/* Frost noise texture */}
+        <div className="absolute inset-0 z-[4] pointer-events-none frost-noise" />
+
+        {/* Geometric grid overlay */}
         <div
-          className="absolute inset-0 pointer-events-none opacity-[0.03]"
+          className="absolute inset-0 z-[5] pointer-events-none opacity-[0.03]"
           style={{
             backgroundImage: `
               linear-gradient(rgba(82,183,136,0.5) 1px, transparent 1px),
@@ -914,52 +750,75 @@ export function QuoteFollowUpPage() {
           }}
         />
 
-        <div className="relative z-10 max-w-[900px] mx-auto px-5 md:px-8 py-24 md:py-32 text-center">
+        <div className="relative z-10 w-full max-w-[900px] mx-auto px-5 md:px-8 py-32 text-center">
+          {/* Big stat */}
           <ScrollReveal>
-            <span
-              className="inline-block px-4 py-2 text-[11px] font-bold tracking-[2px] uppercase mb-8"
+            <div
+              className="text-[clamp(80px,15vw,140px)] font-bold leading-none mb-4"
               style={{
                 fontFamily: "var(--font-heading)",
                 color: "var(--amber)",
-                background: "rgba(212,135,63,0.1)",
-                borderRadius: "var(--radius-badge)",
               }}
             >
-              Dla firm z branży okien i drzwi
-            </span>
+              73%
+            </div>
           </ScrollReveal>
 
+          {/* Headline */}
           <ScrollReveal delay={1}>
             <h1
-              className="text-[clamp(32px,5vw,52px)] leading-[1.15] mb-8"
+              className="text-[clamp(28px,4vw,42px)] leading-[1.2] mb-6"
               style={{ color: "var(--frost)" }}
             >
-              Wysyłasz 50+ ofert miesięcznie.
+              Twoich leadów nigdy nie otrzymuje
               <br />
-              <span className="italic" style={{ color: "var(--spruce-light)" }}>
-                73% nigdy nie dostaje drugiego kontaktu.
+              <span
+                className="italic"
+                style={{ color: "var(--amber)" }}
+              >
+                drugiego kontaktu
               </span>
             </h1>
           </ScrollReveal>
 
+          {/* Subtitle */}
           <ScrollReveal delay={2}>
             <p
-              className="text-[clamp(15px,1.8vw,18px)] leading-[1.7] max-w-[600px] mx-auto mb-10"
+              className="text-[clamp(15px,1.6vw,17px)] leading-[1.7] max-w-[600px] mx-auto mb-12"
               style={{ color: "var(--text-dark-muted)" }}
             >
-              Nie dlatego, że cena nie pasuje. Dlatego, że nikt nie ma czasu zadzwonić i zapytać.
-              <br />
-              <strong style={{ color: "var(--frost)" }}>
-                Automatyczny follow-up rozwiązuje ten problem.
-              </strong>
+              To dziesiątki tysięcy euro przychodu, które co miesiąc wymykają Ci się z rąk.
+              Powolne follow-upy, niepołączone narzędzia i ręczny chaos po cichu zabijają
+              Twój pipeline.
             </p>
           </ScrollReveal>
 
+          {/* Loss Calculator */}
           <ScrollReveal delay={3}>
+            <LossCalculator />
+          </ScrollReveal>
+
+          {/* Question */}
+          <ScrollReveal delay={4}>
+            <p
+              className="text-[16px] italic mt-12 mb-8"
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--spruce-light)",
+              }}
+            >
+              Kiedy ostatnio skontaktowałeś się ponownie ze swoją istniejącą bazą klientów?
+            </p>
+          </ScrollReveal>
+
+          {/* CTAs */}
+          <ScrollReveal delay={5}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#kalkulator"
-                className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5"
+                href="https://api.leadconnectorhq.com/widget/booking/QRDz2smDfgEZvhTtyePu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 text-[12px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:-translate-y-0.5"
                 style={{
                   fontFamily: "var(--font-heading)",
                   background: "var(--amber)",
@@ -967,60 +826,31 @@ export function QuoteFollowUpPage() {
                   borderRadius: "var(--radius-button)",
                 }}
               >
-                Oblicz potencjalny wzrost
+                Znajdź swoje wycieki przychodu
               </a>
               <a
                 href="#case-study"
-                className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,255,255,0.08)]"
+                className="px-8 py-4 text-[12px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,255,255,0.08)]"
                 style={{
                   fontFamily: "var(--font-heading)",
-                  border: "2px solid rgba(255,255,255,0.2)",
+                  border: "2px solid rgba(255,255,255,0.25)",
                   color: "var(--frost)",
                   borderRadius: "var(--radius-button)",
                 }}
               >
-                Zobacz case study
+                Zobacz, jak to naprawiamy
               </a>
             </div>
           </ScrollReveal>
         </div>
 
-        {/* Bottom gradient */}
+        {/* Bottom gradient fade */}
         <div
-          className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+          className="absolute bottom-0 left-0 right-0 h-32 z-[7] pointer-events-none"
           style={{
-            background: "linear-gradient(to top, var(--off-white), transparent)",
+            background: "linear-gradient(to top, var(--midnight), transparent)",
           }}
         />
-      </section>
-
-      {/* ROI Calculator Section */}
-      <section
-        id="kalkulator"
-        className="relative py-24 md:py-32 topo-texture"
-        style={{ background: "var(--off-white)" }}
-      >
-        <div className="max-w-[600px] mx-auto px-5 md:px-8">
-          <div className="text-center mb-12">
-            <ScrollReveal>
-              <div className="flex justify-center">
-                <SectionLabel text="Kalkulator" light />
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={1}>
-              <h2
-                className="text-[clamp(28px,4vw,42px)]"
-                style={{ color: "var(--midnight)" }}
-              >
-                Ile zostawiacie{" "}
-                <span className="italic" style={{ color: "var(--spruce)" }}>
-                  na stole?
-                </span>
-              </h2>
-            </ScrollReveal>
-          </div>
-          <ROICalculator />
-        </div>
       </section>
 
       {/* Case Study */}
