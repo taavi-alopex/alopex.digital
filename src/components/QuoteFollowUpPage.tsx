@@ -12,90 +12,52 @@ const BOOKING_URL = "https://api.leadconnectorhq.com/widget/booking/anlzXzfzVMRm
 function ROICalculator() {
   const [quotes, setQuotes] = useState(100);
   const [dealValue, setDealValue] = useState(5000);
-  const [conversionRate, setConversionRate] = useState(10);
 
+  const conversionRate = 10;
   const currentOrders = Math.round((quotes * conversionRate) / 100);
   const additionalOrders = Math.round(currentOrders * 0.16);
   const newOrders = currentOrders + additionalOrders;
   const additionalRevenue = additionalOrders * dealValue;
   const annualRevenue = additionalRevenue * 12;
-  const plnRate = 4.3;
-  const additionalRevenuePLN = Math.round(additionalRevenue * plnRate);
-  const annualRevenuePLN = Math.round(annualRevenue * plnRate);
 
   return (
-    <div
-      className="p-8 md:p-10"
-      style={{
-        background: "var(--white)",
-        borderRadius: "var(--radius-card)",
-        boxShadow: "0 4px 40px rgba(0,0,0,0.08)",
-        border: "1px solid var(--frost)",
-      }}
-    >
-      <div className="text-center mb-8">
-        <h3 className="text-[20px] font-semibold mb-2" style={{ fontFamily: "var(--font-heading)", color: "var(--midnight)" }}>
-          Kalkulator ROI
-        </h3>
-        <p className="text-[13px]" style={{ color: "var(--dark-gray)" }}>
-          Na podstawie case study Koduaken (+16% konwersji)
-        </p>
-      </div>
-
-      <div className="space-y-8">
+    <div className="p-5 md:p-6" style={{ background: "var(--white)", borderRadius: "var(--radius-card)", boxShadow: "0 4px 40px rgba(0,0,0,0.08)", border: "1px solid var(--frost)" }}>
+      {/* Two sliders in row */}
+      <div className="grid grid-cols-2 gap-6 mb-6">
         <div>
-          <div className="flex justify-between items-baseline mb-3">
-            <label className="text-[13px] font-medium" style={{ fontFamily: "var(--font-heading)", color: "var(--midnight)" }}>Ofert miesięcznie</label>
-            <span className="text-[18px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce)" }}>{quotes}</span>
+          <div className="flex justify-between items-baseline mb-2">
+            <label className="text-[11px] font-medium" style={{ fontFamily: "var(--font-heading)", color: "var(--midnight)" }}>Ofert/mies.</label>
+            <span className="text-[16px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce)" }}>{quotes}</span>
           </div>
           <input type="range" min="20" max="500" step="10" value={quotes} onChange={(e) => setQuotes(Number(e.target.value))} className="w-full h-2 rounded-lg appearance-none cursor-pointer" style={{ background: `linear-gradient(to right, var(--spruce) 0%, var(--spruce) ${((quotes - 20) / 480) * 100}%, var(--frost) ${((quotes - 20) / 480) * 100}%, var(--frost) 100%)` }} />
-          <div className="flex justify-between text-[11px] mt-2" style={{ color: "var(--dark-gray)" }}><span>20</span><span>500</span></div>
         </div>
-
         <div>
-          <div className="flex justify-between items-baseline mb-3">
-            <label className="text-[13px] font-medium" style={{ fontFamily: "var(--font-heading)", color: "var(--midnight)" }}>Średnia wartość zamówienia</label>
-            <span className="text-[18px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce)" }}>{dealValue.toLocaleString()} €</span>
+          <div className="flex justify-between items-baseline mb-2">
+            <label className="text-[11px] font-medium" style={{ fontFamily: "var(--font-heading)", color: "var(--midnight)" }}>Śr. wartość</label>
+            <span className="text-[16px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce)" }}>{dealValue.toLocaleString()}€</span>
           </div>
           <input type="range" min="1000" max="20000" step="500" value={dealValue} onChange={(e) => setDealValue(Number(e.target.value))} className="w-full h-2 rounded-lg appearance-none cursor-pointer" style={{ background: `linear-gradient(to right, var(--spruce) 0%, var(--spruce) ${((dealValue - 1000) / 19000) * 100}%, var(--frost) ${((dealValue - 1000) / 19000) * 100}%, var(--frost) 100%)` }} />
-          <div className="flex justify-between text-[11px] mt-2" style={{ color: "var(--dark-gray)" }}><span>1 000 €</span><span>20 000 €</span></div>
-        </div>
-
-        <div>
-          <div className="flex justify-between items-baseline mb-3">
-            <label className="text-[13px] font-medium" style={{ fontFamily: "var(--font-heading)", color: "var(--midnight)" }}>Obecna konwersja</label>
-            <span className="text-[18px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce)" }}>{conversionRate}%</span>
-          </div>
-          <input type="range" min="5" max="30" step="1" value={conversionRate} onChange={(e) => setConversionRate(Number(e.target.value))} className="w-full h-2 rounded-lg appearance-none cursor-pointer" style={{ background: `linear-gradient(to right, var(--spruce) 0%, var(--spruce) ${((conversionRate - 5) / 25) * 100}%, var(--frost) ${((conversionRate - 5) / 25) * 100}%, var(--frost) 100%)` }} />
-          <div className="flex justify-between text-[11px] mt-2" style={{ color: "var(--dark-gray)" }}><span>5%</span><span>30%</span></div>
         </div>
       </div>
 
-      <div className="mt-10 pt-8" style={{ borderTop: "1px solid var(--frost)" }}>
-        <div className="grid grid-cols-2 gap-4 mb-6">
-          <div className="text-center p-5" style={{ background: "var(--off-white)", borderRadius: "var(--radius-card)" }}>
-            <div className="text-[11px] font-bold tracking-[1px] uppercase mb-1" style={{ fontFamily: "var(--font-heading)", color: "var(--dark-gray)" }}>Teraz</div>
-            <div className="text-[32px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--midnight)" }}>{currentOrders}</div>
-            <div className="text-[11px]" style={{ color: "var(--dark-gray)" }}>zamówień/mies.</div>
-          </div>
-          <div className="text-center p-5" style={{ background: "var(--spruce-pale)", borderRadius: "var(--radius-card)", border: "2px solid var(--spruce)" }}>
-            <div className="text-[11px] font-bold tracking-[1px] uppercase mb-1" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce)" }}>Po wdrożeniu</div>
-            <div className="text-[32px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce)" }}>{newOrders}</div>
-            <div className="text-[11px]" style={{ color: "var(--dark-gray)" }}>zamówień/mies.</div>
-          </div>
+      {/* Results in compact row */}
+      <div className="flex items-center justify-between gap-4 p-4" style={{ background: "var(--midnight)", borderRadius: "var(--radius-button)" }}>
+        <div className="text-center flex-1">
+          <div className="text-[9px] font-bold tracking-[1px] uppercase" style={{ color: "var(--text-dark-muted)" }}>Teraz</div>
+          <div className="text-[24px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--frost)" }}>{currentOrders}</div>
         </div>
-
-        <div className="p-6 text-center" style={{ background: "var(--midnight)", borderRadius: "var(--radius-card)" }}>
-          <div className="text-[11px] font-bold tracking-[1px] uppercase mb-1" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce-light)" }}>Dodatkowy przychód miesięcznie</div>
-          <div className="text-[36px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--frost)" }}>+{additionalRevenue.toLocaleString()} €</div>
-          <div className="text-[13px]" style={{ color: "var(--text-dark-muted)" }}>(~{additionalRevenuePLN.toLocaleString()} PLN)</div>
-          <div className="mt-4 pt-4" style={{ borderTop: "1px solid var(--dark-border)" }}>
-            <span className="text-[13px]" style={{ color: "var(--text-dark-muted)" }}>Rocznie to </span>
-            <span className="text-[18px] font-bold" style={{ color: "var(--spruce-light)" }}>+{annualRevenue.toLocaleString()} €</span>
-          </div>
+        <div className="text-[20px]" style={{ color: "var(--spruce-light)" }}>→</div>
+        <div className="text-center flex-1">
+          <div className="text-[9px] font-bold tracking-[1px] uppercase" style={{ color: "var(--spruce-light)" }}>Po wdrożeniu</div>
+          <div className="text-[24px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce-light)" }}>{newOrders}</div>
         </div>
-        <p className="text-center text-[11px] mt-4" style={{ color: "var(--dark-gray)" }}>* Szacunki oparte na +16% wzrostu konwersji (case study Koduaken)</p>
+        <div className="h-10 w-px" style={{ background: "var(--dark-border)" }} />
+        <div className="text-center flex-1">
+          <div className="text-[9px] font-bold tracking-[1px] uppercase" style={{ color: "var(--spruce-light)" }}>+przychód/mies.</div>
+          <div className="text-[24px] font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce-light)" }}>+{additionalRevenue.toLocaleString()}€</div>
+        </div>
       </div>
+      <p className="text-center text-[10px] mt-3" style={{ color: "var(--dark-gray)" }}>+16% konwersji · {annualRevenue.toLocaleString()}€/rok · case study Koduaken</p>
     </div>
   );
 }
@@ -104,11 +66,8 @@ function CaseStudySection() {
   return (
     <section id="case-study" className="relative py-16 md:py-20 overflow-hidden frost-noise" style={{ background: "var(--midnight)" }}>
       <div className="relative z-10 max-w-[1000px] mx-auto px-5 md:px-8">
-        {/* Header */}
         <div className="text-center mb-10">
-          <ScrollReveal>
-            <div className="flex justify-center"><SectionLabel text="Case Study" /></div>
-          </ScrollReveal>
+          <ScrollReveal><div className="flex justify-center"><SectionLabel text="Case Study" /></div></ScrollReveal>
           <ScrollReveal delay={1}>
             <h2 className="text-[clamp(24px,3.5vw,36px)]" style={{ color: "var(--frost)" }}>
               Jak firma okienna zwiększyła sprzedaż <span className="italic" style={{ color: "var(--spruce-light)" }}>o 16%</span>
@@ -116,9 +75,7 @@ function CaseStudySection() {
           </ScrollReveal>
         </div>
 
-        {/* Compact layout - two columns */}
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Left column - Problem & Solution */}
           <ScrollReveal delay={2} variant="fadeLeft">
             <div className="space-y-6">
               <div>
@@ -141,7 +98,6 @@ function CaseStudySection() {
             </div>
           </ScrollReveal>
 
-          {/* Right column - Results */}
           <ScrollReveal delay={3} variant="fadeRight">
             <div className="p-6" style={{ background: "var(--dark-elevated)", borderRadius: "var(--radius-card)", border: "1px solid var(--dark-border)" }}>
               <span className="text-[10px] font-bold tracking-[2px] uppercase mb-4 inline-block" style={{ fontFamily: "var(--font-heading)", color: "var(--spruce-light)" }}>Wyniki</span>
@@ -154,15 +110,12 @@ function CaseStudySection() {
                 ))}
               </div>
               <div className="pt-4 text-center" style={{ borderTop: "1px solid var(--dark-border)" }}>
-                <p className="text-[14px]" style={{ color: "var(--text-dark-body)" }}>
-                  = <strong style={{ color: "var(--spruce-light)" }}>+30 000 €</strong>/mies.
-                </p>
+                <p className="text-[14px]" style={{ color: "var(--text-dark-body)" }}>= <strong style={{ color: "var(--spruce-light)" }}>+30 000 €</strong>/mies.</p>
               </div>
             </div>
           </ScrollReveal>
         </div>
 
-        {/* Stats row */}
         <ScrollReveal delay={4}>
           <div className="grid grid-cols-4 gap-2 mt-8">
             {[{ value: "388", label: "ofert", accent: false }, { value: "47", label: "odpowiedzi", accent: false }, { value: "37", label: "zamówień", accent: false }, { value: "341", label: "bez kontaktu", accent: true }].map((stat, i) => (
@@ -188,25 +141,14 @@ function HowItWorks() {
 
   return (
     <section id="process" className="relative py-20 md:py-24 overflow-hidden" style={{ background: "var(--off-white)" }}>
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 right-0 pointer-events-none" style={{ transform: "rotate(180deg)" }}>
-        <SpruceTreeline variant={2} opacity={0.04} />
-      </div>
-      <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-        <SpruceTreeline variant={1} opacity={0.04} />
-      </div>
-
-      {/* Subtle grid pattern */}
+      <div className="absolute top-0 left-0 right-0 pointer-events-none" style={{ transform: "rotate(180deg)" }}><SpruceTreeline variant={2} opacity={0.04} /></div>
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none"><SpruceTreeline variant={1} opacity={0.04} /></div>
       <div className="absolute inset-0 pointer-events-none opacity-[0.02]" style={{ backgroundImage: "linear-gradient(var(--spruce) 1px, transparent 1px), linear-gradient(90deg, var(--spruce) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
 
       <div className="relative z-10 max-w-[900px] mx-auto px-5 md:px-8">
         <div className="text-center mb-12">
           <ScrollReveal><div className="flex justify-center"><SectionLabel text="Proces" light /></div></ScrollReveal>
-          <ScrollReveal delay={1}>
-            <h2 className="text-[clamp(28px,4vw,42px)]" style={{ color: "var(--midnight)" }}>
-              Jak to <span className="italic" style={{ color: "var(--spruce)" }}>działa?</span>
-            </h2>
-          </ScrollReveal>
+          <ScrollReveal delay={1}><h2 className="text-[clamp(28px,4vw,42px)]" style={{ color: "var(--midnight)" }}>Jak to <span className="italic" style={{ color: "var(--spruce)" }}>działa?</span></h2></ScrollReveal>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
@@ -239,13 +181,8 @@ function TeamSection() {
       <div className="relative z-10 max-w-[700px] mx-auto px-5 md:px-8">
         <div className="text-center mb-10">
           <ScrollReveal><div className="flex justify-center"><SectionLabel text="Zespół" /></div></ScrollReveal>
-          <ScrollReveal delay={1}>
-            <h2 className="text-[clamp(24px,3.5vw,36px)]" style={{ color: "var(--frost)" }}>
-              Z kim będziesz <span className="italic" style={{ color: "var(--spruce-light)" }}>rozmawiać?</span>
-            </h2>
-          </ScrollReveal>
+          <ScrollReveal delay={1}><h2 className="text-[clamp(24px,3.5vw,36px)]" style={{ color: "var(--frost)" }}>Z kim będziesz <span className="italic" style={{ color: "var(--spruce-light)" }}>rozmawiać?</span></h2></ScrollReveal>
         </div>
-
         <div className="grid grid-cols-2 gap-5">
           {team.map((member, i) => (
             <ScrollReveal key={member.name} delay={i + 2}>
@@ -290,26 +227,12 @@ function CTASection() {
   return (
     <section className="relative py-20 md:py-24 frost-noise" style={{ background: "var(--midnight)" }}>
       <div className="max-w-[600px] mx-auto px-5 md:px-8 text-center">
-        <ScrollReveal>
-          <h2 className="text-[clamp(26px,4vw,38px)] mb-5" style={{ fontFamily: "var(--font-display)", color: "var(--frost)" }}>
-            Zarezerwuj 30-minutowy audyt
-          </h2>
-        </ScrollReveal>
-        <ScrollReveal delay={1}>
-          <p className="text-[16px] leading-[1.7] mb-8" style={{ color: "var(--text-dark-muted)" }}>
-            Zmapujemy Państwa proces ofertowania i pokażemy, gdzie giną potencjalne zamówienia. Bez zobowiązań.
-          </p>
-        </ScrollReveal>
+        <ScrollReveal><h2 className="text-[clamp(26px,4vw,38px)] mb-5" style={{ fontFamily: "var(--font-display)", color: "var(--frost)" }}>Zarezerwuj 30-minutowy audyt</h2></ScrollReveal>
+        <ScrollReveal delay={1}><p className="text-[16px] leading-[1.7] mb-8" style={{ color: "var(--text-dark-muted)" }}>Zmapujemy Państwa proces ofertowania i pokażemy, gdzie giną potencjalne zamówienia. Bez zobowiązań.</p></ScrollReveal>
         <ScrollReveal delay={2}>
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 text-[14px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5 pulse-glow" style={{ fontFamily: "var(--font-heading)", background: "var(--amber)", color: "white", borderRadius: "var(--radius-button)", boxShadow: "0 4px 20px rgba(212,135,63,0.3)" }}>
-            Zarezerwuj audyt
-          </a>
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 text-[14px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5 pulse-glow" style={{ fontFamily: "var(--font-heading)", background: "var(--amber)", color: "white", borderRadius: "var(--radius-button)", boxShadow: "0 4px 20px rgba(212,135,63,0.3)" }}>Zarezerwuj audyt</a>
         </ScrollReveal>
-        <ScrollReveal delay={3}>
-          <p className="text-[12px] mt-5" style={{ color: "var(--text-dark-muted)" }}>
-            Rozmowa po polsku z Mikitą lub po angielsku z Taavim
-          </p>
-        </ScrollReveal>
+        <ScrollReveal delay={3}><p className="text-[12px] mt-5" style={{ color: "var(--text-dark-muted)" }}>Rozmowa po polsku z Mikitą lub po angielsku z Taavim</p></ScrollReveal>
       </div>
     </section>
   );
@@ -317,66 +240,100 @@ function CTASection() {
 
 export function QuoteFollowUpPage() {
   const [loaded, setLoaded] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
 
   useEffect(() => {
     setLoaded(true);
+    const handleMouse = (e: MouseEvent) => {
+      setMousePos({
+        x: (e.clientX / window.innerWidth) * 100,
+        y: (e.clientY / window.innerHeight) * 100,
+      });
+    };
+    window.addEventListener("mousemove", handleMouse);
+    return () => window.removeEventListener("mousemove", handleMouse);
   }, []);
 
   return (
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background */}
+        {/* Background with parallax */}
         <div className="absolute inset-0 z-[0]">
-          <Image src="/images/hero-forest.jpg" alt="" fill className="object-cover" priority quality={85} />
+          <Image
+            src="/images/hero-forest.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+            quality={85}
+            style={{
+              transform: `scale(1.05) translate(${(mousePos.x - 50) * 0.02}%, ${(mousePos.y - 50) * 0.02}%)`,
+              transition: "transform 0.3s ease-out",
+            }}
+          />
           <div className="absolute inset-0" style={{ background: "linear-gradient(160deg, rgba(22, 25, 41, 0.85), rgba(22, 25, 41, 0.75) 40%, rgba(45, 106, 79, 0.4))" }} />
         </div>
 
-        <div className="absolute inset-0 z-[4] pointer-events-none frost-noise" />
+        {/* Mouse-following radial glow */}
+        <div
+          className="absolute inset-0 z-[3] pointer-events-none"
+          style={{
+            background: `radial-gradient(ellipse at ${mousePos.x}% ${mousePos.y}%, rgba(45, 106, 79, 0.12), transparent 60%)`,
+          }}
+        />
+
+        <div className="absolute inset-0 z-[4] pointer-events-none frost-noise film-grain" />
         <div className="absolute inset-0 z-[5] pointer-events-none opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(82,183,136,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(82,183,136,0.5) 1px, transparent 1px)", backgroundSize: "80px 80px", maskImage: "radial-gradient(ellipse at 50% 50%, black 20%, transparent 70%)", WebkitMaskImage: "radial-gradient(ellipse at 50% 50%, black 20%, transparent 70%)" }} />
 
-        {/* Spruce treeline at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 z-[6] pointer-events-none">
+        {/* Spruce treeline with parallax */}
+        <div
+          className="absolute bottom-0 left-0 right-0 z-[6] pointer-events-none"
+          style={{
+            transform: `translateY(${Math.max(0, (mousePos.y - 50) * 0.05)}px)`,
+            transition: "transform 0.3s ease-out",
+          }}
+        >
           <SpruceTreeline variant={1} opacity={0.15} />
         </div>
 
-        <div className="relative z-10 w-full max-w-[800px] mx-auto px-5 md:px-8 py-32 text-center">
+        <div className="relative z-10 w-full max-w-[800px] mx-auto px-5 md:px-8 py-24 text-center">
           {/* Fox Logo */}
-          <div className="mb-8" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0) scale(1)" : "translateY(16px) scale(0.9)", transition: "opacity 1s var(--fox-ease), transform 1s var(--fox-ease)" }}>
-            <AnimatedFoxLogo size={100} glow animate={loaded} className="mx-auto" />
+          <div className="mb-6" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0) scale(1)" : "translateY(16px) scale(0.9)", transition: "opacity 1s var(--fox-ease), transform 1s var(--fox-ease)" }}>
+            <AnimatedFoxLogo size={90} glow animate={loaded} className="mx-auto" />
           </div>
 
           <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s var(--fox-ease) 0.2s, transform 0.7s var(--fox-ease) 0.2s" }} className="flex justify-center">
             <SectionLabel text="Dla firm z branży okien i drzwi" />
           </div>
 
-          <h1 className="text-[clamp(28px,4.5vw,48px)] leading-[1.2] mb-4" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s var(--fox-ease) 0.35s, transform 0.7s var(--fox-ease) 0.35s", color: "var(--frost)", textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
+          <h1 className="text-[clamp(26px,4vw,44px)] leading-[1.2] mb-3" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s var(--fox-ease) 0.35s, transform 0.7s var(--fox-ease) 0.35s", color: "var(--frost)", textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
             Wysyłasz ponad 50 ofert miesięcznie!
           </h1>
 
-          <h2 className="text-[clamp(24px,4vw,42px)] leading-[1.2] mb-8 italic" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s var(--fox-ease) 0.45s, transform 0.7s var(--fox-ease) 0.45s", color: "var(--spruce-light)", textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
+          <h2 className="text-[clamp(22px,3.5vw,38px)] leading-[1.2] mb-6 italic" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s var(--fox-ease) 0.45s, transform 0.7s var(--fox-ease) 0.45s", color: "var(--spruce-light)", textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
             Ale 73% z nich przepada bez wieści...
           </h2>
 
-          <p className="text-[clamp(15px,1.8vw,18px)] leading-[1.7] max-w-[550px] mx-auto mb-10" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s var(--fox-ease) 0.55s, transform 0.7s var(--fox-ease) 0.55s", color: "var(--mist)", textShadow: "0 1px 10px rgba(0,0,0,0.4)" }}>
+          <p className="text-[clamp(14px,1.6vw,16px)] leading-[1.7] max-w-[500px] mx-auto mb-8" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s var(--fox-ease) 0.55s, transform 0.7s var(--fox-ease) 0.55s", color: "var(--mist)", textShadow: "0 1px 10px rgba(0,0,0,0.4)" }}>
             Powód? Wcale nie cena, a brak czasu na zwykły telefon z Twojej strony.
             <br />
             <strong style={{ color: "var(--frost)" }}>Automatyczny follow-up sprawi, że żadna okazja nie ucieknie Ci przez palce.</strong>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s var(--fox-ease) 0.65s, transform 0.7s var(--fox-ease) 0.65s" }}>
-            <a href="#kalkulator" className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5 pulse-glow" style={{ fontFamily: "var(--font-heading)", background: "var(--amber)", color: "white", borderRadius: "var(--radius-button)" }}>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center" style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s var(--fox-ease) 0.65s, transform 0.7s var(--fox-ease) 0.65s" }}>
+            <a href="#kalkulator" className="px-7 py-3.5 text-[12px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5 pulse-glow" style={{ fontFamily: "var(--font-heading)", background: "var(--amber)", color: "white", borderRadius: "var(--radius-button)" }}>
               Oblicz potencjalny wzrost
             </a>
-            <a href="#case-study" className="px-8 py-4 text-[13px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,255,255,0.08)]" style={{ fontFamily: "var(--font-heading)", border: "2px solid rgba(255,255,255,0.25)", color: "var(--frost)", borderRadius: "var(--radius-button)", backdropFilter: "blur(8px)" }}>
+            <a href="#case-study" className="px-7 py-3.5 text-[12px] font-semibold tracking-[0.5px] uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,255,255,0.08)]" style={{ fontFamily: "var(--font-heading)", border: "2px solid rgba(255,255,255,0.25)", color: "var(--frost)", borderRadius: "var(--radius-button)", backdropFilter: "blur(8px)" }}>
               Zobacz case study
             </a>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2" style={{ opacity: loaded ? 1 : 0, transition: "opacity 1s ease 1.2s" }}>
-          <span className="text-[10px] font-semibold tracking-[2px] uppercase" style={{ fontFamily: "var(--font-heading)", color: "var(--text-dark-muted)" }}>Przewiń</span>
+        {/* Scroll indicator - always visible */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce">
+          <span className="text-[10px] font-semibold tracking-[2px] uppercase" style={{ fontFamily: "var(--font-heading)", color: "var(--mist)" }}>Przewiń</span>
           <div className="scroll-indicator">
             <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="var(--mist)" strokeWidth="1.5">
               <rect x="1" y="1" width="14" height="22" rx="7" />
@@ -384,28 +341,22 @@ export function QuoteFollowUpPage() {
             </svg>
           </div>
         </div>
+
+        {/* Bottom gradient */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 z-[7] pointer-events-none" style={{ background: "linear-gradient(to top, var(--midnight), transparent)" }} />
       </section>
 
       {/* ROI Calculator Section */}
-      <section id="kalkulator" className="relative py-20 md:py-24" style={{ background: "var(--off-white)" }}>
-        {/* Background decorations */}
-        <div className="absolute top-0 left-0 right-0 pointer-events-none" style={{ transform: "rotate(180deg)" }}>
-          <SpruceTreeline variant={3} opacity={0.03} />
-        </div>
+      <section id="kalkulator" className="relative py-16 md:py-20" style={{ background: "var(--off-white)" }}>
+        <div className="absolute top-0 left-0 right-0 pointer-events-none" style={{ transform: "rotate(180deg)" }}><SpruceTreeline variant={3} opacity={0.03} /></div>
         <div className="absolute inset-0 pointer-events-none opacity-[0.015]" style={{ backgroundImage: "radial-gradient(var(--spruce) 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
 
-        <div className="relative z-10 max-w-[600px] mx-auto px-5 md:px-8">
-          <div className="text-center mb-10">
+        <div className="relative z-10 max-w-[550px] mx-auto px-5 md:px-8">
+          <div className="text-center mb-8">
             <ScrollReveal><div className="flex justify-center"><SectionLabel text="Kalkulator" light /></div></ScrollReveal>
-            <ScrollReveal delay={1}>
-              <h2 className="text-[clamp(26px,4vw,38px)]" style={{ color: "var(--midnight)" }}>
-                Ile możesz <span className="italic" style={{ color: "var(--spruce)" }}>zyskać?</span>
-              </h2>
-            </ScrollReveal>
+            <ScrollReveal delay={1}><h2 className="text-[clamp(24px,3.5vw,34px)]" style={{ color: "var(--midnight)" }}>Ile możesz <span className="italic" style={{ color: "var(--spruce)" }}>zyskać?</span></h2></ScrollReveal>
           </div>
-          <ScrollReveal delay={2}>
-            <ROICalculator />
-          </ScrollReveal>
+          <ScrollReveal delay={2}><ROICalculator /></ScrollReveal>
         </div>
       </section>
 
