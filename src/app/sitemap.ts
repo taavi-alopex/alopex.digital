@@ -72,5 +72,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Polish-specific landing page for quote follow-up campaign
+  routes.push({
+    url: `${baseUrl}/pl/automatyczny-follow-up`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.9,
+  });
+
   return routes;
 }
