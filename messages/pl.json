@@ -216,41 +216,54 @@
   "process": {
     "meta": {
       "title": "Nasz proces",
-      "description": "Metoda orkiestracji systemów — od audytu odkrywczego do strategicznego blueprintu, przez budowę architektury do bezproblemowego wdrożenia."
+      "description": "Metoda Orkiestracji Systemów — 5-etapowa metodyka, która prowadzi Cię od chaosu do jasności w 12 tygodni."
     },
     "label": "Nasz proces",
-    "title": "Metoda",
-    "titleAccent": "Orkiestracji Systemów",
+    "title": "Od chaosu do jasności",
+    "titleAccent": "w 12 tygodni",
+    "subtitle": "Sprawdzona metodyka, która gwarantuje, że każda automatyzacja, którą budujemy, opiera się na głębokim zrozumieniu Twojego biznesu, a nie na założeniach.",
+    "inputLabel": "Ty dostarczasz",
+    "outputLabel": "Ty otrzymujesz",
     "steps": [
       {
         "title": "Audyt Systemów",
         "phase": "Odkrywanie",
-        "description": "Rozumiemy problem, zanim zaprojektujemy rozwiązanie. W 1–2 spotkaniach oceniamy Twoje obecne bolączki, procesy i wąskie gardła, aby precyzyjnie zidentyfikować, gdzie tracisz przychody.",
-        "detail": "1–2 spotkania"
+        "duration": "Tydzień 1",
+        "description": "Zanim cokolwiek zaprojektujemy, musimy zrozumieć, gdzie jesteś dzisiaj. Mapujemy Twój obecny proces sprzedaży, znajdujemy gdzie uciekają leady i identyfikujemy wąskie gardła, które kosztują Cię pieniądze.",
+        "inputs": ["Dostęp do kluczowych osób", "Przegląd obecnych narzędzi", "Przykłady materiałów sprzedażowych", "Szczere odpowiedzi o tym, co działa"],
+        "outputs": ["Raport z audytu systemów", "Mapa obecnych procesów", "Zidentyfikowane miejsca utraty przychodów", "Ocena gotowości"]
       },
       {
-        "title": "Strategiczny Blueprint",
+        "title": "Plan Strategiczny",
         "phase": "Planowanie",
-        "description": "Jasna mapa drogowa bez niespodzianek. Projektujemy pełną architekturę rozwiązania, ustalamy harmonogram i definiujemy każdą integrację. Ten dokument jest Twój na zawsze.",
-        "detail": "Twój na zawsze"
+        "duration": "Tydzień 2-3",
+        "description": "Na podstawie wyników audytu projektujemy kompletną architekturę rozwiązania. To Twoja mapa drogowa — szczegółowy plan pokazujący dokładnie co zbudujemy, jak systemy się połączą i jaki będzie efekt końcowy.",
+        "inputs": ["Feedback do ustaleń z audytu", "Priorytety biznesowe i ograniczenia", "Czas decydenta na spotkania zatwierdzające"],
+        "outputs": ["Dokument planu strategicznego", "Wizualna architektura systemu", "Specyfikacje workflow", "Podział inwestycji"]
       },
       {
-        "title": "Budowa Architektury",
-        "phase": "Wdrożenie",
-        "description": "Przejrzysty postęp i doskonałość techniczna. Budujemy Twoją infrastrukturę GoHighLevel, integrujemy niestandardowe API przez n8n i konfigurujemy automatyzację — z cotygodniowym raportowaniem przez ClickUp.",
-        "detail": "Cotygodniowe raporty postępu"
+        "title": "Budowa Systemu",
+        "phase": "Realizacja",
+        "duration": "Tydzień 4-10",
+        "description": "Z zatwierdzonym planem rozpoczynamy budowę Twojego systemu. Konfigurujemy środowisko GoHighLevel, budujemy integracje przez n8n i tworzymy workflow, które będą napędzać Twój biznes.",
+        "inputs": ["Terminowy feedback do wersji roboczych", "Dostępy do integracji", "Dane testowe", "Treści do szablonów"],
+        "outputs": ["Skonfigurowane konto GoHighLevel", "Działające integracje", "Workflow automatyzacji", "Cotygodniowe raporty postępu w ClickUp"]
       },
       {
-        "title": "Bezproblemowy Start",
-        "phase": "Onboarding",
-        "description": "Nie odchodzimy, dopóki Twój zespół nie czuje się pewnie z systemem. Praktyczne szkolenie, dostosowanie interfejsu i wsparcie adopcji — bo wdrożenie nie jest skończone, dopóki Twój zespół z tego nie korzysta.",
-        "detail": "Praktyczne szkolenie w cenie"
+        "title": "Płynny Start",
+        "phase": "Uruchomienie",
+        "duration": "Tydzień 11-12",
+        "description": "System tworzy wartość tylko wtedy, gdy Twój zespół faktycznie go używa. Zapewniamy, że Twój zespół jest pewny i komfortowy z nowym systemem, zanim się wycofamy.",
+        "inputs": ["Czas zespołu na szkolenia", "Istniejące dane klientów", "Feedback o użyteczności"],
+        "outputs": ["Przeszkolony zespół", "Zmigrowane dane", "Dokumentacja użytkownika", "Wsparcie przy starcie"]
       },
       {
         "title": "Pętla Wzrostu",
-        "phase": "Ciągłe wsparcie",
-        "description": "Dbamy o to, by system ewoluował razem z Twoją firmą. Dwutygodniowe rozmowy stabilizacyjne przechodzą w kwartalne przeglądy strategiczne, utrzymując infrastrukturę o krok przed Twoim wzrostem.",
-        "detail": "Ciągła ewolucja"
+        "phase": "Ciągłe",
+        "duration": "Na stałe",
+        "description": "Twoja firma się rozwija, a Twoje systemy powinny rozwijać się razem z nią. Pętla Wzrostu zapewnia, że Twoja infrastruktura wyprzedza Twój wzrost — a nie zostaje w tyle.",
+        "inputs": ["Czas na regularne spotkania", "Feedback o tym, co działa", "Informacje o zmianach w biznesie"],
+        "outputs": ["Rozmowy co dwa tygodnie", "Kwartalne przeglądy", "Ciągłe ulepszenia", "Priorytetowe wsparcie"]
       }
     ]
   },

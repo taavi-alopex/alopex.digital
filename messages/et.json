@@ -216,41 +216,54 @@
   "process": {
     "meta": {
       "title": "Meie protsess",
-      "description": "Süsteemide orkestreerimise meetod — auditist strateegilise kavandini, arhitektuuri ehitamisest sujuva käivitamiseni."
+      "description": "Süsteemide orkestreerimise meetod — 5-etapiline metoodika, mis viib sind kaosest selguseni 12 nädalaga."
     },
     "label": "Meie protsess",
-    "title": "Süsteemide",
-    "titleAccent": "orkestreerimise meetod",
+    "title": "Kaosest selguseni",
+    "titleAccent": "12 nädalaga",
+    "subtitle": "Tõestatud metoodika, mis tagab, et iga automaatika, mille ehitame, põhineb su äri sügaval mõistmisel, mitte oletustel.",
+    "inputLabel": "Sina annad",
+    "outputLabel": "Sina saad",
     "steps": [
       {
-        "title": "Süsteemide audit",
-        "phase": "Avastamine",
-        "description": "Mõistame probleemi enne lahenduse kujundamist. 1–2 kohtumisega hindame su praegused valukohad, protsessid ja kitsaskohad, et tuvastada täpselt, kust tulu lekib.",
-        "detail": "1–2 kohtumist"
+        "title": "Süsteemi audit",
+        "phase": "Avastus",
+        "duration": "1. nädal",
+        "description": "Enne kui midagi projekteerima hakkame, peame mõistma, kus sa täna oled. Kaardistame su praeguse müügiprotsessi, leiame kust lead'id kaovad ja tuvastame kitsaskohad, mis sulle raha maksavad.",
+        "inputs": ["Ligipääs võtmeisikutele", "Ülevaade praegustest tööriistadest", "Näited müügimaterjalidest", "Ausad vastused selle kohta, mis töötab"],
+        "outputs": ["Süsteemi auditi raport", "Praeguse olukorra protsessikaart", "Tuvastatud kohad, kust raha kaob", "Valmiduse hinnang"]
       },
       {
-        "title": "Strateegiline kavand",
+        "title": "Strateegiline plaan",
         "phase": "Planeerimine",
-        "description": "Selge tegevuskava ilma üllatusteta. Kaardistame kogu lahenduse arhitektuuri, määrame ajakava ja defineerime iga integratsiooni. See väljund jääb sulle.",
-        "detail": "Jääb sulle"
+        "duration": "2.-3. nädal",
+        "description": "Auditi tulemuste põhjal projekteerime täieliku lahenduse arhitektuuri. See on su tegevuskava — detailne plaan, mis näitab täpselt, mida ehitame, kuidas süsteemid ühenduvad ja milline on lõpptulemus.",
+        "inputs": ["Tagasiside auditi leidudele", "Äriprioriteedid ja piirangud", "Otsustaja aeg kinnituskoosolekuteks"],
+        "outputs": ["Strateegilise plaani dokument", "Visuaalne süsteemi arhitektuur", "Workflow spetsifikatsioonid", "Investeeringu jaotus"]
       },
       {
-        "title": "Arhitektuuri ehitus",
-        "phase": "Teostamine",
-        "description": "Läbipaistev edenemine ja tehniline tipptase. Ehitame su GoHighLevel taristu, integreerime kohandatud API-d n8n kaudu ja seadistame automatiseerimise — koos iganädalase aruandlusega ClickUp kaudu.",
-        "detail": "Iganädalased edenemisaruanded"
+        "title": "Süsteemi ehitus",
+        "phase": "Teostus",
+        "duration": "4.-10. nädal",
+        "description": "Kinnitatud plaaniga alustame su süsteemi ehitamist. Seadistame su GoHighLevel keskkonna, ehitame n8n kaudu kohandatud ühendused ja loome workflow'd, mis su äri jooksutavad.",
+        "inputs": ["Õigeaegne tagasiside mustanditele", "Ligipääsud ühendusteks", "Näidisandmed testimiseks", "Sisu mallidele"],
+        "outputs": ["Seadistatud GoHighLevel konto", "Töötavad ühendused", "Automaatika workflow'd", "Iganädalased eduaruanded ClickUp'is"]
       },
       {
         "title": "Sujuv käivitus",
-        "phase": "Juurutamine",
-        "description": "Me ei lahku enne, kui su meeskond tunneb end süsteemiga mugavalt. Praktiline koolitus, kasutajaliidese kohandused ja kasutuselevõtu tugi — sest tarnimine pole lõppenud enne, kui meeskond süsteemi kasutab.",
-        "detail": "Praktiline koolitus kaasas"
+        "phase": "Käivitus",
+        "duration": "11.-12. nädal",
+        "description": "Süsteem loob väärtust ainult siis, kui su tiim seda tegelikult kasutab. Tagame, et su tiim on uue süsteemiga kindel ja mugav enne, kui meie tagasi astume.",
+        "inputs": ["Tiimi aeg koolitusteks", "Olemasolevad kliendiandmed", "Tagasiside kasutatavusele"],
+        "outputs": ["Koolitatud tiim", "Ületoodud andmed", "Kasutajadokumentatsioon", "Käivitustugi"]
       },
       {
-        "title": "Kasvu tsükkel",
+        "title": "Kasvutsükkel",
         "phase": "Jätkuv",
-        "description": "Tagame, et süsteem areneb koos su äriga. Kahenädalased stabiliseerimiskõned lähevad üle kvartaalseteks strateegia ülevaatusteks, hoides su taristut kasvust sammu ees.",
-        "detail": "Pidev areng"
+        "duration": "Pidevalt",
+        "description": "Su äri areneb ja su süsteemid peaksid sellega kaasa arenema. Kasvutsükkel tagab, et su infrastruktuur püsib su kasvust ees — mitte maha jäädes.",
+        "inputs": ["Aeg regulaarseteks kohtumisteks", "Tagasiside selle kohta, mis töötab", "Info ärimuudatuste kohta"],
+        "outputs": ["Iga kahe nädala tagant kõned", "Kvartalikoosolekud", "Pidevad parandused", "Prioriteetne tugi"]
       }
     ]
   },
