@@ -216,41 +216,54 @@
   "process": {
     "meta": {
       "title": "Our Process",
-      "description": "The Systems Orchestration Method — from discovery audit to strategic blueprint to architecture build to frictionless launch."
+      "description": "The Systems Orchestration Method — a proven 5-phase methodology that takes you from chaos to clarity in 12 weeks."
     },
     "label": "Our Process",
-    "title": "The Systems",
-    "titleAccent": "Orchestration Method",
+    "title": "From Chaos to Clarity",
+    "titleAccent": "in 12 Weeks",
+    "subtitle": "A proven methodology that ensures every automation we build is rooted in deep understanding of your business, not assumptions.",
+    "inputLabel": "You Provide",
+    "outputLabel": "You Receive",
     "steps": [
       {
         "title": "The Systems Audit",
         "phase": "Discovery",
-        "description": "We understand the problem before we design the solution. In 1-2 meetings, we assess your current pains, processes, and bottlenecks to identify exactly where revenue is leaking.",
-        "detail": "1-2 meetings"
+        "duration": "Week 1",
+        "description": "Before we design anything, we need to understand where you are today. We map your current sales process, identify where leads are leaking, and pinpoint the bottlenecks costing you revenue.",
+        "inputs": ["Access to key team members", "Overview of current tools", "Examples of sales materials", "Honest answers about what's working"],
+        "outputs": ["Systems Audit Report", "Current state process map", "Identified revenue leaks", "Readiness assessment"]
       },
       {
         "title": "The Strategic Blueprint",
         "phase": "Planning",
-        "description": "A clear roadmap with no surprises. We map the full solution architecture, scope the timeline, and define every integration. This deliverable is yours to keep.",
-        "detail": "Yours to keep"
+        "duration": "Week 2-3",
+        "description": "Based on the audit findings, we design a complete solution architecture. This is your roadmap — a detailed plan showing exactly what we'll build, how systems connect, and what the end result looks like.",
+        "inputs": ["Feedback on audit findings", "Business priorities & constraints", "Decision-making availability"],
+        "outputs": ["Strategic Blueprint Document", "Visual system architecture", "Workflow specifications", "Investment breakdown"]
       },
       {
         "title": "The Architecture Build",
         "phase": "Implementation",
-        "description": "Transparent progress and technical excellence. We build your GoHighLevel infrastructure, integrate custom APIs via n8n, and configure automation \u2014 with weekly reporting via ClickUp.",
-        "detail": "Weekly progress reports"
+        "duration": "Week 4-10",
+        "description": "With an approved Blueprint, we build your system. We configure your GoHighLevel environment, build custom integrations via n8n, and create the automation workflows that will run your business.",
+        "inputs": ["Timely feedback on drafts", "Access credentials for integrations", "Sample data for testing", "Content for templates"],
+        "outputs": ["Configured GoHighLevel account", "Working integrations", "Automation workflows", "Weekly progress reports via ClickUp"]
       },
       {
         "title": "The Frictionless Launch",
         "phase": "Onboarding",
-        "description": "We don\u2019t leave until your team is comfortable using the system. Hands-on training, UI tweaks, and adoption support \u2014 because delivery isn\u2019t done until your team is using it.",
-        "detail": "Hands-on training included"
+        "duration": "Week 11-12",
+        "description": "A system only creates value if your team actually uses it. We ensure your team is confident and comfortable with the new system before we step back.",
+        "inputs": ["Team availability for training", "Existing customer data", "Feedback on usability"],
+        "outputs": ["Trained team", "Migrated data", "User documentation", "Go-live support"]
       },
       {
         "title": "The Growth Loop",
         "phase": "Ongoing",
-        "description": "We ensure the system evolves with your business. Bi-weekly stabilization calls transition to quarterly strategy reviews, keeping your infrastructure ahead of your growth.",
-        "detail": "Continuous evolution"
+        "duration": "Continuous",
+        "description": "Your business evolves, and your systems should evolve with it. The Growth Loop ensures your infrastructure stays ahead of your growth — not behind it.",
+        "inputs": ["Availability for check-ins", "Feedback on what's working", "Updates on business changes"],
+        "outputs": ["Bi-weekly stabilization calls", "Quarterly strategy reviews", "Continuous improvements", "Priority support access"]
       }
     ]
   },
