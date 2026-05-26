@@ -89,7 +89,7 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics";
       openGraph: {
         title: t("title"),
         description: t("ogDescription"),
-        url: "https://alopex.digital",
+        url: "https://alopex.digital ",
         siteName: "Alopex Digital",
         type: "website",
         locale: locale === "et" ? "et_EE" : locale === "pl" ? "pl_PL" : "en_US",
