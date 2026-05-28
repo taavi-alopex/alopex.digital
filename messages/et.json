@@ -216,7 +216,7 @@
   "process": {
     "meta": {
       "title": "Meie protsess",
-      "description": "Süsteemide orkestreerimise meetod — 5-etapiline metoodika, mis viib sind kaosest selguseni 12 nädalaga."
+      "description": "Süsteemide orkestreerimise meetod — 6-etapiline metoodika, mis viib sind esimesest kontaktist töötava süsteemini 12 nädalaga."
     },
     "label": "Meie protsess",
     "title": "Kaosest selguseni",
@@ -225,6 +225,14 @@
     "inputLabel": "Sina annad",
     "outputLabel": "Sina saad",
     "steps": [
+      {
+        "title": "Tutvumiskõne",
+        "phase": "Esimene kontakt",
+        "duration": "30 minutit",
+        "description": "Enne kui alustame, peame mõistma, kas sobime kokku. See esialgne vestlus aitab meil mõista sinu ärikonteksti, väljakutseid ja eesmärke — ning sul mõista, kuidas meie töötame.",
+        "inputs": ["Sinu ärikontekst", "Praegused väljakutsed", "Kasvueesmärgid", "Valmisolek avameelselt rääkida"],
+        "outputs": ["Vastastikune arusaam sobivusest", "Selge jah/ei edasiliikumiseks", "Kui jah: järgmised sammud", "Kui ei: aus tagasiside ja soovitused"]
+      },
       {
         "title": "Süsteemi audit",
         "phase": "Avastus",

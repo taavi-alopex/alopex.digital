@@ -216,7 +216,7 @@
   "process": {
     "meta": {
       "title": "Nasz proces",
-      "description": "Metoda Orkiestracji Systemów — 5-etapowa metodyka, która prowadzi Cię od chaosu do jasności w 12 tygodni."
+      "description": "Metoda Orkiestracji Systemów — 6-etapowa metodyka, która prowadzi Cię od pierwszego kontaktu do działającego systemu w 12 tygodni."
     },
     "label": "Nasz proces",
     "title": "Od chaosu do jasności",
@@ -225,6 +225,14 @@
     "inputLabel": "Ty dostarczasz",
     "outputLabel": "Ty otrzymujesz",
     "steps": [
+      {
+        "title": "Rozmowa Wprowadzająca",
+        "phase": "Pierwszy kontakt",
+        "duration": "30 minut",
+        "description": "Zanim rozpoczniemy jakąkolwiek współpracę, musimy zrozumieć, czy pasujemy do siebie. Ta wstępna rozmowa pomaga nam zrozumieć kontekst Twojego biznesu, wyzwania i cele — a Tobie zrozumieć, jak pracujemy.",
+        "inputs": ["Kontekst Twojego biznesu", "Obecne wyzwania", "Cele wzrostu", "Otwartość na rozmowę o tym, co nie działa"],
+        "outputs": ["Wzajemne zrozumienie dopasowania", "Jasna decyzja tak/nie", "Jeśli tak: następne kroki", "Jeśli nie: szczery feedback i rekomendacje"]
+      },
       {
         "title": "Audyt Systemów",
         "phase": "Odkrywanie",

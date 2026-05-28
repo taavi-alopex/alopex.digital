@@ -16,7 +16,7 @@ interface ProcessStep {
 export function Process() {
   const t = useTranslations("process");
   const steps: ProcessStep[] = t.raw("steps");
-  const numbers = ["01", "02", "03", "04", "05"];
+  const numbers = ["00", "01", "02", "03", "04", "05"];
 
   return (
     <section

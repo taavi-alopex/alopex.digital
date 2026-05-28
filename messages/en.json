@@ -216,7 +216,7 @@
   "process": {
     "meta": {
       "title": "Our Process",
-      "description": "The Systems Orchestration Method — a proven 5-phase methodology that takes you from chaos to clarity in 12 weeks."
+      "description": "The Systems Orchestration Method — a proven 6-phase methodology that takes you from first contact to live system in 12 weeks."
     },
     "label": "Our Process",
     "title": "From Chaos to Clarity",
@@ -225,6 +225,14 @@
     "inputLabel": "You Provide",
     "outputLabel": "You Receive",
     "steps": [
+      {
+        "title": "The Discovery Call",
+        "phase": "First Contact",
+        "duration": "30 Minutes",
+        "description": "Before we dive into any engagement, we need to understand if we're the right fit for each other. This initial conversation helps us understand your business context, challenges, and goals — and helps you understand how we work.",
+        "inputs": ["Your business context", "Current challenges", "Growth goals", "Openness to discuss what's not working"],
+        "outputs": ["Mutual understanding of fit", "Clear yes/no on moving forward", "If yes: next steps outlined", "If no: honest feedback and referrals"]
+      },
       {
         "title": "The Systems Audit",
         "phase": "Discovery",
