@@ -906,5 +906,112 @@
     "team": {
       "title": "Otsekontaktid"
     }
+  },
+  "automateSales": {
+    "meta": {
+      "title": "Automatiseerime su müügi | Alopex Digital",
+      "description": "Las roboti töö jääb robotile. Ehitame terve müügimasina — leadide leidmisest kuni korduvmüügini. Vähem inimtööjõukulu, ükski lead ega pakkumine ei jää rippuma."
+    },
+    "hero": {
+      "label": "Müügiautomaatika",
+      "title": "Las roboti töö jääb",
+      "titleAccent": "robotile.",
+      "subtitle": "Automatiseerime su müügi — leadide leidmisest kuni korduvmüügini. Vähem inimtööjõukulu, ükski lead ega pakkumine ei jää rippuma.",
+      "cta": "Broneeri 15 min Martiniga",
+      "scroll": "Keri",
+      "micro": "Tasuta. Ilma müügisurveta. Näitame, kuidas masin sinu ärile käiks."
+    },
+    "problem": {
+      "title": "Müük on inimese-sõltuv pudelikael, mitte süsteem.",
+      "p1": "Enamik B2B-firmasid teeb müügi käsitsi. Omanik või paar müügimeest ajavad leade taga, pakkumised jäävad õhku rippuma, vana kliendibaas ei saa ühtegi follow-up'i.",
+      "p2": "Kui palju su tiimi nädalast kulub asjadele, mida robot võiks teha? Leadide otsimine, kvalifitseerimine, pakkumiste järelajamine, info käsitsi kopeerimine ühest süsteemist teise — see on roboti töö, mitte inimese oma."
+    },
+    "machine": {
+      "title": "Terve müügimasin, võtmed kätte.",
+      "intro": "Me ei müü tööriista. Me ehitame valmis müügimasina, mis töötab taustal 24/7 — ei haigestu ega lahku.",
+      "metaProof": "Tõestus on lihtne: see leht ja kiri, mis sind siia tõi, on sama masin töös.",
+      "steps": [
+        {
+          "title": "Leadide leidmine",
+          "desc": "Masin leiab õiged ettevõtted ise — keegi ei käi käsitsi lehti läbi."
+        },
+        {
+          "title": "Rikastamine",
+          "desc": "Iga lead rikastatakse ja skooritakse enne kontakti."
+        },
+        {
+          "title": "Personaalne outreach",
+          "desc": "AI-genereeritud kirjad, mitte template-spam."
+        },
+        {
+          "title": "Follow-up jadad",
+          "desc": "Mitmeastmeline järelkontakt e-mail + SMS, automaatselt."
+        },
+        {
+          "title": "Info kogumine",
+          "desc": "Huvitatute käest kogutakse kvalifitseeriv info ise."
+        },
+        {
+          "title": "Automaatne pakkumine",
+          "desc": "Kogutud infost genereeritakse pakkumine."
+        },
+        {
+          "title": "Baasi äratamine",
+          "desc": "Vana kliendibaas re-aktiveeritakse automaatselt."
+        }
+      ]
+    },
+    "proof": {
+      "title": "Mida me oleme juba ehitanud.",
+      "items": [
+        {
+          "name": "Packtailor",
+          "body": "Elimineerisime vajaduse käia käsitsi ettevõtete lehti läbi, et leade leida ja kvalifitseerida. Outreach, follow-up ja esmane info kogumine personaliseeritakse automaatselt.",
+          "result": "Käsitöö kadus — masin teeb selle 24/7."
+        },
+        {
+          "name": "Koduaken",
+          "body": "Ehitasime automaatse follow-up'i pakkumistele. Ükski pakkumine ei jää enam rippuma, järelkontakt käib ise kuni kliendi otsuseni.",
+          "result": "+15% müüki — ilma ühtegi uut inimest palkamata."
+        }
+      ]
+    },
+    "roi": {
+      "title": "Müügimehe alternatiiv, mis ei lahku.",
+      "p1": "Üks müügiinimene maksab 2500–4000€ kuus, pluss värbamine ja sisseelamine. Masin teeb lead gen'i, follow-up'i ja pakkumiste järelkontakti 24/7 — ei haigestu, ei lahku, ei unusta.",
+      "p2": "Sina keskendud tehingute sulgemisele. Rutiin jääb masinale.",
+      "card": {
+        "costLabel": "Müügimees",
+        "cost": "2500–4000 €/kuus",
+        "machineLabel": "Masin",
+        "machine": "24/7 — ei haigestu, ei lahku"
+      }
+    },
+    "ctaSection": {
+      "title": "Vaatame, kuidas see sinu ärile käiks.",
+      "subtitle": "15 minutit Martiniga. Ilma müügisurveta — näitame masinat ja kas see sulle sobib.",
+      "button": "Broneeri discovery kõne"
+    },
+    "faq": {
+      "title": "Levinud küsimused.",
+      "items": [
+        {
+          "q": "Tahate mu müügimehe asendada?",
+          "a": "Ei — me anname talle relvad. Masin teeb rutiini (lead gen, follow-up, pakkumiste järelkontakt), müügiinimene keskendub tehingute sulgemisele ja suhetele."
+        },
+        {
+          "q": "Kõlab liiga hea, et tõsi olla.",
+          "a": "Sa just kogesid seda. See leht ja kiri, mis sind siia tõi, on sama masina töö. Discovery kõnel näitan täpselt, kuidas see sinu ärile käib."
+        },
+        {
+          "q": "Külmad kirjad = spam?",
+          "a": "GDPR-konformne, legitiimne huvi, opt-out igas kirjas. Ja sa ise nägid — see polnud spam, vaid relevantne."
+        },
+        {
+          "q": "Pole aega seadistada.",
+          "a": "Meie ehitame kogu masina. Sinu ülesanne on tehinguid sulgeda."
+        }
+      ]
+    }
   }
 }

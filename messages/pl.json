@@ -906,5 +906,112 @@
     "team": {
       "title": "Kontakty bezpośrednie"
     }
+  },
+  "automateSales": {
+    "meta": {
+      "title": "We automate your sales | Alopex Digital",
+      "description": "Let robots do the robot work. We build a whole sales machine — from finding leads to repeat business. Less labour cost, no lead or quote left hanging."
+    },
+    "hero": {
+      "label": "Sales automation",
+      "title": "Let robots do the",
+      "titleAccent": "robot work.",
+      "subtitle": "We automate your sales — from finding leads to repeat business. Less labour cost, and no lead or quote left hanging.",
+      "cta": "Book 15 min with Martin",
+      "scroll": "Scroll",
+      "micro": "Free. No sales pressure. We show how the machine would run for your business."
+    },
+    "problem": {
+      "title": "Sales is a people-dependent bottleneck, not a system.",
+      "p1": "Most B2B firms run sales by hand. The owner or a couple of salespeople chase leads, quotes hang in the air, and the old client base never gets a follow-up.",
+      "p2": "How much of your team's week goes to things a robot could do? Finding leads, qualifying, chasing quotes, copying data between systems by hand — that's robot work, not human work."
+    },
+    "machine": {
+      "title": "A whole sales machine, turnkey.",
+      "intro": "We don't sell a tool. We build a finished sales machine that runs in the background 24/7 — it doesn't get sick or quit.",
+      "metaProof": "The proof is simple: this page and the email that brought you here are the same machine at work.",
+      "steps": [
+        {
+          "title": "Finding leads",
+          "desc": "The machine finds the right companies itself — no one combs through pages by hand."
+        },
+        {
+          "title": "Enrichment",
+          "desc": "Every lead is enriched and scored before contact."
+        },
+        {
+          "title": "Personalised outreach",
+          "desc": "AI-written emails, not template spam."
+        },
+        {
+          "title": "Follow-up sequences",
+          "desc": "Multi-step follow-up over email and SMS, automatically."
+        },
+        {
+          "title": "Info gathering",
+          "desc": "Qualifying info is collected from interested leads by itself."
+        },
+        {
+          "title": "Automatic quotes",
+          "desc": "A quote is generated from the info collected."
+        },
+        {
+          "title": "Reactivating the base",
+          "desc": "Your old client base is re-activated automatically."
+        }
+      ]
+    },
+    "proof": {
+      "title": "What we've already built.",
+      "items": [
+        {
+          "name": "Packtailor",
+          "body": "We eliminated the need to comb through company pages by hand to find and qualify leads. Outreach, follow-up and initial info gathering are personalised automatically.",
+          "result": "The manual work is gone — the machine does it 24/7."
+        },
+        {
+          "name": "Koduaken",
+          "body": "We built automatic follow-up on quotes. No quote hangs anymore — the follow-up runs itself until the client decides.",
+          "result": "+15% in sales — without hiring a single new person."
+        }
+      ]
+    },
+    "roi": {
+      "title": "A salesperson alternative that never quits.",
+      "p1": "One salesperson costs €2,500–4,000 a month, plus hiring and onboarding. The machine does lead gen, follow-up and quote chasing 24/7 — never sick, never gone, never forgets.",
+      "p2": "You focus on closing deals. The routine stays with the machine.",
+      "card": {
+        "costLabel": "A salesperson",
+        "cost": "€2,500–4,000/mo",
+        "machineLabel": "The machine",
+        "machine": "24/7 — never sick, never gone"
+      }
+    },
+    "ctaSection": {
+      "title": "Let's see how this would run for your business.",
+      "subtitle": "15 minutes with Martin. No sales pressure — we show the machine and whether it fits you.",
+      "button": "Book a discovery call"
+    },
+    "faq": {
+      "title": "Common questions.",
+      "items": [
+        {
+          "q": "Do you want to replace my salesperson?",
+          "a": "No — we arm them. The machine does the routine (lead gen, follow-up, quote chasing); the salesperson focuses on closing and relationships."
+        },
+        {
+          "q": "Sounds too good to be true.",
+          "a": "You just experienced it. This page and the email that brought you here are the work of the same machine. On a discovery call I'll show exactly how it runs for your business."
+        },
+        {
+          "q": "Cold emails = spam?",
+          "a": "GDPR-compliant, legitimate interest, opt-out in every email. And you saw it yourself — that wasn't spam, it was relevant."
+        },
+        {
+          "q": "No time to set it up.",
+          "a": "We build the whole machine. Your job is to close deals."
+        }
+      ]
+    }
   }
 }
