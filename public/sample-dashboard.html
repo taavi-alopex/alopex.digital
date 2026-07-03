@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alopex Analytics — Performance Dashboard</title>
+<title>Näidis-dashboard — näe kogu oma äri ühe pilguga | Alopex Digital</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -576,12 +576,46 @@
     .header { flex-direction: column; gap: 16px; }
     .controls-bar { flex-direction: column; align-items: stretch; }
   }
+
+  /* ── LP hero (K3 dashboards campaign) ── */
+  .lp-hero { position:relative; z-index:1; max-width:1000px; margin:0 auto; padding:64px 32px 8px; text-align:center; }
+  .lp-hero .eyebrow { font-family:var(--font-mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--amber); opacity:.9; }
+  .lp-hero h1 { font-family:var(--font-display); font-weight:400; font-size:clamp(38px,6vw,68px); line-height:1.03; margin:18px 0 20px; color:var(--text-primary); letter-spacing:-.5px; }
+  .lp-hero p.sub { font-family:var(--font-body); font-size:clamp(15px,1.6vw,18px); line-height:1.6; color:var(--text-secondary); max-width:640px; margin:0 auto 30px; }
+  .lp-cta-btn { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-ui); font-weight:600; font-size:16px; color:#161018; background:linear-gradient(135deg,var(--amber),var(--amber-light)); padding:15px 30px; border-radius:var(--radius); text-decoration:none; box-shadow:0 0 0 rgba(212,135,63,.5); transition:transform var(--duration-md) var(--ease-fox), box-shadow var(--duration-md) var(--ease-fox); animation:pulseGlow 3.2s ease-in-out infinite; }
+  .lp-cta-btn:hover { transform:translateY(-2px); box-shadow:0 12px 40px rgba(212,135,63,.35); }
+  @keyframes pulseGlow { 0%,100%{box-shadow:0 0 0 rgba(212,135,63,.0)} 50%{box-shadow:0 0 34px rgba(212,135,63,.28)} }
+  .lp-hero .scroll-hint { display:block; margin-top:18px; font-family:var(--font-body); font-size:13px; color:var(--text-muted); }
+  .lp-hero .frame-note { margin-top:34px; font-family:var(--font-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-muted); }
+  /* ── LP closing CTA ── */
+  .lp-cta { position:relative; z-index:1; max-width:1100px; margin:56px auto 12px; padding:48px 40px; text-align:center;
+            background:linear-gradient(160deg,var(--bg-card),var(--midnight)); border:1px solid var(--border); border-radius:calc(var(--radius)*1.6); overflow:hidden; }
+  .lp-cta::after { content:''; position:absolute; width:420px; height:420px; border-radius:50%; filter:blur(150px); opacity:.10; background:var(--amber); top:-160px; right:-120px; pointer-events:none; }
+  .lp-cta h2 { font-family:var(--font-display); font-weight:400; font-size:clamp(28px,4vw,44px); line-height:1.08; color:var(--text-primary); margin-bottom:16px; }
+  .lp-cta p.lead { font-family:var(--font-body); font-size:16px; line-height:1.65; color:var(--text-secondary); max-width:680px; margin:0 auto 34px; }
+  .lp-proof { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:0 auto 38px; max-width:900px; text-align:left; }
+  .lp-proof .pc { background:rgba(255,255,255,.02); border:1px solid var(--border); border-radius:var(--radius); padding:20px; }
+  .lp-proof .pc h3 { font-family:var(--font-ui); font-weight:600; font-size:15px; color:var(--amber-light); margin-bottom:8px; }
+  .lp-proof .pc p { font-family:var(--font-body); font-size:13.5px; line-height:1.55; color:var(--text-secondary); }
+  .lp-cta .sign { margin-top:26px; font-family:var(--font-mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); }
+  @media (max-width:760px){ .lp-proof{grid-template-columns:1fr} .lp-cta{padding:36px 22px} .lp-hero{padding-top:44px} }
+
 </style>
 </head>
 <body>
 
 <div class="ambient-glow glow-1"></div>
 <div class="ambient-glow glow-2"></div>
+
+
+<section class="lp-hero">
+  <div class="eyebrow">Näidis · elus dashboard</div>
+  <h1>Näe kogu oma äri ühe pilguga</h1>
+  <p class="sub">See on näidis. Täpselt selline dashboard ehitatakse <strong>sinu enda numbritest</strong> — käive, pipeline, broneeringud, reklaam ja laoseis ühes vaates, mis värskeneb ise. Keri alla ja mängi läbi.</p>
+  <a class="lp-cta-btn" href="https://api.leadconnectorhq.com/widget/bookings/discovery-call-with-martin-teras-30min" target="_blank" rel="noopener">Broneeri 15-min tutvustus →</a>
+  <span class="scroll-hint">või vaata kõigepealt näidist ↓</span>
+  <div class="frame-note">— fiktiivsed näidisandmed —</div>
+</section>
 
 <div class="dashboard">
   <!-- ══ Header ══ -->
@@ -594,7 +628,7 @@
       </div>
       <div class="brand-text">
         <h1>Alopex Analytics</h1>
-        <span>Performance Dashboard</span>
+        <span>Näidis · tulemusülevaade</span>
       </div>
     </div>
     <div class="header-controls">
@@ -604,24 +638,24 @@
       </div>
       <div class="ctrl-btn" id="btn-date">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        <span id="date-display">Mar 1 – Mar 8, 2026</span>
+        <span id="date-display">1. – 8. märts 2026</span>
       </div>
     </div>
   </header>
 
   <!-- ══ Interactive Controls ══ -->
   <div class="controls-bar anim d1">
-    <label>Revenue Goal</label>
+    <label>Käibe eesmärk</label>
     <input type="range" class="range-slider" id="goal-slider" min="30000" max="80000" value="55000" step="1000">
     <span class="range-value" id="goal-value">€55,000</span>
     <div class="sep"></div>
-    <label>View</label>
+    <label>Vaade</label>
     <div class="toggle-group">
-      <button class="toggle-btn active" data-view="monthly" onclick="setView('monthly')">Monthly</button>
-      <button class="toggle-btn" data-view="cumulative" onclick="setView('cumulative')">Cumulative</button>
+      <button class="toggle-btn active" data-view="monthly" onclick="setView('monthly')">Kuupõhine</button>
+      <button class="toggle-btn" data-view="cumulative" onclick="setView('cumulative')">Kumulatiivne</button>
     </div>
     <div class="sep"></div>
-    <label>Period</label>
+    <label>Periood</label>
     <div class="toggle-group">
       <button class="toggle-btn" data-period="6" onclick="setPeriod(6)">6M</button>
       <button class="toggle-btn active" data-period="12" onclick="setPeriod(12)">12M</button>
@@ -631,12 +665,12 @@
   <!-- ══ KPI Cards ══ -->
   <div class="kpi-grid">
     <div class="kpi-card anim d2" onclick="toggleDrill(this)">
-      <div class="kpi-label">Revenue This Month</div>
+      <div class="kpi-label">Selle kuu käive</div>
       <div class="kpi-value-row">
         <div class="kpi-value" style="color:var(--amber)">€47,280</div>
         <div class="kpi-target">/ €55,000</div>
       </div>
-      <div class="kpi-change up">↑ 8.3% vs last month</div>
+      <div class="kpi-change up">↑ 8.3% vs eelmine kuu</div>
       <div class="kpi-progress-bar">
         <div class="kpi-progress-fill" style="width:0%;background:linear-gradient(90deg,var(--amber),var(--amber-light));" data-target="86"></div>
       </div>
@@ -653,11 +687,11 @@
     </div>
 
     <div class="kpi-card anim d3" onclick="toggleDrill(this)">
-      <div class="kpi-label">New Leads</div>
+      <div class="kpi-label">Uued leadid</div>
       <div class="kpi-value-row">
         <div class="kpi-value">284</div>
       </div>
-      <div class="kpi-change up">↑ 12% vs last month</div>
+      <div class="kpi-change up">↑ 12% vs eelmine kuu</div>
       <div class="kpi-sparkline" id="spark-leads"></div>
       <div class="drill-panel">
         <table class="drill-table">
@@ -673,11 +707,11 @@
     </div>
 
     <div class="kpi-card anim d4" onclick="toggleDrill(this)">
-      <div class="kpi-label">Conversion Rate</div>
+      <div class="kpi-label">Konversioonimäär</div>
       <div class="kpi-value-row">
         <div class="kpi-value">18.4<span style="font-size:14px;color:var(--text-muted)">%</span></div>
       </div>
-      <div class="kpi-change down">↓ 2.1% vs last month</div>
+      <div class="kpi-change down">↓ 2.1% vs eelmine kuu</div>
       <div class="kpi-sparkline" id="spark-conversion"></div>
       <div class="drill-panel">
         <table class="drill-table">
@@ -691,12 +725,12 @@
     </div>
 
     <div class="kpi-card anim d5" onclick="toggleDrill(this)">
-      <div class="kpi-label">Booked Appointments</div>
+      <div class="kpi-label">Broneeritud kohtumised</div>
       <div class="kpi-value-row">
         <div class="kpi-value">67</div>
         <div class="kpi-target">/ 80</div>
       </div>
-      <div class="kpi-change up">↑ 5.2% vs last month</div>
+      <div class="kpi-change up">↑ 5.2% vs eelmine kuu</div>
       <div class="kpi-progress-bar">
         <div class="kpi-progress-fill" style="width:0%;background:linear-gradient(90deg,var(--spruce),var(--spruce-light));" data-target="84"></div>
       </div>
@@ -713,11 +747,11 @@
     </div>
 
     <div class="kpi-card anim d6" onclick="toggleDrill(this)">
-      <div class="kpi-label">Avg Deal Value</div>
+      <div class="kpi-label">Keskmine tehingu väärtus</div>
       <div class="kpi-value-row">
         <div class="kpi-value">€2,340</div>
       </div>
-      <div class="kpi-change up">↑ 3.7% vs last month</div>
+      <div class="kpi-change up">↑ 3.7% vs eelmine kuu</div>
       <div class="kpi-sparkline" id="spark-deal"></div>
       <div class="drill-panel">
         <table class="drill-table">
@@ -733,9 +767,9 @@
 
   <!-- ══ Revenue vs Goal ══ -->
   <div class="section-label">
-    <h2>Revenue Performance</h2>
+    <h2>Käibe tulemus</h2>
     <div class="line"></div>
-    <div class="badge">Goal Tracking</div>
+    <div class="badge">Eesmärgi jälgimine</div>
   </div>
   <div class="chart-grid grid-full">
     <div class="card anim d7">
@@ -753,7 +787,7 @@
 
   <!-- ══ Pipeline + Lead Source ══ -->
   <div class="section-label">
-    <h2>Pipeline & Acquisition</h2>
+    <h2>Pipeline ja müügivihjed</h2>
     <div class="line"></div>
     <div class="badge">Funnel Analytics</div>
   </div>
@@ -782,7 +816,7 @@
 
   <!-- ══ Rep Performance + Heatmap ══ -->
   <div class="section-label">
-    <h2>Team & Activity</h2>
+    <h2>Tiim ja aktiivsus</h2>
     <div class="line"></div>
     <div class="badge">Performance</div>
   </div>
@@ -805,24 +839,38 @@
 
   <!-- ══ Forecast + Gauges ══ -->
   <div class="section-label">
-    <h2>Forecast & Appointments</h2>
+    <h2>Prognoos ja kohtumised</h2>
     <div class="line"></div>
-    <div class="badge">Predictive</div>
+    <div class="badge">Ennustav</div>
   </div>
   <div class="chart-grid grid-2-1">
     <div class="card anim d12">
-      <div class="card-title" style="margin-bottom:16px">Revenue Forecast — Pipeline Weighted</div>
+      <div class="card-title" style="margin-bottom:16px">Käibe prognoos — pipeline-kaalutud</div>
       <div class="chart-container" id="chart-forecast"></div>
     </div>
     <div class="card anim d12">
-      <div class="card-title" style="margin-bottom:16px">Appointment Funnel Metrics</div>
+      <div class="card-title" style="margin-bottom:16px">Kohtumiste lehtri näitajad</div>
       <div class="chart-container" id="chart-gauges"></div>
     </div>
   </div>
 
+
+  <!-- ══ LP closing CTA ══ -->
+  <section class="lp-cta">
+    <h2>See on näidis. Sinu oma näeks välja sinu andmetega.</h2>
+    <p class="lead">Me ühendame kokku süsteemid, kus su numbrid praegu laiali on — GoHighLevel, e-pood, Directo või Merit, reklaamikontod, Google Sheets — ja teeme neist ühe vaate, kust näed korraga, kuidas äril päriselt läheb. Ja mis kõige tähtsam: dashboard ütleb välja, mida numbritega peale hakata.</p>
+    <div class="lp-proof">
+      <div class="pc"><h3>HAF Treeningstuudio</h3><p>GHL ja broneeringute põhjal: showup-rate, broneeringud ja pipeline Tartus ja Tallinnas — nende enda brändis, ise värskenevalt.</p></div>
+      <div class="pc"><h3>Custom Gains</h3><p>PostHog-põhine kasvu-dashboard: acquisition funnel reklaamist makseni, UTM-allikad, churn ja tagasiside ühes vaates.</p></div>
+      <div class="pc"><h3>Southwestern Advantage</h3><p>Müügiandmete dashboard, mis ei jää graafikute juurde — toob välja ühe muudatuse, mis toob kõige rohkem raha.</p></div>
+    </div>
+    <a class="lp-cta-btn" href="https://api.leadconnectorhq.com/widget/bookings/discovery-call-with-martin-teras-30min" target="_blank" rel="noopener">Broneeri 15-min tutvustus →</a>
+    <div class="sign">Alopex Digital — GHL &amp; n8n automaatika · Eesti</div>
+  </section>
+
   <!-- ══ Footer ══ -->
   <div class="footer">
-    <p>Powered by <a href="#">Alopex Digital</a> · Custom analytics beyond GoHighLevel · Data refreshes every 15 min</p>
+    <p>Ehitanud <a href="https://alopex.digital">Alopex Digital</a> · sinu andmetest kokku pandud dashboard · värskeneb ise iga 15 min</p>
   </div>
 </div>
 
