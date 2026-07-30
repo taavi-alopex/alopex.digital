@@ -34,10 +34,27 @@ async function hogql(query: string): Promise<Row[]> {
     body: JSON.stringify({ query: { kind: "HogQLQuery", query } }),
     cache: "no-store",
   });
+  if (res.status === 429) {
+    // PostHog's free plan throttles query volume. Surface it as itself rather than as a
+    // generic failure, so nobody goes looking for a broken key.
+    throw new Error("PostHog piiras päringute arvu (429). Proovi mõne minuti pärast uuesti.");
+  }
   if (!res.ok) throw new Error(`PostHog ${res.status}: ${(await res.text()).slice(0, 200)}`);
   const json = await res.json();
   return (json.results ?? []) as Row[];
 }
+
+/**
+ * Short-lived in-process cache.
+ *
+ * Without it, every page load and every 7/30/90 click fires a fresh set of queries and the
+ * free plan throttles within a handful of refreshes. Next's fetch cache can't help here —
+ * it does not cache POST — so the memo lives here. `output: "standalone"` runs one process,
+ * so a module-level Map is enough; the page prints the generation time, so the staleness is
+ * visible rather than hidden.
+ */
+const TTL_MS = 60_000;
+const memo = new Map<number, { at: number; data: unknown }>();
 
 const num = (v: string | number | null) => Number(v ?? 0);
 const str = (v: string | number | null, fallback: string) => {
@@ -65,12 +82,25 @@ function zeroFill(rows: Day[], days: number): Day[] {
 export type Metrics = Awaited<ReturnType<typeof getMetrics>>;
 
 export async function getMetrics(days = 30) {
+  const kehtiv = memo.get(days);
+  if (kehtiv && Date.now() - kehtiv.at < TTL_MS) {
+    return kehtiv.data as Awaited<ReturnType<typeof arvuta>>;
+  }
+  const data = await arvuta(days);
+  // Only memoise successes — a throttled read must not be pinned for a minute.
+  if (data.available) memo.set(days, { at: Date.now(), data });
+  return data;
+}
+
+async function arvuta(days: number) {
   const since = `timestamp >= now() - INTERVAL ${days} DAY`;
   const where = `${SCOPE} AND ${since}`;
 
   try {
-    const [totals, daily, funnel, voice, voiceStats, sources, devices, leads] = await Promise.all([
-      // Headline counters, one pass so the KPI row is internally consistent.
+    // Four aggregate blocks (KPIs, main funnel, voice funnel, voice averages) all scan the
+    // same rows, so they are ONE query. Cutting 8 parallel reads to 5 keeps the free plan's
+    // query throttle out of the way.
+    const [totals, daily, sources, devices, leads] = await Promise.all([
       hogql(
         `SELECT uniqIf(person_id, event = '$pageview')                AS visitors,
                 countIf(event = '$pageview')                          AS pageviews,
@@ -79,42 +109,24 @@ export async function getMetrics(days = 30) {
                 uniqIf(person_id, event = 'lead_saadetud')            AS leads,
                 uniqIf(person_id, event = 'broneering_klikitud')      AS bookings,
                 uniqIf(person_id, event = 'haal_alustatud')           AS voice_started,
-                uniqIf(person_id, event = 'haal_onnestus')            AS voice_done
+                uniqIf(person_id, event = 'haal_onnestus')            AS voice_done,
+                uniqIf(person_id, event = 'haal_saadetud')            AS voice_sent,
+                uniqIf(person_id, event = 'haal_luba_puudub')         AS denied,
+                uniqIf(person_id, event = 'haal_katkestatud')         AS cancelled,
+                uniqIf(person_id, event = 'haal_nurjus')              AS failed,
+                round(avgIf(toFloat(properties.sekundeid), event = 'haal_saadetud'), 1) AS avg_sec,
+                max(if(event = 'haal_saadetud', toFloat(properties.sekundeid), 0))      AS max_sec,
+                round(avgIf(toFloat(properties.ridu), event = 'haal_onnestus'), 1)      AS avg_rows,
+                round(avgIf(toFloat(properties.kulu_aastas), event = 'lead_saadetud'), 0) AS avg_cost
          FROM events WHERE ${where}`,
       ),
-      // Daily traffic + leads on one axis.
+      // Daily series. Rendered as two separate charts, never one with two y-scales.
       hogql(
         `SELECT toDate(timestamp)                                   AS day,
                 countIf(event = '$pageview')                        AS pageviews,
                 uniqIf(person_id, event = '$pageview')              AS visitors,
                 countIf(event = 'lead_saadetud')                    AS leads
          FROM events WHERE ${where} GROUP BY day ORDER BY day`,
-      ),
-      // Main funnel, counted as distinct people per step.
-      hogql(
-        `SELECT uniqIf(person_id, event = '$pageview')              AS s1,
-                uniqIf(person_id, event = 'kaardistus_alustatud')   AS s2,
-                uniqIf(person_id, event = 'kaardistus_number')      AS s3,
-                uniqIf(person_id, event = 'lead_saadetud')          AS s4
-         FROM events WHERE ${where}`,
-      ),
-      // Voice funnel + the failure modes that explain drop-off.
-      hogql(
-        `SELECT uniqIf(person_id, event = 'haal_alustatud')         AS started,
-                uniqIf(person_id, event = 'haal_saadetud')          AS sent,
-                uniqIf(person_id, event = 'haal_onnestus')          AS done,
-                uniqIf(person_id, event = 'haal_luba_puudub')       AS denied,
-                uniqIf(person_id, event = 'haal_katkestatud')       AS cancelled,
-                uniqIf(person_id, event = 'haal_nurjus')            AS failed
-         FROM events WHERE ${where}`,
-      ),
-      // Averages worth watching: recording length against the 5 min cap, rows per recording.
-      hogql(
-        `SELECT round(avgIf(toFloat(properties.sekundeid), event = 'haal_saadetud'), 1) AS avg_sec,
-                max(if(event = 'haal_saadetud', toFloat(properties.sekundeid), 0))      AS max_sec,
-                round(avgIf(toFloat(properties.ridu), event = 'haal_onnestus'), 1)      AS avg_rows,
-                round(avgIf(toFloat(properties.kulu_aastas), event = 'lead_saadetud'), 0) AS avg_cost
-         FROM events WHERE ${where}`,
       ),
       // PostHog writes the literal '$direct' for untracked entries, not an empty string —
       // both have to collapse into one bucket or "(otse)" splits in two.
@@ -144,9 +156,6 @@ export async function getMetrics(days = 30) {
     ]);
 
     const t = totals[0] ?? [];
-    const f = funnel[0] ?? [];
-    const v = voice[0] ?? [];
-    const vs = voiceStats[0] ?? [];
 
     const visitors = num(t[0]);
     const leadCount = num(t[4]);
@@ -179,25 +188,25 @@ export async function getMetrics(days = 30) {
         days,
       ),
       funnel: [
-        { step: "Avas lehe", people: num(f[0]) },
-        { step: "Hakkas täitma", people: num(f[1]) },
-        { step: "Nägi oma numbrit", people: num(f[2]) },
-        { step: "Jättis kontaktid", people: num(f[3]) },
+        { step: "Avas lehe", people: num(t[0]) },
+        { step: "Hakkas täitma", people: num(t[2]) },
+        { step: "Nägi oma numbrit", people: num(t[3]) },
+        { step: "Jättis kontaktid", people: num(t[4]) },
       ],
       voice: {
         steps: [
-          { step: "Alustas rääkimist", people: num(v[0]) },
-          { step: "Saatis salvestuse", people: num(v[1]) },
-          { step: "Sai read", people: num(v[2]) },
+          { step: "Alustas rääkimist", people: num(t[6]) },
+          { step: "Saatis salvestuse", people: num(t[8]) },
+          { step: "Sai read", people: num(t[7]) },
         ],
-        denied: num(v[3]),
-        cancelled: num(v[4]),
-        failed: num(v[5]),
-        avgSeconds: num(vs[0]),
-        maxSeconds: num(vs[1]),
-        avgRows: num(vs[2]),
+        denied: num(t[9]),
+        cancelled: num(t[10]),
+        failed: num(t[11]),
+        avgSeconds: num(t[12]),
+        maxSeconds: num(t[13]),
+        avgRows: num(t[14]),
       },
-      avgCost: num(vs[3]),
+      avgCost: num(t[15]),
       sources: sources.map((r) => ({ source: str(r[0], "(otse)"), visitors: num(r[1]) })),
       devices: devices.map((r) => ({ device: str(r[0], "(teadmata)"), visitors: num(r[1]) })),
       leadsByMode: leads.map((r) => ({
