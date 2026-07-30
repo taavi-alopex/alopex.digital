@@ -1,0 +1,1307 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Käsitsitöö kaardistus · Alopex Digital</title>
+<meta name="description" content="Kaardista 15 minutiga, kus sinu ettevõttes kannab inimene infot ühest süsteemist teise, ja vaata, mis see aastas maksab.">
+<meta name="theme-color" content="#161929">
+<link rel="icon" href="alopex-mark.svg" type="image/svg+xml">
+<meta property="og:title" content="Käsitsitöö kaardistus">
+<meta property="og:description" content="Kus sinu ettevõttes kannab inimene infot ühest aknast teise? Täida read ja näe, mis see aastas maksab.">
+<meta property="og:locale" content="et_EE">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+</script>
+<style>
+/* ============================================================
+   ALOPEX DIGITAL — CVI v3.0 "Arctic fox in the boreal forest"
+   Tokenid on 1:1 alopex.digital/src/app/globals.css failist.
+   ============================================================ */
+:root{
+  --midnight:#161929;
+  --dark-navy:#282C3E;
+  --dark-surface:#1E2138;
+  --dark-elevated:#282C44;
+  --dark-border:rgba(255,255,255,.07);
+  --dark-border-strong:rgba(255,255,255,.14);
+
+  --spruce:#2D6A4F;
+  --spruce-light:#52B788;
+  --spruce-pale:#D8F3DC;
+
+  --amber:#D4873F;
+  --amber-light:#F0C78A;
+
+  --frost:#E8EDF2;
+  --mist:#C4CED8;
+  --text-body:rgba(255,255,255,.65);
+  --text-muted:rgba(255,255,255,.45);
+
+  --fox-ease:cubic-bezier(.16,1,.3,1);
+  --fast:150ms; --medium:300ms; --slow:600ms;
+
+  --r-btn:8px; --r-card:12px; --r-section:16px;
+
+  --display:"Instrument Serif",Georgia,serif;
+  --head:"Outfit",system-ui,sans-serif;
+  --text:"Montserrat",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --gut:20px;
+  --bar:82px; /* mobiili alumine kokkuvõtteriba */
+}
+@media(min-width:760px){ :root{ --gut:32px; --bar:0px; } }
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+  margin:0;
+  background:var(--midnight);
+  color:var(--text-body);
+  font-family:var(--text);
+  font-size:15px;line-height:1.7;
+  overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom));
+}
+::selection{background:rgba(45,106,79,.35);color:var(--frost)}
+
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--gut)}
+
+/* ---------- tüpograafia ---------- */
+h1,h2,h3{margin:0}
+h1{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(34px,7.4vw,60px);line-height:1.06;letter-spacing:-.02em;
+  color:var(--frost);
+}
+h2{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(26px,4.4vw,38px);line-height:1.2;letter-spacing:-.01em;
+  color:var(--frost);
+}
+h3{font-family:var(--head);font-weight:600;font-size:17px;line-height:1.3;color:var(--frost)}
+p{margin:0}
+
+.eyebrow{
+  display:flex;align-items:center;gap:12px;
+  font-family:var(--mono);font-size:11px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--mist);
+  margin-bottom:20px;
+}
+.eyebrow::before{
+  content:"";width:44px;height:2px;border-radius:1px;flex:none;
+  background:linear-gradient(90deg,var(--spruce),var(--amber));
+}
+.lede{font-size:16px;color:var(--text-body);max-width:56ch;margin-top:18px}
+
+/* ---------- päis ---------- */
+header{padding:44px 0 8px;position:relative}
+@media(min-width:760px){header{padding:72px 0 16px}}
+.brandline{
+  display:flex;align-items:center;gap:11px;margin-bottom:34px;
+  font-family:var(--head);font-size:14px;font-weight:500;letter-spacing:.01em;color:var(--mist);
+}
+.brandline .mark{width:36px;height:36px;flex:none;display:block}
+.source{
+  margin-top:26px;padding-top:18px;border-top:1px solid var(--dark-border);
+  font-size:13px;color:var(--text-muted);max-width:56ch;
+}
+
+/* ---------- sektsioonid ---------- */
+section{padding:44px 0}
+@media(min-width:760px){section{padding:64px 0}}
+.sechead{margin-bottom:24px}
+.sechead p{margin-top:10px;max-width:58ch;font-size:15px}
+
+.divider{
+  height:1px;border:0;margin:0;
+  background:linear-gradient(90deg,transparent,rgba(82,183,136,.22) 20%,rgba(212,135,63,.18) 50%,rgba(82,183,136,.22) 80%,transparent);
+}
+
+/* ---------- veerud ---------- */
+.cols{display:grid;grid-template-columns:1fr;gap:32px;margin-top:30px}
+@media(min-width:1000px){
+  .cols{grid-template-columns:minmax(0,1fr) 336px;gap:44px;align-items:start}
+  .rail{position:sticky;top:28px}
+}
+
+/* ---------- kokkuvõtte paneel (desktop) ---------- */
+.rail{display:none}
+@media(min-width:1000px){.rail{display:block}}
+.panel{
+  background:var(--dark-surface);
+  border:1px solid var(--dark-border);
+  border-radius:var(--r-section);
+  padding:26px 24px;
+}
+.panel-label{
+  font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--text-muted);margin-bottom:20px;
+}
+.figure{
+  font-family:var(--display);font-weight:400;
+  font-size:52px;line-height:1;letter-spacing:-.02em;
+  color:var(--amber);
+  font-variant-numeric:tabular-nums;
+  transition:color var(--medium) var(--fox-ease);
+}
+.figure.idle{color:var(--dark-border-strong)}
+.figure .u{font-family:var(--head);font-size:17px;letter-spacing:0;margin-left:8px;color:var(--text-muted)}
+.sub{font-family:var(--mono);font-size:12px;color:var(--text-muted);margin-top:9px;font-variant-numeric:tabular-nums}
+.stat + .stat{margin-top:24px;padding-top:24px;border-top:1px solid var(--dark-border)}
+.stat .small{font-family:var(--head);font-size:26px;font-weight:500;color:var(--frost);font-variant-numeric:tabular-nums}
+
+/* aasta mõõdik: 12 kuud ühest inimesest */
+.meter{display:flex;gap:3px;margin-bottom:9px}
+.meter i{
+  flex:1;height:26px;border-radius:2px;
+  background:var(--dark-elevated);
+  transition:background var(--medium) var(--fox-ease);
+}
+.meter i.on{background:var(--amber)}
+.meter i.part{background:linear-gradient(90deg,var(--amber) var(--p,50%),var(--dark-elevated) var(--p,50%))}
+
+/* ---------- read ---------- */
+.rows-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+.hint{font-size:14px;color:var(--text-muted);max-width:60ch;margin:12px 0 26px}
+
+/* ---------- häälsisend ---------- */
+.voice{
+  background:var(--dark-surface);border:1px solid var(--dark-border);
+  border-radius:var(--r-section);padding:22px 20px;margin-bottom:26px;
+}
+@media(min-width:760px){.voice{padding:26px 26px 24px}}
+.voice[hidden]{display:none}
+.voice h3{margin-bottom:8px}
+.voice .selg{font-size:14.5px;color:var(--text-body);max-width:56ch}
+.voice .fine{font-size:12.5px;color:var(--text-muted);margin-top:14px;max-width:56ch}
+.voice-act{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px}
+.voice-act .vai{font-size:13.5px;color:var(--text-muted)}
+
+.btn-rec{
+  background:transparent;border-color:rgba(212,135,63,.45);color:var(--frost);
+}
+.btn-rec:hover{border-color:var(--amber);background:rgba(212,135,63,.08)}
+.btn-rec .pt{
+  width:11px;height:11px;border-radius:50%;background:var(--amber);flex:none;
+}
+
+/* salvestamine */
+.rec-top{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.rec-time{font-family:var(--mono);font-size:30px;font-weight:700;color:var(--frost);font-variant-numeric:tabular-nums;line-height:1}
+.rec-left{font-family:var(--mono);font-size:12.5px;color:var(--text-muted);font-variant-numeric:tabular-nums}
+.rec-left.warn{color:var(--amber)}
+.levels{display:flex;align-items:flex-end;gap:4px;height:44px;margin:20px 0 22px}
+.levels i{
+  flex:1;min-height:3px;border-radius:2px;background:var(--amber);opacity:.85;
+  height:3px;transition:height 90ms linear;
+}
+@media(prefers-reduced-motion:reduce){.levels i{transition:none}}
+
+/* töötlemine. NB: klassinimi ei tohi olla .bar — see on mobiili alumine riba. */
+.prog{margin-top:6px}
+.prog-lab{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:10px}
+.prog-lab .st{font-family:var(--head);font-size:15px;font-weight:500;color:var(--frost)}
+.prog-lab .pc{font-family:var(--mono);font-size:12.5px;color:var(--text-muted);font-variant-numeric:tabular-nums}
+.pbar{height:6px;border-radius:3px;background:var(--dark-elevated);overflow:hidden}
+.pbar span{
+  display:block;height:100%;width:0;border-radius:3px;
+  background:linear-gradient(90deg,var(--spruce),var(--amber));
+  transition:width var(--medium) var(--fox-ease);
+}
+.meanwhile{
+  margin-top:24px;padding-top:20px;border-top:1px solid var(--dark-border);
+}
+.meanwhile p{font-size:14px;color:var(--text-muted);margin-bottom:16px;max-width:52ch}
+.meanwhile .grid3{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:680px){.meanwhile .grid3{grid-template-columns:1fr 1fr 1fr}}
+
+.voice-msg{margin-top:16px;font-size:14px;line-height:1.6}
+.voice-msg.err{color:var(--amber-light)}
+.voice-msg.ok{color:var(--spruce-light)}
+
+.row{
+  background:var(--dark-surface);
+  border:1px solid var(--dark-border);
+  border-radius:var(--r-card);
+  padding:18px 16px 14px;
+  margin-bottom:14px;
+  transition:border-color var(--medium) var(--fox-ease),transform var(--medium) var(--fox-ease);
+}
+@media(min-width:760px){.row{padding:20px 22px 16px}}
+.row:focus-within{border-color:rgba(82,183,136,.3)}
+.row.live{border-color:rgba(212,135,63,.28)}
+
+/* juhe: kust ──▸ kuhu. Kitsal ekraanil püsti, laial pikali. */
+.wire{display:flex;margin-bottom:16px;flex-direction:column;align-items:stretch;gap:0}
+.wire .end{flex:1 1 0;min-width:0}
+.chip{
+  width:100%;
+  font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--frost);
+  background:var(--dark-elevated);
+  border:1px solid var(--dark-border-strong);
+  border-radius:var(--r-btn);
+  padding:11px 12px;
+  min-height:46px;
+  text-overflow:ellipsis;
+}
+.chip::placeholder{color:var(--text-muted);text-transform:none;letter-spacing:0}
+.link{
+  display:flex;align-items:center;justify-content:center;
+  flex:none;flex-direction:column;height:30px;
+}
+.link .cord{
+  flex:1;border-radius:1px;background:var(--dark-border-strong);
+  width:var(--w,2px);
+  transition:width var(--medium) var(--fox-ease),height var(--medium) var(--fox-ease),background var(--medium) var(--fox-ease);
+}
+.link .tip{
+  width:0;height:0;flex:none;
+  border-left:4px solid transparent;border-right:4px solid transparent;
+  border-top:6px solid var(--dark-border-strong);
+  transition:border-color var(--medium) var(--fox-ease);
+}
+.row.live .link .cord{background:var(--amber)}
+.row.live .link .tip{border-top-color:var(--amber)}
+@media(min-width:560px){
+  .wire{flex-direction:row;align-items:center;gap:10px}
+  .link{flex:0 0 70px;flex-direction:row;height:22px}
+  .link .cord{width:auto;height:var(--w,2px)}
+  .link .tip{
+    border-top:4px solid transparent;border-bottom:4px solid transparent;
+    border-left:6px solid var(--dark-border-strong);border-right:0;
+  }
+  .row.live .link .tip{border-top-color:transparent;border-left-color:var(--amber)}
+}
+
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:620px){
+  .grid{grid-template-columns:1fr 1fr;gap:14px 18px}
+  .grid .full{grid-column:1/-1}
+}
+.field label{
+  display:block;
+  font-family:var(--head);font-size:12px;font-weight:500;
+  letter-spacing:.03em;color:var(--text-muted);margin-bottom:7px;
+}
+input[type=text],input[type=email],input[type=tel],input[type=number]{
+  width:100%;
+  font-family:var(--text);font-size:16px;color:var(--frost);
+  background:var(--midnight);
+  border:1px solid var(--dark-border-strong);
+  border-radius:var(--r-btn);
+  padding:11px 12px;min-height:44px;
+  transition:border-color var(--fast) var(--fox-ease),background var(--fast) var(--fox-ease);
+}
+input::placeholder{color:rgba(255,255,255,.3)}
+input:hover{border-color:rgba(255,255,255,.22)}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,input[type=range]:focus-visible{
+  outline:2px solid var(--spruce-light);outline-offset:2px;
+}
+input[type=number]{font-family:var(--mono);font-variant-numeric:tabular-nums}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+input[type=number]{-moz-appearance:textfield}
+
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.rowfoot{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  margin-top:14px;padding-top:12px;border-top:1px solid var(--dark-border);
+}
+.rows-foot{margin:2px 0 0}
+.rows-foot .btn{width:100%;border-style:dashed;color:var(--mist)}
+.rows-foot .btn:hover{color:var(--frost);border-style:solid}
+.rowsum{font-family:var(--mono);font-size:12px;color:var(--text-muted);font-variant-numeric:tabular-nums}
+.rowsum b{color:var(--amber);font-weight:700}
+.del{
+  font-family:var(--head);font-size:13px;color:var(--text-muted);
+  background:none;border:0;border-radius:var(--r-btn);padding:8px 10px;margin-right:-10px;
+  min-height:44px;cursor:pointer;transition:color var(--fast) var(--fox-ease);
+}
+.del:hover{color:var(--amber-light)}
+
+/* ---------- nupud ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--head);font-size:15px;font-weight:500;
+  border-radius:var(--r-btn);padding:13px 22px;min-height:48px;
+  border:1px solid var(--dark-border-strong);
+  background:transparent;color:var(--frost);
+  cursor:pointer;text-decoration:none;
+  transition:border-color var(--medium) var(--fox-ease),background var(--medium) var(--fox-ease),transform var(--medium) var(--fox-ease);
+}
+.btn:hover{border-color:rgba(82,183,136,.4);background:rgba(82,183,136,.06)}
+.btn:active{transform:translateY(1px)}
+.btn-go{
+  background:var(--spruce);border-color:var(--spruce);color:#fff;font-weight:600;
+}
+.btn-go:hover{background:var(--spruce-light);border-color:var(--spruce-light);color:var(--midnight)}
+.btn-go[disabled]{opacity:.5;cursor:not-allowed}
+.btn-sm{font-size:14px;padding:9px 15px;min-height:44px}
+
+/* ---------- tunnihinna liugur ---------- */
+.rate{
+  background:var(--dark-surface);border:1px solid var(--dark-border);
+  border-radius:var(--r-card);padding:18px 18px 12px;margin-top:22px;
+}
+.rate .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.rate .lab{font-family:var(--head);font-size:14px;font-weight:500;color:var(--frost)}
+.rate .val{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--frost);font-variant-numeric:tabular-nums}
+.rate .note{font-size:12.5px;color:var(--text-muted);margin-top:10px}
+input[type=range]{
+  -webkit-appearance:none;appearance:none;width:100%;height:44px;background:transparent;cursor:pointer;
+}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:var(--dark-elevated)}
+input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:var(--dark-elevated)}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:24px;height:24px;border-radius:50%;margin-top:-10px;
+  background:var(--frost);border:5px solid var(--spruce);
+}
+input[type=range]::-moz-range-thumb{
+  width:24px;height:24px;border-radius:50%;border:5px solid var(--spruce);background:var(--frost);
+}
+
+/* ---------- top 3 ---------- */
+.top3{list-style:none;margin:0;padding:0;counter-reset:t}
+.top3 li{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:16px 0;border-top:1px solid var(--dark-border);
+}
+.top3 li:first-child{border-top:0;padding-top:4px}
+.top3 .n{
+  font-family:var(--mono);font-size:12px;font-weight:700;color:var(--amber);
+  flex:none;width:22px;padding-top:3px;
+}
+.top3 .what{flex:1;min-width:0}
+.top3 .what strong{display:block;font-family:var(--head);font-weight:500;font-size:15.5px;color:var(--frost)}
+.top3 .what span{font-family:var(--mono);font-size:12px;color:var(--text-muted);display:block;margin-top:4px}
+.top3 .h{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--amber);white-space:nowrap;padding-top:2px;font-variant-numeric:tabular-nums}
+.empty{color:var(--text-muted);font-size:14px}
+
+/* ---------- kontrollnimekiri ---------- */
+.checks{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px}
+@media(min-width:760px){.checks{grid-template-columns:1fr 1fr;gap:12px}}
+.checks li{
+  background:var(--dark-surface);border:1px solid var(--dark-border);
+  border-radius:var(--r-card);
+}
+.checks label{
+  display:flex;gap:13px;align-items:flex-start;
+  padding:15px 16px;cursor:pointer;
+}
+.checks input{
+  appearance:none;-webkit-appearance:none;flex:none;
+  width:21px;height:21px;margin:1px 0 0;border-radius:5px;
+  border:1.5px solid var(--dark-border-strong);background:var(--midnight);
+  cursor:pointer;position:relative;
+  transition:border-color var(--fast) var(--fox-ease),background var(--fast) var(--fox-ease);
+}
+.checks input:checked{background:var(--spruce);border-color:var(--spruce)}
+.checks input:checked::after{
+  content:"";position:absolute;left:6.5px;top:3px;width:5px;height:10px;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);
+}
+.checks label > span{flex:1;min-width:0}
+.checks .t{display:block;font-family:var(--head);font-size:15px;font-weight:500;color:var(--frost);line-height:1.35}
+.checks .d{display:block;font-size:13px;color:var(--text-muted);margin-top:5px;line-height:1.5}
+
+.verdict{
+  border:1px solid var(--dark-border);border-radius:var(--r-card);
+  background:var(--dark-surface);padding:16px 18px;
+  font-family:var(--head);font-size:15px;color:var(--text-body);
+  transition:border-color var(--medium) var(--fox-ease),background var(--medium) var(--fox-ease),color var(--medium) var(--fox-ease);
+}
+.verdict.ok{border-color:rgba(82,183,136,.45);background:rgba(45,106,79,.16);color:var(--spruce-pale)}
+
+/* ---------- vorm ---------- */
+.lead-grid{display:grid;grid-template-columns:1fr;gap:30px}
+@media(min-width:940px){
+  .lead-grid{grid-template-columns:minmax(0,620px) minmax(0,1fr);gap:48px;align-items:start}
+}
+.form{
+  background:var(--dark-surface);border:1px solid var(--dark-border);
+  border-radius:var(--r-section);padding:24px 20px;max-width:620px;
+}
+@media(min-width:760px){.form{padding:30px 30px 26px}}
+.form .grid2{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:560px){.form .grid2{grid-template-columns:1fr 1fr}.form .full{grid-column:1/-1}}
+.consent{font-size:13px;color:var(--text-muted);margin:18px 0 20px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.actions .btn{flex:1 1 auto}
+.msg{margin-top:16px;font-size:14px;min-height:1.4em}
+.msg.err{color:var(--amber-light)}
+.msg.ok{color:var(--spruce-light)}
+
+/* ---------- kes kõne vastu võtab ---------- */
+.who{border-top:1px solid var(--dark-border);padding-top:26px}
+@media(min-width:940px){
+  .who{border-top:0;border-left:1px solid var(--dark-border);padding:4px 0 0 40px}
+}
+.who h3{margin-bottom:18px}
+.who-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.avatar{
+  position:relative;flex:none;width:66px;height:66px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:rgba(45,106,79,.22);border:1px solid rgba(82,183,136,.28);
+}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.avatar .ini{font-family:var(--mono);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--spruce-light)}
+.who-head .nimi{display:block;font-family:var(--head);font-size:16px;font-weight:600;color:var(--frost);line-height:1.3}
+.who-head .roll{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:5px}
+.who-lead{font-size:15.5px;color:var(--frost);line-height:1.6;margin-bottom:22px}
+.who .steps{list-style:none;margin:0;padding:0}
+.who .steps li{padding:15px 0;border-top:1px solid var(--dark-border);font-size:14.5px;line-height:1.6}
+.who .steps li:first-child{border-top:0;padding-top:0}
+.who .kokku{
+  margin-top:20px;padding-top:18px;border-top:1px solid var(--dark-border);
+  font-size:13.5px;color:var(--text-muted);line-height:1.6;
+}
+
+/* ---------- mobiili alumine riba ---------- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  background:rgba(22,25,41,.9);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-top:1px solid var(--dark-border);
+  padding:12px var(--gut) calc(12px + env(safe-area-inset-bottom));
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+@media(min-width:1000px){.bar{display:none}}
+.bar .n{font-family:var(--display);font-size:28px;line-height:1;color:var(--amber);font-variant-numeric:tabular-nums}
+.bar .n.idle{color:var(--dark-border-strong)}
+.bar .n .u{font-family:var(--head);font-size:13px;margin-left:5px;color:var(--text-muted)}
+.bar .k{font-family:var(--mono);font-size:11px;color:var(--text-muted);margin-top:5px;font-variant-numeric:tabular-nums}
+
+/* ---------- jalus ---------- */
+footer{border-top:1px solid var(--dark-border);padding:30px 0 40px;font-size:13px;color:var(--text-muted)}
+footer a{color:var(--mist);text-decoration:none;border-bottom:1px solid transparent;transition:border-color var(--medium) var(--fox-ease)}
+footer a:hover{border-bottom-color:var(--spruce-light)}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brandline"><img class="mark" src="alopex-mark.svg" alt="" width="36" height="36"> Alopex Digital</div>
+    <p class="eyebrow">Käsitsitöö kaardistus</p>
+    <h1>Kus sinu ettevõttes kannab inimene infot ühest aknast teise?</h1>
+    <p class="lede">Käi läbi üks tavaline tööpäev ja märgi iga koht üles. Võtab viisteist minutit. Lõpus näed, mis see töö sulle aastas maksab ja kust tasub alustada.</p>
+    <p class="source">See kaardistus ilmus koos artikliga Kaubandus-Tööstuskoja Teatajas. Artikkel rääkis neljast tasemest — vestlus, kontekst, ühendus, agent. Kaardistus näitab, kui palju sul kolmandal tasemel võita on.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="cols">
+
+    <main>
+      <div class="rows-head">
+        <h2>Sinu read</h2>
+        <button class="btn btn-sm" type="button" data-add>Lisa rida</button>
+      </div>
+      <p class="hint">Kolm rida on eeltäidetud näitena — kirjuta need üle. Tüüpilised kohad: päring kodulehelt CRM-i, CRM-ist pakkumisse, pakkumisest arvesse, arvest raamatupidamisse. Kõige rohkem ununeb see, mida sa ise teed.</p>
+
+      <section class="voice" id="voice" hidden aria-labelledby="voiceH">
+        <!-- 1. seisund: puhkeolek -->
+        <div id="vIdle">
+          <h3 id="voiceH">Räägi oma protsess sisse</h3>
+          <p class="selg">Räägi kaks-kolm minutit sellest, kuidas töö su ettevõttes ühest inimesest ja süsteemist teiseni liigub. Kirjutan read sinu eest tabelisse. Numbrid paned ise juurde — need tead ainult sina.</p>
+          <div class="voice-act">
+            <button class="btn btn-rec" type="button" id="vStart"><span class="pt" aria-hidden="true"></span> Alusta rääkimist</button>
+            <span class="vai">või täida read ise, allpool</span>
+          </div>
+          <p class="fine">Kuni viis minutit. Salvestisest tehakse tekst ja helifail kustutatakse kohe pärast seda.</p>
+        </div>
+
+        <!-- 2. seisund: salvestan -->
+        <div id="vRec" hidden>
+          <div class="rec-top">
+            <span class="rec-time" id="vTime" role="timer" aria-live="off">0:00</span>
+            <span class="rec-left" id="vLeft">jääb 5:00</span>
+          </div>
+          <div class="levels" id="vLevels" aria-hidden="true"></div>
+          <div class="voice-act" style="margin-top:0">
+            <button class="btn btn-go" type="button" id="vStop">Valmis, tee read</button>
+            <button class="btn btn-sm" type="button" id="vCancel">Loobu</button>
+          </div>
+        </div>
+
+        <!-- 3. seisund: töötlen -->
+        <div id="vWork" hidden>
+          <div class="prog">
+            <div class="prog-lab">
+              <span class="st" id="vStage">Laen üles</span>
+              <span class="pc" id="vPct">0%</span>
+            </div>
+            <div class="pbar"><span id="vBar"></span></div>
+          </div>
+          <div class="meanwhile">
+            <p>Sellal võid kontaktid juba ära täita. Kohustuslik ei ole — read tulevad ekraanile niikuinii.</p>
+            <div class="grid3">
+              <div class="field"><label for="vnimi">Nimi</label><input type="text" id="vnimi" autocomplete="name"></div>
+              <div class="field"><label for="vfirma">Ettevõte</label><input type="text" id="vfirma" autocomplete="organization"></div>
+              <div class="field"><label for="vemail">E-post</label><input type="email" id="vemail" autocomplete="email" inputmode="email"></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="voice-msg" id="vMsg" role="status"></p>
+      </section>
+
+      <div id="rows"></div>
+
+      <div class="rows-foot">
+        <button class="btn btn-sm" type="button" data-add>Lisa veel üks rida</button>
+      </div>
+
+      <div class="rate">
+        <div class="top">
+          <label class="lab" for="rate">Ühe töötunni kulu</label>
+          <span class="val"><span id="rateVal">25</span> €</span>
+        </div>
+        <input type="range" id="rate" min="10" max="60" step="1" value="25" aria-describedby="rateNote">
+        <p class="note" id="rateNote">Bruto koos maksudega, mitte netopalk.</p>
+      </div>
+    </main>
+
+    <aside class="rail">
+      <div class="panel" aria-live="polite">
+        <p class="panel-label">Kokku aastas</p>
+
+        <div class="stat">
+          <div class="figure idle" id="cost">0<span class="u">€</span></div>
+          <p class="sub"><span id="hours">0</span> tundi · 46 töönädalat</p>
+        </div>
+
+        <div class="stat">
+          <div class="meter" id="meter" role="img" aria-label="Osa ühe inimese tööaastast"></div>
+          <div class="small"><span id="months">0</span> kuud</div>
+          <p class="sub">ühe inimese tööaastast</p>
+        </div>
+
+        <div class="stat">
+          <p class="panel-label" style="margin-bottom:14px">Kust alustada</p>
+          <ol class="top3" id="top3"></ol>
+          <p class="empty" id="top3empty">Täida read ära. Järjestan need sageduse ja ajakulu korrutise järgi, mitte tüütuse järgi.</p>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<section id="prio">
+  <div class="wrap">
+    <div class="sechead">
+      <h2>Kolm kohta, kust alustada</h2>
+      <p>Alusta kõige sagedasemast, mitte kõige tüütumast. Tüütu asi, mis juhtub kord kuus, ei too midagi tagasi.</p>
+    </div>
+    <ol class="top3" id="top3b"></ol>
+    <p class="empty" id="top3bempty">Siia tulevad su kolm kallimat kohta, kui oled read täitnud.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="wrap">
+    <div class="sechead">
+      <h2>Kas selle saab masinale anda?</h2>
+      <p id="flagLead">Võta ette oma esimene koht ja käi need neli tingimust läbi.</p>
+    </div>
+
+    <ul class="checks">
+      <li><label for="f1"><input type="checkbox" id="f1"><span><span class="t">Tegemist on kahe eraldi süsteemiga</span><span class="d">Mitte kahe vahelehega samas programmis.</span></span></label></li>
+      <li><label for="f2"><input type="checkbox" id="f2"><span><span class="t">Mõlemal on liides või vähemalt eksport</span><span class="d">Kui andmed saab välja CSV-na, siis piisab ka sellest.</span></span></label></li>
+      <li><label for="f3"><input type="checkbox" id="f3"><span><span class="t">Reegli saab ühe lausega kirja panna</span><span class="d">Näiteks: iga uus päring läheb CRM-i uue kontaktina.</span></span></label></li>
+      <li><label for="f4"><input type="checkbox" id="f4"><span><span class="t">Otsust ei ole vaja teha</span><span class="d">Kui keegi peab kaaluma, jääb see koht inimesele.</span></span></label></li>
+    </ul>
+
+    <p class="verdict" id="verdict">Märgi tingimused, mis kehtivad.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="wrap">
+    <div class="sechead">
+      <h2>Saada tulemus endale</h2>
+      <p>Saadan kaardistuse kokkuvõtte ja ühe lehe selle kohta, kuidas su esimene koht praktikas ära ühendatakse.</p>
+    </div>
+
+    <div class="lead-grid">
+    <form class="form" id="lead" novalidate>
+      <div class="grid2">
+        <div class="field"><label for="name">Nimi</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="company">Ettevõte</label><input type="text" id="company" name="company" autocomplete="organization" required></div>
+        <div class="field full"><label for="email">E-post</label><input type="email" id="email" name="email" autocomplete="email" inputmode="email" required></div>
+        <div class="field full"><label for="phone">Telefon</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+372 5xxx xxxx" required></div>
+      </div>
+      <p class="consent">Saadan kokkuvõtte ja ühe järelkirja. Rohkem mitte, kui sa ise ei küsi.</p>
+      <div class="actions">
+        <button class="btn btn-go" type="submit" id="send">Saada tulemus</button>
+        <a class="btn" id="broneeri" href="https://api.leadconnectorhq.com/widget/bookings/discovery-call-with-martin-teras-30min" target="_blank" rel="noopener">Broneeri 30 minutit Martiniga</a>
+      </div>
+      <p class="msg" id="msg" role="status"></p>
+    </form>
+
+    <aside class="who">
+      <h3>Mis kõnel juhtub</h3>
+
+      <div class="who-head">
+        <!-- Foto tuleb connect.alopex.digital lehelt. Kui fail puudub, näidatakse initsiaale. -->
+        <span class="avatar">
+          <img src="martin.jpg" alt="Martin Teras" width="600" height="600" onerror="this.remove()">
+          <span class="ini" aria-hidden="true">MT</span>
+        </span>
+        <span>
+          <span class="nimi">Martin Teras</span>
+          <span class="roll">Müügijuht · Alopex Digital</span>
+        </span>
+      </div>
+
+      <p class="who-lead">Martin aitab sul üles leida esimesed kitsaskohad su protsessides.</p>
+
+      <ul class="steps">
+        <li>Käite su read koos läbi ja märgite ära, mis on päriselt ühendatav.</li>
+        <li>Vaatate, kas su süsteemide vahel on liides, eksport või ainult ekraan.</li>
+        <li>Saad järjekorra: millest alustada ja mis läheb ootele.</li>
+      </ul>
+
+      <p class="kokku">Kui su numbritest projekti välja ei tule, ütleb Martin seda kohe. Keegi ei hakka sulle midagi müüma.</p>
+    </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Alopex Digital OÜ · <a href="https://alopex.digital">alopex.digital</a><br>
+    Kaardistus ilmus koos artikliga Kaubandus-Tööstuskoja Teatajas.
+  </div>
+</footer>
+
+<div class="bar" aria-hidden="true">
+  <div>
+    <div class="n idle" id="barCost">0<span class="u">€ aastas</span></div>
+    <div class="k"><span id="barHours">0</span> h · <span id="barMonths">0</span> inimkuud</div>
+  </div>
+  <button class="btn btn-sm" type="button" id="barJump">Tulemus</button>
+</div>
+
+<script>
+/* Kuhu andmed lähevad. n8n webhook või GHL inbound webhook. */
+const WEBHOOK_URL = "https://n8n.alopex.digital/webhook/teataja-lead";
+
+/* ---------- PostHog ----------
+   Sama projekt, mis Custom Gainsil ja taavitaavi.com-il (195558, EU).
+   Liiklus eraldatakse $host + $pathname järgi. Kohalikult ei mõõda,
+   kui just ?ph=1 ei lisa. */
+const PH_KEY = "phc_uS3GPHxUQCdzGytjN6uxUzpwP3vCXzSinxiSncE2X7oa";
+const PH_SUND = /localhost|127\.0\.0\.1|\.local$/.test(location.hostname)
+                && !location.search.includes("ph=1");
+if(!PH_SUND && window.posthog){
+  posthog.init(PH_KEY, {
+    api_host: "https://eu.i.posthog.com",
+    person_profiles: "identified_only",
+    capture_pageview: true,
+    capture_pageleave: true
+  });
+  /* Märgistab KÕIK selle lehe sündmused, ka $pageview'd. Dashboard filtreerib
+     selle järgi, mitte URL-i järgi — nii ei lähe see katki, kui aadress muutub. */
+  posthog.register({leht: "teataja-kaardistus"});
+}
+const jalgi = (nimi, omadused) => {
+  if(PH_SUND){ console.debug("[ph]", nimi, omadused || {}); return; }
+  try{ window.posthog && posthog.capture(nimi, omadused || {}); }catch(e){}
+};
+let phAlustatud = false, phNumber = false;
+
+const SYSTEEMID = ["Koduleht","CRM","E-post","Excel","Google Sheets","Majandustarkvara","Merit","Directo","Scoro","E-pood","Laosüsteem","Paber","Telefon","WhatsApp","Pakkumine","Arve"];
+const NADALAID = 46, TUNNID_KUUS = 160, SALV = "alopex-kaardistus-v1";
+
+const ALGREAD = [
+  {info:"Päringu andmed",kust:"Koduleht",kuhu:"CRM",kes:"",korrad:"",minutid:""},
+  {info:"Pakkumise read",kust:"CRM",kuhu:"Pakkumine",kes:"",korrad:"",minutid:""},
+  {info:"Arve andmed",kust:"Pakkumine",kuhu:"Majandustarkvara",kes:"",korrad:"",minutid:""}
+];
+
+const $ = s => document.querySelector(s);
+const rowsEl = $("#rows");
+
+let read, hind;
+try{
+  const s = JSON.parse(localStorage.getItem(SALV) || "null");
+  read = Array.isArray(s?.read) && s.read.length ? s.read : ALGREAD.map(r=>({...r}));
+  hind = +s?.hind || 25;
+}catch(e){ read = ALGREAD.map(r=>({...r})); hind = 25; }
+
+function salvesta(){
+  try{ localStorage.setItem(SALV, JSON.stringify({read, hind})); }catch(e){}
+}
+
+const skoor = r => (+r.korrad||0) * (+r.minutid||0);
+const reaTunnid = r => skoor(r) * NADALAID / 60;
+const tunnidKokku = () => read.reduce((s,r)=>s+skoor(r),0) * NADALAID / 60;
+const esc = v => String(v ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+const fmt = n => Math.round(n).toLocaleString("et-EE");
+
+/* ---------- read ---------- */
+function joonista(){
+  rowsEl.innerHTML = "";
+  read.forEach((r,i)=>{
+    const el = document.createElement("div");
+    el.className = "row" + (skoor(r) > 0 ? " live" : "");
+    el.innerHTML = `
+      <div class="wire">
+        <div class="end">
+          <label class="sr" for="kust${i}" hidden>Kust</label>
+          <input class="chip" type="text" id="kust${i}" data-i="${i}" data-k="kust" list="syst" value="${esc(r.kust)}" placeholder="kust" aria-label="Rida ${i+1}: kust">
+        </div>
+        <div class="link" aria-hidden="true"><span class="cord"></span><span class="tip"></span></div>
+        <div class="end">
+          <input class="chip" type="text" id="kuhu${i}" data-i="${i}" data-k="kuhu" list="syst" value="${esc(r.kuhu)}" placeholder="kuhu" aria-label="Rida ${i+1}: kuhu">
+        </div>
+      </div>
+      <div class="grid">
+        <div class="field full">
+          <label for="info${i}">Mis info liigub</label>
+          <input type="text" id="info${i}" data-i="${i}" data-k="info" value="${esc(r.info)}" placeholder="nt päringu andmed">
+        </div>
+        <div class="field">
+          <label for="kes${i}">Kes seda teeb</label>
+          <input type="text" id="kes${i}" data-i="${i}" data-k="kes" value="${esc(r.kes)}" placeholder="nt assistent">
+        </div>
+        <div class="field">
+          <div class="pair">
+            <div>
+              <label for="korrad${i}">Korda nädalas</label>
+              <input type="number" id="korrad${i}" data-i="${i}" data-k="korrad" min="0" step="1" inputmode="numeric" value="${esc(r.korrad)}" placeholder="0">
+            </div>
+            <div>
+              <label for="minutid${i}">Minutit korra kohta</label>
+              <input type="number" id="minutid${i}" data-i="${i}" data-k="minutid" min="0" step="1" inputmode="numeric" value="${esc(r.minutid)}" placeholder="0">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rowfoot">
+        <span class="rowsum">${skoor(r) ? `<b>${fmt(reaTunnid(r))} h</b> aastas · ${fmt(reaTunnid(r)*hind)} €` : "&nbsp;"}</span>
+        <button class="del" type="button" data-del="${i}">Eemalda rida</button>
+      </div>`;
+    rowsEl.appendChild(el);
+  });
+  arvuta();
+}
+
+/* juhtme paksus järgib rea osakaalu koguajast */
+function juhtmed(){
+  const max = Math.max(...read.map(skoor), 1);
+  [...rowsEl.children].forEach((el,i)=>{
+    const osa = skoor(read[i]) / max;
+    el.style.setProperty("--w", (skoor(read[i]) ? 2 + Math.round(osa*4) : 2) + "px");
+  });
+}
+
+/* ---------- arvutus ---------- */
+function arvuta(){
+  const h = tunnidKokku(), kulu = h * hind, kuud = h / TUNNID_KUUS;
+  const tyhi = h <= 0;
+
+  /* Aktiveerimishetk: esimene kord, kui ekraanil on päris number. */
+  if(!phNumber && h > 0){
+    phNumber = true;
+    jalgi("kaardistus_number", {kulu_aastas: Math.round(kulu), ridu: read.filter(r=>skoor(r)>0).length, haalega: haalKordi > 0});
+  }
+
+  $("#cost").innerHTML = fmt(kulu) + '<span class="u">€</span>';
+  $("#cost").classList.toggle("idle", tyhi);
+  $("#hours").textContent = fmt(h);
+  $("#months").textContent = kuud.toFixed(1).replace(".", ",");
+
+  $("#barCost").innerHTML = fmt(kulu) + '<span class="u">€ aastas</span>';
+  $("#barCost").classList.toggle("idle", tyhi);
+  $("#barHours").textContent = fmt(h);
+  $("#barMonths").textContent = kuud.toFixed(1).replace(".", ",");
+
+  const m = $("#meter");
+  if(m.children.length !== 12){
+    m.innerHTML = "";
+    for(let i=0;i<12;i++) m.appendChild(document.createElement("i"));
+  }
+  [...m.children].forEach((b,i)=>{
+    b.className = "";
+    b.style.removeProperty("--p");
+    if(kuud >= i+1) b.className = "on";
+    else if(kuud > i){ b.className = "part"; b.style.setProperty("--p", Math.round((kuud-i)*100)+"%"); }
+  });
+
+  const rida = read
+    .map((r,i)=>({...r, i, sk:skoor(r)}))
+    .filter(r=>r.sk>0)
+    .sort((a,b)=>b.sk-a.sk)
+    .slice(0,3);
+
+  const html = rida.map((r,n)=>`
+    <li>
+      <span class="n">0${n+1}</span>
+      <span class="what">
+        <strong>${esc(r.info) || "Nimetu rida"}</strong>
+        <span>${esc(r.kust) || "?"} &rarr; ${esc(r.kuhu) || "?"}${r.kes ? " · " + esc(r.kes) : ""}</span>
+      </span>
+      <span class="h">${fmt(reaTunnid(r))} h</span>
+    </li>`).join("");
+
+  ["#top3","#top3b"].forEach(sel => $(sel).innerHTML = html);
+  ["#top3empty","#top3bempty"].forEach(sel => $(sel).hidden = rida.length > 0);
+
+  $("#flagLead").textContent = rida.length
+    ? `Su kallim koht on „${rida[0].info || "esimene rida"}" — ${rida[0].kust || "?"} → ${rida[0].kuhu || "?"}, ${fmt(reaTunnid(rida[0]))} tundi aastas. Käi selle kohta need neli tingimust läbi.`
+    : "Võta ette oma esimene koht ja käi need neli tingimust läbi.";
+
+  juhtmed();
+  salvesta();
+}
+
+/* ---------- sisestus ---------- */
+rowsEl.addEventListener("input", e=>{
+  const t = e.target;
+  if(t.dataset.k === undefined) return;
+  if(!phAlustatud){ phAlustatud = true; jalgi("kaardistus_alustatud", {haalega: haalKordi > 0}); }
+  read[+t.dataset.i][t.dataset.k] = t.value;
+  const row = t.closest(".row");
+  const i = +t.dataset.i;
+  row.classList.toggle("live", skoor(read[i]) > 0);
+  row.querySelector(".rowsum").innerHTML = skoor(read[i])
+    ? `<b>${fmt(reaTunnid(read[i]))} h</b> aastas · ${fmt(reaTunnid(read[i])*hind)} €`
+    : "&nbsp;";
+  arvuta();
+});
+
+rowsEl.addEventListener("click", e=>{
+  const b = e.target.closest("[data-del]");
+  if(!b) return;
+  read.splice(+b.dataset.del, 1);
+  if(!read.length) read.push({info:"",kust:"",kuhu:"",kes:"",korrad:"",minutid:""});
+  joonista();
+});
+
+document.querySelectorAll("[data-add]").forEach(b => b.addEventListener("click", ()=>{
+  read.push({info:"",kust:"",kuhu:"",kes:"",korrad:"",minutid:""});
+  joonista();
+  const uus = rowsEl.lastElementChild;
+  uus.scrollIntoView({block:"center", behavior:"smooth"});
+  uus.querySelector("input").focus({preventScroll:true});
+}));
+
+$("#rate").addEventListener("input", e=>{
+  hind = +e.target.value;
+  $("#rateVal").textContent = hind;
+  [...rowsEl.children].forEach((el,i)=>{
+    el.querySelector(".rowsum").innerHTML = skoor(read[i])
+      ? `<b>${fmt(reaTunnid(read[i]))} h</b> aastas · ${fmt(reaTunnid(read[i])*hind)} €`
+      : "&nbsp;";
+  });
+  arvuta();
+});
+
+$("#barJump").addEventListener("click", ()=> $("#prio").scrollIntoView({behavior:"smooth"}));
+
+$("#broneeri").addEventListener("click", ()=>
+  jalgi("broneering_klikitud", {kulu_aastas: Math.round(tunnidKokku()*hind), haalega: haalKordi > 0}));
+
+/* ---------- kontrollnimekiri ---------- */
+const lipud = ["f1","f2","f3","f4"];
+function verdikt(){
+  const n = lipud.filter(id => $("#"+id).checked).length;
+  const v = $("#verdict");
+  if(n === 4 && !verdikt.tehtud){ verdikt.tehtud = true; jalgi("lipud_koik"); }
+  v.classList.toggle("ok", n === 4);
+  v.textContent = n === 4
+    ? "Neli neljast. Selle koha saab masinale anda."
+    : n === 0 ? "Märgi tingimused, mis kehtivad."
+    : `${n} neljast. Puuduv tingimus ei tähenda, et asi ei õnnestu — see tähendab, et enne tuleb midagi muud korda teha.`;
+}
+lipud.forEach(id => $("#"+id).addEventListener("change", verdikt));
+
+/* ---------- vorm ---------- */
+$("#lead").addEventListener("submit", async e=>{
+  e.preventDefault();
+  const msg = $("#msg");
+  const nimi = $("#name").value.trim(), email = $("#email").value.trim(),
+        firma = $("#company").value.trim(), tel = $("#phone").value.trim();
+  if(!nimi || !firma || !/.+@.+\..+/.test(email)){
+    msg.className = "msg err";
+    msg.textContent = "Täida nimi, ettevõte ja korrektne e-post.";
+    return;
+  }
+  if(tel.replace(/\D/g,"").length < 7){
+    msg.className = "msg err";
+    msg.textContent = "Lisa ka telefoninumber — Martin helistab enne, kui midagi saadab.";
+    $("#phone").focus();
+    return;
+  }
+  const h = tunnidKokku();
+  const payload = {
+    allikas: "teataja-kaardistus",
+    seanss: SEANSS,
+    haalega: haalKordi > 0,
+    transkript,
+    nimi, email, firma, telefon: tel,
+    tunnihind: hind,
+    tunnid_aastas: Math.round(h),
+    kulu_aastas: Math.round(h*hind),
+    inimkuud: +(h/TUNNID_KUUS).toFixed(1),
+    read: read.filter(r=>skoor(r)>0).map(r=>({...r, tunnid_aastas: Math.round(reaTunnid(r))})),
+    punane_lipp: lipud.filter(id=>$("#"+id).checked)
+  };
+
+  $("#send").disabled = true;
+  msg.className = "msg";
+  msg.textContent = "Saadan…";
+
+  if(!WEBHOOK_URL){
+    console.log("WEBHOOK_URL puudub. Payload:", payload);
+    msg.className = "msg err";
+    msg.textContent = "Vorm ei ole veel ühendatud. Lisa WEBHOOK_URL.";
+    $("#send").disabled = false;
+    return;
+  }
+  try{
+    const res = await fetch(WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+    if(!res.ok) throw new Error(res.status);
+    msg.className = "msg ok";
+    msg.textContent = "Saadetud. Kokkuvõte on su postkastis mõne minuti pärast.";
+    jalgi("lead_saadetud", {
+      kulu_aastas: payload.kulu_aastas,
+      ridu: payload.read.length,
+      haalega: payload.haalega,
+      lipud: payload.punane_lipp.length
+    });
+  }catch(err){
+    msg.className = "msg err";
+    msg.textContent = "Saatmine ebaõnnestus. Proovi uuesti või kirjuta taavi@alopex.digital.";
+    $("#send").disabled = false;
+  }
+});
+
+/* ================= häälsisend =================
+   Ots, mis võtab vastu helifaili ja tagastab read.
+   Vastus: { "read": [ {info, kust, kuhu, kes, korrad?, minutid?}, ... ] }
+   Korrad ja minutid tulevad ainult siis, kui inimene need ise välja ütles. */
+const VOICE_URL = "https://n8n.alopex.digital/webhook/teataja-haal";
+const MAX_SEK = 300;                 /* 5 minutit */
+const HOIATA_SEK = 30;               /* pehme märguanne enne lõppu */
+const RIBASID = 14;
+
+const SEANSS = (crypto.randomUUID && crypto.randomUUID()) ||
+               ("s-" + Math.random().toString(36).slice(2) + Date.now().toString(36));
+
+const vu = {
+  box:$("#voice"), idle:$("#vIdle"), rec:$("#vRec"), work:$("#vWork"),
+  start:$("#vStart"), stop:$("#vStop"), cancel:$("#vCancel"),
+  time:$("#vTime"), left:$("#vLeft"), levels:$("#vLevels"),
+  stage:$("#vStage"), pct:$("#vPct"), bar:$("#vBar"), msg:$("#vMsg")
+};
+
+let mediaRec = null, tykid = [], vool = null, ac = null, analyser = null;
+let raf = 0, tiksuja = 0, algusAeg = 0, roomaja = 0, jargmine = 0;
+let loobutud = false, haalKordi = 0, transkript = "";
+
+const toetatud = () => !!(navigator.mediaDevices?.getUserMedia && window.MediaRecorder && window.isSecureContext);
+
+function mimeTyyp(){
+  return ["audio/webm;codecs=opus","audio/webm","audio/mp4;codecs=mp4a.40.2","audio/mp4","audio/ogg;codecs=opus"]
+    .find(t => MediaRecorder.isTypeSupported(t)) || "";
+}
+
+function vaade(nimi){
+  vu.idle.hidden = nimi !== "idle";
+  vu.rec.hidden  = nimi !== "rec";
+  vu.work.hidden = nimi !== "work";
+}
+
+function teade(tekst, liik){
+  vu.msg.className = "voice-msg" + (liik ? " " + liik : "");
+  vu.msg.textContent = tekst || "";
+}
+
+function mmss(s){ return Math.floor(s/60) + ":" + String(Math.floor(s%60)).padStart(2,"0"); }
+
+/* ---- progress ---- */
+const praeguP = () => parseFloat(vu.bar.style.width) || 0;
+function seaP(p, silt){
+  const x = Math.max(0, Math.min(100, p));
+  vu.bar.style.width = x + "%";
+  vu.pct.textContent = Math.round(x) + "%";
+  if(silt) vu.stage.textContent = silt;
+}
+function rooma(lagi, sek, silt){
+  clearInterval(roomaja);
+  if(silt) seaP(praeguP(), silt);
+  const alg = praeguP(), samm = 120, kokku = sek*1000;
+  let moodas = 0;
+  roomaja = setInterval(()=>{
+    moodas += samm;
+    const k = Math.min(1, moodas/kokku);
+    seaP(alg + (lagi-alg) * (1 - Math.pow(1-k, 3)));
+    if(k >= 1) clearInterval(roomaja);
+  }, samm);
+}
+function seisaProgress(){ clearInterval(roomaja); clearTimeout(jargmine); }
+
+/* ---- tasemenäidik ---- */
+function ehitaRibad(){
+  vu.levels.innerHTML = "";
+  for(let i=0;i<RIBASID;i++) vu.levels.appendChild(document.createElement("i"));
+}
+function joonistaTase(){
+  if(!analyser) return;
+  const puhver = new Uint8Array(analyser.frequencyBinCount);
+  analyser.getByteFrequencyData(puhver);
+  const ribad = vu.levels.children, samm = Math.floor(puhver.length / RIBASID);
+  for(let i=0;i<RIBASID;i++){
+    let summa = 0;
+    for(let j=0;j<samm;j++) summa += puhver[i*samm + j];
+    const kesk = summa / samm / 255;
+    ribad[i].style.height = Math.max(3, Math.round(kesk * 44)) + "px";
+  }
+  raf = requestAnimationFrame(joonistaTase);
+}
+
+/* ---- puhastus ---- */
+function vabasta(){
+  cancelAnimationFrame(raf); raf = 0;
+  clearInterval(tiksuja); tiksuja = 0;
+  if(vool){ vool.getTracks().forEach(t=>t.stop()); vool = null; }
+  if(ac){ ac.close().catch(()=>{}); ac = null; }
+  analyser = null;
+}
+
+/* ---- salvestamine ---- */
+async function alusta(){
+  teade("");
+  try{
+    vool = await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true, noiseSuppression:true}});
+  }catch(err){
+    const keeldus = err && err.name === "NotAllowedError";
+    jalgi("haal_luba_puudub", {pohjus: keeldus ? "keelatud" : (err && err.name) || "tundmatu"});
+    teade(keeldus
+      ? "Brauser ei andnud mikrofoni luba. Luba see aadressiribalt ja proovi uuesti, või täida read ise."
+      : "Mikrofoni ei saanud kätte. Täida read ise, allpool.", "err");
+    return;
+  }
+
+  const tyyp = mimeTyyp();
+  try{
+    mediaRec = new MediaRecorder(vool, tyyp ? {mimeType:tyyp, audioBitsPerSecond:48000} : undefined);
+  }catch(err){
+    vabasta();
+    teade("See brauser ei oska heli salvestada. Täida read ise, allpool.", "err");
+    return;
+  }
+
+  tykid = []; loobutud = false;
+  mediaRec.ondataavailable = e => { if(e.data && e.data.size) tykid.push(e.data); };
+  mediaRec.onstop = () => {
+    const blob = new Blob(tykid, {type: tyyp || "audio/webm"});
+    vabasta();
+    if(loobutud || !blob.size){ vaade("idle"); return; }
+    saada(blob, tyyp);
+  };
+  mediaRec.start(1000);
+
+  try{
+    ac = new (window.AudioContext || window.webkitAudioContext)();
+    analyser = ac.createAnalyser();
+    analyser.fftSize = 256;
+    ac.createMediaStreamSource(vool).connect(analyser);
+    joonistaTase();
+  }catch(err){ analyser = null; }
+
+  jalgi("haal_alustatud", {kord: haalKordi + 1});
+  algusAeg = Date.now();
+  vu.time.textContent = "0:00";
+  vu.left.textContent = "jääb " + mmss(MAX_SEK);
+  vu.left.classList.remove("warn");
+  vaade("rec");
+
+  tiksuja = setInterval(()=>{
+    const kulunud = Math.floor((Date.now() - algusAeg)/1000);
+    const jaab = MAX_SEK - kulunud;
+    vu.time.textContent = mmss(kulunud);
+    vu.left.textContent = jaab > 0 ? "jääb " + mmss(jaab) : "aeg täis";
+    vu.left.classList.toggle("warn", jaab <= HOIATA_SEK);
+    if(jaab <= 0) lopeta();
+  }, 250);
+}
+
+function lopeta(){
+  if(mediaRec && mediaRec.state !== "inactive") mediaRec.stop();
+  else { vabasta(); vaade("idle"); }
+}
+
+function loobu(){
+  loobutud = true;
+  jalgi("haal_katkestatud", {sekundeid: Math.round((Date.now()-algusAeg)/1000)});
+  lopeta();
+  teade("Salvestus visatud ära.", "");
+}
+
+/* ---- saatmine ---- */
+function saada(blob, tyyp){
+  vaade("work");
+  seaP(0, "Laen üles");
+  teade("");
+
+  if(!VOICE_URL){
+    seisaProgress();
+    console.log("VOICE_URL puudub. Helifail:", blob.size, "baiti,", tyyp);
+    vaade("idle");
+    teade("Häälsisend ei ole veel ühendatud. Lisa VOICE_URL. Read saad seni ise täita.", "err");
+    return;
+  }
+
+  const sek = Math.round((Date.now()-algusAeg)/1000);
+  jalgi("haal_saadetud", {sekundeid: sek, baite: blob.size});
+
+  const laiend = /mp4/.test(tyyp) ? "m4a" : /ogg/.test(tyyp) ? "ogg" : "webm";
+  const fd = new FormData();
+  fd.append("heli", blob, "kaardistus-" + SEANSS + "." + laiend);
+  fd.append("seanss", SEANSS);
+  fd.append("sekundeid", String(sek));
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", VOICE_URL);
+  xhr.timeout = 180000;
+  xhr.responseType = "json";
+
+  xhr.upload.onprogress = e => {
+    if(e.lengthComputable) seaP(e.loaded / e.total * 35, "Laen üles");
+  };
+  xhr.upload.onload = () => {
+    rooma(74, 28, "Kuulan salvestust");
+    jargmine = setTimeout(()=> rooma(94, 26, "Panen read kokku"), 28000);
+  };
+  xhr.onload = () => {
+    seisaProgress();
+    if(xhr.status < 200 || xhr.status >= 300){ nurjus("Töötlemine ebaõnnestus (" + xhr.status + ")."); return; }
+    let and = xhr.response;
+    if(typeof and === "string"){ try{ and = JSON.parse(and); }catch(e){ and = null; } }
+    const uued = Array.isArray(and) ? and : (and && Array.isArray(and.read) ? and.read : null);
+    if(!uued || !uued.length){ nurjus("Salvestusest ei tulnud ühtegi rida välja. Proovi uuesti või täida read ise."); return; }
+    if(and && and.transkript) transkript = (transkript ? transkript + "\n\n" : "") + String(and.transkript);
+    seaP(100, "Valmis");
+    setTimeout(()=> valmis(uued), 350);
+  };
+  xhr.onerror = () => { seisaProgress(); nurjus("Ühendus katkes. Proovi uuesti või täida read ise."); };
+  xhr.ontimeout = () => { seisaProgress(); nurjus("Töötlemine võttis liiga kaua. Proovi uuesti või täida read ise."); };
+
+  xhr.send(fd);
+}
+
+function nurjus(tekst){
+  jalgi("haal_nurjus", {pohjus: tekst.slice(0, 60)});
+  vaade("idle");
+  teade(tekst, "err");
+}
+
+/* Kas read on veel puutumata näidised? Siis asendame. Muidu lisame otsa. */
+function ridadPuutumata(){
+  if(read.length !== ALGREAD.length) return false;
+  return read.every((r,i) =>
+    r.info === ALGREAD[i].info && r.kust === ALGREAD[i].kust &&
+    r.kuhu === ALGREAD[i].kuhu && !String(r.kes).trim() &&
+    !String(r.korrad).trim() && !String(r.minutid).trim());
+}
+
+function valmis(uued){
+  const puhtad = uued.slice(0, 20).map(r => ({
+    info: String(r.info ?? "").slice(0,120),
+    kust: String(r.kust ?? "").slice(0,60),
+    kuhu: String(r.kuhu ?? "").slice(0,60),
+    kes:  String(r.kes  ?? "").slice(0,60),
+    korrad:  Number.isFinite(+r.korrad)  && +r.korrad  > 0 ? String(Math.round(+r.korrad))  : "",
+    minutid: Number.isFinite(+r.minutid) && +r.minutid > 0 ? String(Math.round(+r.minutid)) : ""
+  })).filter(r => r.info || r.kust || r.kuhu);
+
+  if(!puhtad.length){ nurjus("Salvestusest ei tulnud ühtegi rida välja. Proovi uuesti või täida read ise."); return; }
+
+  const asenda = haalKordi === 0 && ridadPuutumata();
+  read = asenda ? puhtad : read.concat(puhtad);
+  haalKordi++;
+  jalgi("haal_onnestus", {
+    ridu: puhtad.length,
+    kord: haalKordi,
+    numbritega: puhtad.filter(r => r.korrad && r.minutid).length
+  });
+
+  joonista();
+  vaade("idle");
+  vu.start.lastChild.textContent = " Räägi veel juurde";
+
+  const puudu = puhtad.filter(r => !r.korrad || !r.minutid).length;
+  teade(puhtad.length + (puhtad.length === 1 ? " rida kirjas." : " rida kirjas.") +
+        (puudu ? " Lisa nüüd igale reale kaks numbrit — mitu korda nädalas ja mitu minutit korra kohta." : ""), "ok");
+
+  const sihtIndeks = asenda ? 0 : read.length - puhtad.length;
+  const sihtRida = rowsEl.children[sihtIndeks];
+  if(sihtRida){
+    sihtRida.scrollIntoView({block:"center", behavior:"smooth"});
+    const esimeneNumber = sihtRida.querySelector('input[data-k="korrad"]');
+    if(esimeneNumber) esimeneNumber.focus({preventScroll:true});
+  }
+}
+
+/* ---- kontaktid ootamise ajal ---- */
+[["vnimi","name"],["vfirma","company"],["vemail","email"]].forEach(([a,b])=>{
+  const src = $("#"+a), sihv = $("#"+b);
+  if(src && sihv) src.addEventListener("input", ()=>{ sihv.value = src.value; });
+});
+
+/* ---- käivitus ---- */
+if(toetatud()){
+  ehitaRibad();
+  vu.box.hidden = false;
+  vu.start.addEventListener("click", alusta);
+  vu.stop.addEventListener("click", lopeta);
+  vu.cancel.addEventListener("click", loobu);
+  window.addEventListener("pagehide", ()=>{ loobutud = true; vabasta(); });
+}
+
+/* ---------- käivitus ---------- */
+const dl = document.createElement("datalist");
+dl.id = "syst";
+dl.innerHTML = SYSTEEMID.map(s=>`<option value="${s}">`).join("");
+document.body.appendChild(dl);
+
+$("#rate").value = hind;
+$("#rateVal").textContent = hind;
+
+/* Kui read tulid localStorage'ist ja number on juba olemas, ei ole see aktiveerimine,
+   vaid tagasitulek. Muidu läheks iga uuestilaadimine uue aktiveerimisena arvesse. */
+if(tunnidKokku() > 0){
+  phNumber = true;
+  jalgi("kaardistus_jatkati", {ridu: read.filter(r=>skoor(r)>0).length});
+}
+
+joonista();
+verdikt();
+</script>
+</body>
+</html>

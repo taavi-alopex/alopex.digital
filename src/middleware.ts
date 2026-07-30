@@ -35,6 +35,9 @@ export default function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // Exclude _next, api, static files (anything with a dot)
-  matcher: ["/((?!api|_next|_vercel|pricing|sample-dashboard|.*\\..*).*)"],
+  // Exclude _next, api, static files (anything with a dot), and the routes that must not
+  // get a locale prefix: the rewritten static pages and the Teataja admin dashboard.
+  matcher: [
+    "/((?!api|_next|_vercel|pricing|sample-dashboard|teataja|teataja-dash|.*\\..*).*)",
+  ],
 };

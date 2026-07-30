@@ -15,6 +15,13 @@ const nextConfig: NextConfig = {
         source: "/sample-dashboard",
         destination: "/sample-dashboard.html",
       },
+      // Teataja lead magnet. A static file rather than a route so it stays outside the
+      // next-intl [locale] tree — /teataja must NOT redirect to /en/teataja, the article
+      // in print gives the bare Estonian address.
+      {
+        source: "/teataja",
+        destination: "/teataja.html",
+      },
     ];
   },
 };
