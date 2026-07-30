@@ -37,7 +37,7 @@ async function hogql(query: string): Promise<Row[]> {
   if (res.status === 429) {
     // PostHog's free plan throttles query volume. Surface it as itself rather than as a
     // generic failure, so nobody goes looking for a broken key.
-    throw new Error("PostHog piiras päringute arvu (429). Proovi mõne minuti pärast uuesti.");
+    throw new Error("PostHog piiras päringute arvu (429). Numbrid tulevad tagasi mõne minuti pärast.");
   }
   if (!res.ok) throw new Error(`PostHog ${res.status}: ${(await res.text()).slice(0, 200)}`);
   const json = await res.json();

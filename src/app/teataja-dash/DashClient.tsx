@@ -95,7 +95,15 @@ export default function DashClient() {
 
         {viga ? <Teade tekst={`Andmete lugemine ebaõnnestus: ${viga}`} /> : null}
         {data && !data.available ? (
-          <Teade tekst={`PostHog ei vastanud: ${data.error}. Kontrolli POSTHOG_READ_KEY väärtust.`} />
+          <Teade
+            tekst={
+              // A throttle is not a broken key — pointing at the key would send you
+              // debugging the wrong thing.
+              /429/.test(data.error ?? "")
+                ? data.error!
+                : `PostHog ei vastanud: ${data.error} — kontrolli POSTHOG_READ_KEY väärtust boksis.`
+            }
+          />
         ) : null}
         {laen && !data ? <Teade tekst="Laen…" /> : null}
 
