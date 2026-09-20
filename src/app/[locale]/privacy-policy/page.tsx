@@ -156,6 +156,21 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                   color: "var(--frost)",
                 }}
               >
+                {t("privacyPolicy.sections.b2bMarketing.title")}
+              </h2>
+              <p style={{ color: "var(--text-dark-body)" }}>
+                {t("privacyPolicy.sections.b2bMarketing.content")}
+              </p>
+            </section>
+
+            <section>
+              <h2
+                className="text-xl font-semibold mb-4"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "var(--frost)",
+                }}
+              >
                 {t("privacyPolicy.sections.thirdParties.title")}
               </h2>
               <p style={{ color: "var(--text-dark-body)" }}>

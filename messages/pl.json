@@ -555,28 +555,32 @@
           "title": "3. Podstawa prawna przetwarzania",
           "content": "Przetwarzamy dane na podstawie: wykonania umowy, prawnie uzasadnionego interesu, zgody (na marketing) oraz obowiązków prawnych wynikających z art. 6 RODO."
         },
+        "b2bMarketing": {
+          "title": "4. Marketing bezpośredni B2B",
+          "content": "Wysyłamy wiadomości e-mail o naszych usługach do przedstawicieli firm (członków zarządu, szefów sprzedaży i marketingu). Dane kontaktowe (imię i nazwisko, stanowisko, służbowy adres e-mail, firma) pochodzą ze źródeł publicznych: rejestru przedsiębiorców, stron internetowych firm, LinkedIn i publicznych katalogów firm. Przetwarzamy je na podstawie prawnie uzasadnionego interesu (RODO art. 6 ust. 1 lit. f) oraz § 103¹ estońskiej ustawy o łączności elektronicznej, która dopuszcza marketing bezpośredni na adres kontaktowy osoby prawnej, o ile odbiorca może łatwo zrezygnować. Każda wiadomość zawiera możliwość rezygnacji. Rezygnację realizujemy tego samego dnia i dodajemy kontakt do listy wykluczeń, aby więcej nie pisać. Wiadomości wysyłamy przez Instantly.ai (podmiot przetwarzający), a odpowiedzi zapisujemy w naszym CRM (GoHighLevel). Kontakt przechowujemy do czasu rezygnacji lub 12 miesięcy od ostatniej korespondencji; listę wykluczeń przechowujemy w celu realizacji rezygnacji. W każdej chwili możesz wnieść sprzeciw (RODO art. 21): odpowiedz na wiadomość słowem „unsubscribe” lub napisz na info@alopex.digital."
+        },
         "thirdParties": {
-          "title": "4. Zewnętrzni dostawcy usług",
+          "title": "5. Zewnętrzni dostawcy usług",
           "content": "Udostępniamy dane zaufanym dostawcom: GoHighLevel (CRM), Meta (reklama), Google (analityka), TikTok (reklama) i n8n (automatyzacja). Wszyscy przestrzegają Ram Ochrony Danych UE-USA lub Standardowych Klauzul Umownych."
         },
         "retention": {
-          "title": "5. Okres przechowywania danych",
+          "title": "6. Okres przechowywania danych",
           "content": "Zgłoszenia kontaktowe: 3 lata. Dane klientów: czas trwania umowy + 7 lat. Dane analityczne: 26 miesięcy. Zgoda marketingowa: do wycofania + 3 lata."
         },
         "rights": {
-          "title": "6. Twoje prawa",
+          "title": "7. Twoje prawa",
           "content": "Na mocy RODO przysługuje Ci prawo do: dostępu, sprostowania, usunięcia, ograniczenia, przenoszenia, sprzeciwu i wycofania zgody. Aby skorzystać ze swoich praw, skontaktuj się z info@alopex.digital."
         },
         "cookies": {
-          "title": "7. Pliki cookie",
+          "title": "8. Pliki cookie",
           "content": "Używamy niezbędnych plików cookie (funkcjonalność strony), analitycznych plików cookie (statystyki użytkowania) i marketingowych plików cookie (reklama). Zarządzaj preferencjami poprzez nasz baner zgody na pliki cookie."
         },
         "contact": {
-          "title": "8. Kontakt",
+          "title": "9. Kontakt",
           "content": "W przypadku pytań dotyczących prywatności lub w celu skorzystania ze swoich praw:"
         },
         "supervisory": {
-          "title": "9. Organ nadzorczy",
+          "title": "10. Organ nadzorczy",
           "content": "Masz prawo złożyć skargę do Estońskiego Inspektoratu Ochrony Danych:"
         }
       }
