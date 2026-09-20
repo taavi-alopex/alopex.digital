@@ -555,28 +555,32 @@
           "title": "3. Legal Basis for Processing",
           "content": "We process data based on: contract performance, legitimate interest, consent (for marketing), and legal obligations under GDPR Article 6."
         },
+        "b2bMarketing": {
+          "title": "4. B2B direct marketing",
+          "content": "We send emails about our services to company representatives (board members, sales and marketing leads). Contact details (name, role, work email address, company) come from public sources: the Estonian Business Register, company websites, LinkedIn and public business directories. We process them on the basis of legitimate interest (GDPR Art. 6(1)(f)) and § 103¹ of the Estonian Electronic Communications Act, which permits direct marketing to a legal person's contact address provided the recipient can easily opt out. Every email contains an opt-out. We honour opt-outs the same day and add the contact to a suppression list so we do not write again. Emails are sent through Instantly.ai (processor) and replies are stored in our CRM (GoHighLevel). We keep a contact until opt-out or 12 months after the last correspondence; the suppression list is kept to enforce the opt-out. You may object to this processing at any time (GDPR Art. 21): reply to the email with the word \"eemalda\" or \"unsubscribe\", or write to info@alopex.digital."
+        },
         "thirdParties": {
-          "title": "4. Third-Party Services",
+          "title": "5. Third-Party Services",
           "content": "We share data with trusted providers: GoHighLevel (CRM), Meta (advertising), Google (analytics), TikTok (advertising), and n8n (automation). All comply with EU-US Data Privacy Framework or Standard Contractual Clauses."
         },
         "retention": {
-          "title": "5. Data Retention",
+          "title": "6. Data Retention",
           "content": "Contact submissions: 3 years. Client data: contract duration + 7 years. Analytics: 26 months. Marketing consent: until withdrawn + 3 years."
         },
         "rights": {
-          "title": "6. Your Rights",
+          "title": "7. Your Rights",
           "content": "Under GDPR you have rights to: access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. Contact info@alopex.digital to exercise your rights."
         },
         "cookies": {
-          "title": "7. Cookies",
+          "title": "8. Cookies",
           "content": "We use necessary cookies (site functionality), analytics cookies (usage statistics), and marketing cookies (advertising). Manage preferences via our cookie consent banner."
         },
         "contact": {
-          "title": "8. Contact Us",
+          "title": "9. Contact Us",
           "content": "For privacy-related questions or to exercise your rights:"
         },
         "supervisory": {
-          "title": "9. Supervisory Authority",
+          "title": "10. Supervisory Authority",
           "content": "You have the right to lodge a complaint with the Estonian Data Protection Inspectorate:"
         }
       }

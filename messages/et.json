@@ -555,28 +555,32 @@
           "title": "3. Töötlemise õiguslik alus",
           "content": "Me töötleme andmeid järgmistel alustel: lepingu täitmine, õigustatud huvi, nõusolek (turunduseks) ja juriidilised kohustused GDPR artikli 6 alusel."
         },
+        "b2bMarketing": {
+          "title": "4. Otseturundus ettevõtetele (B2B)",
+          "content": "Saadame ettevõtete esindajatele (juhatuse liikmed, müügi- ja turundusjuhid) e-kirju meie teenuste kohta. Kontaktandmed (nimi, ametikoht, töö e-posti aadress, ettevõte) pärinevad avalikest allikatest: äriregister, ettevõtte koduleht, LinkedIn ja avalikud ärikataloogid. Töötleme neid õigustatud huvi alusel (IKÜM art 6 lg 1 p f) ja elektroonilise side seaduse § 103¹ alusel, mis lubab juriidilise isiku kontaktaadressile otseturundust, kui saajal on lihtne sellest loobuda. Igas kirjas on loobumisvõimalus. Loobumissoovi täidame samal päeval ja lisame kontakti välistusnimekirja, et me talle enam ei kirjutaks. Kirjade saatmiseks kasutame teenust Instantly.ai (volitatud töötleja) ja vastused salvestame oma CRM-i (GoHighLevel). Säilitame kontakti kuni loobumiseni või kuni 12 kuud pärast viimast kirjavahetust; välistusnimekirja säilitame loobumise täitmiseks. Teil on õigus töötlemisele igal ajal vastuväide esitada (IKÜM art 21): vastake kirjale sõnaga „eemalda“ või kirjutage info@alopex.digital."
+        },
         "thirdParties": {
-          "title": "4. Kolmandatest osapooltest teenusepakkujad",
+          "title": "5. Kolmandatest osapooltest teenusepakkujad",
           "content": "Me jagame andmeid usaldusväärsete pakkujatega: GoHighLevel (CRM), Meta (reklaam), Google (analüütika), TikTok (reklaam) ja n8n (automatiseerimine). Kõik järgivad EL-USA andmekaitseraamistikku või standardseid lepingutingimusi."
         },
         "retention": {
-          "title": "5. Andmete säilitamine",
+          "title": "6. Andmete säilitamine",
           "content": "Kontaktvormi esitused: 3 aastat. Kliendi andmed: lepingu kestvus + 7 aastat. Analüütikaandmed: 26 kuud. Turundusnõusolek: kuni tagasivõtmiseni + 3 aastat."
         },
         "rights": {
-          "title": "6. Teie õigused",
+          "title": "7. Teie õigused",
           "content": "GDPR-i alusel on teil õigus: juurdepääsule, parandamisele, kustutamisele, piiramisele, ülekantavusele, vastuväitele ja nõusoleku tagasivõtmisele. Oma õiguste kasutamiseks võtke ühendust info@alopex.digital."
         },
         "cookies": {
-          "title": "7. Küpsised",
+          "title": "8. Küpsised",
           "content": "Me kasutame vajalikke küpsiseid (veebilehe funktsionaalsus), analüütikaküpsiseid (kasutusstatistika) ja turundusküpsiseid (reklaam). Hallake eelistusi meie küpsiste nõusolekuribalt."
         },
         "contact": {
-          "title": "8. Võtke meiega ühendust",
+          "title": "9. Võtke meiega ühendust",
           "content": "Privaatsusega seotud küsimuste või oma õiguste kasutamiseks:"
         },
         "supervisory": {
-          "title": "9. Järelevalveasutus",
+          "title": "10. Järelevalveasutus",
           "content": "Teil on õigus esitada kaebus Andmekaitse Inspektsioonile:"
         }
       }
