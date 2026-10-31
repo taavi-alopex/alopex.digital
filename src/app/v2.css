@@ -700,7 +700,13 @@ body:has(.v2) { background: #F4F5F2; }
 @keyframes fcink { from { opacity: 0; filter: blur(1.5px); } to { opacity: 1; filter: none; } }
 @keyframes fcbuzz { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-.6px); } 75% { transform: translateX(.6px); } }
 @keyframes fcblink { 50% { opacity: .35; } }
+/* Page change: the content fades in and rises a little. The menu and the footer stay still.
+   Every page renders its own <main>, so the animation runs again on each navigation. */
+.v2 > main { animation: v2page .38s cubic-bezier(.2, .7, .2, 1) both; }
+@keyframes v2page { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
 @media (prefers-reduced-motion: reduce) {
+  .v2 > main { animation: none; }
   .v2 .fc-paper-wrap, .v2 .fc-paper .ln, .v2 .fc-printer.printing .fc-send, .v2 .fc-printer.printing .fc-led { animation: none; max-height: none; opacity: 1; }
 }
 .v2 .fc-mini { display: none; }
