@@ -1,33 +1,54 @@
-import { getTranslations } from "next-intl/server";
-import { Metadata } from "next";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-import { Process } from "@/components/Process";
-import { InlineCTA } from "@/components/InlineCTA";
+import type { Metadata } from "next";
+import { getText } from "@/content/v2/text";
+import { ProcessSteps } from "@/components/v2/ProcessSteps";
+import { PageFrame, PageHead } from "@/components/v2/Shared";
 
-type Props = {
-  params: Promise<{ locale: string }>;
-};
+type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "process" });
-
-  return {
-    title: t("meta.title") + " | Alopex Digital",
-    description: t("meta.description"),
-  };
+  const t = getText((await params).locale);
+  return { title: `${t.process.head.crumb} | Alopex Digital`, description: t.process.head.lead };
 }
 
-export default function ProcessPage() {
+export default async function ProcessPage({ params }: Props) {
+  const t = getText((await params).locale);
+  const p = t.process;
   return (
-    <>
-      <Navigation />
-      <main className="pt-20">
-        <Process />
-        <InlineCTA variant="assessment" />
-      </main>
-      <Footer />
-    </>
+    <PageFrame>
+      <PageHead {...p.head} />
+      <section className="s">
+        <div className="wrap">
+          <ProcessSteps steps={p.steps} hint={p.scrollHint} stepLabel={p.stepLabel} give={p.give} get={p.get} />
+        </div>
+      </section>
+      <section className="s alt">
+        <div className="wrap">
+          <div className="shead">
+            <h2>{p.promisesTitle}</h2>
+            <p>{p.promisesSub}</p>
+          </div>
+          <div className="grid3">
+            {p.promises.map((x) => (
+              <div key={x.title} className="card small">
+                <span className="lbl live">{x.label}</span>
+                <b>{x.title}</b>
+                <span>{x.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="wrap faq-wrap">
+          <h2 className="minor">{p.faqTitle}</h2>
+          <div className="faq">
+            {p.faq.map((f) => (
+              <details key={f.q}>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    </PageFrame>
   );
 }

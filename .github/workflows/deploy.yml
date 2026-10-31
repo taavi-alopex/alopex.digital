@@ -10,11 +10,18 @@ jobs:
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1
+        env:
+          # Booking (GoHighLevel). Stored as repository secrets, never in git.
+          GHL_API_TOKEN: ${{ secrets.GHL_API_TOKEN }}
+          GHL_LOCATION_ID: ${{ secrets.GHL_LOCATION_ID }}
         with:
           host: 65.108.88.183
           username: root
           key: ${{ secrets.DEPLOY_SSH_KEY }}
+          envs: GHL_API_TOKEN,GHL_LOCATION_ID
           script: |
             cd /root/alopex-site
             git pull origin main
+            # Written next to the code for the Docker build only; git ignores it. Empty values keep booking in demo mode.
+            printf 'GHL_API_TOKEN=%s\nGHL_LOCATION_ID=%s\n' "$GHL_API_TOKEN" "$GHL_LOCATION_ID" > .env.production.local
             docker compose up -d --build --force-recreate alopex-site

@@ -1,51 +1,11 @@
-import { getTranslations } from "next-intl/server";
-import { Metadata } from "next";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-import { RevOpsAgencyPage } from "@/components/RevOpsAgencyPage";
+import { PlatformLanding, platformMetadata } from "@/components/v2/PlatformLanding";
 
-type Props = {
-  params: Promise<{ locale: string }>;
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "revopsAgency" });
-
-  return {
-    title: t("meta.title"),
-    description: t("meta.description"),
-    keywords: [
-      "RevOps agency",
-      "RevOps agency Europe",
-      "revenue operations",
-      "RevOps consultant",
-      "revenue operations agency EU",
-      "RevOps implementation",
-      "sales operations Europe",
-      "marketing operations agency",
-    ],
-    alternates: {
-      canonical: `https://alopex.digital/${locale}/revops-agency-europe`,
-    },
-    openGraph: {
-      title: t("meta.title"),
-      description: t("meta.description"),
-      url: `https://alopex.digital/${locale}/revops-agency-europe`,
-      siteName: "Alopex Digital",
-      type: "website",
-    },
-  };
+export async function generateMetadata({ params }: Props) {
+  return platformMetadata("revops-agency-europe", (await params).locale);
 }
 
-export default function Page() {
-  return (
-    <>
-      <Navigation />
-      <main className="pt-20">
-        <RevOpsAgencyPage />
-      </main>
-      <Footer />
-    </>
-  );
+export default async function Page({ params }: Props) {
+  return <PlatformLanding id="revops-agency-europe" locale={(await params).locale} />;
 }

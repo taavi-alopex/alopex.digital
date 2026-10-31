@@ -1,0 +1,15 @@
+<svg width="240" height="56" viewBox="0 0 240 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kastoram WOOD">
+  <!-- Crate corner mark -->
+  <g transform="translate(2,4)">
+    <rect x="1" y="1" width="46" height="46" rx="3" fill="none" stroke="#2B2018" stroke-width="2.5"/>
+    <!-- corner brackets / banding -->
+    <path d="M1 13 H47 M1 35 H47" stroke="#2B2018" stroke-width="2" opacity="0.35"/>
+    <path d="M14 1 V47 M34 1 V47" stroke="#2B2018" stroke-width="2" opacity="0.18"/>
+    <!-- copper stamp diamond -->
+    <rect x="16.5" y="16.5" width="15" height="15" rx="2" transform="rotate(45 24 24)" fill="#B5703C"/>
+    <path d="M20 24 l3 3 l6 -7" stroke="#F6F1E8" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="62" y="30" font-family="'Fraunces', Georgia, serif" font-size="26" font-weight="600" letter-spacing="0.5" fill="#2B2018">KASTORAM</text>
+  <text x="63" y="46" font-family="'Inter', Arial, sans-serif" font-size="10.5" font-weight="600" letter-spacing="5" fill="#B5703C">WOOD&#160;&#160;OÜ</text>
+</svg>

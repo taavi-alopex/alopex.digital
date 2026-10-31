@@ -8,3 +8,5 @@ Dockerfile
 .DS_Store
 .env*
 !.env.production
+# Booking keys, written by the deploy from GitHub secrets (see .github/workflows/deploy.yml).
+!.env.production.local
