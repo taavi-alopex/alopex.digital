@@ -8,7 +8,7 @@ body:has(.v2) { background: #F4F5F2; }
 
 .v2 {
   --bg: #F4F5F2; --bg-2: #ECEEE9; --card: #FFFFFF; --line: #DCDFD7; --line-2: #C8CCC2;
-  --ink: #161929; --ink-2: #4A4F60; --ink-3: #7D8190;
+  --ink: #161929; --ink-2: #4A4F60; --ink-3: #646878;
   --green: #2D6A4F; --green-pale: #D8F3DC; --green-ink: #12372A;
   --accent: #D4873F; --warm: #FFF5E6;
   --display: var(--font-familjen), "Helvetica Neue", Arial, sans-serif;
@@ -27,7 +27,8 @@ body:has(.v2) { background: #F4F5F2; }
 .v2 a { color: inherit; }
 .v2 button { font: inherit; color: inherit; }
 .v2 ::selection { background: var(--green-pale); color: var(--green-ink); }
-.v2 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+/* Amber alone is 2.6:1 on the ground; the 1px ink ring underneath makes the focus visible for everyone. */
+.v2 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; box-shadow: 0 0 0 1px var(--ink); }
 
 .v2 .wrap { max-width: 1240px; margin: 0 auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)); }
 .v2 .mono { font-family: var(--mono); font-size: 11px; letter-spacing: .02em; }
