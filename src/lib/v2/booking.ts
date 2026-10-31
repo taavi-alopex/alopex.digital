@@ -4,6 +4,9 @@
 export const CALENDAR_ID = "Cpq4e6doG8jAqqU9NEGU";
 
 export const TIMEZONE = "Europe/Tallinn";
+
+/** n8n workflow "Booking Confirmation (website)": emails the client and the team after a booking. */
+export const BOOKING_CONFIRMATION_WEBHOOK = "https://n8n.alopex.digital/webhook/booking-confirmation";
 export const GHL_API = "https://services.leadconnectorhq.com";
 export const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
