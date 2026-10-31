@@ -53,7 +53,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) notFound();
 
   return (
-    <html lang={locale} className="scroll-smooth">
+    // The light page colour is set inline so the very first paint is light (the shared globals.css paints the body dark navy for the Teataja dashboard).
+    <html lang={locale} className="scroll-smooth" style={{ background: "#F4F5F2", colorScheme: "light" }}>
       <head>
         <Script id="cookieyes" src="https://cdn-cookieyes.com/client_data/0fa48870f6545632d245c569fd209db8/script.js" strategy="beforeInteractive" />
         <OrganizationSchema />
@@ -61,7 +62,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <FAQPageSchema />
         <WebSiteSchema />
       </head>
-      <body className={`${familjen.variable} ${sourceSans.variable} ${martian.variable} antialiased`} suppressHydrationWarning>
+      <body className={`${familjen.variable} ${sourceSans.variable} ${martian.variable} antialiased`} style={{ background: "#F4F5F2", color: "#161929" }} suppressHydrationWarning>
         <MetaPixel />
         <GoogleAnalytics />
         {/* Client components only need the locale; all wording comes from src/content/v2/text. */}

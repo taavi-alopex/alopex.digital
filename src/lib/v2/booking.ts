@@ -29,16 +29,16 @@ export function pickSlots(days: Day[]): Day[] {
     });
 }
 
-/** Demo times for local work: the next five working days. */
-export function demoDays(): Day[] {
+/** Demo times for local work: the next working days (5 for the quick picks, more for the calendar). */
+export function demoDays(count = 5): Day[] {
   const times = [["10:00", "13:00"], ["09:00", "14:30"], ["11:30", "15:00"], ["10:00", "16:00"], ["09:30", "13:00"]];
   const days: Day[] = [];
   const d = new Date();
-  while (days.length < 5) {
+  while (days.length < count) {
     d.setDate(d.getDate() + 1);
     if (d.getDay() === 0 || d.getDay() === 6) continue;
     const date = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-    days.push({ date, slots: times[days.length].map((t) => `${date}T${t}:00+02:00`) });
+    days.push({ date, slots: times[days.length % times.length].map((t) => `${date}T${t}:00+02:00`) });
   }
   return days;
 }

@@ -22,6 +22,94 @@ const slotLabel = (t: Text, slot: string) => {
   return fmt(t.slotFormat, { day: name, date, time: timeOf(t, slot) });
 };
 
+/** Local yyyy-mm-dd, so dates match the calendar's own day keys. */
+const ymd = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
+/** "See more times": every free time the calendar allows (up to four weeks), Monday to Friday, in a popup. Picking a time closes it. */
+function MoreTimes({ t, slot, onPick }: { t: Text; slot: string | null; onPick: (s: string) => void }) {
+  const ref = useRef<HTMLDialogElement>(null);
+  const [days, setDays] = useState<Day[] | null>(null);
+  const [day, setDay] = useState<string | null>(null);
+
+  const open = () => {
+    ref.current?.showModal();
+    if (days) return;
+    fetch("/api/booking/slots?range=full")
+      .then((r) => r.json())
+      .then((d) => {
+        const list: Day[] = (d.days || []).filter((x: Day) => x.slots.length);
+        setDays(list);
+        setDay((cur) => cur ?? list[0]?.date ?? null);
+      })
+      .catch(() => setDays([]));
+  };
+
+  const byDate = new Map((days ?? []).map((d) => [d.date, d.slots]));
+  // Weeks from this Monday (next Monday at the weekend), Monday to Friday.
+  const monday = new Date();
+  monday.setHours(12, 0, 0, 0);
+  if (monday.getDay() === 6) monday.setDate(monday.getDate() + 2);
+  if (monday.getDay() === 0) monday.setDate(monday.getDate() + 1);
+  monday.setDate(monday.getDate() - ((monday.getDay() + 6) % 7));
+  // As many weeks as Martin's calendar opens (it allows booking 14 days ahead), at least two, at most five.
+  const last = days?.length ? new Date(`${days[days.length - 1].date}T12:00:00`) : null;
+  const span = last ? Math.floor((last.getTime() - monday.getTime()) / (7 * 864e5)) + 1 : 3;
+  const weeks = Array.from({ length: Math.min(5, Math.max(2, span)) }, (_, w) =>
+    Array.from({ length: 5 }, (_, i) => {
+      const d = new Date(monday);
+      d.setDate(monday.getDate() + w * 7 + i);
+      return ymd(d);
+    }),
+  );
+  const times = day ? byDate.get(day) ?? [] : [];
+
+  return (
+    <>
+      <button type="button" className="link bk-more" onClick={open}>{t.moreTimes} →</button>
+      <dialog ref={ref} className="v2-modal bk-cal" onClick={(e) => e.target === ref.current && ref.current?.close()}>
+        <div className="modal-body">
+          <button type="button" className="modal-x" aria-label={t.calClose} onClick={() => ref.current?.close()}>×</button>
+          <h2>{t.calTitle}</h2>
+          <p>{t.calHint}</p>
+          {days === null ? (
+            <p className="bk-cal-wait">{t.loading}</p>
+          ) : (
+            <>
+              <div className="bk-cal-grid">
+                {[1, 2, 3, 4, 5].map((i) => <span key={i} className="hd">{t.days[i]}</span>)}
+                {weeks.flat().map((date) => {
+                  const n = byDate.get(date)?.length ?? 0;
+                  const l = dayLabel(t, date);
+                  return (
+                    <button key={date} type="button" disabled={!n} aria-pressed={day === date} onClick={() => setDay(date)}>
+                      <b>{l.date}</b>
+                      {n > 0 && <i aria-hidden="true" />}
+                    </button>
+                  );
+                })}
+              </div>
+              <div className="bk-cal-times">
+                {day && <b>{dayLabel(t, day).name} {dayLabel(t, day).date}</b>}
+                <div>
+                  {times.length ? (
+                    times.map((s) => (
+                      <button key={s} type="button" aria-pressed={slot === s} onClick={() => { onPick(s); ref.current?.close(); }}>
+                        {timeOf(t, s)}
+                      </button>
+                    ))
+                  ) : (
+                    <span className="none">{t.calNone}</span>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      </dialog>
+    </>
+  );
+}
+
 /**
  * Booking in three steps that open one after another:
  * the job → the email (sent right away, so we keep the lead) → a time.
@@ -141,6 +229,7 @@ export function BookingForm({ text: t }: { text: Text }) {
               );
             })}
           </div>
+          <MoreTimes t={t} slot={slot} onPick={setSlot} />
           <button className="btn" type="button" onClick={book} disabled={!slot || state === "sending"}>
             {state === "sending" ? t.sending : slot ? fmt(t.book, { slot: slotLabel(t, slot) }) : t.pickFirst}
           </button>

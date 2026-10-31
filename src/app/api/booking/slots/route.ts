@@ -1,14 +1,16 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { CALENDAR_ID, GHL_API, TIMEZONE, demoDays, ghl, pickSlots, type Day } from "@/lib/v2/booking";
 
 // Free call times from Martin's calendar (the same for every language).
-export async function GET() {
+// Default: the next five days with two picks each. ?range=full: every free time in the next four weeks, for the calendar.
+export async function GET(req: NextRequest) {
+  const full = req.nextUrl.searchParams.get("range") === "full";
   const calendarId = CALENDAR_ID;
   const auth = ghl();
-  if (!auth) return NextResponse.json({ live: false, days: pickSlots(demoDays()) });
+  if (!auth) return NextResponse.json({ live: false, days: full ? demoDays(20) : pickSlots(demoDays()) });
 
   const start = Date.now() + 12 * 3600 * 1000;
-  const end = start + 14 * 24 * 3600 * 1000;
+  const end = start + (full ? 28 : 14) * 24 * 3600 * 1000;
   const url = `${GHL_API}/calendars/${calendarId}/free-slots?startDate=${start}&endDate=${end}&timezone=${encodeURIComponent(TIMEZONE)}`;
   try {
     const res = await fetch(url, {
@@ -21,7 +23,7 @@ export async function GET() {
       .filter(([k, v]) => /^\d{4}-\d{2}-\d{2}$/.test(k) && Array.isArray(v?.slots))
       .map(([date, v]) => ({ date, slots: v.slots as string[] }))
       .sort((a, b) => a.date.localeCompare(b.date));
-    return NextResponse.json({ live: true, days: pickSlots(days) });
+    return NextResponse.json({ live: true, days: full ? days : pickSlots(days) });
   } catch (err) {
     console.error("booking/slots", err);
     return NextResponse.json({ live: false, error: "unavailable", days: [] }, { status: 502 });
