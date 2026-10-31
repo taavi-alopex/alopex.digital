@@ -36,7 +36,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         "x-default": "https://alopex.digital/en",
       },
     },
-    icons: { icon: "/alopex-logo.svg", apple: "/alopex-logo.png" },
+    icons: {
+      icon: [
+        { url: "/brand/icons/favicon-32.png", sizes: "32x32", type: "image/png" },
+        { url: "/brand/icons/favicon-16.png", sizes: "16x16", type: "image/png" },
+        { url: "/brand/icons/favicon-48.png", sizes: "48x48", type: "image/png" },
+      ],
+      apple: { url: "/brand/icons/apple-touch-icon-180.png", sizes: "180x180" },
+    },
     openGraph: {
       title: t.meta.title,
       description: t.meta.description,
