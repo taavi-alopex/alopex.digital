@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { CALENDAR_ID, EMAIL_RE, GHL_API, ghl } from "@/lib/v2/booking";
+import { BOOKING_CONFIRMATION_WEBHOOK, CALENDAR_ID, EMAIL_RE, GHL_API, ghl } from "@/lib/v2/booking";
 
 // Books the intro call in GoHighLevel: find or create the contact, then create the appointment.
 export async function POST(req: NextRequest) {
@@ -54,13 +54,26 @@ export async function POST(req: NextRequest) {
         locationId: auth.locationId,
         contactId,
         startTime: slot,
-        // Every language books the same calendar, so the title says which language the call is in.
-        title: `Intro call (${locale.toUpperCase()})${company ? ` · ${company}` : ""}${jobs.length ? `: ${jobs.join(", ")}` : ""}`,
+        // The client sees this title in the calendar invite. It still says which language the call is in, because every language books the same calendar.
+        title: `Alopex Digital${company ? ` × ${company}` : ""} · 30-minute call (${locale.toUpperCase()})`,
         appointmentStatus: "confirmed",
         toNotify: true,
       }),
     });
     if (!apptRes.ok) throw new Error(`appointment ${apptRes.status}`);
+    const appt = await apptRes.json().catch(() => ({}));
+    const appointmentId: string | undefined = appt?.id ?? appt?.appointment?.id ?? appt?.event?.id;
+
+    // n8n sends the "Your call is booked" email and the team note. It reads the time and the email back from GoHighLevel.
+    if (appointmentId) {
+      await fetch(BOOKING_CONFIRMATION_WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ appointmentId, locale, company, jobs }),
+        signal: AbortSignal.timeout(4000),
+      }).catch((e) => console.error("booking/book confirmation", e));
+    } else console.error("booking/book confirmation: no appointment id");
+
     return NextResponse.json({ ok: true, live: true });
   } catch (err) {
     console.error("booking/book", err);
