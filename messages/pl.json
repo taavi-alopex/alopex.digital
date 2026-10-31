@@ -1,541 +1,7 @@
 {
-  "metadata": {
-    "title": "Alopex Digital",
-    "description": "Zaawansowana infrastruktura GoHighLevel i RevOps dla firm opartych na sprzedaży. Projektujemy, budujemy i wdrażamy systemy, które powstrzymują utratę przychodów.",
-    "ogDescription": "Zaawansowana infrastruktura GoHighLevel i RevOps dla firm opartych na sprzedaży. Projektujemy, budujemy i wdrażamy systemy, które powstrzymują utratę przychodów."
-  },
-  "nav": {
-    "about": "O nas",
-    "services": "Usługi",
-    "process": "Proces",
-    "caseStudies": "Case Studies",
-    "healthCheck": "Audyt RevOps",
-    "contact": "Kontakt",
-    "cta": "Umów bezpłatną rozmowę"
-  },
-  "hero": {
-    "label": "Agencja GoHighLevel & n8n",
-    "title": "Twoje Revenue Operations,",
-    "titleAccent": "zaprojektowane i wdrożone",
-    "subtitle": "Mapujemy Twój proces biznesowy, budujemy infrastrukturę GoHighLevel i upewniamy się, że Twój zespół faktycznie z niej korzysta. Koniec z leadami uciekającymi przez ręczny chaos.",
-    "ctaPrimary": "Umów bezpłatną rozmowę",
-    "ctaPrimaryMicro": "30-minutowa rozmowa. Bez zobowiązań.",
-    "ctaSecondary": "Nasz proces",
-    "scroll": "Przewiń",
-    "assessmentLink": "Zrób darmowy audyt RevOps"
-  },
-  "heroV2": {
-    "label": "Agencja Revenue Operations",
-    "title": "Twoich leadów nigdy nie otrzymuje",
-    "titleAccent": "drugiego kontaktu",
-    "subtitle": "To dziesiątki tysięcy euro przychodu, które co miesiąc wymykają się Ci z rąk. Powolne follow-upy, niepołączone narzędzia i ręczny chaos po cichu zabijają Twój pipeline.",
-    "hook": "Kiedy ostatnio skontaktowałeś się ponownie ze swoją istniejącą bazą klientów?",
-    "ctaPrimary": "Znajdź swoje wycieki przychodu",
-    "ctaSecondary": "Zobacz, jak to naprawiamy",
-    "scroll": "Przewiń",
-    "assessmentLink": "Zrób darmowy audyt RevOps",
-    "calculator": {
-      "dealValueLabel": "Śr. wartość transakcji (€)",
-      "leadsLabel": "Leadów miesięcznie",
-      "resultLabel": "Prawdopodobnie tracisz",
-      "perMonth": "/mies.",
-      "breakdown": "{lostLeads} utraconych leadów × 10% konwersja = {lostDeals} utraconych transakcji · {annual}/rok"
-    }
-  },
-  "inlineCta": {
-    "afterClients": "Rozpoznajesz swoją firmę?",
-    "afterClientsLink": "Porozmawiajmy.",
-    "afterProcess": "Zacznij od Audytu Systemów",
-    "afterProcessMicro": "Bezpłatna rozmowa \u2014 zmapujemy, gdzie tracisz przychody.",
-    "assessment": "Nie wiesz, od czego zacząć?",
-    "assessmentLink": "Zrób darmowy audyt RevOps \u2192"
-  },
-  "about": {
-    "meta": {
-      "title": "O nas",
-      "description": "Alopex Digital — Twój partner GoHighLevel & RevOps w Europie. Projektujemy jasność dla firm opartych na sprzedaży."
-    },
-    "label": "Kim jesteśmy",
-    "title": "Agencja GoHighLevel & RevOps",
-    "titleAccent": "dla firm opartych na sprzedaży w UE",
-    "p1": "Alopex Digital to Twój partner GoHighLevel — przenosimy najlepszą amerykańską technologię revenue operations do firm opartych na sprzedaży w całej Europie.",
-    "p2": "Nie budujemy po prostu systemów. Projektujemy jasność — mapujemy cały proces biznesowy, zanim napiszemy choćby jeden workflow. Potem budujemy, wdrażamy i upewniamy się, że Twój zespół faktycznie z tego korzysta. To nas wyróżnia.",
-    "regions": ["Unia Europejska", "GoHighLevel", "RevOps"],
-    "purposeLabel": "Nasza misja",
-    "purposeQuote": "\u201eOrkiestrowa\u0107 jasno\u015b\u0107 i p\u0142ynno\u015b\u0107 dla firm opartych na sprzedaży.\u201d",
-    "purposeDescription": "Budujemy maszyny wolności — zautomatyzowane systemy, które uwalniają Twój czas, abyś mógł skupić się na rozwoju."
-  },
-  "clients": {
-    "label": "Dla kogo pracujemy",
-    "title": "Stworzone dla",
-    "titleAccent": "firm opartych na sprzedaży",
-    "items": [
-      {
-        "industry": "Instalacje o wysokiej wartości",
-        "examples": "Fotowoltaika, OZE, HVAC",
-        "pain": "Leady uciekają przez brak follow-upu przy kontraktach 10–50 tys. EUR",
-        "outcome": "Automatyczne sekwencje follow-up, które zamykają lukę między leadem a podpisaną umową."
-      },
-      {
-        "industry": "Pipeline relacyjny",
-        "examples": "Nieruchomości, Consulting, Usługi prawne",
-        "pain": "Zarządzanie pipeline'ami kupujących/sprzedających, gdzie niedopasowane leady wypadają z procesu",
-        "outcome": "Workflow CRM, które dopasowują, pielęgnują i nigdy nie pozwalają ciepłemu leadowi umknąć."
-      },
-      {
-        "industry": "Rynek dwustronny",
-        "examples": "Rekrutacja, Staffing, Marketplace'y",
-        "pain": "Ghosting i słabe doświadczenie kandydatów w przepływach B2B + B2C",
-        "outcome": "Doświadczenia kandydatów i klientów, które chronią markę i zapełniają wakaty szybciej."
-      }
-    ]
-  },
-  "uniques": {
-    "label": "Dlaczego Alopex",
-    "title": "Dlaczego wybrać Alopex jako partnera",
-    "titleAccent": "GoHighLevel",
-    "items": [
-      {
-        "title": "Strategiczny Blueprint",
-        "subtitle": "Najpierw projektujemy, potem budujemy",
-        "description": "Nie zgadujemy — mapujemy cały proces biznesowy, zanim zbudujemy choćby jeden workflow. Większość agencji od razu przechodzi do budowania. My minimalizujemy ryzyko, myśląc jak właściciel firmy."
-      },
-      {
-        "title": "Zaawansowane ekosystemy API",
-        "subtitle": "Więcej niż podstawowe integracje",
-        "description": "Budujemy niestandardowe mosty API, które łączą HighLevel z dowolnym systemem — lokalnym czy starszej generacji. Twój CRM staje się centralnym mózgiem firmy, a nie kolejnym narzędziem."
-      },
-      {
-        "title": "Regionalna biegłość RevOps",
-        "subtitle": "Przewaga lokalnego partnera",
-        "description": "Znamy kulturę, język i prawo. GDPR, lokalne bramki płatnicze, regionalna logika podatkowa — przekładamy światowej klasy amerykańską technologię na rozwiązania działające na Twoim konkretnym rynku."
-      }
-    ]
-  },
-  "services": {
-    "meta": {
-      "title": "Usługi",
-      "description": "Rozwiązania GoHighLevel i niestandardowe integracje n8n dla firm opartych na sprzedaży. CRM, automatyzacja, pipeline'y i integracje lokalnych systemów."
-    },
-    "label": "Co budujemy",
-    "title": "Rozwiązania GoHighLevel",
-    "titleAccent": "i niestandardowe integracje",
-    "intro": "Dostarczamy kompletny stos revenue operations — oparty na GoHighLevel i połączony z Twoimi lokalnymi systemami przez niestandardowe integracje n8n.",
-    "platformLabel": "Platforma GoHighLevel",
-    "integrationsLabel": "Niestandardowe integracje przez n8n",
-    "platformItems": [
-      {
-        "title": "CRM i zarządzanie pipeline'em",
-        "description": "Śledź każdą transakcję od pierwszego kontaktu do podpisanej umowy"
-      },
-      {
-        "title": "Automatyzacja marketingu",
-        "description": "Pielęgnuj leady automatycznymi sekwencjami e-mail, SMS i workflow"
-      },
-      {
-        "title": "Kalendarz i rezerwacje",
-        "description": "Pozwól klientom rezerwować bezpośrednio — bez wymiany maili"
-      },
-      {
-        "title": "Zarządzanie reputacją",
-        "description": "Zbieraj i prezentuj opinie na autopilocie"
-      },
-      {
-        "title": "Strony i lejki",
-        "description": "Uruchom konwertujące strony bez programisty"
-      },
-      {
-        "title": "Formularze i ankiety",
-        "description": "Zbieraj leady i feedback inteligentnymi, brandowanymi formularzami"
-      },
-      {
-        "title": "Fakturowanie i płatności",
-        "description": "Wysyłaj faktury i zbieraj płatności w swoim CRM"
-      },
-      {
-        "title": "Raportowanie i dashboardy",
-        "description": "Zobacz cały pipeline przychodów na jednym dashboardzie"
-      }
-    ],
-    "integrationItems": [
-      {
-        "title": "ERP i księgowość",
-        "description": "Połącz Merit Aktiva, e-Arveldaja lub dowolny system księgowy"
-      },
-      {
-        "title": "Platformy e-podpisu",
-        "description": "Zautomatyzuj podpisywanie dokumentów z Dokobit lub SignHere"
-      },
-      {
-        "title": "Lokalne bramki płatnicze",
-        "description": "Zintegruj Montonio, EveryPay i regionalne metody płatności"
-      },
-      {
-        "title": "Portale rządowe i podatkowe",
-        "description": "Zautomatyzuj raportowanie podatkowe i zgodność regulacyjną"
-      },
-      {
-        "title": "Migracja ze starego CRM",
-        "description": "Przenieś dane z dowolnego starego systemu — czysto i kompletnie"
-      },
-      {
-        "title": "Niestandardowe mosty API",
-        "description": "Jeśli ma API, możemy to połączyć z Twoim CRM"
-      }
-    ],
-    "useCasesLabel": "Zobacz w akcji",
-    "useCasesTitle": "Jak to działa",
-    "useCasesTitleAccent": "w Twojej branży",
-    "useCases": [
-      {
-        "industry": "Instalacje o wysokiej wartości",
-        "examples": "Fotowoltaika, HVAC, OZE",
-        "pain": "Przestań tracić kontrakty 10–50 tys. przez brak follow-upu",
-        "solution": "Automatyczna odpowiedź na leada w minuty, śledzenie pipeline'u per handlowiec i sekwencje SMS/email, które pielęgnują aż do podpisania umowy.",
-        "outcome": "Szybsza odpowiedź, mniej straconych kontraktów, pełna widoczność pipeline'u"
-      },
-      {
-        "industry": "Pipeline relacyjny",
-        "examples": "Nieruchomości, Consulting, Usługi prawne",
-        "pain": "Nigdy nie pozwól, by dopasowany lead umknął",
-        "solution": "Workflow CRM dopasowujące kupujących do sprzedających, automatyczna pielęgnacja zimnych leadów i linki do rezerwacji eliminujące tarcie.",
-        "outcome": "Każdy lead śledzony, każde dopasowanie obsłużone, zero porzuconych szans"
-      },
-      {
-        "industry": "Rynek dwustronny",
-        "examples": "Rekrutacja, Staffing, Marketplace'y",
-        "pain": "Zakończ ghosting kandydatów, chroń swoją markę",
-        "solution": "Automatyczna komunikacja z kandydatem na każdym etapie, dashboardy dla klientów i pętle feedbacku zamykające lukę doświadczeń.",
-        "outcome": "Kandydaci zaangażowani, klienci widzą postęp, Twoja marka pozostaje silna"
-      }
-    ],
-    "ctaText": "Nie wiesz, co pasuje?",
-    "ctaDescription": "Umów bezpłatną rozmowę — zmapujemy Twoje potrzeby w 30 minut.",
-    "ctaButton": "Umów bezpłatną rozmowę"
-  },
-  "process": {
-    "meta": {
-      "title": "Nasz proces",
-      "description": "Metoda Orkiestracji Systemów — 6-etapowa metodyka, która prowadzi Cię od pierwszego kontaktu do działającego systemu w 12 tygodni."
-    },
-    "label": "Nasz proces",
-    "title": "Od chaosu do jasności",
-    "titleAccent": "w 12 tygodni",
-    "subtitle": "Sprawdzona metodyka, która gwarantuje, że każda automatyzacja, którą budujemy, opiera się na głębokim zrozumieniu Twojego biznesu, a nie na założeniach.",
-    "inputLabel": "Ty dostarczasz",
-    "outputLabel": "Ty otrzymujesz",
-    "steps": [
-      {
-        "title": "Rozmowa Wprowadzająca",
-        "phase": "Pierwszy kontakt",
-        "duration": "30 minut",
-        "description": "Zanim rozpoczniemy jakąkolwiek współpracę, musimy zrozumieć, czy pasujemy do siebie. Ta wstępna rozmowa pomaga nam zrozumieć kontekst Twojego biznesu, wyzwania i cele — a Tobie zrozumieć, jak pracujemy.",
-        "inputs": ["Kontekst Twojego biznesu", "Obecne wyzwania", "Cele wzrostu", "Otwartość na rozmowę o tym, co nie działa"],
-        "outputs": ["Wzajemne zrozumienie dopasowania", "Jasna decyzja tak/nie", "Jeśli tak: następne kroki", "Jeśli nie: szczery feedback i rekomendacje"]
-      },
-      {
-        "title": "Audyt Systemów",
-        "phase": "Odkrywanie",
-        "duration": "Tydzień 1",
-        "description": "Zanim cokolwiek zaprojektujemy, musimy zrozumieć, gdzie jesteś dzisiaj. Mapujemy Twój obecny proces sprzedaży, znajdujemy gdzie uciekają leady i identyfikujemy wąskie gardła, które kosztują Cię pieniądze.",
-        "inputs": ["Dostęp do kluczowych osób", "Przegląd obecnych narzędzi", "Przykłady materiałów sprzedażowych", "Szczere odpowiedzi o tym, co działa"],
-        "outputs": ["Raport z audytu systemów", "Mapa obecnych procesów", "Zidentyfikowane miejsca utraty przychodów", "Ocena gotowości"]
-      },
-      {
-        "title": "Plan Strategiczny",
-        "phase": "Planowanie",
-        "duration": "Tydzień 2-3",
-        "description": "Na podstawie wyników audytu projektujemy kompletną architekturę rozwiązania. To Twoja mapa drogowa — szczegółowy plan pokazujący dokładnie co zbudujemy, jak systemy się połączą i jaki będzie efekt końcowy.",
-        "inputs": ["Feedback do ustaleń z audytu", "Priorytety biznesowe i ograniczenia", "Czas decydenta na spotkania zatwierdzające"],
-        "outputs": ["Dokument planu strategicznego", "Wizualna architektura systemu", "Specyfikacje workflow", "Podział inwestycji"]
-      },
-      {
-        "title": "Budowa Systemu",
-        "phase": "Realizacja",
-        "duration": "Tydzień 4-10",
-        "description": "Z zatwierdzonym planem rozpoczynamy budowę Twojego systemu. Konfigurujemy środowisko GoHighLevel, budujemy integracje przez n8n i tworzymy workflow, które będą napędzać Twój biznes.",
-        "inputs": ["Terminowy feedback do wersji roboczych", "Dostępy do integracji", "Dane testowe", "Treści do szablonów"],
-        "outputs": ["Skonfigurowane konto GoHighLevel", "Działające integracje", "Workflow automatyzacji", "Cotygodniowe raporty postępu w ClickUp"]
-      },
-      {
-        "title": "Płynny Start",
-        "phase": "Uruchomienie",
-        "duration": "Tydzień 11-12",
-        "description": "System tworzy wartość tylko wtedy, gdy Twój zespół faktycznie go używa. Zapewniamy, że Twój zespół jest pewny i komfortowy z nowym systemem, zanim się wycofamy.",
-        "inputs": ["Czas zespołu na szkolenia", "Istniejące dane klientów", "Feedback o użyteczności"],
-        "outputs": ["Przeszkolony zespół", "Zmigrowane dane", "Dokumentacja użytkownika", "Wsparcie przy starcie"]
-      },
-      {
-        "title": "Pętla Wzrostu",
-        "phase": "Ciągłe",
-        "duration": "Na stałe",
-        "description": "Twoja firma się rozwija, a Twoje systemy powinny rozwijać się razem z nią. Pętla Wzrostu zapewnia, że Twoja infrastruktura wyprzedza Twój wzrost — a nie zostaje w tyle.",
-        "inputs": ["Czas na regularne spotkania", "Feedback o tym, co działa", "Informacje o zmianach w biznesie"],
-        "outputs": ["Rozmowy co dwa tygodnie", "Kwartalne przeglądy", "Ciągłe ulepszenia", "Priorytetowe wsparcie"]
-      }
-    ]
-  },
-  "stats": {
-    "items": [
-      { "value": 150, "suffix": "+", "label": "Uruchomionych systemów" },
-      { "value": 3, "suffix": "x", "label": "Więcej leadów w 90 dni" },
-      { "value": 85, "suffix": "%", "label": "Mniej ręcznego follow-upu" },
-      { "value": 12, "suffix": "min", "label": "Śr. czas odpowiedzi na leada" }
-    ]
-  },
-  "values": {
-    "label": "Nasze wartości",
-    "title": "Co napędza",
-    "titleAccent": "wszystko, co robimy",
-    "items": [
-      {
-        "title": "Mentalność właściciela",
-        "subtitle": "Odpowiedzialność i nagroda",
-        "description": "Traktujemy firmy naszych klient\u00f3w jak w\u0142asne. Proaktywni, odpowiedzialni i nigdy nie m\u00f3wimy \u201eto nie moja sprawa\u201d. Wprowadzamy pozytywne zmiany i nagradzamy rezultaty."
-      },
-      {
-        "title": "Odpowiedzialna wolność",
-        "subtitle": "Zdyscyplinowana autonomia",
-        "description": "Pracujemy skąd chcemy, ale nigdy nie zostawiamy zespołu bez wsparcia. Wyniki ponad godziny. Autonomia zdobywana poprzez niezawodność i wysoką wydajność."
-      },
-      {
-        "title": "Wszystko da się rozwiązać",
-        "subtitle": "Zaradność techniczna",
-        "description": "Nieust\u0119pliwa mentalno\u015b\u0107 rozwi\u0105zywania problem\u00f3w. Wykorzystujemy zbiorow\u0105 inteligencj\u0119 \u2014 AI, dokumentacj\u0119, spo\u0142eczno\u015b\u0107 \u2014 aby pokona\u0107 ka\u017cd\u0105 przeszkod\u0119. \u201eNie wiem\u201d nigdy nie jest ostateczn\u0105 odpowiedzi\u0105."
-      },
-      {
-        "title": "Prawda ponad ego",
-        "subtitle": "Merytokracja i przejrzystość",
-        "description": "Radykalna przejrzystość w relacjach z zespołem i klientami. Wygrywa najlepszy pomysł, niezależnie od stanowiska czy stażu. Budujemy zaufanie poprzez otwartość i uczciwość."
-      },
-      {
-        "title": "Działaj z sercem",
-        "subtitle": "Empatia i ludzka więź",
-        "description": "Za każdym zgłoszeniem i wywołaniem API stoi człowiek. Wspieramy wzajemny rozwój, dobrostan i sukces. Wysoka wydajność wymaga dużej troski."
-      }
-    ]
-  },
-  "guarantee": {
-    "label": "Nasza obietnica",
-    "title": "Zero ryzyka,",
-    "titleAccent": "pełna pewność",
-    "items": [
-      {
-        "title": "Obietnica adopcji użytkowników",
-        "description": "Nie tylko budujemy — upewniamy się, że z tego korzystasz. Jeśli Twój zespół nie czuje się pewnie po naszym szkoleniu wdrożeniowym, zapewnimy dodatkowe sesje szkoleniowe bez dodatkowych kosztów, aż poczują się komfortowo.",
-        "highlight": "Doszkolenie bez dodatkowych kosztów"
-      },
-      {
-        "title": "Kredyt za Blueprint",
-        "description": "Płacisz za architekturę, nie za pitch sprzedażowy. Jeśli wybierzesz nas do budowy, 100% opłaty za Blueprint zostanie zaliczone na poczet wdrożenia. Jeśli zdecydujesz się na kogoś innego, plany zostają u Ciebie.",
-        "highlight": "100% opłaty za Blueprint zaliczone"
-      }
-    ]
-  },
-  "cta": {
-    "title": "Gotowy, by przestać",
-    "titleAccent": "tracić przychody?",
-    "description": "Umów bezpłatną rozmowę odkrywczą. Zmapujemy Twoje obecne bolączki i pokażemy dokładnie, gdzie leżą szanse — bez zobowiązań, bez nacisku sprzedażowego.",
-    "button": "Umów bezpłatną rozmowę",
-    "microCopy": "30-minutowa rozmowa. Bez zobowiązań. Zmapujemy, gdzie tracisz przychody.",
-    "emailPrefix": "Lub napisz do nas bezpośrednio na"
-  },
-  "footer": {
-    "tagline": "Infrastruktura GoHighLevel & n8n dla firm opartych na sprzedaży w całej Europie.",
-    "servicesTitle": "Usługi",
-    "companyTitle": "Firma",
-    "services": [
-      { "label": "Audyt Systemów" },
-      { "label": "Strategiczny Blueprint" },
-      { "label": "Budowa Architektury" },
-      { "label": "Bezproblemowy Start" },
-      { "label": "Pętla Wzrostu" }
-    ],
-    "company": [
-      { "label": "O nas" },
-      { "label": "Nasz proces" },
-      { "label": "Case Studies" },
-      { "label": "Wartości" },
-      { "label": "Kontakt" }
-    ],
-    "legalTitle": "Informacje prawne",
-    "legal": [
-      { "label": "Polityka Prywatności" },
-      { "label": "Regulamin" }
-    ],
-    "copyright": "Alopex Digital OÜ. Wszelkie prawa zastrzeżone.",
-    "location": "Obsługujemy firmy w całej Europie"
-  },
-  "recruitment": {
-    "title": "Dołącz do zespołu Alopex",
-    "subtitle": "Zawsze szukamy bystrych, zmotywowanych osób, które chcą budować coś znaczącego. Opowiedz nam o sobie.",
-    "name": "Imię i nazwisko",
-    "email": "E-mail",
-    "role": "Rola, która Cię interesuje",
-    "rolePlaceholder": "np. Specjalista RevOps, Developer, Sprzedaż...",
-    "message": "Opowiedz nam o sobie",
-    "messagePlaceholder": "Co Cię ekscytuje w Alopex? Jaka jest Twoja supermoc?",
-    "submit": "Wyślij zgłoszenie",
-    "submitting": "Wysyłanie...",
-    "success": "Zgłoszenie wysłane!",
-    "successMessage": "Dziękujemy za kontakt. Przejrzymy Twoje zgłoszenie i odezwiemy się w ciągu kilku dni.",
-    "footerLink": "Dołącz do zespołu"
-  },
-  "socialProof": {
-    "label": "Historie klientów",
-    "title": "Co nasi klienci",
-    "titleAccent": "mówią o nas",
-    "testimonials": [
-      {
-        "quote": "Miałam wiele pomysłów, ale nie wiedziałam, co jest technicznie możliwe. GoHighLevel był narzędziem, którego potrzebowałam do automatyzacji moich biznesów.",
-        "name": "Chanet Simonen",
-        "title": "Coach & Przedsiębiorca",
-        "logo": "/chanet-logo.png"
-      },
-      {
-        "quote": "Nie miałam wglądu w to, co robi mój zespół sprzedaży. Teraz mam automatyczne śledzenie KPI dla całego zespołu.",
-        "name": "Viktoria Rozental",
-        "title": "CEO, Gemoss",
-        "logo": "/gemoss-logo.svg"
-      },
-      {
-        "quote": "Chciałem skalować swój biznes, ale czułem, że sam jestem wąskim gardłem. Zbyt wiele manualnych zadań, brak jasnego obrazu. Alopex pomógł mi zbudować systemy, które działają beze mnie.",
-        "name": "Martin Kull",
-        "title": "CEO, Ovision",
-        "logo": "/ovision-logo.svg"
-      }
-    ],
-    "caseStudyLabel": "Case Study",
-    "caseStudy": {
-      "client": "Koduaken",
-      "industry": "Produkcja okien",
-      "challenge": "Oferty wysyłane, ale bez follow-upu — kontrakty wymykały się z rąk.",
-      "solution": "Automatyczne sekwencje follow-up uruchamiane po każdej ofercie.",
-      "result": "20%",
-      "resultLabel": "poprawa konwersji",
-      "resultDetail": "już od pierwszego testu"
-    }
-  },
-  "anchoring": {
-    "label": "Mądra inwestycja",
-    "title": "Etatowy specjalista RevOps",
-    "titleAccent": "vs. Alopex",
-    "inHouse": {
-      "title": "Zatrudnij wewnętrznie",
-      "salary": "€48 000–72 000/rok",
-      "items": [
-        "Wynagrodzenie + świadczenia",
-        "3–6 miesięcy na rekrutację",
-        "Szkolenie i wdrożenie",
-        "Pojedynczy punkt awarii",
-        "Licencje na narzędzia dodatkowo"
-      ]
-    },
-    "alopex": {
-      "title": "Współpraca z Alopex",
-      "items": [
-        "Zespół specjalistów od pierwszego dnia",
-        "Gotowe w tygodniach, nie miesiącach",
-        "Wbudowane najlepsze praktyki",
-        "Bieżące wsparcie i rozwój",
-        "Licencja GoHighLevel w cenie"
-      ],
-      "highlight": "Ułamek kosztu. Zero ryzyka."
-    },
-    "cta": "Zobacz, jak to wyglądałoby u Ciebie",
-    "ctaMicro": "Bezpłatna rozmowa — bez zobowiązań."
-  },
-  "assessment": {
-    "meta": {
-      "title": "Audyt RevOps",
-      "description": "Zrób nasz darmowy 5-pytaniowy test, aby zidentyfikować luki w operacjach przychodowych i odkryć możliwości zamknięcia większej liczby transakcji."
-    },
-    "welcome": {
-      "label": "Darmowy audyt",
-      "title": "Audyt RevOps",
-      "subtitle": "Odpowiedz na 5 szybkich pytań, aby zobaczyć, jak wypadają Twoje operacje przychodowe — i gdzie kryją się największe możliwości.",
-      "start": "Rozpocznij audyt"
-    },
-    "questions": [
-      {
-        "question": "Jak obecnie śledzisz leady?",
-        "options": [
-          "Arkusz kalkulacyjny lub e-mail",
-          "Podstawowy CRM (HubSpot free, Pipedrive itp.)",
-          "GoHighLevel lub zaawansowany CRM",
-          "Właściwie ich nie śledzimy"
-        ]
-      },
-      {
-        "question": "Co dzieje się po pojawieniu się leada?",
-        "options": [
-          "Ktoś kontaktuje się ręcznie",
-          "Mamy kilka automatycznych maili",
-          "W pełni zautomatyzowana odpowiedź + sekwencja pielęgnacji",
-          "Zależy, kto jest dostępny"
-        ]
-      },
-      {
-        "question": "Jak szybko nowy lead dostaje odpowiedź?",
-        "options": [
-          "W ciągu 5 minut",
-          "W ciągu godziny",
-          "Tego samego dnia roboczego",
-          "Następnego dnia lub później"
-        ]
-      },
-      {
-        "question": "Jak czyste są Twoje dane klientów?",
-        "options": [
-          "Nie mamy centralnej bazy danych",
-          "Arkusz z lukami",
-          "CRM, ale bałagan",
-          "Czysty, aktualny CRM"
-        ]
-      },
-      {
-        "question": "Ile kontraktów wymyka się co miesiąc?",
-        "options": [
-          "Żaden — śledzimy wszystko",
-          "Kilka, prawdopodobnie",
-          "10–20% lub więcej",
-          "Nie mam pojęcia"
-        ]
-      }
-    ],
-    "other": "Inne (proszę sprecyzować)",
-    "progress": "Pytanie {current} z {total}",
-    "back": "Wstecz",
-    "next": "Dalej",
-    "contact": {
-      "title": "Prawie gotowe!",
-      "subtitle": "Podaj swoje dane, aby otrzymać spersonalizowaną rekomendację i konkretne następne kroki.",
-      "name": "Imię",
-      "email": "E-mail",
-      "company": "Firma (opcjonalnie)",
-      "submit": "Pokaż wyniki",
-      "skip": "Pomiń — pokaż wyniki"
-    },
-    "results": {
-      "critical": {
-        "label": "Krytyczny",
-        "message": "Twoje operacje przychodowe mają znaczące luki, które prawdopodobnie kosztują Cię kontrakty co tydzień. Dobra wiadomość: to dokładnie te problemy, które rozwiązujemy, a szybkie wygrane są w zasięgu ręki."
-      },
-      "needsWork": {
-        "label": "Wymaga pracy",
-        "message": "Masz pewne fundamenty, ale są wyraźne możliwości usprawnienia procesu i przechwycenia większych przychodów. Kilka celowanych usprawnień może przynieść dużą różnicę."
-      },
-      "strong": {
-        "label": "Mocny fundament",
-        "message": "Twoje operacje wyglądają dobrze. Wciąż może być przestrzeń do optymalizacji i skalowania — znajdźmy razem te ostatnie punkty dźwigni."
-      },
-      "cta": "Umów bezpłatną rozmowę",
-      "ctaMicro": "Przejdziemy przez Twoje wyniki i pokażemy dokładnie, co poprawić."
-    }
-  },
   "legal": {
     "privacyPolicy": {
-      "title": "Polityka Prywatności",
+      "title": "Polityka prywatności",
       "metaDescription": "Polityka Prywatności Alopex Digital - jak zbieramy, wykorzystujemy i chronimy Twoje dane",
       "lastUpdated": "Ostatnia aktualizacja",
       "company": "Firma",
@@ -544,44 +10,68 @@
       "email": "E-mail",
       "sections": {
         "introduction": {
-          "title": "1. Wprowadzenie",
-          "content": "Alopex Digital OÜ zobowiązuje się do ochrony Twoich danych osobowych. Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób zbieramy, wykorzystujemy, przechowujemy i chronimy Twoje dane podczas korzystania z naszej strony internetowej lub usług."
+          "title": "1. Kim jesteśmy",
+          "content": "Administratorem danych osobowych opisanych w tej polityce jest Alopex Digital OÜ (numer rejestrowy 17180489). Polityka obejmuje naszą stronę internetową, formularze na niej, nasze wiadomości biznesowe i zgłoszenia do pracy. Gdy budujemy lub utrzymujemy dla klienta system, który przetwarza własne dane klienta, działamy na jego polecenie jako podmiot przetwarzający. Tę pracę reguluje umowa z klientem, a nie ta polityka."
         },
         "dataCollected": {
-          "title": "2. Zbierane dane",
-          "content": "Zbieramy dane kontaktowe (imię, e-mail, telefon), dane biznesowe (firma, stanowisko), dane o użytkowaniu (odwiedzone strony, czas spędzony na stronie) oraz pliki cookie do celów funkcjonalności i analityki."
-        },
-        "legalBasis": {
-          "title": "3. Podstawa prawna przetwarzania",
-          "content": "Przetwarzamy dane na podstawie: wykonania umowy, prawnie uzasadnionego interesu, zgody (na marketing) oraz obowiązków prawnych wynikających z art. 6 RODO."
+          "title": "2. Jakie dane zbieramy i dlaczego",
+          "content": "Zbieramy tylko to, czego potrzebujemy do celów opisanych poniżej.",
+          "items": [
+            "Umówienie rozmowy: Twój e-mail, wybrany rodzaj pracy i termin. Używamy ich, aby umówić i przygotować rozmowę (działania przed zawarciem umowy, art. 6 ust. 1 lit. b RODO).",
+            "Darmowy test pracy ręcznej: Twoje odpowiedzi oraz, jeśli go podasz, Twój e-mail. Używamy ich, aby pokazać wynik. Jeśli zostawisz e-mail, wysyłamy wynik i odzywamy się później (prawnie uzasadniony interes, art. 6 ust. 1 lit. f).",
+            "Newsletter: Twój e-mail. Wysyłamy jedną wiadomość miesięcznie, dopóki się nie wypiszesz (zgoda, art. 6 ust. 1 lit. a).",
+            "Zgłoszenia do pracy: imię i nazwisko, e-mail, rola, która Cię interesuje, i to, co do nas piszesz. Używamy ich do oceny zgłoszenia (działania przed zawarciem umowy, art. 6 ust. 1 lit. b).",
+            "Klienci: dane kontaktowe, umowy i faktury. Potrzebujemy ich do realizacji pracy i spełnienia przepisów o rachunkowości (umowa i obowiązek prawny, art. 6 ust. 1 lit. b i c).",
+            "Korzystanie ze strony: odwiedzone podstrony, urządzenie i przybliżona lokalizacja. Zbieramy je za pomocą plików cookie i tylko za Twoją zgodą (zgoda, art. 6 ust. 1 lit. a)."
+          ]
         },
         "b2bMarketing": {
-          "title": "4. Marketing bezpośredni B2B",
-          "content": "Wysyłamy wiadomości e-mail o naszych usługach do przedstawicieli firm (członków zarządu, szefów sprzedaży i marketingu). Dane kontaktowe (imię i nazwisko, stanowisko, służbowy adres e-mail, firma) pochodzą ze źródeł publicznych: rejestru przedsiębiorców, stron internetowych firm, LinkedIn i publicznych katalogów firm. Przetwarzamy je na podstawie prawnie uzasadnionego interesu (RODO art. 6 ust. 1 lit. f) oraz § 103¹ estońskiej ustawy o łączności elektronicznej, która dopuszcza marketing bezpośredni na adres kontaktowy osoby prawnej, o ile odbiorca może łatwo zrezygnować. Każda wiadomość zawiera możliwość rezygnacji. Rezygnację realizujemy tego samego dnia i dodajemy kontakt do listy wykluczeń, aby więcej nie pisać. Wiadomości wysyłamy przez Instantly.ai (podmiot przetwarzający), a odpowiedzi zapisujemy w naszym CRM (GoHighLevel). Kontakt przechowujemy do czasu rezygnacji lub 12 miesięcy od ostatniej korespondencji; listę wykluczeń przechowujemy w celu realizacji rezygnacji. W każdej chwili możesz wnieść sprzeciw (RODO art. 21): odpowiedz na wiadomość słowem „unsubscribe” lub napisz na info@alopex.digital."
+          "title": "3. Marketing bezpośredni B2B",
+          "content": "Wysyłamy wiadomości e-mail o naszych usługach do przedstawicieli firm (członków zarządu, szefów sprzedaży i marketingu). Dane kontaktowe (imię i nazwisko, stanowisko, służbowy adres e-mail, firma) pochodzą ze źródeł publicznych: rejestru przedsiębiorców, stron internetowych firm, LinkedIn i publicznych katalogów firm. Przetwarzamy je na podstawie prawnie uzasadnionego interesu (RODO art. 6 ust. 1 lit. f) oraz § 103¹ estońskiej ustawy o łączności elektronicznej, która dopuszcza marketing bezpośredni na adres kontaktowy osoby prawnej, o ile odbiorca może łatwo zrezygnować. Każda wiadomość zawiera możliwość rezygnacji. Rezygnację realizujemy tego samego dnia i dodajemy kontakt do listy wykluczeń, aby więcej nie pisać. Wiadomości wysyłamy przez Instantly.ai (podmiot przetwarzający), a odpowiedzi zapisujemy w naszym CRM (GoHighLevel). Kontakt przechowujemy do czasu rezygnacji lub 12 miesięcy od ostatniej korespondencji; listę wykluczeń przechowujemy w celu realizacji rezygnacji. W każdej chwili możesz wnieść sprzeciw (RODO art. 21): odpowiedz na wiadomość słowem „unsubscribe” lub napisz na info@alopex.digital. Do wyszukiwania publicznych danych i sprawdzania adresów e-mail używamy też narzędzi takich jak Clay."
+        },
+        "cookies": {
+          "title": "4. Pliki cookie",
+          "content": "Niezbędne pliki cookie zapewniają działanie strony i są zawsze włączone. Analityczne (Google Analytics) i marketingowe (Meta Pixel) pliki cookie ustawiamy dopiero po wyrażeniu zgody w banerze cookie, który obsługuje CookieYes. Swój wybór możesz w każdej chwili zmienić w banerze cookie."
         },
         "thirdParties": {
-          "title": "5. Zewnętrzni dostawcy usług",
-          "content": "Udostępniamy dane zaufanym dostawcom: GoHighLevel (CRM), Meta (reklama), Google (analityka), TikTok (reklama) i n8n (automatyzacja). Wszyscy przestrzegają Ram Ochrony Danych UE-USA lub Standardowych Klauzul Umownych."
+          "title": "5. Komu przekazujemy dane",
+          "content": "Nie sprzedajemy danych osobowych. Korzystamy z następujących dostawców, którzy przetwarzają dane w naszym imieniu:",
+          "items": [
+            "GoHighLevel: CRM, kalendarz i formularze",
+            "Hetzner Online: hosting strony i naszych serwerów w UE",
+            "Google: poczta, dokumenty i Google Analytics",
+            "Meta: Meta Pixel i reklama",
+            "CookieYes: zgody na pliki cookie",
+            "Instantly.ai: wysyłka wiadomości biznesowych",
+            "Clay: wyszukiwanie publicznych danych firm i kontaktów do wiadomości biznesowych",
+            "Dostawcy AI, gdy zadanie wymaga AI. Dostawców używanych w projekcie klienta wskazujemy w umowie z tym klientem.",
+            "n8n: oprogramowanie do automatyzacji, które uruchamiamy na własnych serwerach w UE"
+          ],
+          "after": "Część dostawców ma siedzibę w Stanach Zjednoczonych. Przekazywanie tam danych opiera się na Ramach ochrony danych UE–USA lub standardowych klauzulach umownych UE."
         },
         "retention": {
-          "title": "6. Okres przechowywania danych",
-          "content": "Zgłoszenia kontaktowe: 3 lata. Dane klientów: czas trwania umowy + 7 lat. Dane analityczne: 26 miesięcy. Zgoda marketingowa: do wycofania + 3 lata."
+          "title": "6. Jak długo przechowujemy dane",
+          "items": [
+            "Rezerwacje rozmów i zapytania: 3 lata od ostatniego kontaktu.",
+            "Odpowiedzi z darmowego testu: 3 lata od ostatniego kontaktu.",
+            "Newsletter: do wypisania się. Potem przez 3 lata przechowujemy dowód zgody, a Twój e-mail na liście adresów, do których już nie piszemy.",
+            "Zgłoszenia do pracy: 6 miesięcy od decyzji. Dłużej tylko za Twoją zgodą, np. jeśli chcesz, abyśmy wzięli Cię pod uwagę w późniejszej rekrutacji.",
+            "Kontakty z wiadomości biznesowych: do rezygnacji lub 12 miesięcy od ostatniej korespondencji.",
+            "Dane klientów i faktury: czas trwania umowy plus 7 lat, zgodnie z przepisami o rachunkowości.",
+            "Dane analityczne: 26 miesięcy."
+          ]
         },
         "rights": {
           "title": "7. Twoje prawa",
-          "content": "Na mocy RODO przysługuje Ci prawo do: dostępu, sprostowania, usunięcia, ograniczenia, przenoszenia, sprzeciwu i wycofania zgody. Aby skorzystać ze swoich praw, skontaktuj się z info@alopex.digital."
-        },
-        "cookies": {
-          "title": "8. Pliki cookie",
-          "content": "Używamy niezbędnych plików cookie (funkcjonalność strony), analitycznych plików cookie (statystyki użytkowania) i marketingowych plików cookie (reklama). Zarządzaj preferencjami poprzez nasz baner zgody na pliki cookie."
+          "content": "Możesz poprosić nas o dostęp do swoich danych, ich sprostowanie lub usunięcie, ograniczenie lub zaprzestanie ich wykorzystywania albo przekazanie ich w formacie umożliwiającym przeniesienie. Zgodę możesz wycofać w każdej chwili i w każdej chwili możesz sprzeciwić się marketingowi bezpośredniemu. Napisz na info@alopex.digital. Odpowiadamy w ciągu miesiąca."
         },
         "contact": {
-          "title": "9. Kontakt",
-          "content": "W przypadku pytań dotyczących prywatności lub w celu skorzystania ze swoich praw:"
+          "title": "8. Kontakt",
+          "content": "W sprawach prywatności lub aby skorzystać ze swoich praw:"
         },
         "supervisory": {
-          "title": "10. Organ nadzorczy",
-          "content": "Masz prawo złożyć skargę do Estońskiego Inspektoratu Ochrony Danych:"
+          "title": "9. Organ nadzorczy",
+          "content": "Możesz złożyć skargę do estońskiego Inspektoratu Ochrony Danych albo do organu w swoim kraju, w Polsce do Prezesa Urzędu Ochrony Danych Osobowych (UODO):"
         }
       }
     },
@@ -591,431 +81,68 @@
       "lastUpdated": "Ostatnia aktualizacja",
       "sections": {
         "introduction": {
-          "title": "1. Wprowadzenie",
-          "content": "Niniejszy Regulamin określa zasady korzystania ze strony internetowej, usług i produktów programowych oferowanych przez Alopex Digital OÜ (numer rejestracyjny 17180489). Korzystając z naszych usług, akceptujesz niniejszy Regulamin."
+          "title": "1. Zakres regulaminu",
+          "content": "Ten regulamin dotyczy strony internetowej, usług i produktów programowych Alopex Digital OÜ (numer rejestrowy 17180489). Jeśli podpisaliśmy z Tobą ofertę lub umowę, ma ona pierwszeństwo przed regulaminem."
         },
         "services": {
-          "title": "2. Usługi",
-          "content": "Alopex Digital oferuje usługi doradcze (wdrażanie CRM, automatyzacja przepływów pracy), produkty programowe (niestandardowe automatyzacje, integracje) oraz usługi zarządzane (bieżące wsparcie, konserwacja)."
+          "title": "2. Co oferujemy",
+          "content": "Oferujemy:",
+          "items": [
+            "Automatyzację na zamówienie: systemy budowane dla jednej firmy i połączone z narzędziami, których już używa.",
+            "Asystentów AI i szkolenia: AI skonfigurowane do konkretnych zadań oraz szkolenie zespołu.",
+            "Gotowe produkty: oprogramowanie, które utrzymujemy dla wielu firm, np. Sales Machine, automatyzację księgowości i GHL Email Sync, na warunkach opisanych w ofercie.",
+            "Wsparcie i utrzymanie: monitorowanie, poprawki i ulepszenia systemów, które utrzymujemy."
+          ]
+        },
+        "process": {
+          "title": "3. Jak wygląda projekt",
+          "items": [
+            "Pierwsza rozmowa jest bezpłatna i do niczego nie zobowiązuje.",
+            "Projekt (blueprint) ma stałą opłatę ustaloną przed startem. Jeśli potem budujesz z nami, odejmujemy ją od ceny wdrożenia. Jeśli nie, plan zostaje u Ciebie.",
+            "Wdrożenie ma stałą cenę i zakres, ustalone na piśmie po projekcie. Prace spoza tego zakresu ustalamy i wyceniamy osobno."
+          ]
         },
         "obligations": {
-          "title": "3. Obowiązki Klienta",
-          "content": "Klienci zobowiązują się do: dostarczania dokładnych informacji, zapewnienia niezbędnego dostępu do systemów, terminowego reagowania na zapytania, zachowania poufności danych uwierzytelniających, przestrzegania obowiązujących przepisów i regulowania faktur zgodnie z uzgodnionymi warunkami."
+          "title": "4. Twoje obowiązki",
+          "content": "Przekazujesz nam prawdziwe informacje i potrzebne dostępy, odpowiadasz na pytania w rozsądnym czasie, dbasz o bezpieczeństwo haseł, przestrzegasz prawa i płacisz faktury na czas."
         },
         "payment": {
-          "title": "4. Warunki płatności",
-          "content": "Standardowy termin płatności: 14 dni od daty wystawienia faktury. Faktury w EUR. Opóźnione płatności mogą podlegać odsetkom 0,05% dziennie. Usługi mogą zostać zawieszone dla kont zalegających ponad 30 dni."
+          "title": "5. Płatności",
+          "content": "Faktury są wystawiane w euro i płatne w ciągu 14 dni od daty wystawienia, chyba że oferta mówi inaczej. Odsetki za opóźnienie wynoszą 0,05% dziennie. Jeśli faktura jest nieopłacona dłużej niż 30 dni, możemy wstrzymać usługi."
         },
         "ip": {
-          "title": "5. Własność intelektualna",
-          "content": "Zachowujemy własność istniejących narzędzi i metodologii. Klienci są właścicielami niestandardowych rezultatów stworzonych specjalnie dla nich (po pełnej zapłacie) oraz konfiguracji specyficznych dla ich działalności."
+          "title": "6. Własność intelektualna",
+          "content": "Narzędzia, kod i metody, które mieliśmy przed projektem, pozostają naszą własnością. Po pełnej zapłacie należy do Ciebie to, co zbudowaliśmy specjalnie dla Ciebie, a także Twoje ustawienia i dane."
+        },
+        "data": {
+          "title": "7. Dane osobowe",
+          "content": "Jeśli nasza praca dotyczy danych osobowych, których administratorem jesteś Ty, przetwarzamy je wyłącznie na Twoje polecenie jako podmiot przetwarzający (art. 28 RODO). Na Twoją prośbę zawieramy umowę powierzenia przetwarzania danych."
         },
         "confidentiality": {
-          "title": "6. Poufność",
-          "content": "Obie strony zobowiązują się do zachowania poufności informacji, wykorzystywania ich wyłącznie do świadczenia usług i nieujawniania stronom trzecim bez zgody. Zobowiązania obowiązują 3 lata po rozwiązaniu umowy."
+          "title": "8. Poufność",
+          "content": "Obie strony zachowują poufne informacje drugiej strony w tajemnicy, wykorzystują je tylko do realizacji pracy i nie przekazują ich innym bez zgody. Obowiązek trwa 3 lata po zakończeniu współpracy."
+        },
+        "thirdParty": {
+          "title": "9. Narzędzia zewnętrzne",
+          "content": "Wiele systemów działa na platformach zewnętrznych, np. w CRM, poczcie i programach księgowych. O ich dostępności, cenach i warunkach decydują ich dostawcy, nie my."
         },
         "liability": {
-          "title": "7. Ograniczenie odpowiedzialności",
-          "content": "Nasza całkowita odpowiedzialność nie przekroczy opłat zapłaconych w ciągu 12 miesięcy poprzedzających roszczenie. Nie ponosimy odpowiedzialności za szkody pośrednie, utracone zyski ani problemy wynikające z usług stron trzecich."
+          "title": "10. Ograniczenie odpowiedzialności",
+          "content": "Nasza całkowita odpowiedzialność jest ograniczona do opłat zapłaconych nam w ciągu 12 miesięcy przed zgłoszeniem roszczenia. Nie odpowiadamy za szkody pośrednie, utracone zyski ani problemy wynikające z usług zewnętrznych."
         },
         "termination": {
-          "title": "8. Rozwiązanie",
-          "content": "Każda ze stron może rozwiązać umowę: dla wygody z 30-dniowym wypowiedzeniem lub natychmiast w przypadku istotnego naruszenia nienaprawionego w ciągu 14 dni. Po rozwiązaniu klient płaci za świadczone usługi."
+          "title": "11. Zakończenie współpracy",
+          "content": "Każda ze stron może zakończyć współpracę z 30-dniowym wypowiedzeniem albo od razu, jeśli druga strona istotnie narusza regulamin i nie naprawi tego w ciągu 14 dni. Płacisz za pracę wykonaną do dnia zakończenia."
         },
         "governing": {
-          "title": "9. Prawo właściwe",
-          "content": "Niniejszy Regulamin podlega prawu estońskiemu. Spory będą rozstrzygane przez Sąd Okręgowy w Harju, Estonia. Konsumenci z UE mogą korzystać z platformy ODR UE pod adresem ec.europa.eu/consumers/odr."
+          "title": "12. Prawo właściwe",
+          "content": "Regulamin podlega prawu estońskiemu. Spory rozstrzyga Sąd Okręgowy w Harju (Harju Maakohus) w Estonii."
         },
         "contact": {
-          "title": "10. Kontakt",
-          "content": "W przypadku pytań dotyczących niniejszego Regulaminu:"
+          "title": "13. Kontakt",
+          "content": "Pytania dotyczące regulaminu:"
         }
       }
-    }
-  },
-  "qualification": {
-    "step1": {
-      "title": "Zacznijmy od Twojego e-maila",
-      "subtitle": "Użyjemy go, aby wysłać Ci podsumowanie i informować o postępach.",
-      "placeholder": "twoj@email.pl"
-    },
-    "step2": {
-      "title": "Opowiedz nam o swojej firmie",
-      "subtitle": "To pomoże nam przygotować się do bardziej produktywnej rozmowy.",
-      "revenue": "Miesięczny przychód",
-      "businessType": "Jaką firmę prowadzisz?",
-      "businessTypePlaceholder": "np. Instalacje solarne, Agencja nieruchomości, SaaS...",
-      "challenge": "Jakie jest Twoje największe wyzwanie operacyjne?",
-      "challengePlaceholder": "np. Leady przepadają, ręczne follow-upy...",
-      "timeline": "Kiedy chcesz zacząć?"
-    },
-    "step3": {
-      "title": "Jeszcze jeden krok",
-      "subtitle": "Potwierdź, że jesteś człowiekiem, aby kontynuować.",
-      "verified": "Zweryfikowano"
-    },
-    "revenueOptions": {
-      "under25k": "Poniżej €25 000",
-      "25kto100k": "€25 000 – €100 000",
-      "100kto500k": "€100 000 – €500 000",
-      "over500k": "Powyżej €500 000"
-    },
-    "timelineOptions": {
-      "asap": "Jak najszybciej",
-      "1month": "W ciągu 1 miesiąca",
-      "3months": "W ciągu 3 miesięcy",
-      "exploring": "Tylko rozglądam się"
-    },
-    "back": "Wstecz",
-    "continue": "Dalej",
-    "showCalendar": "Pokaż kalendarz",
-    "submitting": "Proszę czekać..."
-  },
-  "unsubscribe": {
-    "title": "Wypisz się z newslettera",
-    "message": "Zamierzasz wypisać się z newslettera dla tego adresu e-mail:",
-    "button": "Potwierdź wypisanie",
-    "cancel": "Anuluj i wróć",
-    "error": "Coś poszło nie tak. Spróbuj ponownie lub skontaktuj się z nami.",
-    "success": {
-      "title": "Zostałeś wypisany",
-      "message": "Nie będziesz już otrzymywać od nas newsletterów. Jeśli to była pomyłka, zawsze możesz ponownie się zapisać na naszej stronie.",
-      "backHome": "Wróć do strony głównej"
-    }
-  },
-  "newsletter": {
-    "title": "Bądź na bieżąco",
-    "subtitle": "Otrzymuj comiesięczne informacje o RevOps, automatyzacji i skalowaniu firm sprzedażowych. Bez spamu, tylko wartość.",
-    "namePlaceholder": "Twoje imię",
-    "placeholder": "twoj@email.pl",
-    "button": "Subskrybuj",
-    "privacy": "Szanujemy Twoją prywatność. Zrezygnuj w każdej chwili.",
-    "error": "Coś poszło nie tak. Spróbuj ponownie.",
-    "invalidEmail": "Podaj prawidłowy adres e-mail.",
-    "footerLink": "Zapisz się do newslettera",
-    "contactTitle": "Otrzymuj comiesięczne informacje RevOps",
-    "success": {
-      "title": "Jesteś w grze!",
-      "message": "Dziękujemy za subskrypcję. Sprawdź swoją skrzynkę pocztową."
-    }
-  },
-  "caseStudies": {
-    "meta": {
-      "title": "Case Studies",
-      "description": "Zobacz, jak Alopex Digital pomógł firmom zautomatyzować procesy i zaoszczędzić czas dzięki n8n i GoHighLevel."
-    },
-    "label": "Case Studies",
-    "title": "Prawdziwe wyniki",
-    "titleAccent": "dla prawdziwych firm",
-    "subtitle": "Zobacz, jak pomogliśmy firmom zautomatyzować procesy, wyeliminować pracę ręczną i skupić się na rozwoju.",
-    "readMore": "Czytaj więcej",
-    "backLink": "Wszystkie case studies",
-    "ctaTitle": "Chcesz podobnych wyników?",
-    "ctaDescription": "Umów bezpłatną rozmowę, a zmapujemy, gdzie Twoja firma traci czas i pieniądze.",
-    "ctaButton": "Umów bezpłatną rozmowę",
-    "beforeLabel": "Przed",
-    "solutionLabel": "Rozwiązanie",
-    "resultsLabel": "Wyniki",
-    "items": {
-      "ovision-invoicing": {
-        "client": "Ovision",
-        "tag": "Fakturowanie",
-        "title": "Faktury nie spóźniają się już nigdy",
-        "summary": "Automatyczne fakturowanie z GHL do Merit Aktiva z danymi z rejestru firm — faktura w sekundach, nie dniach.",
-        "before": {
-          "text": "Ovision nie miał CRM-a — pipeline był w Trello. Faktury tworzono ręcznie w Merit Aktiva: księgowa kopiowała dane klienta, sprawdzała kody rejestrowe, obliczała numery referencyjne i wprowadzała pozycje produktowe. Każda faktura zajmowała 10–15 minut i regularnie się spóźniała.",
-          "items": [
-            "Każda faktura ręcznie — 10–15 minut",
-            "Faktury regularnie spóźnione, szczególnie po piątkowej produkcji",
-            "Dane rejestrowe sprawdzane ręcznie",
-            "Czas właściciela pochłaniany przez papierkową robotę"
-          ]
-        },
-        "solution": {
-          "text": "Połączyliśmy system sprzedaży bezpośrednio z oprogramowaniem księgowym. Gdy zamówienie przechodzi do etapu 'oczekuje na fakturę', faktura tworzy się automatycznie — z oficjalnymi danymi z rejestru firm, poprawną datą i obliczonym numerem referencyjnym.",
-          "items": [
-            "GHL → Merit Aktiva automatyczne połączenie",
-            "Dane rejestrowe pobierane automatycznie",
-            "Numery referencyjne obliczane przez system",
-            "Faktura generowana w momencie realizacji zamówienia"
-          ]
-        },
-        "results": {
-          "text": "Martin może teraz skupić się na sprzedaży i produkcji zamiast papierkowej robocie.",
-          "items": [
-            "Faktury generowane w sekundach, nie dniach",
-            "Data faktury zawsze poprawna",
-            "Dane rejestrowe zawsze aktualne",
-            "Księgowa nie musi już nic robić ręcznie"
-          ],
-          "highlight": "Sekundy, nie dni"
-        }
-      },
-      "gemoss-sales-kpis": {
-        "client": "Gemoss",
-        "tag": "KPI sprzedaży",
-        "title": "KPI zespołu sprzedaży, które naprawdę działają",
-        "summary": "Kalkulator czasu odpowiedzi w godzinach pracy i automatyczny codzienny system raportowania dla 6-osobowego zespołu.",
-        "before": {
-          "text": "Gemoss nie miał CRM-a — pipeline był w Microsoft Teams. KPI obliczano ręcznie w Excelu raz w miesiącu. KPI czasu odpowiedzi wliczał weekendy i godziny nocne, dając fałszywe wyniki wpływające bezpośrednio na wynagrodzenia.",
-          "items": [
-            "KPI obliczane ręcznie w Excelu raz w miesiącu",
-            "KPI czasu odpowiedzi wliczał weekendy",
-            "Fałszywe liczby wpływały bezpośrednio na wynagrodzenia",
-            "Brak wglądu w aktywność sprzedaży w czasie rzeczywistym"
-          ]
-        },
-        "solution": {
-          "text": "Zbudowaliśmy kalkulator czasu odpowiedzi uwzględniający tylko dni robocze (pon.–pt. 9:00–17:30, z wyłączeniem estońskich świąt). Połączyliśmy ClickUp i Google Sheets z codziennym automatycznym raportowaniem.",
-          "items": [
-            "Kalkulator czasu odpowiedzi w godzinach pracy",
-            "Codzienny automatyczny raport w Google Sheets",
-            "Automatyczne liczenie umów na ekspresy do kawy",
-            "Indywidualne wyniki widoczne per handlowiec"
-          ]
-        },
-        "results": {
-          "text": "Zespół sprzedaży ufa systemowi, a lista płac opiera się na rzeczywistych danych.",
-          "items": [
-            "Przegląd w czasie rzeczywistym każdego ranka",
-            "Uczciwy KPI czasu odpowiedzi — tylko godziny pracy",
-            "Lista płac oparta na rzeczywistych danych",
-            "Zespół sprzedaży ufa systemowi"
-          ],
-          "highlight": "W czasie rzeczywistym, nie raz w miesiącu"
-        }
-      },
-      "ovision-production": {
-        "client": "Ovision",
-        "tag": "Produkcja",
-        "title": "Produkcja pod kontrolą",
-        "summary": "Karty śledzenia per produkt, automatyczne zarządzanie plikami w SharePoint i fakturowanie po ostatnim produkcie.",
-        "before": {
-          "text": "Ovision nie miał żadnego systemu śledzenia produkcji. Kierownik produkcji musiał pamiętać, na jakim etapie jest każdy produkt. Zarządzanie plikami projektowymi było otwartą kwestią, a czasem produkty umykały uwadze.",
-          "items": [
-            "Brak ustrukturyzowanego systemu śledzenia",
-            "Kierownik produkcji śledził statusy z pamięci",
-            "Pliki projektowe rozproszone po mailach",
-            "Fakturowanie opóźnione z powodu braku przeglądu"
-          ]
-        },
-        "solution": {
-          "text": "Zbudowaliśmy system, w którym każdy produkt ma własną kartę śledzenia z terminami, metodami druku i plikami projektowymi. Pliki trafiają automatycznie do SharePoint. Po ukończeniu ostatniego produktu zamówienie automatycznie przechodzi do fakturowania.",
-          "items": [
-            "Każdy produkt ma własną kartę śledzenia",
-            "Pliki projektowe automatycznie do SharePoint",
-            "Produkcja rusza dopiero po zatwierdzeniu projektu",
-            "Automatyczne fakturowanie po ostatnim produkcie"
-          ]
-        },
-        "results": {
-          "text": "Żaden produkt nie umknie uwadze, a fakturowanie rozpoczyna się natychmiast.",
-          "items": [
-            "Status każdego produktu widoczny w czasie rzeczywistym",
-            "Żaden produkt nie umknie uwadze",
-            "Fakturowanie natychmiast, nie po dniach",
-            "Pliki projektowe zawsze we właściwym miejscu"
-          ],
-          "highlight": "Zero przeoczonych produktów"
-        }
-      },
-      "swa-poland-recruitment": {
-        "client": "SWA Poland",
-        "tag": "Rekrutacja",
-        "title": "Kampania rekrutacyjna AI w trzech językach",
-        "summary": "Chatbot AI na Instagramie i Facebooku, trójjęzyczne kampanie SMS+email i odzyskiwanie no-show — automatycznie.",
-        "before": {
-          "text": "SWA Poland nie miał CRM-a ani ustrukturyzowanego procesu rekrutacji. Rekruterzy komunikowali się z kandydatami ręcznie przez DM na Instagramie i Facebooku. Trójjęzyczna komunikacja oznaczała potrójną pracę.",
-          "items": [
-            "Kandydaci kontaktowani ręcznie przez DM",
-            "Brak widoczności pipeline'u",
-            "Kampanie SMS i email wysyłane ręcznie",
-            "Trójjęzyczna komunikacja = 3x pracy"
-          ]
-        },
-        "solution": {
-          "text": "Zbudowaliśmy kompleksowy system rekrutacji: bot AI kwalifikujący w mediach społecznościowych, trójjęzyczne automatyczne kampanie i system wykrywania no-show.",
-          "items": [
-            "Chatbot AI na Instagramie i Facebooku",
-            "9 SMS + 6 wariantów email w trzech językach",
-            "Wykrywanie no-show i automatyczne odzyskiwanie",
-            "Kampanie Meta Ads w 7 miastach"
-          ]
-        },
-        "results": {
-          "text": "Rekruterzy mogą skupić się na kwalifikowanych kandydatach zamiast ręcznego pisania.",
-          "items": [
-            "AI automatycznie przeprowadza wstępną kwalifikację",
-            "Trójjęzyczna kampania działa na autopilocie",
-            "Przegląd kandydatów i etapów w czasie rzeczywistym",
-            "No-show automatycznie dostają drugą szansę"
-          ],
-          "highlight": "3 języki, 0 pracy ręcznej"
-        }
-      },
-      "ovision-quotes-costing": {
-        "client": "Ovision",
-        "tag": "Oferty",
-        "title": "Oferty i kalkulacja kosztów z jednego miejsca",
-        "summary": "Automatyczna wycena z katalogu, generowanie PDF i scentralizowany dostęp do plików dla całego zespołu.",
-        "before": {
-          "text": "Tworzenie ofert było całkowicie ręczne. Ceny zakupu sprawdzano w portalach dostawców, nazwy dostawców wpisywano jako wolny tekst, a pliki były rozproszone po różnych komputerach.",
-          "items": [
-            "Tworzenie oferty zajmowało godzinę pracy ręcznej",
-            "Ceny zakupu kopiowane ręcznie z portali dostawców",
-            "Nazwy dostawców i metody druku jako wolny tekst",
-            "Pliki rozproszone po różnych komputerach"
-          ]
-        },
-        "solution": {
-          "text": "Przenieśliśmy cały proces w jedno miejsce. Ceny produktów pobierane automatycznie z katalogu, kalkulacja kosztów generowana w SharePoint, a PDF oferty tworzy się automatycznie.",
-          "items": [
-            "Ceny automatycznie z katalogu",
-            "Kalkulacja w SharePoint z dostawcami i marżami",
-            "Automatyczny profesjonalny PDF",
-            "Cały zespół widzi ten sam plik"
-          ]
-        },
-        "results": {
-          "text": "Tworzenie oferty jednym kliknięciem, a cały zespół ma dostęp do plików.",
-          "items": [
-            "Jedno kliknięcie zamiast godziny pracy ręcznej",
-            "Ceny zakupu automatycznie z katalogu",
-            "Profesjonalny PDF za każdym razem",
-            "Ponowne zamówienia nie wymagają rozpoczynania od zera"
-          ],
-          "highlight": "1 kliknięcie, nie 1 godzina"
-        }
-      }
-    }
-  },
-  "contact": {
-    "meta": {
-      "title": "Kontakt",
-      "description": "Skontaktuj się z Alopex Digital. Umów rozmowę, napisz do nas lub śledź nas w mediach społecznościowych."
-    },
-    "label": "Skontaktuj się",
-    "title": "Rozpocznijmy",
-    "titleAccent": "rozmowę",
-    "subtitle": "Czy masz pytanie, chcesz omówić projekt, czy po prostu powiedzieć cześć — chętnie Cię wysłuchamy.",
-    "bookCall": {
-      "title": "Umów bezpłatną rozmowę",
-      "description": "30-minutowa rozmowa. Bez zobowiązań. Zmapujemy, gdzie tracisz przychody i pokażemy możliwości.",
-      "button": "Umów bezpłatną rozmowę"
-    },
-    "phone": "Telefon",
-    "email": "Email",
-    "followUs": "Śledź nas",
-    "registeredAddress": "Adres siedziby",
-    "team": {
-      "title": "Kontakty bezpośrednie"
-    }
-  },
-  "automateSales": {
-    "meta": {
-      "title": "We automate your sales | Alopex Digital",
-      "description": "Let robots do the robot work. We build a whole sales machine — from finding leads to repeat business. Less labour cost, no lead or quote left hanging."
-    },
-    "hero": {
-      "label": "Sales automation",
-      "title": "Let robots do the",
-      "titleAccent": "robot work.",
-      "subtitle": "We automate your sales — from finding leads to repeat business. Less labour cost, and no lead or quote left hanging.",
-      "cta": "Book 15 min with Martin",
-      "scroll": "Scroll",
-      "micro": "Free. No sales pressure. We show how the machine would run for your business."
-    },
-    "problem": {
-      "title": "Sales is a people-dependent bottleneck, not a system.",
-      "p1": "Most B2B firms run sales by hand. The owner or a couple of salespeople chase leads, quotes hang in the air, and the old client base never gets a follow-up.",
-      "p2": "How much of your team's week goes to things a robot could do? Finding leads, qualifying, chasing quotes, copying data between systems by hand — that's robot work, not human work."
-    },
-    "machine": {
-      "title": "A whole sales machine, turnkey.",
-      "intro": "We don't sell a tool. We build a finished sales machine that runs in the background 24/7 — it doesn't get sick or quit.",
-      "metaProof": "The proof is simple: this page and the email that brought you here are the same machine at work.",
-      "steps": [
-        {
-          "title": "Finding leads",
-          "desc": "The machine finds the right companies itself — no one combs through pages by hand."
-        },
-        {
-          "title": "Enrichment",
-          "desc": "Every lead is enriched and scored before contact."
-        },
-        {
-          "title": "Personalised outreach",
-          "desc": "AI-written emails, not template spam."
-        },
-        {
-          "title": "Follow-up sequences",
-          "desc": "Multi-step follow-up over email and SMS, automatically."
-        },
-        {
-          "title": "Info gathering",
-          "desc": "Qualifying info is collected from interested leads by itself."
-        },
-        {
-          "title": "Automatic quotes",
-          "desc": "A quote is generated from the info collected."
-        },
-        {
-          "title": "Reactivating the base",
-          "desc": "Your old client base is re-activated automatically."
-        }
-      ]
-    },
-    "proof": {
-      "title": "What we've already built.",
-      "items": [
-        {
-          "name": "Packtailor",
-          "body": "We eliminated the need to comb through company pages by hand to find and qualify leads. Outreach, follow-up and initial info gathering are personalised automatically.",
-          "result": "The manual work is gone — the machine does it 24/7."
-        },
-        {
-          "name": "Koduaken",
-          "body": "We built automatic follow-up on quotes. No quote hangs anymore — the follow-up runs itself until the client decides.",
-          "result": "+15% in sales — without hiring a single new person."
-        }
-      ]
-    },
-    "roi": {
-      "title": "A salesperson alternative that never quits.",
-      "p1": "One salesperson costs €2,500–4,000 a month, plus hiring and onboarding. The machine does lead gen, follow-up and quote chasing 24/7 — never sick, never gone, never forgets.",
-      "p2": "You focus on closing deals. The routine stays with the machine.",
-      "card": {
-        "costLabel": "A salesperson",
-        "cost": "€2,500–4,000/mo",
-        "machineLabel": "The machine",
-        "machine": "24/7 — never sick, never gone"
-      }
-    },
-    "ctaSection": {
-      "title": "Let's see how this would run for your business.",
-      "subtitle": "15 minutes with Martin. No sales pressure — we show the machine and whether it fits you.",
-      "button": "Book a discovery call"
-    },
-    "faq": {
-      "title": "Common questions.",
-      "items": [
-        {
-          "q": "Do you want to replace my salesperson?",
-          "a": "No — we arm them. The machine does the routine (lead gen, follow-up, quote chasing); the salesperson focuses on closing and relationships."
-        },
-        {
-          "q": "Sounds too good to be true.",
-          "a": "You just experienced it. This page and the email that brought you here are the work of the same machine. On a discovery call I'll show exactly how it runs for your business."
-        },
-        {
-          "q": "Cold emails = spam?",
-          "a": "GDPR-compliant, legitimate interest, opt-out in every email. And you saw it yourself — that wasn't spam, it was relevant."
-        },
-        {
-          "q": "No time to set it up.",
-          "a": "We build the whole machine. Your job is to close deals."
-        }
-      ]
     }
   }
 }

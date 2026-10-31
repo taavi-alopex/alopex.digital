@@ -1,538 +1,4 @@
 {
-  "metadata": {
-    "title": "Alopex Digital",
-    "description": "Kõrgtasemel GoHighLevel & RevOps taristu müügipõhistele ettevõtetele. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise.",
-    "ogDescription": "Kõrgtasemel GoHighLevel & RevOps taristu müügipõhistele ettevõtetele. Me projekteerime, ehitame ja käivitame süsteemid, mis peatavad tulu lekkimise."
-  },
-  "nav": {
-    "about": "Meist",
-    "services": "Teenused",
-    "process": "Protsess",
-    "caseStudies": "Kliendilood",
-    "healthCheck": "Tervisekontroll",
-    "contact": "Kontakt",
-    "cta": "Broneeri tutvumiskõne"
-  },
-  "hero": {
-    "label": "GoHighLevel & n8n agentuur",
-    "title": "Sinu müügimasin,",
-    "titleAccent": "valmis ja töötab",
-    "subtitle": "Kaardistame su müügiprotsessi, ehitame GoHighLevel taristu ja tagame, et su meeskond seda päriselt kasutab. Lead'id ei kao enam käsitsi segaduses.",
-    "ctaPrimary": "Broneeri tutvumiskõne",
-    "ctaPrimaryMicro": "30-minutiline kõne. Kohustuseta.",
-    "ctaSecondary": "Meie protsess",
-    "scroll": "Keri",
-    "assessmentLink": "Tee tasuta müügisüsteemi audit"
-  },
-  "heroV2": {
-    "label": "Revenue Operations agentuur",
-    "title": "sinu liididest ei saa kunagi",
-    "titleAccent": "teist kontakti",
-    "subtitle": "See on kümneid tuhandeid eurosid käivet, mis kõnnib igal kuul uksest välja. Aeglane järelkontakt, ühendamata tööriistad ja manuaalne kaos tapavad su pipeline'i vaikselt.",
-    "hook": "Millal sa viimati oma olemasolevale kliendibaasile järelkontakti tegid?",
-    "ctaPrimary": "Vaata, kust raha kaotsi läheb",
-    "ctaSecondary": "Vaata, kuidas me seda parandame",
-    "scroll": "Keri",
-    "assessmentLink": "Tee tasuta müügisüsteemi audit",
-    "calculator": {
-      "dealValueLabel": "Keskmine tehingu väärtus (€)",
-      "leadsLabel": "Liide kuus",
-      "resultLabel": "Tõenäoliselt kaotad",
-      "perMonth": "/kuu",
-      "breakdown": "{lostLeads} kaotatud liidi × 10% konversioon = {lostDeals} kaotatud tehingut · {annual}/a"
-    }
-  },
-  "inlineCta": {
-    "afterClients": "Tunned oma ettevõtte ära?",
-    "afterClientsLink": "Räägime.",
-    "afterProcess": "Alusta süsteemide auditiga",
-    "afterProcessMicro": "Tasuta tutvumiskõne \u2014 kaardistame, kust tulu lekib.",
-    "assessment": "Pole kindel, kust alustada?",
-    "assessmentLink": "Tee tasuta müügisüsteemi audit \u2192"
-  },
-  "about": {
-    "meta": {
-      "title": "Meist",
-      "description": "Alopex Digital — sinu GoHighLevel & RevOps partner Euroopas. Me projekteerime selgust müügipõhistele ettevõtetele."
-    },
-    "label": "Kes me oleme",
-    "title": "GoHighLevel & RevOps agentuur",
-    "titleAccent": "müügipõhistele ettevõtetele üle EL-i",
-    "p1": "Alopex Digital on GoHighLevel Maaletooja — me ehitame automatiseeritud süsteeme, mis vabastavad su aja, et saaksid keskenduda kasvule.",
-    "p2": "Me ei ehita lihtsalt süsteeme. Me projekteerime selguse — kaardistame kogu äriprotsessi enne ühtegi töövoo kirjutamist. Seejärel ehitame, käivitame ja tagame, et su meeskond seda ka päriselt kasutab. See ongi erinevus.",
-    "regions": ["Euroopa Liit", "GoHighLevel", "RevOps"],
-    "purposeLabel": "Meie eesmärk",
-    "purposeQuote": "\u201eOrkestreerida selgust ja sujuvust müügipõhistele ettevõtetele.\u201c",
-    "purposeDescription": "Me ehitame vabadusmootoreid — automatiseeritud süsteeme, mis vabastavad su aja, et saaksid keskenduda kasvule."
-  },
-  "clients": {
-    "label": "Keda me teenindame",
-    "title": "Loodud",
-    "titleAccent": "müügist elavatele ettevõtetele",
-    "items": [
-      {
-        "industry": "Kõrge väärtusega paigaldus",
-        "examples": "Päikeseenergia, taastuvenergia, küte ja ventilatsioon",
-        "pain": "Lead'id kaovad halva follow-up'i tõttu — isegi 10–50k tehingutel",
-        "outcome": "Automaatsed follow-up jadad, mis viivad lead'i pakkumisest lepinguni."
-      },
-      {
-        "industry": "Suhtel põhinev müügitoru",
-        "examples": "Kinnisvara, konsultatsioon, õigusteenused",
-        "pain": "Ostjate ja müüjate pipeline'id, kus sobitamata kontaktid ära kaovad",
-        "outcome": "CRM automaatika, mis sobitab, hooldab ja ei lase ühtki sooja kontakti kaduda."
-      },
-      {
-        "industry": "Kahepoolne turg",
-        "examples": "Värbamine, personaliteenus, turuplatsid",
-        "pain": "Kandidaadid saavad halba kogemust ja kontaktid kaovad B2B + B2C poolel",
-        "outcome": "Kandidaadi ja kliendi teekond on korras — bränd püsib ja kohad täituvad kiiremini."
-      }
-    ]
-  },
-  "uniques": {
-    "label": "Miks Alopex",
-    "title": "Miks valida Alopex oma",
-    "titleAccent": "GoHighLevel partneriks",
-    "items": [
-      {
-        "title": "Strateegiline kavandamine",
-        "subtitle": "Enne ehitamist projekteerime",
-        "description": "Me ei arva — me kaardistame kogu äriprotsessi enne ühtegi töövoo loomist. Enamik agentuure hakkab kohe ehitama. Meie maandame riski, mõeldes esmalt nagu omanik."
-      },
-      {
-        "title": "Kõrgtasemel API ökosüsteemid",
-        "subtitle": "Rohkem kui lihtsad integratsioonid",
-        "description": "Me ehitame kohandatud API sillad, mis ühendavad HighLevel iga pärand- või kohaliku süsteemiga. Sinu CRM saab ettevõtte keskseks ajuks, mitte lihtsalt järjekordseks tööriistaks."
-      },
-      {
-        "title": "Piirkondlik RevOps pädevus",
-        "subtitle": "Maaletooja faktor",
-        "description": "Me tunneme kultuuri, keelt ja seadusi. GDPR, kohalikud maksevõimalused, piirkondlik maksuarvestus — me tõlgime maailmatasemel USA tehnoloogia lahendusteks, mis töötavad sinu konkreetsel turul."
-      }
-    ]
-  },
-  "services": {
-    "meta": {
-      "title": "Teenused",
-      "description": "GoHighLevel lahendused ja kohandatud n8n integratsioonid müügipõhistele ettevõtetele. CRM, automatiseerimine, müügitorud ja kohalikud süsteemiintegratsioonid."
-    },
-    "label": "Mida me ehitame",
-    "title": "GoHighLevel lahendused",
-    "titleAccent": "ja kohandatud integratsioonid",
-    "intro": "Pakume terviklikku RevOps platvormi — GoHighLevel baasil, ühendatud sinu kohalike süsteemidega läbi kohandatud n8n integratsioonide.",
-    "platformLabel": "GoHighLevel platvorm",
-    "integrationsLabel": "Kohandatud integratsioonid n8n kaudu",
-    "platformItems": [
-      {
-        "title": "CRM ja müügitoru haldus",
-        "description": "Jälgi iga tehingut esimesest kontaktist allkirjastatud lepinguni"
-      },
-      {
-        "title": "Turunduse automatiseerimine",
-        "description": "Hoolda müügivihjeid automaatsete e-posti, SMS ja töövoo järjestustega"
-      },
-      {
-        "title": "Kalender ja broneerimine",
-        "description": "Lase klientidel otse broneerida — ilma e-kirjade edasi-tagasi saatmiseta"
-      },
-      {
-        "title": "Maine haldus",
-        "description": "Kogu ja kuva arvustusi autopiloodil"
-      },
-      {
-        "title": "Veebilehed ja müügilehtrid",
-        "description": "Käivita konverteerivad lehed ilma arendajata"
-      },
-      {
-        "title": "Vormid ja küsitlused",
-        "description": "Kogu müügivihjeid ja tagasisidet nutikate bränditud vormidega"
-      },
-      {
-        "title": "Arveldamine ja maksed",
-        "description": "Saada arveid ja kogu makseid otse CRM-is"
-      },
-      {
-        "title": "Aruandlus ja töölauad",
-        "description": "Vaata kogu müügitoru ühelt töölaualt"
-      }
-    ],
-    "integrationItems": [
-      {
-        "title": "ERP ja raamatupidamine",
-        "description": "Ühenda Merit Aktiva, e-Arveldaja või mis tahes raamatupidamissüsteem"
-      },
-      {
-        "title": "E-allkirja platvormid",
-        "description": "Automatiseeri dokumendiallkirjastamine Dokobitiga või SignHere'iga"
-      },
-      {
-        "title": "Kohalikud maksevõimalused",
-        "description": "Integreeri Montonio, EveryPay ja piirkondlikud maksemeetodid"
-      },
-      {
-        "title": "Riigi- ja maksuportaalid",
-        "description": "Automatiseeri maksuaruandlus ja regulatiivne vastavus"
-      },
-      {
-        "title": "Vana CRM-i migratsioon",
-        "description": "Vii oma andmed üle mis tahes vanast süsteemist — puhtalt ja täielikult"
-      },
-      {
-        "title": "Kohandatud API sillad",
-        "description": "Kui sellel on API, saame selle sinu CRM-iga ühendada"
-      }
-    ],
-    "useCasesLabel": "Vaata tegevuses",
-    "useCasesTitle": "Kuidas see töötab",
-    "useCasesTitleAccent": "sinu valdkonnas",
-    "useCases": [
-      {
-        "industry": "Kõrge väärtusega paigaldus",
-        "examples": "Päikeseenergia, küte, taastuvenergia",
-        "pain": "Lõpeta 10–50k tehingute kaotamine halva järeltegevuse tõttu",
-        "solution": "Automaatne müügivihje vastus minutitega, müügitoru jälgimine müügiesindaja kohta ja SMS/e-posti järjestused, mis hooldavad kuni lepingu allkirjastamiseni.",
-        "outcome": "Kiirem vastus, vähem kaotatud tehinguid, täielik ülevaade müügitorust"
-      },
-      {
-        "industry": "Suhtel põhinev müügitoru",
-        "examples": "Kinnisvara, konsultatsioon, õigusteenused",
-        "pain": "Ära lase ühelgi sobitatud kontaktil kaduda",
-        "solution": "CRM töövood, mis sobitavad ostjaid müüjatega, automaatne hooldus külmadele kontaktidele ja broneerimislingid, mis kõrvaldavad ajaplaneerimise hõõrdumise.",
-        "outcome": "Iga kontakt jälgitud, iga sobitamine jälgitud, null kaotatud võimalust"
-      },
-      {
-        "industry": "Kahepoolne turg",
-        "examples": "Värbamine, personaliteenus, turuplatsid",
-        "pain": "Lõpeta kandidaatide kadumine, kaitse oma brändi",
-        "solution": "Automaatne kandidaadisuhtlus igal etapil, kliendile suunatud töölauad ja tagasiside tsüklid, mis sulgevad kogemuslõhe.",
-        "outcome": "Kandidaadid jäävad kaasatuks, kliendid näevad edenemist, sinu bränd püsib tugev"
-      }
-    ],
-    "ctaText": "Pole kindel, mis sobib?",
-    "ctaDescription": "Broneeri tasuta tutvumiskõne — kaardistame su vajadused 30 minutiga.",
-    "ctaButton": "Broneeri tutvumiskõne"
-  },
-  "process": {
-    "meta": {
-      "title": "Meie protsess",
-      "description": "Süsteemide orkestreerimise meetod — 6-etapiline metoodika, mis viib sind esimesest kontaktist töötava süsteemini 12 nädalaga."
-    },
-    "label": "Meie protsess",
-    "title": "Kaosest selguseni",
-    "titleAccent": "12 nädalaga",
-    "subtitle": "Tõestatud metoodika, mis tagab, et iga automaatika, mille ehitame, põhineb su äri sügaval mõistmisel, mitte oletustel.",
-    "inputLabel": "Sina annad",
-    "outputLabel": "Sina saad",
-    "steps": [
-      {
-        "title": "Tutvumiskõne",
-        "phase": "Esimene kontakt",
-        "duration": "30 minutit",
-        "description": "Enne kui alustame, peame mõistma, kas sobime kokku. See esialgne vestlus aitab meil mõista sinu ärikonteksti, väljakutseid ja eesmärke — ning sul mõista, kuidas meie töötame.",
-        "inputs": ["Sinu ärikontekst", "Praegused väljakutsed", "Kasvueesmärgid", "Valmisolek avameelselt rääkida"],
-        "outputs": ["Vastastikune arusaam sobivusest", "Selge jah/ei edasiliikumiseks", "Kui jah: järgmised sammud", "Kui ei: aus tagasiside ja soovitused"]
-      },
-      {
-        "title": "Süsteemi audit",
-        "phase": "Avastus",
-        "duration": "1. nädal",
-        "description": "Enne kui midagi projekteerima hakkame, peame mõistma, kus sa täna oled. Kaardistame su praeguse müügiprotsessi, leiame kust lead'id kaovad ja tuvastame kitsaskohad, mis sulle raha maksavad.",
-        "inputs": ["Ligipääs võtmeisikutele", "Ülevaade praegustest tööriistadest", "Näited müügimaterjalidest", "Ausad vastused selle kohta, mis töötab"],
-        "outputs": ["Süsteemi auditi raport", "Praeguse olukorra protsessikaart", "Tuvastatud kohad, kust raha kaob", "Valmiduse hinnang"]
-      },
-      {
-        "title": "Strateegiline plaan",
-        "phase": "Planeerimine",
-        "duration": "2.-3. nädal",
-        "description": "Auditi tulemuste põhjal projekteerime täieliku lahenduse arhitektuuri. See on su tegevuskava — detailne plaan, mis näitab täpselt, mida ehitame, kuidas süsteemid ühenduvad ja milline on lõpptulemus.",
-        "inputs": ["Tagasiside auditi leidudele", "Äriprioriteedid ja piirangud", "Otsustaja aeg kinnituskoosolekuteks"],
-        "outputs": ["Strateegilise plaani dokument", "Visuaalne süsteemi arhitektuur", "Workflow spetsifikatsioonid", "Investeeringu jaotus"]
-      },
-      {
-        "title": "Süsteemi ehitus",
-        "phase": "Teostus",
-        "duration": "4.-10. nädal",
-        "description": "Kinnitatud plaaniga alustame su süsteemi ehitamist. Seadistame su GoHighLevel keskkonna, ehitame n8n kaudu kohandatud ühendused ja loome workflow'd, mis su äri jooksutavad.",
-        "inputs": ["Õigeaegne tagasiside mustanditele", "Ligipääsud ühendusteks", "Näidisandmed testimiseks", "Sisu mallidele"],
-        "outputs": ["Seadistatud GoHighLevel konto", "Töötavad ühendused", "Automaatika workflow'd", "Iganädalased eduaruanded ClickUp'is"]
-      },
-      {
-        "title": "Sujuv käivitus",
-        "phase": "Käivitus",
-        "duration": "11.-12. nädal",
-        "description": "Süsteem loob väärtust ainult siis, kui su tiim seda tegelikult kasutab. Tagame, et su tiim on uue süsteemiga kindel ja mugav enne, kui meie tagasi astume.",
-        "inputs": ["Tiimi aeg koolitusteks", "Olemasolevad kliendiandmed", "Tagasiside kasutatavusele"],
-        "outputs": ["Koolitatud tiim", "Ületoodud andmed", "Kasutajadokumentatsioon", "Käivitustugi"]
-      },
-      {
-        "title": "Kasvutsükkel",
-        "phase": "Jätkuv",
-        "duration": "Pidevalt",
-        "description": "Su äri areneb ja su süsteemid peaksid sellega kaasa arenema. Kasvutsükkel tagab, et su infrastruktuur püsib su kasvust ees — mitte maha jäädes.",
-        "inputs": ["Aeg regulaarseteks kohtumisteks", "Tagasiside selle kohta, mis töötab", "Info ärimuudatuste kohta"],
-        "outputs": ["Iga kahe nädala tagant kõned", "Kvartalikoosolekud", "Pidevad parandused", "Prioriteetne tugi"]
-      }
-    ]
-  },
-  "stats": {
-    "items": [
-      { "value": 150, "suffix": "+", "label": "Käivitatud süsteemi" },
-      { "value": 3, "suffix": "x", "label": "Rohkem lead'e 90 päevaga" },
-      { "value": 85, "suffix": "%", "label": "Vähem käsitsi follow-up'i" },
-      { "value": 12, "suffix": "min", "label": "Keskm. lead'ile vastamise aeg" }
-    ]
-  },
-  "values": {
-    "label": "Meie väärtused",
-    "title": "Mis juhib",
-    "titleAccent": "kõike, mida teeme",
-    "items": [
-      {
-        "title": "Omaniku mõtteviis",
-        "subtitle": "Vastutus ja tulemus",
-        "description": "Kohtleme klientide ettevõtteid nagu enda omi. Proaktiivsed, usaldusisikuna tegutsevad ja ei ütle kunagi \u201esee pole minu töö\u201c. Me toome positiivse muutuse ja premeerime tulemusi."
-      },
-      {
-        "title": "Vastutustundlik vabadus",
-        "subtitle": "Distsiplineeritud autonoomia",
-        "description": "Töötame kõikjal, aga ei jäta kunagi meeskonda hätta. Tulemus enne tunde. Autonoomia, mis on teenitud usaldusväärsuse ja kõrge sooritusega."
-      },
-      {
-        "title": "Kõik on lahendatav",
-        "subtitle": "Tehniline leidlikkus",
-        "description": "Järeleandmatu probleemilahenduse mõtteviis. Kasutame kollektiivset intelligentsi — tehisintellekti, dokumentatsiooni, kogukonda — et ületada iga takistus. \u201eMa ei tea\u201c ei ole kunagi lõplik vastus."
-      },
-      {
-        "title": "Tõde enne egot",
-        "subtitle": "Meritokraatia ja läbipaistvus",
-        "description": "Radikaalne läbipaistvus meeskonna ja klientidega. Parim idee võidab, sõltumata tiitlist või staažist. Ehitame usaldust avatuse ja aususe kaudu."
-      },
-      {
-        "title": "Süda on sees",
-        "subtitle": "Empaatia ja inimlik side",
-        "description": "Iga pileti ja API päringu taga on inimene. Toetame üksteise arengut, heaolu ja edu. Kõrge sooritus nõuab kõrget hoolimist."
-      }
-    ]
-  },
-  "guarantee": {
-    "label": "Meie lubadus",
-    "title": "Null riski,",
-    "titleAccent": "täielik kindlustunne",
-    "items": [
-      {
-        "title": "Meie lubadus: sa hakkad seda kasutama",
-        "description": "Me ei ehita lihtsalt — me tagame, et su tiim seda ka päriselt kasutab. Kui meeskond ei tunne end pärast koolitust kindlalt, teeme tasuta lisakoolitusi, kuni tunnevad.",
-        "highlight": "Ümberõpe ilma lisatasuta"
-      },
-      {
-        "title": "Kavandi tasu — arvestatakse maha",
-        "description": "Maksad arhitektuuri eest, mitte müügikõne eest. Kui valid meid ehitama, arvestame 100% kavandi tasu ehituse hinnast maha. Kui lähed mujale, jäävad plaanid sulle.",
-        "highlight": "100% kavandi tasu krediteeritud"
-      }
-    ]
-  },
-  "cta": {
-    "title": "Lõpetame",
-    "titleAccent": "müügivõimaluste näppude vahelt puterdamise",
-    "description": "Broneeri tasuta tutvumiskõne. Vaatame su praeguse olukorra üle ja näitame, kust raha lauale jääb — ilma kohustuseta.",
-    "button": "Broneeri tutvumiskõne",
-    "microCopy": "30-minutiline kõne. Kohustuseta. Kaardistame, kust tulu lekib.",
-    "emailPrefix": "Või kirjuta meile otse"
-  },
-  "footer": {
-    "tagline": "GoHighLevel & n8n taristu müügipõhistele ettevõtetele üle Euroopa.",
-    "servicesTitle": "Teenused",
-    "companyTitle": "Ettevõte",
-    "services": [
-      { "label": "Süsteemide audit" },
-      { "label": "Strateegiline kavand" },
-      { "label": "Arhitektuuri ehitus" },
-      { "label": "Sujuv käivitus" },
-      { "label": "Kasvu tsükkel" }
-    ],
-    "company": [
-      { "label": "Meist" },
-      { "label": "Meie protsess" },
-      { "label": "Kliendilood" },
-      { "label": "Väärtused" },
-      { "label": "Kontakt" }
-    ],
-    "legalTitle": "Õiguslik teave",
-    "legal": [
-      { "label": "Privaatsuspoliitika" },
-      { "label": "Kasutustingimused" }
-    ],
-    "copyright": "Alopex Digital OÜ. Kõik õigused kaitstud.",
-    "location": "Teenindame ettevõtteid üle Euroopa"
-  },
-  "recruitment": {
-    "title": "Liitu Alopexi meeskonnaga",
-    "subtitle": "Otsime alati teravaid ja motiveeritud inimesi, kes tahavad ehitada midagi tähenduslikku. Räägi meile enda kohta.",
-    "name": "Täisnimi",
-    "email": "E-post",
-    "role": "Roll, mis sind huvitab",
-    "rolePlaceholder": "nt RevOps spetsialist, arendaja, müük...",
-    "message": "Räägi meile enda kohta",
-    "messagePlaceholder": "Mis sind Alopexi juures põnevil hoiab? Mis on su supervõime?",
-    "submit": "Saada kandidatuur",
-    "submitting": "Saatmine...",
-    "success": "Kandidatuur saadetud!",
-    "successMessage": "Täname, et ühendust võtsid. Vaatame su kandidatuuri läbi ja vastame mõne päeva jooksul.",
-    "footerLink": "Liitu meeskonnaga"
-  },
-  "socialProof": {
-    "label": "Klientide lood",
-    "title": "Mida meie kliendid",
-    "titleAccent": "ütlevad",
-    "testimonials": [
-      {
-        "quote": "Mul oli palju ideid, aga ma ei teadnud, mis on tehniliselt võimalik. GoHighLevel oli tööriist, mida vajasin oma äride automatiseerimiseks.",
-        "name": "Chanet Simonen",
-        "title": "Coach & Ettevõtja",
-        "logo": "/chanet-logo.png"
-      },
-      {
-        "quote": "Mul polnud ülevaadet, mida mu müügimeeskond teeb. Nüüd on mul kogu meeskonna automatiseeritud KPI jälgimine.",
-        "name": "Viktoria Rozental",
-        "title": "Tegevjuht, Gemoss",
-        "logo": "/gemoss-logo.svg"
-      },
-      {
-        "quote": "Tahtsin oma äri skaleerida, aga tundsin, et mina ise olen pudelikael. Liiga palju manuaalseid ülesandeid, puudus selge ülevaade. Alopex aitas mul ehitada süsteemid, mis töötavad ilma minuta.",
-        "name": "Martin Kull",
-        "title": "Tegevjuht, Ovision",
-        "logo": "/ovision-logo.svg"
-      }
-    ],
-    "caseStudyLabel": "Kliendilugu",
-    "caseStudy": {
-      "client": "Koduaken",
-      "industry": "Aknatootmine",
-      "challenge": "Hinnapakkumised saadeti, aga järeltegevust ei tulnud — tehingud libisesid käest.",
-      "solution": "Automatiseeritud järeltegevuse järjestused, mis käivituvad pärast iga hinnapakkumist.",
-      "result": "20%",
-      "resultLabel": "konversiooni paranemine",
-      "resultDetail": "juba esimesest testist"
-    }
-  },
-  "anchoring": {
-    "label": "Miks see mõttekam on",
-    "title": "Oma RevOps inimene",
-    "titleAccent": "vs. Alopex",
-    "inHouse": {
-      "title": "Palka majja",
-      "salary": "€48 000–72 000/a",
-      "items": [
-        "Palk + sotsiaalmaksud",
-        "3–6 kuud värbamiseks",
-        "Koolitus ja sisseelamine",
-        "Üks inimene = üks riskikoht",
-        "Tööriistade litsentsid peale"
-      ]
-    },
-    "alopex": {
-      "title": "Tööta Alopexiga",
-      "items": [
-        "Spetsialistide meeskond esimesest päevast",
-        "Töötab nädalatega, mitte kuudega",
-        "Toimivad lahendused kohe kaasas",
-        "Jätkuv tugi ja areng",
-        "GoHighLevel litsents kaasas"
-      ],
-      "highlight": "Murdosa hinnast. Null riski."
-    },
-    "cta": "Vaata, kuidas see sinu jaoks välja näeks",
-    "ctaMicro": "Tasuta tutvumiskõne — kohustuseta."
-  },
-  "assessment": {
-    "meta": {
-      "title": "RevOps tervisekontroll",
-      "description": "Tee meie tasuta 5-küsimuseline test, et tuvastada lüngad müügisüsteemides ja avastada võimalusi rohkemate tehingute sõlmimiseks."
-    },
-    "welcome": {
-      "label": "Tasuta audit",
-      "title": "Müügisüsteemi tervisekontroll",
-      "subtitle": "Vasta 5 kiirele küsimusele, et näha, kuidas su müügisüsteemid töötavad — ja kus peituvad suurimad võimalused.",
-      "start": "Alusta auditi"
-    },
-    "questions": [
-      {
-        "question": "Kuidas sa praegu müügivihjeid jälgid?",
-        "options": [
-          "Exceli tabel või e-post",
-          "Lihtne CRM (HubSpot free, Pipedrive jne)",
-          "GoHighLevel või täiustatud CRM",
-          "Tegelikult ei jälgigi"
-        ]
-      },
-      {
-        "question": "Mis juhtub pärast müügivihje saabumist?",
-        "options": [
-          "Keegi võtab käsitsi ühendust",
-          "Meil on mõned automaatsed e-kirjad",
-          "Täisautomaatne vastus + hooldusahel",
-          "Oleneb, kes parajasti saadaval on"
-        ]
-      },
-      {
-        "question": "Kui kiiresti uus müügivihje vastuse saab?",
-        "options": [
-          "5 minuti jooksul",
-          "Tunni jooksul",
-          "Sama tööpäeva jooksul",
-          "Järgmisel päeval või hiljem"
-        ]
-      },
-      {
-        "question": "Kui puhas on su kliendiandmebaas?",
-        "options": [
-          "Meil pole ühtset andmebaasi",
-          "Excel lünkadega",
-          "CRM, aga segane",
-          "Puhas, ajakohane CRM"
-        ]
-      },
-      {
-        "question": "Mitu tehingut iga kuu käest libiseb?",
-        "options": [
-          "Mitte ühtegi — jälgime kõike",
-          "Mõned tõenäoliselt",
-          "10–20% või rohkem",
-          "Pole aimugi"
-        ]
-      }
-    ],
-    "other": "Muu (täpsusta)",
-    "progress": "Küsimus {current}/{total}",
-    "back": "Tagasi",
-    "next": "Edasi",
-    "contact": {
-      "title": "Peaaegu valmis!",
-      "subtitle": "Sisesta oma andmed personaalse soovituse ja konkreetsete järgmiste sammude saamiseks.",
-      "name": "Nimi",
-      "email": "E-post",
-      "company": "Ettevõte (valikuline)",
-      "submit": "Näita tulemusi",
-      "skip": "Jäta vahele — näita tulemusi"
-    },
-    "results": {
-      "critical": {
-        "label": "Kriitiline",
-        "message": "Su müügisüsteemidel on olulised lüngad, mis tõenäoliselt maksavad sulle igal nädalal tehinguid. Hea uudis: need on täpselt need probleemid, mida me lahendame, ja kiired võidud on käeulatuses."
-      },
-      "needsWork": {
-        "label": "Vajab tööd",
-        "message": "Sul on mõned alused paigas, aga on selgeid võimalusi protsessi tõhustamiseks ja rohkema tulu hõivamiseks. Mõni sihitud parandus võib tuua suure erinevuse."
-      },
-      "strong": {
-        "label": "Tugev vundament",
-        "message": "Su süsteemid on heas seisus. Siiski võib olla ruumi optimeerimiseks ja skaleerimiseks — leiame need viimased hoovad koos üles."
-      },
-      "cta": "Broneeri tasuta tutvumiskõne",
-      "ctaMicro": "Vaatame su tulemused läbi ja näitame täpselt, kust parandada."
-    }
-  },
   "legal": {
     "privacyPolicy": {
       "title": "Privaatsuspoliitika",
@@ -544,43 +10,67 @@
       "email": "E-post",
       "sections": {
         "introduction": {
-          "title": "1. Sissejuhatus",
-          "content": "Alopex Digital OÜ on pühendunud teie isikuandmete kaitsmisele. Käesolev privaatsuspoliitika selgitab, kuidas me kogume, kasutame, säilitame ja kaitseme teie andmeid, kui külastate meie veebilehte või kasutate meie teenuseid."
+          "title": "1. Kes me oleme",
+          "content": "Siin kirjeldatud isikuandmete eest vastutab Alopex Digital OÜ (registrikood 17180489). See poliitika hõlmab meie veebilehte, selle vorme, meie ärikirju ja tööle kandideerimist. Kui ehitame või haldame kliendile süsteemi, mis töötleb kliendi enda andmeid, tegutseme kliendi juhiste järgi volitatud töötlejana. Seda tööd reguleerib meie leping kliendiga, mitte see poliitika."
         },
         "dataCollected": {
-          "title": "2. Kogutavad andmed",
-          "content": "Me kogume kontaktandmeid (nimi, e-post, telefon), äriandmeid (ettevõte, ametikoht), kasutusandmeid (külastatud lehed, lehel viibitud aeg) ja küpsiseid funktsionaalsuse ning analüütika jaoks."
-        },
-        "legalBasis": {
-          "title": "3. Töötlemise õiguslik alus",
-          "content": "Me töötleme andmeid järgmistel alustel: lepingu täitmine, õigustatud huvi, nõusolek (turunduseks) ja juriidilised kohustused GDPR artikli 6 alusel."
+          "title": "2. Mida me kogume ja miks",
+          "content": "Kogume ainult seda, mida allpool nimetatud eesmärkideks vajame.",
+          "items": [
+            "Kõne broneerimine: teie e-post, valitud töö liik ja aeg. Kasutame neid kõne kokkuleppimiseks ja ettevalmistamiseks (lepingu sõlmimisele eelnevad toimingud, IKÜM art 6 lg 1 p b).",
+            "Tasuta käsitsi töö test: teie vastused ja, kui selle annate, teie e-post. Kasutame neid tulemuse näitamiseks. Kui jätate e-posti, saadame tulemuse ja võtame hiljem ühendust (õigustatud huvi, art 6 lg 1 p f).",
+            "Uudiskiri: teie e-post. Saadame ühe kirja kuus, kuni loobute (nõusolek, art 6 lg 1 p a).",
+            "Tööle kandideerimine: teie nimi, e-post, soovitud roll ja see, mida meile kirjutate. Kasutame neid kandideerimise hindamiseks (lepingu sõlmimisele eelnevad toimingud, art 6 lg 1 p b).",
+            "Kliendid: kontaktandmed, lepingud ja arved. Vajame neid töö tegemiseks ja raamatupidamise seaduse täitmiseks (leping ja seadusest tulenev kohustus, art 6 lg 1 p b ja c).",
+            "Veebilehe kasutus: külastatud lehed, seade ja ligikaudne asukoht. Kogume neid küpsistega ja ainult teie nõusolekul (nõusolek, art 6 lg 1 p a)."
+          ]
         },
         "b2bMarketing": {
-          "title": "4. Otseturundus ettevõtetele (B2B)",
-          "content": "Saadame ettevõtete esindajatele (juhatuse liikmed, müügi- ja turundusjuhid) e-kirju meie teenuste kohta. Kontaktandmed (nimi, ametikoht, töö e-posti aadress, ettevõte) pärinevad avalikest allikatest: äriregister, ettevõtte koduleht, LinkedIn ja avalikud ärikataloogid. Töötleme neid õigustatud huvi alusel (IKÜM art 6 lg 1 p f) ja elektroonilise side seaduse § 103¹ alusel, mis lubab juriidilise isiku kontaktaadressile otseturundust, kui saajal on lihtne sellest loobuda. Igas kirjas on loobumisvõimalus. Loobumissoovi täidame samal päeval ja lisame kontakti välistusnimekirja, et me talle enam ei kirjutaks. Kirjade saatmiseks kasutame teenust Instantly.ai (volitatud töötleja) ja vastused salvestame oma CRM-i (GoHighLevel). Säilitame kontakti kuni loobumiseni või kuni 12 kuud pärast viimast kirjavahetust; välistusnimekirja säilitame loobumise täitmiseks. Teil on õigus töötlemisele igal ajal vastuväide esitada (IKÜM art 21): vastake kirjale sõnaga „eemalda“ või kirjutage info@alopex.digital."
+          "title": "3. Otseturundus ettevõtetele (B2B)",
+          "content": "Saadame ettevõtete esindajatele (juhatuse liikmed, müügi- ja turundusjuhid) e-kirju meie teenuste kohta. Kontaktandmed (nimi, ametikoht, töö e-posti aadress, ettevõte) pärinevad avalikest allikatest: äriregister, ettevõtte koduleht, LinkedIn ja avalikud ärikataloogid. Töötleme neid õigustatud huvi alusel (IKÜM art 6 lg 1 p f) ja elektroonilise side seaduse § 103¹ alusel, mis lubab juriidilise isiku kontaktaadressile otseturundust, kui saajal on lihtne sellest loobuda. Igas kirjas on loobumisvõimalus. Loobumissoovi täidame samal päeval ja lisame kontakti välistusnimekirja, et me talle enam ei kirjutaks. Kirjade saatmiseks kasutame teenust Instantly.ai (volitatud töötleja) ja vastused salvestame oma CRM-i (GoHighLevel). Säilitame kontakti kuni loobumiseni või kuni 12 kuud pärast viimast kirjavahetust; välistusnimekirja säilitame loobumise täitmiseks. Teil on õigus töötlemisele igal ajal vastuväide esitada (IKÜM art 21): vastake kirjale sõnaga „eemalda“ või kirjutage info@alopex.digital. Avalike andmete leidmiseks ja e-posti aadressi kontrollimiseks kasutame ka andmetööriistu, näiteks Clay."
+        },
+        "cookies": {
+          "title": "4. Küpsised",
+          "content": "Vajalikud küpsised hoiavad lehe töös ja on alati sees. Analüütikaküpsised (Google Analytics) ja turundusküpsised (Meta Pixel) lisame ainult siis, kui olete küpsiste ribal nõustunud. Küpsiste riba haldab CookieYes. Oma valikut saate igal ajal küpsiste ribal muuta."
         },
         "thirdParties": {
-          "title": "5. Kolmandatest osapooltest teenusepakkujad",
-          "content": "Me jagame andmeid usaldusväärsete pakkujatega: GoHighLevel (CRM), Meta (reklaam), Google (analüütika), TikTok (reklaam) ja n8n (automatiseerimine). Kõik järgivad EL-USA andmekaitseraamistikku või standardseid lepingutingimusi."
+          "title": "5. Kellega me andmeid jagame",
+          "content": "Me ei müü isikuandmeid. Kasutame järgmisi teenusepakkujaid, kes töötlevad andmeid meie nimel:",
+          "items": [
+            "GoHighLevel: CRM, kalender ja vormid",
+            "Hetzner Online: veebilehe ja meie serverite majutus ELis",
+            "Google: e-post, dokumendid ja Google Analytics",
+            "Meta: Meta Pixel ja reklaam",
+            "CookieYes: küpsiste nõusolek",
+            "Instantly.ai: ärikirjade saatmine",
+            "Clay: avalike ettevõtte- ja kontaktandmete leidmine ärikirjade jaoks",
+            "AI teenusepakkujad, kui ülesanne vajab AI-d. Kliendiprojektis kasutatavad pakkujad on kirjas lepingus selle kliendiga.",
+            "n8n: automatiseerimistarkvara, mida käitame oma serverites ELis"
+          ],
+          "after": "Osa pakkujaid asub Ameerika Ühendriikides. Andmete edastamine sinna põhineb ELi-USA andmekaitseraamistikul või ELi lepingutüüptingimustel."
         },
         "retention": {
-          "title": "6. Andmete säilitamine",
-          "content": "Kontaktvormi esitused: 3 aastat. Kliendi andmed: lepingu kestvus + 7 aastat. Analüütikaandmed: 26 kuud. Turundusnõusolek: kuni tagasivõtmiseni + 3 aastat."
+          "title": "6. Kui kaua me andmeid hoiame",
+          "items": [
+            "Kõnede broneeringud ja päringud: 3 aastat pärast viimast kontakti.",
+            "Tasuta testi vastused: 3 aastat pärast viimast kontakti.",
+            "Uudiskiri: kuni loobumiseni. Pärast seda hoiame nõusoleku tõendit 3 aastat ja teie e-posti nimekirjas, kuhu me enam ei kirjuta.",
+            "Tööle kandideerimine: 6 kuud pärast otsust. Kauem ainult teie nõusolekul, näiteks kui soovite, et arvestaksime teiega hiljem mõne teise rolli puhul.",
+            "Ärikirjade kontaktid: kuni loobumiseni või 12 kuud pärast viimast kirjavahetust.",
+            "Kliendiandmed ja arved: lepingu kestus pluss 7 aastat, nagu nõuab raamatupidamise seadus.",
+            "Analüütikaandmed: 26 kuud."
+          ]
         },
         "rights": {
           "title": "7. Teie õigused",
-          "content": "GDPR-i alusel on teil õigus: juurdepääsule, parandamisele, kustutamisele, piiramisele, ülekantavusele, vastuväitele ja nõusoleku tagasivõtmisele. Oma õiguste kasutamiseks võtke ühendust info@alopex.digital."
-        },
-        "cookies": {
-          "title": "8. Küpsised",
-          "content": "Me kasutame vajalikke küpsiseid (veebilehe funktsionaalsus), analüütikaküpsiseid (kasutusstatistika) ja turundusküpsiseid (reklaam). Hallake eelistusi meie küpsiste nõusolekuribalt."
+          "content": "Võite paluda meil näidata, parandada või kustutada teie andmed, piirata või lõpetada nende kasutamist või anda need teile üle masinloetaval kujul. Nõusoleku võite igal ajal tagasi võtta ja otseturundusele igal ajal vastu vaielda. Kirjutage info@alopex.digital. Vastame ühe kuu jooksul."
         },
         "contact": {
-          "title": "9. Võtke meiega ühendust",
-          "content": "Privaatsusega seotud küsimuste või oma õiguste kasutamiseks:"
+          "title": "8. Kontakt",
+          "content": "Privaatsusküsimuste korral või oma õiguste kasutamiseks:"
         },
         "supervisory": {
-          "title": "10. Järelevalveasutus",
+          "title": "9. Järelevalveasutus",
           "content": "Teil on õigus esitada kaebus Andmekaitse Inspektsioonile:"
         }
       }
@@ -591,431 +81,68 @@
       "lastUpdated": "Viimati uuendatud",
       "sections": {
         "introduction": {
-          "title": "1. Sissejuhatus",
-          "content": "Käesolevad kasutustingimused reguleerivad Alopex Digital OÜ (registrikood 17180489) pakutava veebilehe, teenuste ja tarkvaratoodete kasutamist. Meie teenuseid kasutades nõustute käesolevate tingimustega."
+          "title": "1. Tingimuste kehtivus",
+          "content": "Need tingimused kehtivad Alopex Digital OÜ (registrikood 17180489) veebilehe, teenuste ja tarkvaratoodete kohta. Kui oleme teiega allkirjastanud pakkumise või lepingu, on see nende tingimuste ees ülimuslik."
         },
         "services": {
-          "title": "2. Teenused",
-          "content": "Alopex Digital pakub nõustamisteenuseid (CRM-i juurutamine, töövoo automatiseerimine), tarkvaratooteid (kohandatud automatiseeringud, integratsioonid) ja haldusteenuseid (jätkuv tugi, hooldus)."
+          "title": "2. Mida me pakume",
+          "content": "Pakume:",
+          "items": [
+            "Rätsepautomaatika: ühe ettevõtte jaoks ehitatud süsteemid, mis on ühendatud tööriistadega, mida ettevõte juba kasutab.",
+            "AI assistendid ja koolitus: AI seadistamine kindlate ülesannete jaoks ja tiimi koolitamine.",
+            "Valmistooted: tarkvara, mida haldame paljudele ettevõtetele, näiteks Sales Machine, raamatupidamise automaatika ja GHL Email Sync, pakkumises kirjeldatud tingimustel.",
+            "Tugi ja hooldus: meie hallatavate süsteemide jälgimine, parandused ja täiendused."
+          ]
+        },
+        "process": {
+          "title": "3. Kuidas projekt käib",
+          "items": [
+            "Esimene kõne on tasuta ega kohusta teid millekski.",
+            "Kavandil on kindel tasu, mille lepime kokku enne algust. Kui ehitate seejärel koos meiega, arvame tasu ehituse hinnast maha. Kui mitte, jääb plaan teile.",
+            "Ehitusel on kindel hind ja ulatus, mille lepime pärast kavandit kirjalikult kokku. Sellest väljapoole jääva töö lepime kokku ja hinnastame eraldi."
+          ]
         },
         "obligations": {
-          "title": "3. Kliendi kohustused",
-          "content": "Kliendid nõustuvad: esitama täpseid andmeid, andma vajalikku süsteemidele juurdepääsu, vastama päringutele õigeaegselt, hoidma volitusi konfidentsiaalsena, järgima kehtivaid seadusi ja tasuma arveid kokkulepitud tingimustel."
+          "title": "4. Kliendi kohustused",
+          "content": "Annate meile õiget teavet ja vajalikud ligipääsud, vastate meie küsimustele mõistliku aja jooksul, hoiate oma paroolid turvaliselt, järgite seadusi ja tasute arved õigel ajal."
         },
         "payment": {
-          "title": "4. Maksetingimused",
-          "content": "Standardne maksetähtaeg: 14 päeva arve kuupäevast. Arved eurodes. Hilinenud maksetele võidakse lisada viivist 0,05% päevas. Teenused võidakse peatada üle 30 päeva võlgu olevate kontode puhul."
+          "title": "5. Maksmine",
+          "content": "Arved on eurodes ja tuleb tasuda 14 päeva jooksul arve kuupäevast, kui pakkumises ei ole kokku lepitud teisiti. Viivis on 0,05 % päevas. Kui arve on üle 30 päeva tasumata, võime teenuse peatada."
         },
         "ip": {
-          "title": "5. Intellektuaalomand",
-          "content": "Meile jääb omand olemasolevatele tööriistadele ja metoodikatele. Klientidele kuuluvad spetsiaalselt neile loodud kohandatud tulemid (pärast täielikku tasumist) ja nende ärispetsiifilised konfiguratsioonid."
+          "title": "6. Intellektuaalomand",
+          "content": "Tööriistad, kood ja meetodid, mis meil olid enne projekti, jäävad meile. Pärast täielikku tasumist kuulub teile see, mille ehitasime spetsiaalselt teile, samuti teie enda seadistused ja andmed."
+        },
+        "data": {
+          "title": "7. Isikuandmed",
+          "content": "Kui meie töö puudutab isikuandmeid, mille eest vastutate teie, töötleme neid ainult teie juhiste järgi volitatud töötlejana (IKÜM art 28). Soovi korral sõlmime teiega andmetöötluslepingu."
         },
         "confidentiality": {
-          "title": "6. Konfidentsiaalsus",
-          "content": "Mõlemad pooled nõustuvad hoidma konfidentsiaalset teavet privaatsena, kasutama seda ainult teenuse osutamiseks ega avalda kolmandatele osapooltele ilma nõusolekuta. Kohustused kehtivad 3 aastat pärast lõpetamist."
+          "title": "8. Konfidentsiaalsus",
+          "content": "Mõlemad pooled hoiavad teise poole konfidentsiaalset teavet salajas, kasutavad seda ainult töö tegemiseks ega jaga seda ilma nõusolekuta teistega. Kohustus kehtib 3 aastat pärast koostöö lõppu."
+        },
+        "thirdParty": {
+          "title": "9. Kolmandate osapoolte tööriistad",
+          "content": "Paljud süsteemid töötavad kolmandate osapoolte platvormidel, näiteks CRM-ides, e-posti- ja raamatupidamisprogrammides. Nende kättesaadavuse, hinnad ja tingimused määravad need pakkujad, mitte meie."
         },
         "liability": {
-          "title": "7. Vastutuse piiramine",
-          "content": "Meie koguvastutus ei ületa nõude esitamisele eelnenud 12 kuu jooksul makstud tasusid. Me ei vastuta kaudsete kahjude, saamata jäänud kasumi ega kolmandate osapoolte teenustest tulenevate probleemide eest."
+          "title": "10. Vastutuse piiramine",
+          "content": "Meie koguvastutus on piiratud tasudega, mille olete meile maksnud nõudele eelnenud 12 kuu jooksul. Me ei vastuta kaudse kahju, saamata jäänud tulu ega kolmandate osapoolte teenustest tulenevate probleemide eest."
         },
         "termination": {
-          "title": "8. Lõpetamine",
-          "content": "Kumbki pool võib lõpetada: mugavuse huvides 30-päevase etteteatamisega või viivitamatult olulise rikkumise korral, mida ei ole 14 päeva jooksul parandatud. Lõpetamisel tasub klient osutatud teenuste eest."
+          "title": "11. Koostöö lõpetamine",
+          "content": "Kumbki pool võib koostöö lõpetada 30-päevase etteteatamisega või kohe, kui teine pool rikub neid tingimusi oluliselt ega paranda rikkumist 14 päeva jooksul. Tehtud töö eest tasute kuni lõpetamiseni."
         },
         "governing": {
-          "title": "9. Kohaldatav õigus",
-          "content": "Käesolevaid tingimusi reguleerivad Eesti seadused. Vaidlused lahendatakse Harju Maakohtus, Eestis. EL-i tarbijad võivad kasutada EL-i veebipõhist vaidluste lahendamise platvormi aadressil ec.europa.eu/consumers/odr."
+          "title": "12. Kohaldatav õigus",
+          "content": "Nendele tingimustele kohaldatakse Eesti õigust. Vaidlused lahendab Harju Maakohus."
         },
         "contact": {
-          "title": "10. Kontakt",
-          "content": "Käesolevate tingimuste kohta küsimuste korral:"
+          "title": "13. Kontakt",
+          "content": "Küsimused nende tingimuste kohta:"
         }
       }
-    }
-  },
-  "qualification": {
-    "step1": {
-      "title": "Alustame sinu e-postiga",
-      "subtitle": "Saadame sulle kokkuvõtte ja hoiame sind kursis.",
-      "placeholder": "sinu@email.ee"
-    },
-    "step2": {
-      "title": "Räägi meile oma ettevõttest",
-      "subtitle": "See aitab meil produktiivsemaks vestluseks valmistuda.",
-      "revenue": "Igakuine käive",
-      "businessType": "Mis tüüpi ettevõtet sa juhid?",
-      "businessTypePlaceholder": "nt Päikeseenergia paigaldus, Kinnisvarabüroo, SaaS...",
-      "challenge": "Mis on sinu suurim operatiivne väljakutse?",
-      "challengePlaceholder": "nt Liidid kukuvad läbi, käsitsi järeltegevus...",
-      "timeline": "Millal soovid alustada?"
-    },
-    "step3": {
-      "title": "Veel üks samm",
-      "subtitle": "Palun kinnita, et oled inimene.",
-      "verified": "Kinnitatud"
-    },
-    "revenueOptions": {
-      "under25k": "Alla €25 000",
-      "25kto100k": "€25 000 – €100 000",
-      "100kto500k": "€100 000 – €500 000",
-      "over500k": "Üle €500 000"
-    },
-    "timelineOptions": {
-      "asap": "Nii kiiresti kui võimalik",
-      "1month": "1 kuu jooksul",
-      "3months": "3 kuu jooksul",
-      "exploring": "Lihtsalt uurin"
-    },
-    "back": "Tagasi",
-    "continue": "Jätka",
-    "showCalendar": "Näita kalendrit",
-    "submitting": "Palun oota..."
-  },
-  "unsubscribe": {
-    "title": "Loobu uudiskirjast",
-    "message": "Sa oled loobumas uudiskirjast selle e-postiga:",
-    "button": "Kinnita loobumine",
-    "cancel": "Tühista ja mine tagasi",
-    "error": "Midagi läks valesti. Palun proovi uuesti või võta meiega ühendust.",
-    "success": {
-      "title": "Oled loobunud",
-      "message": "Sa ei saa meilt enam uudiskirju. Kui see oli eksitus, saad alati uuesti tellida meie veebilehel.",
-      "backHome": "Tagasi avalehele"
-    }
-  },
-  "newsletter": {
-    "title": "Püsi kursis",
-    "subtitle": "Saa igakuisi teadmisi RevOps-ist, automatiseerimisest ja müügile suunatud ettevõtete skaleerimisest. Mitte späm, ainult väärtus.",
-    "namePlaceholder": "Sinu nimi",
-    "placeholder": "sinu@email.ee",
-    "button": "Telli",
-    "privacy": "Austame sinu privaatsust. Loobu igal ajal.",
-    "error": "Midagi läks valesti. Palun proovi uuesti.",
-    "invalidEmail": "Palun sisesta kehtiv e-posti aadress.",
-    "footerLink": "Telli uudiskiri",
-    "contactTitle": "Saa igakuisi RevOps teadmisi",
-    "success": {
-      "title": "Oled sees!",
-      "message": "Täname tellimuse eest. Kontrolli oma postkasti kinnituse saamiseks."
-    }
-  },
-  "caseStudies": {
-    "meta": {
-      "title": "Kliendilood",
-      "description": "Vaata, kuidas Alopex Digital on aidanud ettevõtetel automatiseerida protsesse ja säästa aega n8n ja GoHighLevel abil."
-    },
-    "label": "Kliendilood",
-    "title": "Päris tulemused",
-    "titleAccent": "päris ettevõtetele",
-    "subtitle": "Vaata, kuidas me oleme aidanud ettevõtetel automatiseerida protsesse, kaotada käsitööd ja keskenduda kasvule.",
-    "readMore": "Loe lähemalt",
-    "backLink": "Kõik kliendilood",
-    "ctaTitle": "Tahad sarnaseid tulemusi?",
-    "ctaDescription": "Broneeri tasuta tutvumiskõne ja kaardistame, kus sinu ettevõttes aega ja raha lekib.",
-    "ctaButton": "Broneeri tutvumiskõne",
-    "beforeLabel": "Enne",
-    "solutionLabel": "Lahendus",
-    "resultsLabel": "Tulemused",
-    "items": {
-      "ovision-invoicing": {
-        "client": "Ovision",
-        "tag": "Arveldamine",
-        "title": "Arved ei hiline enam",
-        "summary": "Automaatne arveldamine GHL-ist Merit Aktivasse Äriregistri andmetega — arve tekib sekunditega, mitte päevadega.",
-        "before": {
-          "text": "Ovisionil polnud CRM-i — müügitoru oli Trellos. Arved tehti käsitsi Merit Aktivas: raamatupidaja kopeeris kliendi andmed, kontrollis Äriregistrist registrikoodi, arvutas viitenumbri ja sisestas tooteread. Iga arve võttis 10–15 minutit ja hilinesid regulaarselt.",
-          "items": [
-            "Iga arve käsitsi — 10–15 minutit",
-            "Arved hilinesid regulaarselt, eriti reedese tootmise puhul",
-            "Äriregistri andmeid kontrolliti käsitsi",
-            "Omaniku aeg kulus paberimajandusele"
-          ]
-        },
-        "solution": {
-          "text": "Ühendasime müügisüsteemi otse raamatupidamistarkvaraga. Kui tellimus liigub \u201Eootab arvet\u201C etappi, tekib arve automaatselt — koos Äriregistrist tõmmatud ametlike andmetega, õige kuupäevaga ja arvutatud viitenumbriga.",
-          "items": [
-            "GHL → Merit Aktiva automaatne ühendus",
-            "Äriregistri andmed tõmmatakse automaatselt",
-            "Viitenumber arvutatakse süsteemi poolt",
-            "Arve tekib tellimuse valmimise hetkel"
-          ]
-        },
-        "results": {
-          "text": "Martin saab keskenduda müügile ja tootmisele, mitte paberimajandusele.",
-          "items": [
-            "Arve tekib sekunditega, mitte päevadega",
-            "Arve kuupäev on alati õige",
-            "Äriregistri andmed on alati ajakohased",
-            "Raamatupidaja ei pea enam midagi käsitsi tegema"
-          ],
-          "highlight": "Sekunditega, mitte päevadega"
-        }
-      },
-      "gemoss-sales-kpis": {
-        "client": "Gemoss",
-        "tag": "Müügi KPI-d",
-        "title": "Müügimeeskonna KPI-d, mis päriselt toimivad",
-        "summary": "Tööaja-põhine vastamisaja kalkulaator ja automaatne igapäevane raporteerimissüsteem 6-liikmelisele müügimeeskonnale.",
-        "before": {
-          "text": "Gemossil polnud CRM-i — müügitoru oli Microsoft Teamsis. KPI-sid arvutati käsitsi Excelis kord kuus. Vastamisaja KPI arvestas sisse nädalavahetused ja öötunnid, mis andis valesid tulemusi ja mõjutas otse palka.",
-          "items": [
-            "KPI-sid arvutati käsitsi Excelis kord kuus",
-            "Vastamisaja KPI arvestas nädalavahetused sisse",
-            "Valed numbrid mõjutasid otse palka",
-            "Polnud reaalajalist ülevaadet müügist"
-          ]
-        },
-        "solution": {
-          "text": "Ehitasime vastamisaja kalkulaatori, mis arvestab ainult tööpäevi (E–R 9:00–17:30, Eesti pühad välja arvatud). Ühendasime ClickUpi ja Google Sheetsi igapäevase automaatse raporteerimisega.",
-          "items": [
-            "Tööpäevadel põhinev vastamisaja kalkulaator",
-            "Igapäevane automaatne raport Google Sheetsis",
-            "Kohvimasina lepingute automaatne loendus",
-            "Iga müügiinimese tulemused eraldi nähtavad"
-          ]
-        },
-        "results": {
-          "text": "Müügimeeskond usaldab süsteemi ja palgaarvestus põhineb tegelikel andmetel.",
-          "items": [
-            "Reaalajas ülevaade iga hommik",
-            "Aus vastamisaja KPI — ainult tööpäevad",
-            "Palgaarvestus põhineb tegelikel andmetel",
-            "Müügimeeskond usaldab süsteemi"
-          ],
-          "highlight": "Reaalajas, mitte kord kuus"
-        }
-      },
-      "ovision-production": {
-        "client": "Ovision",
-        "tag": "Tootmine",
-        "title": "Tootmine kontrolli all",
-        "summary": "Toote-põhised jälgimiskaardid, automaatne SharePointi failihaldus ja arveldamine kohe peale viimast toodet.",
-        "before": {
-          "text": "Ovisionil polnud tootmise jälgimise süsteemi üldse. Tootmisjuht pidi ise meeles pidama, millises etapis iga toode on. Disainifailide haldus oli lahtine küsimus ja vahel jäi mõni toode kahe silma vahele.",
-          "items": [
-            "Polnud struktureeritud jälgimissüsteemi",
-            "Tootmisjuht pidas staatuseid meeles",
-            "Disainifailid olid laiali emailides",
-            "Arveldamine viibis, sest polnud ülevaadet"
-          ]
-        },
-        "solution": {
-          "text": "Ehitasime süsteemi, kus iga toode saab oma jälgimiskaardi koos tähtaegade, trükimeetodi ja disainifailidega. Disainifailid lähevad automaatselt SharePointi. Viimase toote valmimisel liigub tellimus automaatselt arveldamisele.",
-          "items": [
-            "Iga toode saab oma jälgimiskaardi",
-            "Disainifailid automaatselt SharePointi",
-            "Tootmisesse liikumine ainult peale kinnitust",
-            "Automaatne arveldamine viimase toote järel"
-          ]
-        },
-        "results": {
-          "text": "Ükski toode ei jää märkamata ja arveldamine algab kohe peale viimast toodet.",
-          "items": [
-            "Iga toote staatus nähtav reaalajas",
-            "Ükski toode ei jää märkamata",
-            "Arveldamine algab kohe, mitte päevi hiljem",
-            "Disainifailid alati õiges kohas"
-          ],
-          "highlight": "Null toodet kahe silma vahele"
-        }
-      },
-      "swa-poland-recruitment": {
-        "client": "SWA Poland",
-        "tag": "Värbamine",
-        "title": "AI värbamiskampaania kolmes keeles",
-        "summary": "AI chatbot Instagramis ja Facebookis, kolmekeelne SMS+email kampaania ja no-show taastamine — automaatselt.",
-        "before": {
-          "text": "SWA Polandil polnud CRM-i ega struktureeritud värbamisprotsessi. Värbajad suhtlesid kandidaatidega käsitsi Instagrami ja Facebooki DM-ide kaudu. Kolmekeelne kommunikatsioon tähendas kolmekordset tööd.",
-          "items": [
-            "Kandidaatidega suheldi käsitsi DM-ides",
-            "Polnud ülevaadet pipeline'ist",
-            "SMS ja email kampaaniad käsitsi",
-            "Kolmekeelne kommunikatsioon = 3x töö"
-          ]
-        },
-        "solution": {
-          "text": "Ehitasime tervikliku värbamissüsteemi: AI-kvalifitseerimise bot sotsiaalmeedias, kolmekeelne automaatne kampaania ja no-show tuvastamise süsteem.",
-          "items": [
-            "AI chatbot Instagramis ja Facebookis",
-            "9 SMS + 6 email varianti kolmes keeles",
-            "No-show tuvastamine ja automaatne taastamine",
-            "Meta Ads kampaaniad 7 linna peale"
-          ]
-        },
-        "results": {
-          "text": "Värbajad saavad keskenduda kvalifitseeritud kandidaatidele, mitte käsitsi vestlemisele.",
-          "items": [
-            "AI teeb esmase kvalifitseerimise automaatselt",
-            "Kolmekeelne kampaania töötab automaatselt",
-            "Reaalajas ülevaade kandidaatidest ja etappidest",
-            "No-showd saavad automaatselt uue võimaluse"
-          ],
-          "highlight": "3 keelt, 0 käsitööd"
-        }
-      },
-      "ovision-quotes-costing": {
-        "client": "Ovision",
-        "tag": "Pakkumised",
-        "title": "Pakkumised ja kuluarvestus ühest kohast",
-        "summary": "Automaatne tootekataloogi hinnastamine, PDF genereerimine ja tsentraliseeritud failijuurdepääs kogu meeskonnale.",
-        "before": {
-          "text": "Pakkumiste tegemine käis täielikult käsitsi. Omahinnad vaadati järele tarnijate portaalidest, tarnija nimed kirjutati vabatekstina ja failid olid laiali erinevates arvutites.",
-          "items": [
-            "Pakkumiste koostamine tund aega käsitööd",
-            "Omahinnad kopeeriti käsitsi tarnijate portaalidest",
-            "Tarnija nimed ja trükimeetodid vabatekstina",
-            "Failid laiali erinevates arvutites"
-          ]
-        },
-        "solution": {
-          "text": "Tõime kogu protsessi ühte kohta. Tootehinnad tõmmatakse automaatselt kataloogist, kuluarvestus genereeritakse SharePointis ja pakkumise PDF tekib automaatselt.",
-          "items": [
-            "Hinnad automaatselt kataloogist",
-            "Kuluarvestus SharePointis tarnijate ja marginaalidega",
-            "Automaatne professionaalne PDF",
-            "Kogu meeskond näeb sama faili"
-          ]
-        },
-        "results": {
-          "text": "Pakkumise koostamine ühe nupuvajutusega ja kogu meeskond pääseb failidele ligi.",
-          "items": [
-            "Üks nupuvajutus, mitte tund käsitööd",
-            "Omahinnad automaatselt kataloogist",
-            "Professionaalne PDF iga kord",
-            "Kordustellimusel pole vaja nullist alustada"
-          ],
-          "highlight": "1 klikk, mitte 1 tund"
-        }
-      }
-    }
-  },
-  "contact": {
-    "meta": {
-      "title": "Kontakt",
-      "description": "Võta ühendust Alopex Digitaliga. Broneeri tutvumiskõne, kirjuta meile või jälgi meid sotsiaalmeedias."
-    },
-    "label": "Võta ühendust",
-    "title": "Alustame",
-    "titleAccent": "vestlust",
-    "subtitle": "Olgu sul küsimus, soov projekti arutada või lihtsalt tere öelda — meil on hea meel sinust kuulda.",
-    "bookCall": {
-      "title": "Broneeri tutvumiskõne",
-      "description": "30-minutiline kõne. Kohustuseta. Kaardistame, kust tulu lekib ja näitame võimalusi.",
-      "button": "Broneeri tutvumiskõne"
-    },
-    "phone": "Telefon",
-    "email": "E-post",
-    "followUs": "Jälgi meid",
-    "registeredAddress": "Registreeritud aadress",
-    "team": {
-      "title": "Otsekontaktid"
-    }
-  },
-  "automateSales": {
-    "meta": {
-      "title": "Automatiseerime su müügi | Alopex Digital",
-      "description": "Las roboti töö jääb robotile. Ehitame terve müügimasina — leadide leidmisest kuni korduvmüügini. Vähem inimtööjõukulu, ükski lead ega pakkumine ei jää rippuma."
-    },
-    "hero": {
-      "label": "Müügiautomaatika",
-      "title": "Las roboti töö jääb",
-      "titleAccent": "robotile.",
-      "subtitle": "Automatiseerime su müügi — leadide leidmisest kuni korduvmüügini. Vähem inimtööjõukulu, ükski lead ega pakkumine ei jää rippuma.",
-      "cta": "Broneeri 15 min Martiniga",
-      "scroll": "Keri",
-      "micro": "Tasuta. Ilma müügisurveta. Näitame, kuidas masin sinu ärile käiks."
-    },
-    "problem": {
-      "title": "Müük on inimese-sõltuv pudelikael, mitte süsteem.",
-      "p1": "Enamik B2B-firmasid teeb müügi käsitsi. Omanik või paar müügimeest ajavad leade taga, pakkumised jäävad õhku rippuma, vana kliendibaas ei saa ühtegi follow-up'i.",
-      "p2": "Kui palju su tiimi nädalast kulub asjadele, mida robot võiks teha? Leadide otsimine, kvalifitseerimine, pakkumiste järelajamine, info käsitsi kopeerimine ühest süsteemist teise — see on roboti töö, mitte inimese oma."
-    },
-    "machine": {
-      "title": "Terve müügimasin, võtmed kätte.",
-      "intro": "Me ei müü tööriista. Me ehitame valmis müügimasina, mis töötab taustal 24/7 — ei haigestu ega lahku.",
-      "metaProof": "Tõestus on lihtne: see leht ja kiri, mis sind siia tõi, on sama masin töös.",
-      "steps": [
-        {
-          "title": "Leadide leidmine",
-          "desc": "Masin leiab õiged ettevõtted ise — keegi ei käi käsitsi lehti läbi."
-        },
-        {
-          "title": "Rikastamine",
-          "desc": "Iga lead rikastatakse ja skooritakse enne kontakti."
-        },
-        {
-          "title": "Personaalne outreach",
-          "desc": "AI-genereeritud kirjad, mitte template-spam."
-        },
-        {
-          "title": "Follow-up jadad",
-          "desc": "Mitmeastmeline järelkontakt e-mail + SMS, automaatselt."
-        },
-        {
-          "title": "Info kogumine",
-          "desc": "Huvitatute käest kogutakse kvalifitseeriv info ise."
-        },
-        {
-          "title": "Automaatne pakkumine",
-          "desc": "Kogutud infost genereeritakse pakkumine."
-        },
-        {
-          "title": "Baasi äratamine",
-          "desc": "Vana kliendibaas re-aktiveeritakse automaatselt."
-        }
-      ]
-    },
-    "proof": {
-      "title": "Mida me oleme juba ehitanud.",
-      "items": [
-        {
-          "name": "Packtailor",
-          "body": "Elimineerisime vajaduse käia käsitsi ettevõtete lehti läbi, et leade leida ja kvalifitseerida. Outreach, follow-up ja esmane info kogumine personaliseeritakse automaatselt.",
-          "result": "Käsitöö kadus — masin teeb selle 24/7."
-        },
-        {
-          "name": "Koduaken",
-          "body": "Ehitasime automaatse follow-up'i pakkumistele. Ükski pakkumine ei jää enam rippuma, järelkontakt käib ise kuni kliendi otsuseni.",
-          "result": "+15% müüki — ilma ühtegi uut inimest palkamata."
-        }
-      ]
-    },
-    "roi": {
-      "title": "Müügimehe alternatiiv, mis ei lahku.",
-      "p1": "Üks müügiinimene maksab 2500–4000€ kuus, pluss värbamine ja sisseelamine. Masin teeb lead gen'i, follow-up'i ja pakkumiste järelkontakti 24/7 — ei haigestu, ei lahku, ei unusta.",
-      "p2": "Sina keskendud tehingute sulgemisele. Rutiin jääb masinale.",
-      "card": {
-        "costLabel": "Müügimees",
-        "cost": "2500–4000 €/kuus",
-        "machineLabel": "Masin",
-        "machine": "24/7 — ei haigestu, ei lahku"
-      }
-    },
-    "ctaSection": {
-      "title": "Vaatame, kuidas see sinu ärile käiks.",
-      "subtitle": "15 minutit Martiniga. Ilma müügisurveta — näitame masinat ja kas see sulle sobib.",
-      "button": "Broneeri discovery kõne"
-    },
-    "faq": {
-      "title": "Levinud küsimused.",
-      "items": [
-        {
-          "q": "Tahate mu müügimehe asendada?",
-          "a": "Ei — me anname talle relvad. Masin teeb rutiini (lead gen, follow-up, pakkumiste järelkontakt), müügiinimene keskendub tehingute sulgemisele ja suhetele."
-        },
-        {
-          "q": "Kõlab liiga hea, et tõsi olla.",
-          "a": "Sa just kogesid seda. See leht ja kiri, mis sind siia tõi, on sama masina töö. Discovery kõnel näitan täpselt, kuidas see sinu ärile käib."
-        },
-        {
-          "q": "Külmad kirjad = spam?",
-          "a": "GDPR-konformne, legitiimne huvi, opt-out igas kirjas. Ja sa ise nägid — see polnud spam, vaid relevantne."
-        },
-        {
-          "q": "Pole aega seadistada.",
-          "a": "Meie ehitame kogu masina. Sinu ülesanne on tehinguid sulgeda."
-        }
-      ]
     }
   }
 }

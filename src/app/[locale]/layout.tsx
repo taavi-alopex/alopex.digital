@@ -1,143 +1,74 @@
-  import type { Metadata } from "next";
-  import Script from "next/script";
-  import { Instrument_Serif, Outfit, Montserrat, JetBrains_Mono } from "next/font/google";
-  import { notFound } from "next/navigation";
-  import { NextIntlClientProvider } from "next-intl";
-  import { getMessages, getTranslations } from "next-intl/server";
-  import { routing } from "@/i18n/routing";
-  import { BookingProvider } from "@/components/BookingProvider";
-  import { AssessmentProvider } from "@/components/AssessmentProvider";
-  import { RecruitmentProvider } from "@/components/RecruitmentProvider";
-  import { NewsletterProvider } from "@/components/NewsletterProvider";
-  import { MetaPixel } from "@/components/MetaPixel";
+import type { Metadata } from "next";
+import Script from "next/script";
+import { Familjen_Grotesk, Source_Sans_3, Martian_Mono } from "next/font/google";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { getText } from "@/content/v2/text";
+import { MetaPixel } from "@/components/MetaPixel";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
-  import { ChatWidget } from "@/components/ChatWidget";
-  import {
-    OrganizationSchema,
-    LocalBusinessSchema,
-    FAQPageSchema,
-    WebSiteSchema,
-  } from "@/components/StructuredData";
-  import "../globals.css";
+import { OrganizationSchema, LocalBusinessSchema, FAQPageSchema, WebSiteSchema } from "@/components/StructuredData";
+import "../globals.css";
+import "../v2.css";
 
-  const instrumentSerif = Instrument_Serif({
-    variable: "--font-instrument-serif",
-    subsets: ["latin", "latin-ext"],
-    weight: "400",
-    style: ["normal", "italic"],
-    display: "swap",
-  });
+const familjen = Familjen_Grotesk({ variable: "--font-familjen", subsets: ["latin", "latin-ext"], weight: ["400", "500", "600", "700"], display: "swap" });
+const sourceSans = Source_Sans_3({ variable: "--font-source-sans", subsets: ["latin", "latin-ext"], weight: ["400", "500", "600"], display: "swap" });
+const martian = Martian_Mono({ variable: "--font-martian", subsets: ["latin", "latin-ext"], weight: ["400", "500"], display: "swap" });
 
-  const outfit = Outfit({
-    variable: "--font-outfit",
-    subsets: ["latin", "latin-ext"],
-    weight: ["300", "400", "500", "600", "700", "800"],
-    display: "swap",
-  });
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
 
-  const montserrat = Montserrat({
-    variable: "--font-montserrat",
-    subsets: ["latin", "latin-ext"],
-    weight: ["300", "400", "500", "600", "700"],
-    display: "swap",
-  });
-
-  const jetbrainsMono = JetBrains_Mono({
-    variable: "--font-jetbrains-mono",
-    subsets: ["latin", "latin-ext"],
-    weight: ["400", "500", "700"],
-    display: "swap",
-  });
-
-  type Props = {
-    children: React.ReactNode;
-    params: Promise<{ locale: string }>;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = getText(locale);
+  return {
+    metadataBase: new URL("https://alopex.digital"),
+    title: t.meta.title,
+    description: t.meta.description,
+    keywords: ["process automation", "AI consulting", "CRM automation", "n8n", "GoHighLevel", "Merit Aktiva", "Estonia", "Poland", "Nordics"],
+    alternates: {
+      languages: {
+        en: "https://alopex.digital/en",
+        et: "https://alopex.digital/et",
+        pl: "https://alopex.digital/pl",
+        "x-default": "https://alopex.digital/en",
+      },
+    },
+    icons: { icon: "/alopex-logo.svg", apple: "/alopex-logo.png" },
+    openGraph: {
+      title: t.meta.title,
+      description: t.meta.description,
+      url: `https://alopex.digital/${locale}`,
+      siteName: "Alopex Digital",
+      type: "website",
+      locale: locale === "et" ? "et_EE" : locale === "pl" ? "pl_PL" : "en_US",
+    },
   };
+}
 
-  export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: "metadata" });
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) notFound();
 
-    return {
-      title: t("title"),
-      description: t("description"),
-      keywords: [
-        "GoHighLevel",
-        "GoHighLevel agency",
-        "GoHighLevel implementation",
-        "n8n",
-        "n8n automation",
-        "RevOps",
-        "CRM automation",
-        "revenue operations",
-        "European Union",
-        "EU",
-      ],
-      alternates: {
-        canonical: `https://alopex.digital/${locale}`,
-        languages: {
-          en: "https://alopex.digital/en",
-          et: "https://alopex.digital/et",
-          pl: "https://alopex.digital/pl",
-          "x-default": "https://alopex.digital/en",
-        },
-      },
-      icons: {
-        icon: "/alopex-logo.svg",
-        apple: "/alopex-logo.png",
-      },
-      openGraph: {
-        title: t("title"),
-        description: t("ogDescription"),
-        url: "https://alopex.digital",
-        siteName: "Alopex Digital",
-        type: "website",
-        locale: locale === "et" ? "et_EE" : locale === "pl" ? "pl_PL" : "en_US",
-      },
-    };
-  }
-
-  export default async function LocaleLayout({ children, params }: Props) {
-    const { locale } = await params;
-
-    if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
-      notFound();
-    }
-
-    const messages = await getMessages();
-
-    return (
-      <html lang={locale} className="scroll-smooth">
-        <head>
-          <Script
-            id="cookieyes"
-            src="https://cdn-cookieyes.com/client_data/0fa48870f6545632d245c569fd209db8/script.js"
-            strategy="beforeInteractive"
-          />
-          <OrganizationSchema />
-          <LocalBusinessSchema />
-          <FAQPageSchema />
-          <WebSiteSchema />
-        </head>
-        <body
-          className={`${instrumentSerif.variable} ${outfit.variable} ${montserrat.variable} ${jetbrainsMono.variable} antialiased`}
-          suppressHydrationWarning
-        >
-          <MetaPixel />
-          <GoogleAnalytics />
-          <NextIntlClientProvider messages={messages}>
-            <BookingProvider>
-              <AssessmentProvider>
-                <RecruitmentProvider>
-                    <NewsletterProvider>
-                      {children}
-                    </NewsletterProvider>
-                  </RecruitmentProvider>
-              </AssessmentProvider>
-            </BookingProvider>
-          </NextIntlClientProvider>
-          <ChatWidget />
-        </body>
-      </html>
-    );
-  }
+  return (
+    <html lang={locale} className="scroll-smooth">
+      <head>
+        <Script id="cookieyes" src="https://cdn-cookieyes.com/client_data/0fa48870f6545632d245c569fd209db8/script.js" strategy="beforeInteractive" />
+        <OrganizationSchema />
+        <LocalBusinessSchema />
+        <FAQPageSchema />
+        <WebSiteSchema />
+      </head>
+      <body className={`${familjen.variable} ${sourceSans.variable} ${martian.variable} antialiased`} suppressHydrationWarning>
+        <MetaPixel />
+        <GoogleAnalytics />
+        {/* Client components only need the locale; all wording comes from src/content/v2/text. */}
+        <NextIntlClientProvider locale={locale} messages={{}}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}

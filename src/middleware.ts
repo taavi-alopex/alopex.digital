@@ -4,31 +4,15 @@ import { routing } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
 
-// Campaign subdomain served by the same app/infra as the main site.
-// automate.alopex.digital -> the /automate-sales landing page.
+// The old campaign subdomain: its landing page was removed (31.10.2026), so it sends visitors to the main site.
 const CAMPAIGN_HOST = "automate.alopex.digital";
-// The Instantly campaign is Estonian-first, so the bare subdomain root
-// resolves to the Estonian landing page.
-const CAMPAIGN_DEFAULT_LOCALE = "et";
 
 export default function middleware(req: NextRequest) {
   const host = (req.headers.get("host") || "").split(":")[0].toLowerCase();
 
   if (host === CAMPAIGN_HOST) {
-    const url = req.nextUrl;
-    const path = url.pathname;
-
-    // Already on the campaign page (any locale) — let it render.
-    if (/^\/(en|et|pl)\/automate-sales(\/|$)/.test(path)) {
-      return intlMiddleware(req);
-    }
-
-    // Respect an explicit locale prefix (e.g. /en, /pl), otherwise default to ET.
-    const localeMatch = path.match(/^\/(en|et|pl)(\/|$)/);
-    const locale = localeMatch ? localeMatch[1] : CAMPAIGN_DEFAULT_LOCALE;
-
-    url.pathname = `/${locale}/automate-sales`;
-    return NextResponse.rewrite(url);
+    const locale = req.nextUrl.pathname.match(/^\/(en|et|pl)(\/|$)/)?.[1] ?? "et";
+    return NextResponse.redirect(`https://alopex.digital/${locale}`, 308);
   }
 
   return intlMiddleware(req);
