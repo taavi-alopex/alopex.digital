@@ -2,7 +2,7 @@
   "legal": {
     "privacyPolicy": {
       "title": "Privaatsuspoliitika",
-      "metaDescription": "Alopex Digitali privaatsuspoliitika - kuidas me teie andmeid kogume, kasutame ja kaitseme",
+      "metaDescription": "Alopex Digitali privaatsuspoliitika: kuidas me teie andmeid kogume, kasutame ja kaitseme",
       "lastUpdated": "Viimati uuendatud",
       "company": "Ettevõte",
       "registryCode": "Registrikood",
@@ -44,7 +44,7 @@
             "CookieYes: küpsiste nõusolek",
             "Instantly.ai: ärikirjade saatmine",
             "Clay: avalike ettevõtte- ja kontaktandmete leidmine ärikirjade jaoks",
-            "AI teenusepakkujad, kui ülesanne vajab AI-d. Kliendiprojektis kasutatavad pakkujad on kirjas lepingus selle kliendiga.",
+            "AI-teenuste pakkujad, kui ülesanne vajab AI-d. Kliendiprojektis kasutatavad pakkujad on kirjas lepingus selle kliendiga.",
             "n8n: automatiseerimistarkvara, mida käitame oma serverites ELis"
           ],
           "after": "Osa pakkujaid asub Ameerika Ühendriikides. Andmete edastamine sinna põhineb ELi-USA andmekaitseraamistikul või ELi lepingutüüptingimustel."
@@ -77,7 +77,7 @@
     },
     "terms": {
       "title": "Kasutustingimused",
-      "metaDescription": "Alopex Digitali kasutustingimused - meie teenuste kasutamise reeglid",
+      "metaDescription": "Alopex Digitali kasutustingimused: meie teenuste kasutamise reeglid",
       "lastUpdated": "Viimati uuendatud",
       "sections": {
         "introduction": {
@@ -88,9 +88,9 @@
           "title": "2. Mida me pakume",
           "content": "Pakume:",
           "items": [
-            "Rätsepautomaatika: ühe ettevõtte jaoks ehitatud süsteemid, mis on ühendatud tööriistadega, mida ettevõte juba kasutab.",
-            "AI assistendid ja koolitus: AI seadistamine kindlate ülesannete jaoks ja tiimi koolitamine.",
-            "Valmistooted: tarkvara, mida haldame paljudele ettevõtetele, näiteks Sales Machine, raamatupidamise automaatika ja GHL Email Sync, pakkumises kirjeldatud tingimustel.",
+            "Automaatika ettevõtte jaoks: ühe ettevõtte jaoks ehitatud süsteemid, mis on ühendatud tööriistadega, mida ettevõte juba kasutab.",
+            "AI-assistendid ja koolitus: AI seadistamine kindlate ülesannete jaoks ja tiimi koolitamine.",
+            "Valmistooted: tarkvara, mida haldame paljudele ettevõtetele, näiteks Sales Machine, raamatupidamise automaatika ja Alopex Email Sync, pakkumises kirjeldatud tingimustel.",
             "Tugi ja hooldus: meie hallatavate süsteemide jälgimine, parandused ja täiendused."
           ]
         },
