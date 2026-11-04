@@ -276,10 +276,10 @@ export const site: SiteText = {
       tagline: "Notatki z każdego spotkania we właściwym miejscu, bez pytania kogokolwiek.",
       lead: "Zapisuje podsumowanie i transkrypcję każdego nagranego spotkania we właściwym folderze Google Drive i wysyła link wszystkim uczestnikom.",
       cta: "Zapytaj o Meeting Sync",
-      steps: [["Nagraj", "Spotkania nagrywasz w Wispr Flow, jak zwykle."], ["Dopasuj", "Wydarzenie w kalendarzu i uczestnicy pokazują, do którego klienta lub cyklu należy spotkanie."], ["Zapisz", "Dokument z datą, podsumowaniem i transkrypcją trafia do tego folderu."], ["Pyta, gdy nie wie", "Jeśli reguły nie wystarczą, pyta człowieka zamiast zgadywać."]],
+      steps: [["Nagraj", "Spotkania nagrywasz w Wispr Flow, jak zwykle."], ["Dopasuj", "Wydarzenie w kalendarzu i uczestnicy pokazują, do którego klienta lub cyklu należy spotkanie."], ["Zapisz", "Dokument z datą, podsumowaniem i transkrypcją trafia do tego folderu."], ["Pyta, gdy nie wie", "Jeśli reguły nie wystarczą, AI proponuje folder na podstawie nazwisk, domen e-mail i CRM. Jeśli nadal nie ma pewności, system pyta człowieka."]],
       who: ["Zespoły z wieloma rozmowami z klientami", "Firmy, które trzymają pliki klientów w Google Drive", "Menedżerowie, którzy chcą notatek bez proszenia o nie"],
       proofTitle: "Gdzie działa",
-      proof: "Cały nasz zespół korzysta z niego od października 2026. Zapisuje pliki według stałych, przetestowanych reguł, a nie domysłów AI, i wysyła krótki e-mail, gdy notatki są gotowe.",
+      proof: "Cały nasz zespół korzysta z niego od października 2026. Większość spotkań trafia do folderów według stałych, przetestowanych reguł. Gdy reguły nie wystarczą, folder proponuje AI, a system sprawdza tę propozycję przed zapisaniem. W teście na 79 wcześniejszych spotkaniach żadne nie trafiło do złego folderu. Gdy notatki są gotowe, wysyła krótki e-mail.",
     },
     "calendar-sync": {
       name: "Calendar Sync",

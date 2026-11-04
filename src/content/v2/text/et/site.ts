@@ -276,10 +276,10 @@ export const site: SiteText = {
       tagline: "Iga kohtumise märkmed õiges kohas, ilma kelleltki küsimata.",
       lead: "Paneb iga kohtumise kokkuvõtte ja transkriptsiooni õigesse Google Drive'i kausta ning saadab lingi kõigile osalejatele.",
       cta: "Küsi Meeting Synci kohta",
-      steps: [["Salvesta", "Salvestad kohtumised Wispr Flow'ga nagu tavaliselt."], ["Seo", "Kalendrisündmus ja osalejad näitavad, millise kliendi või kohtumiste sarja juurde see kuulub."], ["Pane kausta", "Kuupäevaga dokument kokkuvõtte ja transkriptsiooniga salvestatakse sellesse kausta."], ["Küsib, kui pole kindel", "Kui reeglitest ei piisa, küsib inimeselt, selle asemel et oletada."]],
+      steps: [["Salvesta", "Salvestad kohtumised Wispr Flow'ga nagu tavaliselt."], ["Seo", "Kalendrisündmus ja osalejad näitavad, millise kliendi või kohtumiste sarja juurde see kuulub."], ["Pane kausta", "Kuupäevaga dokument kokkuvõtte ja transkriptsiooniga salvestatakse sellesse kausta."], ["Küsib, kui pole kindel", "Kui reeglitest ei piisa, pakub AI nimede, e-posti domeenide ja CRM-i põhjal sobiva kausta. Kui ka see pole kindel, küsib süsteem inimeselt."]],
       who: ["Tiimid, kellel on palju kliendikõnesid", "Ettevõtted, kes hoiavad kliendifaile Google Drive'is", "Juhid, kes tahavad märkmeid ilma inimesi taga ajamata"],
       proofTitle: "Kus see töötab",
-      proof: "Meie tiim kasutab seda 2026. aasta oktoobrist. Failid lähevad kausta kindlate ja testitud reeglite järgi, mitte AI oletuste põhjal, ja kui märkmed on valmis, tuleb lühike kiri.",
+      proof: "Meie tiim kasutab seda 2026. aasta oktoobrist. Enamiku kohtumisi paneb see kausta kindlate ja testitud reeglite järgi. Kui reeglitest ei piisa, pakub kausta AI ja süsteem kontrollib selle valiku enne salvestamist üle. 79 varasema kohtumise testis ei läinud ükski vale kausta. Kui märkmed on valmis, tuleb lühike kiri.",
     },
     "calendar-sync": {
       name: "Calendar Sync",

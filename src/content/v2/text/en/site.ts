@@ -276,10 +276,10 @@ export const site = {
       tagline: "Every meeting's notes filed in the right place, without asking anyone.",
       lead: "Saves the summary and transcript of every recorded meeting in the right Google Drive folder, and sends the link to everyone on the call.",
       cta: "Ask about Meeting Sync",
-      steps: [["Record", "Meetings are recorded with Wispr Flow, as usual."], ["Match", "The calendar event and the attendees show which client or series the meeting belongs to."], ["File", "A dated document with the summary and transcript is saved in that folder."], ["Ask when unsure", "If the rules can't decide, it asks the person instead of guessing."]],
+      steps: [["Record", "Meetings are recorded with Wispr Flow, as usual."], ["Match", "The calendar event and the attendees show which client or series the meeting belongs to."], ["File", "A dated document with the summary and transcript is saved in that folder."], ["Ask when unsure", "If the rules can't decide, an AI step suggests the folder from names, email domains and the CRM. If it is still unsure, it asks a person."]],
       who: ["Teams with many client calls", "Companies that keep client files in Google Drive", "Managers who want notes without chasing people"],
       proofTitle: "Where it runs",
-      proof: "Our whole team has used it since October 2026. It files by fixed, tested rules, not by AI guesses, and sends a short email when the notes are ready.",
+      proof: "Our whole team has used it since October 2026. Fixed, tested rules file most meetings. When they can't decide, AI suggests the folder and the system checks that suggestion before filing. In a test on 79 past meetings, none went to the wrong folder. It sends a short email when the notes are ready.",
     },
     "calendar-sync": {
       name: "Calendar Sync",
